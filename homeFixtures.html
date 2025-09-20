@@ -2,26 +2,33 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=2160, height=3840, initial-scale=1.0, user-scalable=no">
     <title>Home Fixtures</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body class="home">
-    <div class="fixtures-container">
-        <div class="date-header">HOME FIXTURES</div>
-        <div class="fixture">
-            <div class="fixture-content">
-                <div class="teams">
-                    <div class="team-home">TEAM NAME</div>
-                    <div class="vs">VS</div>
-                    <div class="team-away">OPPONENT</div>
-                </div>
-                <div class="fixture-details">
-                    <div class="time">00:00</div>
-                    <div class="score-info score-placeholder">- : -</div>
+    <div class="scale-container">
+        <div class="fixtures-container">
+            <div class="date-header">HOME FIXTURES</div>
+            <div class="fixture">
+                <div class="fixture-content">
+                    <div class="teams">
+                        <div class="team-home">TEAM NAME</div>
+                        <div class="vs">VS</div>
+                        <div class="team-away">OPPONENT</div>
+                    </div>
+                    <div class="fixture-details">
+                        <div class="time">00:00</div>
+                        <div class="score-info score-placeholder">- : -</div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+    <script>
+// Force viewport to exact dimensions
+document.querySelector('meta[name="viewport"]').setAttribute('content', 'width=2160, height=3840, initial-scale=1.0, user-scalable=no');
+</script>
 </body>
 </html> 
