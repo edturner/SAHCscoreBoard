@@ -21,7 +21,8 @@
       "kickoff": "11:00",
       "division": "Division 5 South West",
       "location": "Home",
-      "status": "Scheduled"
+      "status": "Completed",
+      "result": "7:0"
     },
     {
       "date": "2025-09-20T12:00:00+01:00",

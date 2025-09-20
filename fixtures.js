@@ -35,6 +35,10 @@ function createFixtureElement(fixture) {
     const homeTeam = fixture.home_team.replace(/(\d+)$/, `${genderSuffix}$1`);
     const awayTeam = fixture.away_team.replace(/(\d+)$/, `${genderSuffix}$1`);
     
+    // Determine score display
+    const scoreDisplay = fixture.result ? fixture.result : '- : -';
+    const scoreClass = fixture.result ? 'score-active' : 'score-placeholder';
+    
     fixtureDiv.innerHTML = `
         <div class="fixture-content">
             <div class="teams">
@@ -44,7 +48,7 @@ function createFixtureElement(fixture) {
             </div>
             <div class="fixture-details">
                 <div class="time">${fixture.kickoff}</div>
-                <div class="score-info score-placeholder">- : -</div>
+                <div class="score-info ${scoreClass}">${scoreDisplay}</div>
             </div>
         </div>
     `;
