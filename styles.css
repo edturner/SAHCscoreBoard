@@ -1,0 +1,182 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    width: 2160px;
+    height: 3840px;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+body {
+    width: 2160px;
+    height: 3840px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform-origin: top left;
+    zoom: 1;
+}
+
+/* Background variants */
+body.home {
+    background-image: url('images/home_bg.png');
+}
+
+body.away {
+    background-image: url('images/away_bg.png');
+}
+
+/* Prevent any scrolling or movement */
+html {
+    overflow: hidden;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+}
+
+.fixtures-container {
+    margin-top: 1400px;
+    margin-left: 90px;
+    width: 1600px;
+    max-width: 90%;
+    position: relative;
+    transform: rotate(-1.5deg);
+    display: flex;
+    flex-direction: column;
+    gap: clamp(15px, 0.75vh, 28px);
+    height: calc(100vh - 1900px);
+}
+
+.date-header {
+    color: white;
+    font-size: 70px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 80px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+.fixture {
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 32px rgba(0, 0, 0, 0.3);
+    flex: 1 1 0;
+    min-height: 140px;
+    max-height: 230px;
+}
+
+.fixture-content {
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.teams {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    color: white;
+    font-size: 45px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.team-home {
+    flex: 1;
+    text-align: right;
+    padding-right: 30px;
+}
+
+.vs {
+    color: #FF6600;
+    font-size: 38px;
+    margin: 0 30px;
+    font-weight: bold;
+}
+
+.team-away {
+    flex: 1;
+    text-align: left;
+    padding-left: 30px;
+}
+
+.fixture-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 250px;
+}
+
+.time {
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.score-info {
+    background: rgba(255, 255, 255, 0.3);
+    color: #ccc;
+    padding: 12px 25px;
+    border-radius: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+}
+
+.score-active {
+    background: #FF6600;
+    color: white;
+    box-shadow: 0 0 20px rgba(255, 102, 0, 0.6);
+}
+
+.score-placeholder {
+    background: rgba(255, 255, 255, 0.3);
+    color: #888;
+}
+
+/* Animation for subtle entrance effect */
+.fixture {
+    animation: slideInUp 0.6s ease-out forwards;
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.fixture:nth-child(2) { animation-delay: 0.1s; }
+.fixture:nth-child(3) { animation-delay: 0.2s; }
+.fixture:nth-child(4) { animation-delay: 0.3s; }
+.fixture:nth-child(5) { animation-delay: 0.4s; }
+.fixture:nth-child(6) { animation-delay: 0.5s; }
+.fixture:nth-child(7) { animation-delay: 0.6s; }
+.fixture:nth-child(8) { animation-delay: 0.7s; }
+.fixture:nth-child(9) { animation-delay: 0.8s; }
+.fixture:nth-child(10) { animation-delay: 0.9s; }
+
+@keyframes slideInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
