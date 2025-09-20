@@ -1,0 +1,183 @@
+{
+  "generated_at": "2025-09-17T12:43:13.276335Z",
+  "home": [
+    {
+      "date": "2025-09-20T10:30:00+01:00",
+      "team": "St Albans 6",
+      "category": "men",
+      "home_team": "St Albans 6",
+      "away_team": "Bedford 6",
+      "kickoff": "10:30",
+      "division": "Division 5 South West",
+      "location": "Home",
+      "status": "Scheduled"
+    },
+    {
+      "date": "2025-09-20T11:00:00+01:00",
+      "team": "St Albans 7",
+      "category": "women",
+      "home_team": "St Albans 7",
+      "away_team": "Broxbourne 4",
+      "kickoff": "11:00",
+      "division": "Division 5 South West",
+      "location": "Home",
+      "status": "Scheduled"
+    },
+    {
+      "date": "2025-09-20T12:00:00+01:00",
+      "team": "St Albans 5",
+      "category": "women",
+      "home_team": "St Albans 5",
+      "away_team": "Bedford 5",
+      "kickoff": "12:00",
+      "division": "Division 4 South West",
+      "location": "Home",
+      "status": "Scheduled"
+    },
+    {
+      "date": "2025-09-20T13:00:00+01:00",
+      "team": "St Albans 1",
+      "category": "women",
+      "home_team": "St Albans 1",
+      "away_team": "Oxford Hawks 1",
+      "kickoff": "13:00",
+      "division": "Conference Midlands",
+      "location": "Home",
+      "status": "Scheduled"
+    },
+    {
+      "date": "2025-09-20T13:30:00+01:00",
+      "team": "St Albans 8",
+      "category": "men",
+      "home_team": "St Albans 8",
+      "away_team": "Saffron Walden 6",
+      "kickoff": "13:30",
+      "division": "Division 6 South West",
+      "location": "Home",
+      "status": "Scheduled"
+    },
+    {
+      "date": "2025-09-20T15:00:00+01:00",
+      "team": "St Albans 2",
+      "category": "men",
+      "home_team": "St Albans 2",
+      "away_team": "Havering 1",
+      "kickoff": "15:00",
+      "division": "Division 1 South",
+      "location": "Home",
+      "status": "Scheduled"
+    },
+    {
+      "date": "2025-09-20T15:00:00+01:00",
+      "team": "St Albans 3",
+      "category": "men",
+      "home_team": "St Albans 3",
+      "away_team": "Royston 1",
+      "kickoff": "15:00",
+      "division": "Division 2 South West",
+      "location": "Home",
+      "status": "Scheduled"
+    },
+    {
+      "date": "2025-09-20T16:30:00+01:00",
+      "team": "St Albans 4",
+      "category": "women",
+      "home_team": "St Albans 4",
+      "away_team": "Bedford 3",
+      "kickoff": "16:30",
+      "division": "Division 2 South West",
+      "location": "Home",
+      "status": "Scheduled"
+    },
+    {
+      "date": "2025-09-20T16:30:00+01:00",
+      "team": "St Albans Centurions",
+      "category": "men",
+      "home_team": "St Albans Centurions",
+      "away_team": "Chelmsford Evergreens",
+      "kickoff": "16:30",
+      "division": "South Masters Open - Men's O60 Premier",
+      "location": "Home",
+      "status": "Scheduled"
+    }
+  ],
+  "away": [
+    {
+      "date": "2025-09-20T10:00:00+01:00",
+      "team": "St Albans 8",
+      "category": "women",
+      "home_team": "Broxbourne 5",
+      "away_team": "St Albans 8",
+      "kickoff": "10:00",
+      "division": "Division 6 South West",
+      "location": "Away",
+      "status": "Scheduled"
+    },
+    {
+      "date": "2025-09-20T12:15:00+01:00",
+      "team": "St Albans 7",
+      "category": "men",
+      "home_team": "Bedford 5",
+      "away_team": "St Albans 7",
+      "kickoff": "12:15",
+      "division": "Division 5 South West",
+      "location": "Away",
+      "status": "Scheduled"
+    },
+    {
+      "date": "2025-09-20T12:30:00+01:00",
+      "team": "St Albans 2",
+      "category": "women",
+      "home_team": "Bury St Edmunds 1",
+      "away_team": "St Albans 2",
+      "kickoff": "12:30",
+      "division": "Premier Division",
+      "location": "Away",
+      "status": "Scheduled"
+    },
+    {
+      "date": "2025-09-20T13:00:00+01:00",
+      "team": "St Albans 9",
+      "category": "men",
+      "home_team": "Rickmansworth 3",
+      "away_team": "St Albans 9",
+      "kickoff": "13:00",
+      "division": "Division 7 South West",
+      "location": "Away",
+      "status": "Scheduled"
+    },
+    {
+      "date": "2025-09-20T14:00:00+01:00",
+      "team": "St Albans 6",
+      "category": "women",
+      "home_team": "Cheshunt 1",
+      "away_team": "St Albans 6",
+      "kickoff": "14:00",
+      "division": "Division 4 South West",
+      "location": "Away",
+      "status": "Scheduled"
+    },
+    {
+      "date": "2025-09-20T14:00:00+01:00",
+      "team": "St Albans 4",
+      "category": "men",
+      "home_team": "Bedford 3",
+      "away_team": "St Albans 4",
+      "kickoff": "14:00",
+      "division": "Division 2 South West",
+      "location": "Away",
+      "status": "Scheduled"
+    },
+    {
+      "date": "2025-09-20T15:00:00+01:00",
+      "team": "St Albans 3",
+      "category": "women",
+      "home_team": "Blueharts 1",
+      "away_team": "St Albans 3",
+      "kickoff": "15:00",
+      "division": "Division 1 South",
+      "location": "Away",
+      "status": "Scheduled"
+    }
+  ]
+}
