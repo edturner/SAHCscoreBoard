@@ -58,7 +58,10 @@ function createFixtureElement(fixture) {
 
 // Force viewport to exact dimensions
 function setViewport() {
-    document.querySelector('meta[name="viewport"]').setAttribute('content', 'width=2160, height=3840, initial-scale=1.0, user-scalable=no');
+    const viewport = document.querySelector('meta[name="viewport"]');
+    if (viewport) {
+        viewport.setAttribute('content', 'width=1080, height=1920, initial-scale=1.0, user-scalable=no');
+    }
 }
 
 // Initialize when page loads
