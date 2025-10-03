@@ -1,90 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+@font-face {
+    font-family: 'TT Bluescreens';
+    src: url('fonts/TTBluescreens-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'TT Bluescreens';
+    src: url('fonts/TTBluescreens-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'TT Bluescreens';
+    src: url('fonts/TTBluescreens-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'TT Bluescreens';
+    src: url('fonts/TTBluescreens-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+:root {
+    /* Adjust this to scale the pattern size */
+    --pattern-zoom: 0%;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html, body {
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    width: 2160px;
-    height: 3840px;
-    position: fixed;
-    top: 0;
-    left: 0;
-}
-
 body {
-    width: 2160px;
-    height: 3840px;
-    background-size: cover;
-    background-position: center;
+    width: 1080px;
+    height: 1920px;
+    overflow: hidden;
+    font-family: 'TT Bluescreens', 'Inter', Arial, sans-serif;
+}
+
+/* Background pattern container */
+.pattern-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #1a1464;
+}
+
+/* White pattern overlay, stretched over the navy background */
+.pattern-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    inset: 0;
     background-repeat: no-repeat;
-    font-family: 'Arial', sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    overflow: hidden;
-    position: fixed;
-    top: 0;
-    left: 0;
-    transform-origin: top left;
-    zoom: 1;
+    background-size: cover;
+    background-position: center center;
+    z-index: 0;
 }
 
-/* Background variants */
-body.home {
-    background-image: url('images/home_bg.png');
+/* Different patterns for home and away */
+body.home .pattern-overlay {
+    background-image: url('images/bg_pattern_home.png');
 }
 
-body.away {
-    background-image: url('images/away_bg.png');
+body.away .pattern-overlay {
+    background-image: url('images/bg_pattern_away.png');
 }
 
-/* Prevent any scrolling or movement */
-html {
-    overflow: hidden;
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-}
-
-.fixtures-container {
-    margin-top: 1400px;
-    margin-left: 115px;
-    width: 1600px;
-    max-width: 90%;
+/* Main content container */
+.content-container {
     position: relative;
-    transform: rotate(-1.5deg);
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    gap: clamp(15px, 0.75vh, 28px);
-    height: calc(100vh - 1900px);
+    z-index: 1;
+}
+
+/* Top section with graphic */
+.top-graphic {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Center content area */
+.center-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(47, 58, 115);
+    margin: 50px 100px;
+    position: relative;
+    padding-bottom: 120px; /* Add space for bottom bar */
+}
+
+/* Text container */
+.text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 100px 50px 20px 50px;
+    flex-shrink: 0;
+}
+
+/* Title text */
+.title {
+    color: white;
+    font-size: 140px;
+    font-weight: bold;
+    font-style: italic;
+    letter-spacing: 5px;
+    line-height: 1;
+    text-align: center;
+    font-family: 'TT Bluescreens', 'Inter', Arial, sans-serif;
+}
+
+.subtitle {
+    color: #a0a5b8;
+    font-size: 140px;
+    font-weight: 900;
+    letter-spacing: 5px;
+    line-height: 1;
+    text-align: center;
+    font-style: italic;
+    font-family: 'TT Bluescreens', 'Inter', Arial, sans-serif;
+}
+
+/* Bottom orange bar */
+.bottom-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    background-color: #ff6b35;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 50px;
+    gap: 25px;
+    z-index: 10;
+}
+
+/* Logo placeholders */
+.logo {
+    width: 90px;
+    height: 70px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.logo.womens {
+    /* background-image: url('womens-logo.png'); */
+}
+
+.logo.mens {
+    /* background-image: url('mens-logo.png'); */
+}
+
+.logo.main {
+    /* background-image: url('east-hockey-logo.png'); */
+}
+
+/* Fixtures styles */
+.fixtures-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 15px;
+    padding: 0 20px 40px 20px; /* Extra bottom padding to avoid bottom bar */
+    overflow-y: auto;
+    max-height: calc(100vh - 400px); /* Limit height to prevent overlap */
 }
 
 .date-header {
     color: white;
-    font-size: 70px;
+    font-size: 35px;
     font-weight: bold;
     text-align: center;
-    margin-bottom: 80px;
+    margin-bottom: 20px;
     text-transform: uppercase;
-    letter-spacing: 4px;
+    letter-spacing: 2px;
+    font-family: 'TT Bluescreens', 'Inter', Arial, sans-serif;
+    flex-shrink: 0;
+    order: -1; /* This puts the date at the top of the flex container */
 }
 
 .fixture {
     background: rgba(0, 0, 0, 0.7);
-    border-radius: 12px;
+    border-radius: 6px;
     overflow: hidden;
-    box-shadow: 0 6px 32px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 3px 16px rgba(0, 0, 0, 0.3);
     flex: 1 1 0;
-    min-height: 140px;
-    max-height: 230px;
+    min-height: 70px;
+    max-height: 115px;
 }
 
 .fixture-content {
-    padding: 25px;
+    padding: 12px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -96,60 +232,64 @@ html {
     align-items: center;
     flex: 1;
     color: white;
-    font-size: 45px;
+    font-size: 22px;
     font-weight: bold;
     text-transform: uppercase;
+    font-family: 'TT Bluescreens', 'Inter', Arial, sans-serif;
 }
 
 .team-home {
     flex: 1;
     text-align: right;
-    padding-right: 30px;
+    padding-right: 15px;
 }
 
 .vs {
     color: #FF6600;
-    font-size: 38px;
-    margin: 0 30px;
+    font-size: 19px;
+    margin: 0 15px;
     font-weight: bold;
+    font-family: 'TT Bluescreens', 'Inter', Arial, sans-serif;
 }
 
 .team-away {
     flex: 1;
     text-align: left;
-    padding-left: 30px;
+    padding-left: 15px;
 }
 
 .fixture-details {
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-width: 250px;
+    min-width: 125px;
 }
 
 .time {
     color: white;
-    font-size: 40px;
+    font-size: 20px;
     font-weight: bold;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
+    font-family: 'TT Bluescreens', 'Inter', Arial, sans-serif;
 }
 
 .score-info {
     background: rgba(255, 255, 255, 0.3);
     color: #ccc;
-    padding: 12px 25px;
-    border-radius: 20px;
-    font-size: 30px;
+    padding: 6px 12px;
+    border-radius: 10px;
+    font-size: 15px;
     font-weight: bold;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     transition: all 0.3s ease;
+    font-family: 'TT Bluescreens', 'Inter', Arial, sans-serif;
 }
 
 .score-active {
     background: #FF6600;
     color: white;
-    box-shadow: 0 0 20px rgba(255, 102, 0, 0.6);
+    box-shadow: 0 0 10px rgba(255, 102, 0, 0.6);
 }
 
 .score-placeholder {
@@ -161,9 +301,10 @@ html {
 .fixture {
     animation: slideInUp 0.6s ease-out forwards;
     opacity: 0;
-    transform: translateY(50px);
+    transform: translateY(25px);
 }
 
+/* Animation delays for normal column layout */
 .fixture:nth-child(2) { animation-delay: 0.1s; }
 .fixture:nth-child(3) { animation-delay: 0.2s; }
 .fixture:nth-child(4) { animation-delay: 0.3s; }
