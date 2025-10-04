@@ -88,17 +88,6 @@
       "division": "Division 6 South West",
       "location": "Home",
       "status": "Scheduled"
-    },
-    {
-      "date": "2025-10-05T14:00:00+01:00",
-      "team": "St Albans",
-      "category": "men",
-      "home_team": "St Albans",
-      "away_team": "Leek 1",
-      "kickoff": "14:00",
-      "division": "Men's Conference Midlands",
-      "location": "Home",
-      "status": "Scheduled"
     }
   ],
   "away": [

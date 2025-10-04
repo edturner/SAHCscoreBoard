@@ -145,6 +145,15 @@ body.away .pattern-overlay {
     font-family: 'TT Bluescreens', 'Inter', Arial, sans-serif;
 }
 
+/* Home fixtures - tangerine colors */
+body.home .title {
+    color: #ff6600; /* Bright tangerine */
+}
+
+body.home .subtitle {
+    color: #a64a0d; /* Darker tangerine */
+}
+
 /* Bottom orange bar */
 .bottom-bar {
     position: absolute;
@@ -191,7 +200,7 @@ body.away .pattern-overlay {
     flex-direction: column;
     justify-content: flex-end;
     gap: 15px;
-    padding: 0 20px 40px 20px; /* Extra bottom padding to avoid bottom bar */
+    padding: 0 30px 40px 30px; /* Extra bottom padding to avoid bottom bar */
     overflow-y: auto;
     max-height: calc(100vh - 400px); /* Limit height to prevent overlap */
 }
