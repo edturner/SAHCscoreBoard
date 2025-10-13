@@ -1,20 +1,6 @@
 {
-  "generated_at": "2025-10-13T13:16:32.088988+00:00",
+  "generated_at": "2025-10-13T13:33:58.762501+00:00",
   "home": [
-    {
-      "date": "2025-10-18T00:00:00+01:00",
-      "team": "St Albans Centurions",
-      "category": "men",
-      "home_team": "St Albans Centurions",
-      "away_team": "Indian Gymkhana Grandmasters",
-      "kickoff": "TBC",
-      "division": "South Masters Men's O60 Premier",
-      "location": "Home",
-      "status": "Scheduled",
-      "fixtureId": "1-17747861",
-      "home_score": null,
-      "away_score": null
-    },
     {
       "date": "2025-10-18T10:30:00+01:00",
       "team": "St Albans 8",
@@ -40,8 +26,8 @@
       "location": "Home",
       "status": "Scheduled",
       "fixtureId": "1-17781655",
-      "home_score": 1,
-      "away_score": 0
+      "home_score": null,
+      "away_score": null
     },
     {
       "date": "2025-10-18T12:00:00+01:00",
@@ -54,8 +40,8 @@
       "location": "Home",
       "status": "Scheduled",
       "fixtureId": "1-17777459",
-      "home_score": 5,
-      "away_score": 8
+      "home_score": null,
+      "away_score": null
     },
     {
       "date": "2025-10-18T13:00:00+01:00",
@@ -152,20 +138,6 @@
       "location": "Home",
       "status": "Scheduled",
       "fixtureId": "1-17766255",
-      "home_score": null,
-      "away_score": null
-    },
-    {
-      "date": "2025-10-19T14:45:00+01:00",
-      "team": "St. Albans HC",
-      "category": "men",
-      "home_team": "St. Albans HC",
-      "away_team": "Upminster u18",
-      "kickoff": "14:45",
-      "division": "Friendly",
-      "location": "Home",
-      "status": "Scheduled",
-      "fixtureId": "0-6362400",
       "home_score": null,
       "away_score": null
     }

@@ -105,6 +105,32 @@ def extract_fixtures(json_data):
         return []
 
 
+def is_kids_fixture(fixture):
+    """
+    Determine whether a fixture should be considered a kids fixture.
+
+    Rules:
+    - division is None
+    - either home or away team name contains 'u18' or 'u16' (case-insensitive)
+    """
+    division_is_null = fixture.get('division') is None
+
+    home = (fixture.get('home_team') or '').lower()
+    away = (fixture.get('away_team') or '').lower()
+
+    contains_age_band = ('u18' in home) or ('u16' in home) or ('u18' in away) or ('u16' in away)
+
+    return division_is_null or contains_age_band
+
+
+def has_tbc_kickoff(fixture):
+    """Return True if kickoff is 'TBC' (case-insensitive)."""
+    kickoff = fixture.get('kickoff')
+    if kickoff is None:
+        return False
+    return str(kickoff).strip().lower() == 'tbc'
+
+
 def filter_weekend_fixtures(fixtures):
     """
     Filter fixtures to include only those on Saturday and Sunday of this week.
@@ -130,6 +156,12 @@ def filter_weekend_fixtures(fixtures):
     print(f"Filtering for fixtures between {range_start} and {range_end}")
 
     for fixture in fixtures:
+        # Exclude kids fixtures
+        if is_kids_fixture(fixture):
+            continue
+        # Exclude fixtures with TBC kickoff
+        if has_tbc_kickoff(fixture):
+            continue
         fixture_datetime = datetime.fromisoformat(fixture['date']).astimezone(UTC)
         if range_start <= fixture_datetime < range_end:
             weekend_fixtures.append(fixture)
@@ -313,6 +345,12 @@ def filter_by_date_range(fixtures, start_date_str, end_date_str):
 
     filtered = []
     for fixture in fixtures:
+        # Exclude kids fixtures
+        if is_kids_fixture(fixture):
+            continue
+        # Exclude fixtures with TBC kickoff
+        if has_tbc_kickoff(fixture):
+            continue
         try:
             fixture_datetime = datetime.fromisoformat(fixture['date']).astimezone(UTC)
         except Exception:
