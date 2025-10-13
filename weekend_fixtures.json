@@ -1,6 +1,20 @@
 {
-  "generated_at": "2025-10-13T12:12:54.381539+00:00",
+  "generated_at": "2025-10-13T13:16:32.088988+00:00",
   "home": [
+    {
+      "date": "2025-10-18T00:00:00+01:00",
+      "team": "St Albans Centurions",
+      "category": "men",
+      "home_team": "St Albans Centurions",
+      "away_team": "Indian Gymkhana Grandmasters",
+      "kickoff": "TBC",
+      "division": "South Masters Men's O60 Premier",
+      "location": "Home",
+      "status": "Scheduled",
+      "fixtureId": "1-17747861",
+      "home_score": null,
+      "away_score": null
+    },
     {
       "date": "2025-10-18T10:30:00+01:00",
       "team": "St Albans 8",
@@ -12,8 +26,8 @@
       "location": "Home",
       "status": "Scheduled",
       "fixtureId": "1-17780883",
-      "home_score": 6,
-      "away_score": 7
+      "home_score": null,
+      "away_score": null
     },
     {
       "date": "2025-10-18T11:00:00+01:00",
@@ -54,6 +68,20 @@
       "location": "Home",
       "status": "Scheduled",
       "fixtureId": "1-17766930",
+      "home_score": null,
+      "away_score": null
+    },
+    {
+      "date": "2025-10-18T13:30:00+01:00",
+      "team": "St Albans Centurions",
+      "category": "men",
+      "home_team": "St Albans Centurions",
+      "away_team": "Indian Gymkhana Grandmasters",
+      "kickoff": "13:30",
+      "division": "South Masters Open - Men's O60 Premier",
+      "location": "Home",
+      "status": "Scheduled",
+      "fixtureId": "1-17900000",
       "home_score": null,
       "away_score": null
     },
@@ -115,15 +143,29 @@
     },
     {
       "date": "2025-10-19T14:00:00+01:00",
-      "team": "St Albans 1",
+      "team": "St Albans",
       "category": "men",
-      "home_team": "St Albans 1",
+      "home_team": "St Albans",
       "away_team": "University of Birmingham 2",
       "kickoff": "14:00",
       "division": "Men's Conference Midlands",
       "location": "Home",
       "status": "Scheduled",
       "fixtureId": "1-17766255",
+      "home_score": null,
+      "away_score": null
+    },
+    {
+      "date": "2025-10-19T14:45:00+01:00",
+      "team": "St. Albans HC",
+      "category": "men",
+      "home_team": "St. Albans HC",
+      "away_team": "Upminster u18",
+      "kickoff": "14:45",
+      "division": "Friendly",
+      "location": "Home",
+      "status": "Scheduled",
+      "fixtureId": "0-6362400",
       "home_score": null,
       "away_score": null
     }
