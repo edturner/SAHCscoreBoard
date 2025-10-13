@@ -4,6 +4,7 @@ import argparse
 from bs4 import BeautifulSoup
 from pytz import UTC 
 import csv
+from typing import Set
 
 def extract_json_from_html(html_file):
     """
@@ -167,6 +168,37 @@ def filter_weekend_fixtures(fixtures):
             weekend_fixtures.append(fixture)
 
     return weekend_fixtures
+
+def load_exclusions(exclusions_path: str = 'exclusions.json') -> Set[str]:
+    """Load a set of fixture IDs to exclude from output. Supports either a JSON array of IDs
+    or an object with key "fixtureIds": [ ... ]. Missing file -> empty set.
+    """
+    try:
+        with open(exclusions_path, 'r', encoding='utf-8') as f:
+            data = json.load(f)
+        if isinstance(data, list):
+            return {str(x) for x in data}
+        if isinstance(data, dict) and 'fixtureIds' in data and isinstance(data['fixtureIds'], list):
+            return {str(x) for x in data['fixtureIds']}
+    except FileNotFoundError:
+        return set()
+    except Exception:
+        return set()
+
+def apply_exclusions(fixtures, excluded_ids: Set[str]):
+    """Return fixtures excluding any whose fixtureId is in excluded_ids."""
+    if not excluded_ids:
+        return fixtures
+    filtered = []
+    for fixture in fixtures:
+        fixture_id = fixture.get('fixtureId')
+        if fixture_id is None:
+            filtered.append(fixture)
+            continue
+        if str(fixture_id) in excluded_ids:
+            continue
+        filtered.append(fixture)
+    return filtered
 def print_fixtures(fixtures):
     """
     Print fixture information in a readable format.
@@ -388,6 +420,10 @@ if __name__ == "__main__":
             selected = filter_by_date_range(fixtures, args.start, args.end)
         else:
             selected = filter_weekend_fixtures(fixtures)
+        # Apply persistent exclusions (by fixtureId) if present
+        excluded_ids = load_exclusions()
+        if excluded_ids:
+            selected = apply_exclusions(selected, excluded_ids)
         print_fixtures(selected)
         process_fixtures(selected)
         generate_json_output(selected, output_filename=args.output)
