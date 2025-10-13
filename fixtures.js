@@ -1,7 +1,7 @@
 // Load and populate fixtures
 async function loadFixtures() {
     try {
-        const response = await fetch('fixtures.json');
+        const response = await fetch(`weekend_fixtures.json?t=${Date.now()}`, { cache: 'no-store' });
         const data = await response.json();
         
         // Get the fixtures container
@@ -36,8 +36,9 @@ function createFixtureElement(fixture) {
     const awayTeam = fixture.away_team.replace(/(\d+)$/, `${genderSuffix}$1`);
     
     // Determine score display
-    const scoreDisplay = fixture.result ? fixture.result : '- : -';
-    const scoreClass = fixture.result ? 'score-active' : 'score-placeholder';
+    const hasBothScores = Number.isInteger(fixture.home_score) && Number.isInteger(fixture.away_score);
+    const scoreDisplay = hasBothScores ? `${fixture.home_score} : ${fixture.away_score}` : '- : -';
+    const scoreClass = hasBothScores ? 'score-active' : 'score-placeholder';
     
     fixtureDiv.innerHTML = `
         <div class="fixture-content">
@@ -68,4 +69,5 @@ function setViewport() {
 document.addEventListener('DOMContentLoaded', function() {
     setViewport();
     loadFixtures();
+    setInterval(loadFixtures, 10000); // refresh every 10 seconds (temporary for testing)
 });
