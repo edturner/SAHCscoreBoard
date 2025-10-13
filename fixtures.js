@@ -69,5 +69,5 @@ function setViewport() {
 document.addEventListener('DOMContentLoaded', function() {
     setViewport();
     loadFixtures();
-    setInterval(loadFixtures, 10000); // refresh every 10 seconds (temporary for testing)
+    // setInterval(loadFixtures, 10000); // refresh every 10 seconds (temporary for testing)
 });
