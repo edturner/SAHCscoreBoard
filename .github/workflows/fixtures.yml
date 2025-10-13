@@ -1,7 +1,16 @@
 name: Build weekend fixtures (structure)
 
 on:
-  workflow_dispatch: {}
+  workflow_dispatch:
+    inputs:
+      start:
+        description: "Start date dd/mm/YYYY (optional)"
+        required: false
+        default: ""
+      end:
+        description: "End date dd/mm/YYYY (optional)"
+        required: false
+        default: ""
   schedule:
     - cron: '0 3 * * 4,5'     # Thu/Fri 03:00 UTC initial build (low frequency)
 
@@ -31,7 +40,12 @@ jobs:
         run: python main.py
 
       - name: Build weekend fixtures JSON
-        run: python filter.py --output weekend_fixtures.json
+        run: |
+          if [ -n "${{ github.event.inputs.start }}" ] && [ -n "${{ github.event.inputs.end }}" ]; then
+            python filter.py --start "${{ github.event.inputs.start }}" --end "${{ github.event.inputs.end }}" --output weekend_fixtures.json
+          else
+            python filter.py --output weekend_fixtures.json
+          fi
 
       - name: Commit and push changes
         run: |
