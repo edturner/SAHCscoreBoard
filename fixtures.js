@@ -14,6 +14,15 @@ async function loadFixtures() {
         // Determine which fixtures to load based on the page
         const isHomePage = document.body.classList.contains('home');
         const fixtures = isHomePage ? data.home : data.away;
+
+        // Update the date header based on the first fixture's date
+        const dateHeaderEl = fixturesContainer.querySelector('.date-header');
+        if (dateHeaderEl && fixtures && fixtures.length > 0) {
+            const formatted = formatDateHeader(fixtures[0].date);
+            if (formatted) {
+                dateHeaderEl.textContent = formatted;
+            }
+        }
         
         // Populate fixtures
         fixtures.forEach(fixture => {
@@ -69,5 +78,23 @@ function setViewport() {
 document.addEventListener('DOMContentLoaded', function() {
     setViewport();
     loadFixtures();
-    // setInterval(loadFixtures, 10000); // refresh every 10 seconds (temporary for testing)
+    setInterval(loadFixtures, 300000); // refresh every 5 minutes
 });
+
+function formatDateHeader(isoDateString) {
+    try {
+        const d = new Date(isoDateString);
+        if (isNaN(d.getTime())) return null;
+        const weekday = d.toLocaleDateString('en-GB', { weekday: 'long' });
+        const day = d.getDate();
+        const month = d.toLocaleDateString('en-GB', { month: 'long' });
+        return `${weekday} ${day}${getOrdinal(day)} ${month}`;
+    } catch (e) {
+        return null;
+    }
+}
+
+function getOrdinal(n) {
+    const s = ["th", "st", "nd", "rd"], v = n % 100;
+    return s[(v - 20) % 10] || s[v] || s[0];
+}
