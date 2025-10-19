@@ -141,11 +141,15 @@ def filter_weekend_fixtures(fixtures):
     weekend_fixtures = []
     today = datetime.now(UTC)
 
-    # Calculate next Saturday in UTC
-    days_ahead = (5 - today.weekday()) % 7
-    if days_ahead == 0 and today.weekday() == 5:
+    # Calculate the Saturday of the relevant weekend in UTC
+    # On Sunday, still use the current weekend (yesterday's Saturday)
+    if today.weekday() == 6:  # Sunday
+        saturday_utc = (today - timedelta(days=1)).replace(hour=0, minute=0, second=0, microsecond=0)
+    elif today.weekday() == 5:  # Saturday
         saturday_utc = today.replace(hour=0, minute=0, second=0, microsecond=0)
     else:
+        # Monday-Friday: find the upcoming Saturday of this week
+        days_ahead = (5 - today.weekday()) % 7
         saturday_utc = (today + timedelta(days=days_ahead)).replace(hour=0, minute=0, second=0, microsecond=0)
 
     monday_utc = saturday_utc + timedelta(days=2)
