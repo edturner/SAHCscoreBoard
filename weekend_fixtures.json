@@ -1,5 +1,5 @@
 {
-  "generated_at": "2025-10-30T03:36:39.535807+00:00",
+  "generated_at": "2025-10-31T03:37:33.612195+00:00",
   "home": [
     {
       "date": "2025-11-01T10:30:00+00:00",
@@ -73,20 +73,6 @@
     },
     {
       "date": "2025-11-01T15:00:00+00:00",
-      "team": "St Albans 2",
-      "category": "men",
-      "home_team": "St Albans 2",
-      "away_team": "Old Southendian 1",
-      "kickoff": "15:00",
-      "division": "Division 1 South",
-      "location": "Home",
-      "status": "Scheduled",
-      "fixtureId": "1-17777074",
-      "home_score": null,
-      "away_score": null
-    },
-    {
-      "date": "2025-11-01T15:00:00+00:00",
       "team": "St Albans 7",
       "category": "men",
       "home_team": "St Albans 7",
@@ -96,6 +82,20 @@
       "location": "Home",
       "status": "Scheduled",
       "fixtureId": "1-17779031",
+      "home_score": null,
+      "away_score": null
+    },
+    {
+      "date": "2025-11-01T15:00:00+00:00",
+      "team": "St Albans 2",
+      "category": "men",
+      "home_team": "St Albans 2",
+      "away_team": "Old Southendian 1",
+      "kickoff": "15:00",
+      "division": "Division 1 South",
+      "location": "Home",
+      "status": "Scheduled",
+      "fixtureId": "1-17777074",
       "home_score": null,
       "away_score": null
     },
@@ -145,20 +145,6 @@
   "away": [
     {
       "date": "2025-11-01T11:30:00+00:00",
-      "team": "St Albans 3",
-      "category": "women",
-      "home_team": "Old Loughtonians 2",
-      "away_team": "St Albans 3",
-      "kickoff": "11:30",
-      "division": "Division 1 South",
-      "location": "Away",
-      "status": "Scheduled",
-      "fixtureId": "1-17779969",
-      "home_score": null,
-      "away_score": null
-    },
-    {
-      "date": "2025-11-01T11:30:00+00:00",
       "team": "St Albans 7",
       "category": "women",
       "home_team": "Bedford 6",
@@ -182,6 +168,20 @@
       "location": "Away",
       "status": "Scheduled",
       "fixtureId": "1-17778521",
+      "home_score": null,
+      "away_score": null
+    },
+    {
+      "date": "2025-11-01T11:30:00+00:00",
+      "team": "St Albans 3",
+      "category": "women",
+      "home_team": "Old Loughtonians 2",
+      "away_team": "St Albans 3",
+      "kickoff": "11:30",
+      "division": "Division 1 South",
+      "location": "Away",
+      "status": "Scheduled",
+      "fixtureId": "1-17779969",
       "home_score": null,
       "away_score": null
     },
