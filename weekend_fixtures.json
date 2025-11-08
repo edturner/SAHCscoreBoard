@@ -1,5 +1,5 @@
 {
-  "generated_at": "2025-11-07T03:36:53.064559+00:00",
+  "generated_at": "2025-11-08T00:41:51.245607+00:00",
   "home": [
     {
       "date": "2025-11-08T10:30:00+00:00",
@@ -215,20 +215,6 @@
     },
     {
       "date": "2025-11-08T15:00:00+00:00",
-      "team": "St Albans Centurions",
-      "category": "men",
-      "home_team": "Reading Relics",
-      "away_team": "St Albans Centurions",
-      "kickoff": "15:00",
-      "division": "South Masters Men's O60 Premier",
-      "location": "Away",
-      "status": "Scheduled",
-      "fixtureId": "1-17747874",
-      "home_score": null,
-      "away_score": null
-    },
-    {
-      "date": "2025-11-08T15:00:00+00:00",
       "team": "St Albans 2",
       "category": "men",
       "home_team": "Letchworth 1",
@@ -238,6 +224,20 @@
       "location": "Away",
       "status": "Scheduled",
       "fixtureId": "1-17777078",
+      "home_score": null,
+      "away_score": null
+    },
+    {
+      "date": "2025-11-08T15:00:00+00:00",
+      "team": "St Albans Centurions",
+      "category": "men",
+      "home_team": "Reading Relics",
+      "away_team": "St Albans Centurions",
+      "kickoff": "15:00",
+      "division": "South Masters Men's O60 Premier",
+      "location": "Away",
+      "status": "Scheduled",
+      "fixtureId": "1-17747874",
       "home_score": null,
       "away_score": null
     },
