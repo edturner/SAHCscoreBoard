@@ -1,5 +1,5 @@
 {
-  "generated_at": "2025-11-10T00:00:17.334929+00:00",
+  "generated_at": "2025-11-13T03:40:39.257693+00:00",
   "home": [
     {
       "date": "2025-11-15T10:30:00+00:00",
@@ -201,20 +201,6 @@
     },
     {
       "date": "2025-11-15T14:30:00+00:00",
-      "team": "St Albans 6",
-      "category": "men",
-      "home_team": "Welwyn Garden City 2",
-      "away_team": "St Albans 6",
-      "kickoff": "14:30",
-      "division": "Division 5 South West",
-      "location": "Away",
-      "status": "Scheduled",
-      "fixtureId": "1-17779046",
-      "home_score": null,
-      "away_score": null
-    },
-    {
-      "date": "2025-11-15T14:30:00+00:00",
       "team": "St Albans 7",
       "category": "women",
       "home_team": "Hertford 4",
@@ -228,16 +214,16 @@
       "away_score": null
     },
     {
-      "date": "2025-11-15T16:00:00+00:00",
-      "team": "St Albans 9",
+      "date": "2025-11-15T14:30:00+00:00",
+      "team": "St Albans 6",
       "category": "men",
-      "home_team": "Broxbourne 4",
-      "away_team": "St Albans 9",
-      "kickoff": "16:00",
-      "division": "Division 7 South West",
+      "home_team": "Welwyn Garden City 2",
+      "away_team": "St Albans 6",
+      "kickoff": "14:30",
+      "division": "Division 5 South West",
       "location": "Away",
       "status": "Scheduled",
-      "fixtureId": "1-17779543",
+      "fixtureId": "1-17779046",
       "home_score": null,
       "away_score": null
     },
@@ -252,6 +238,20 @@
       "location": "Away",
       "status": "Scheduled",
       "fixtureId": "1-17778530",
+      "home_score": null,
+      "away_score": null
+    },
+    {
+      "date": "2025-11-15T16:00:00+00:00",
+      "team": "St Albans 9",
+      "category": "men",
+      "home_team": "Broxbourne 4",
+      "away_team": "St Albans 9",
+      "kickoff": "16:00",
+      "division": "Division 7 South West",
+      "location": "Away",
+      "status": "Scheduled",
+      "fixtureId": "1-17779543",
       "home_score": null,
       "away_score": null
     }
