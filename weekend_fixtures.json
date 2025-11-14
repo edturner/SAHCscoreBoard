@@ -1,5 +1,5 @@
 {
-  "generated_at": "2025-11-13T03:40:39.257693+00:00",
+  "generated_at": "2025-11-14T03:38:49.253473+00:00",
   "home": [
     {
       "date": "2025-11-15T10:30:00+00:00",
@@ -173,20 +173,6 @@
     },
     {
       "date": "2025-11-15T13:30:00+00:00",
-      "team": "St Albans 3",
-      "category": "women",
-      "home_team": "Saffron Walden 1",
-      "away_team": "St Albans 3",
-      "kickoff": "13:30",
-      "division": "Division 1 South",
-      "location": "Away",
-      "status": "Scheduled",
-      "fixtureId": "1-17779981",
-      "home_score": null,
-      "away_score": null
-    },
-    {
-      "date": "2025-11-15T13:30:00+00:00",
       "team": "St Albans 4",
       "category": "women",
       "home_team": "Luton Town 1",
@@ -196,6 +182,20 @@
       "location": "Away",
       "status": "Scheduled",
       "fixtureId": "1-17780380",
+      "home_score": null,
+      "away_score": null
+    },
+    {
+      "date": "2025-11-15T13:30:00+00:00",
+      "team": "St Albans 3",
+      "category": "women",
+      "home_team": "Saffron Walden 1",
+      "away_team": "St Albans 3",
+      "kickoff": "13:30",
+      "division": "Division 1 South",
+      "location": "Away",
+      "status": "Scheduled",
+      "fixtureId": "1-17779981",
       "home_score": null,
       "away_score": null
     },
