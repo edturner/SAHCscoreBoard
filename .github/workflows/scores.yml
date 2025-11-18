@@ -37,21 +37,21 @@ jobs:
           pip install -r requirements.txt || pip install requests beautifulsoup4 pytz
 
       - name: Fetch latest matches HTML
-        run: python main.py || python main.py
+        run: python scripts/main.py || python scripts/main.py
 
       - name: Rebuild weekend fixtures JSON with updated scores
         run: |
           if [ -n "${{ github.event.inputs.start }}" ] && [ -n "${{ github.event.inputs.end }}" ]; then
-            python filter.py --start "${{ github.event.inputs.start }}" --end "${{ github.event.inputs.end }}" --output weekend_fixtures.json
+            python scripts/filter.py --start "${{ github.event.inputs.start }}" --end "${{ github.event.inputs.end }}" --output data/scoreboard/weekend_fixtures.json
           else
-            python filter.py --output weekend_fixtures.json
+            python scripts/filter.py --output data/scoreboard/weekend_fixtures.json
           fi
 
       - name: Commit and push changes
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@users.noreply.github.com"
-          git add weekend_fixtures.json || true
+          git add data/scoreboard/weekend_fixtures.json || true
           git commit -m "Update scores [skip ci]" || echo "No changes"
           git push
 

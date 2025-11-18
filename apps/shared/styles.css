@@ -2,7 +2,7 @@
 
 @font-face {
     font-family: 'TT Bluescreens';
-    src: url('fonts/TTBluescreens-Regular.ttf') format('truetype');
+    src: url('fonts/TT Bluescreens Trial Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -10,7 +10,7 @@
 
 @font-face {
     font-family: 'TT Bluescreens';
-    src: url('fonts/TTBluescreens-Bold.ttf') format('truetype');
+    src: url('fonts/TT Bluescreens Trial Bold.ttf') format('truetype');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -18,7 +18,7 @@
 
 @font-face {
     font-family: 'TT Bluescreens';
-    src: url('fonts/TTBluescreens-Italic.ttf') format('truetype');
+    src: url('fonts/TT Bluescreens Trial Italic.ttf') format('truetype');
     font-weight: normal;
     font-style: italic;
     font-display: swap;
@@ -26,7 +26,7 @@
 
 @font-face {
     font-family: 'TT Bluescreens';
-    src: url('fonts/TTBluescreens-BoldItalic.ttf') format('truetype');
+    src: url('fonts/TT Bluescreens Trial Bold Italic.ttf') format('truetype');
     font-weight: bold;
     font-style: italic;
     font-display: swap;
@@ -329,4 +329,258 @@ body.home .subtitle {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+/* League of Leagues layout */
+.center-content.league-layout {
+    padding: 30px 50px 120px 50px;
+    gap: 20px;
+    background: linear-gradient(180deg, rgba(31, 39, 83, 0.95), rgba(20, 24, 52, 0.98));
+}
+
+.league-title {
+    padding-top: 20px;
+}
+
+.league-title .title {
+    font-size: 84px;
+}
+
+.league-title .subtitle {
+    font-size: 84px;
+}
+
+.league-title .tagline {
+    margin-top: 10px;
+    color: #f0f1f5;
+    font-size: 24px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.filter-label {
+    margin-top: 20px;
+    padding: 6px 18px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.08);
+    color: #ffffff;
+    font-size: 60px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.league-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    overflow: hidden;
+}
+
+.league-table {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.league-grid {
+    flex: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-right: 4px;
+}
+
+.table-row {
+    display: grid;
+    grid-template-columns: 80px 180px 90px 65px 100px 170px; 
+    gap: 12px;
+    padding: 12px 20px;
+    border-radius: 12px;
+    background: rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    align-items: center;
+    animation: slideInUp 0.4s ease forwards;
+}
+
+.table-row.table-header {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 18px;
+    color: #edf0ff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+}
+
+
+.col {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 100%;
+}
+
+.col-rank {
+    align-items: center;
+    justify-content: center;
+}
+
+.col-ppg,
+.col-points {
+    align-items: flex-center;
+    text-align: left;
+}
+
+.table-row.table-header .col-ppg,
+.table-row.table-header .col-points {
+    align-items: flex-start;
+    text-align: left;
+}
+
+.col-record {
+    align-items: flex-start;
+}
+
+.col-form {
+    align-items: flex-end;
+}
+
+.rank-chip {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: 800;
+    gap: 4px;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.35);
+}
+
+.rank-number {
+    font-size: 26px;
+    line-height: 1;
+}
+
+.rank-arrow {
+    font-size: 16px;
+}
+
+.badge-up {
+    background: linear-gradient(135deg, #11998e, #38ef7d);
+}
+
+.badge-steady {
+    background: linear-gradient(135deg, #3d3d3d, #918f8f);
+}
+
+.badge-down {
+    background: linear-gradient(135deg, #ff5858, #f09819);
+}
+
+.team-name {
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+.competition-label {
+    color: #cfd3ff;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+}
+
+.ppg-value {
+    font-size: 30px;
+    font-weight: 900;
+    color: #fbd38d;
+    line-height: 1;
+}
+
+.ppg-label {
+    font-size: 14px;
+    letter-spacing: 2px;
+    color: #9aa0ff;
+    text-transform: uppercase;
+}
+
+.points-value {
+    font-size: 28px;
+    font-weight: 800;
+    color: #ffffff;
+}
+
+.points-label {
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.record-main {
+    font-size: 24px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.record-sub {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.form-badges {
+    display: flex;
+    gap: 6px;
+}
+
+.form-badge {
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: #0f1325;
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.form-win {
+    background: #21c784;
+    color: #032011;
+}
+
+.form-draw {
+    background: #ffd64a;
+    color: #4a3000;
+}
+
+.form-loss {
+    background: #f14c4c;
+    color: #ffe5e5;
+}
+
+.error-state {
+    color: #ffe2e2;
+    font-size: 32px;
+    padding: 40px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 12px;
+    background: rgba(0, 0, 0, 0.45);
 }

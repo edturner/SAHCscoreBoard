@@ -1,7 +1,7 @@
 // Load and populate fixtures
 async function loadFixtures() {
     try {
-        const response = await fetch(`weekend_fixtures.json?t=${Date.now()}`, { cache: 'no-store' });
+        const response = await fetch(`../../data/scoreboard/weekend_fixtures.json?t=${Date.now()}`, { cache: 'no-store' });
         const data = await response.json();
         
         // Get the fixtures container

@@ -1,5 +1,10 @@
 import requests
 from datetime import datetime
+from pathlib import Path
+
+REPO_ROOT = Path(__file__).resolve().parents[1]
+RAW_DATA_DIR = REPO_ROOT / "data" / "raw"
+RAW_DATA_DIR.mkdir(parents=True, exist_ok=True)
 
 session = requests.Session()
 
@@ -42,10 +47,10 @@ print(f"Response Status: {response.status_code}")
 if response.status_code == 200:
     # Create filename with timestamp
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    filename = f"matches_data_{timestamp}.html"
+    filename = RAW_DATA_DIR / f"matches_data_{timestamp}.html"
     
     # Save the raw HTML response
-    with open(filename, 'w', encoding='utf-8') as f:
+    with filename.open('w', encoding='utf-8') as f:
         f.write(response.text)
     
     print(f"Data saved to {filename}")

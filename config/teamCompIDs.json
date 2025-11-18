@@ -1,0 +1,228 @@
+[
+  {
+    "name": "St Albans 1(M)",
+    "teamId": "d2d0b65e-bf96-476b-8d38-6d28dae65a61",
+    "competitions": [
+      {
+        "compId": "c14af471-9386-4f7b-a873-8772fe3bf343",
+        "label": "Conference Midlands (2025-2026)",
+        "selected": true
+      }
+    ],
+    "compId": "c14af471-9386-4f7b-a873-8772fe3bf343",
+    "compLabel": "Conference Midlands (2025-2026)"
+  },
+  {
+    "name": "St Albans 1 (F)",
+    "teamId": "d9f0f20b-37ae-4a51-aa7c-6b4c2718da54",
+    "competitions": [
+      {
+        "compId": "bf98e4b9-3fc0-40d0-abeb-dba20beb07ec",
+        "label": "Women's Conference Midlands (2025-2026)",
+        "selected": true
+      }
+    ],
+    "compId": "bf98e4b9-3fc0-40d0-abeb-dba20beb07ec",
+    "compLabel": "Women's Conference Midlands (2025-2026)"
+  },
+  {
+    "name": "St Albans 10 (M)",
+    "teamId": "fe68372e-c867-48bf-8262-9e0db5d72500",
+    "competitions": []
+  },
+  {
+    "name": "St Albans 2 (M)",
+    "teamId": "f1c3a876-4de3-4c99-9800-171fe4667602",
+    "competitions": [
+      {
+        "compId": "19353043-685d-47f5-9c77-3b49f3b8e90a",
+        "label": "East Open - Men's Division 1 South (2025-2026)",
+        "selected": true
+      }
+    ],
+    "compId": "19353043-685d-47f5-9c77-3b49f3b8e90a",
+    "compLabel": "East Open - Men's Division 1 South (2025-2026)"
+  },
+  {
+    "name": "St Albans 2 (F)",
+    "teamId": "a5b838ee-1d9d-491e-b1bb-f05388eff199",
+    "competitions": [
+      {
+        "compId": "c9eb7874-fda3-45aa-962d-b9278abec54c",
+        "label": "East Women's Premier Division (2025-2026)",
+        "selected": true
+      }
+    ],
+    "compId": "c9eb7874-fda3-45aa-962d-b9278abec54c",
+    "compLabel": "East Women's Premier Division (2025-2026)"
+  },
+  {
+    "name": "St Albans 3 (F)",
+    "teamId": "b00d4fe3-eacf-4b31-92cf-4ec4798eb44e",
+    "competitions": [
+      {
+        "compId": "13f89328-f53b-422c-9aff-22ec2ff92215",
+        "label": "East Women's Division 1 South (2025-2026)",
+        "selected": true
+      }
+    ],
+    "compId": "13f89328-f53b-422c-9aff-22ec2ff92215",
+    "compLabel": "East Women's Division 1 South (2025-2026)"
+  },
+  {
+    "name": "St Albans 3 (M)",
+    "teamId": "39486394-dad6-4e98-b4fb-6cc03cbc7910",
+    "competitions": [
+      {
+        "compId": "2d9f6c8d-3794-444a-9f05-03b54eea5754",
+        "label": "East Open - Men's Division 2 South West (2025-2026)",
+        "selected": true
+      }
+    ],
+    "compId": "2d9f6c8d-3794-444a-9f05-03b54eea5754",
+    "compLabel": "East Open - Men's Division 2 South West (2025-2026)"
+  },
+  {
+    "name": "St Albans 4 (M)",
+    "teamId": "3d7ecaa8-5810-4721-9e4c-a8cea9ff8581",
+    "competitions": [
+      {
+        "compId": "2d9f6c8d-3794-444a-9f05-03b54eea5754",
+        "label": "East Open - Men's Division 2 South West (2025-2026)",
+        "selected": true
+      }
+    ],
+    "compId": "2d9f6c8d-3794-444a-9f05-03b54eea5754",
+    "compLabel": "East Open - Men's Division 2 South West (2025-2026)"
+  },
+  {
+    "name": "St Albans 4 (F)",
+    "teamId": "e61f49a1-4ebb-4d1e-b346-bbfe5e7763a5",
+    "competitions": [
+      {
+        "compId": "42cf0648-247f-4956-b9b0-6fe89d2367c3",
+        "label": "East Women's Division 2 South West (2025-2026)",
+        "selected": true
+      }
+    ],
+    "compId": "42cf0648-247f-4956-b9b0-6fe89d2367c3",
+    "compLabel": "East Women's Division 2 South West (2025-2026)"
+  },
+  {
+    "name": "St Albans 5 (M)",
+    "teamId": "f657d2bb-dafe-4b84-8b33-2c51c690bd5c",
+    "competitions": [
+      {
+        "compId": "cf871089-4fcc-4f96-8cd5-a03864ae64ab",
+        "label": "East Open - Men's Division 4 South West (2025-2026)",
+        "selected": true
+      }
+    ],
+    "compId": "cf871089-4fcc-4f96-8cd5-a03864ae64ab",
+    "compLabel": "East Open - Men's Division 4 South West (2025-2026)"
+  },
+  {
+    "name": "St Albans 5 (F)",
+    "teamId": "91e2a40f-fe91-4c8e-9ca6-aed40e6178b2",
+    "competitions": [
+      {
+        "compId": "3b7fa728-0624-4d9b-a707-67f9085bb0f0",
+        "label": "East Women's Division 4 South West (2025-2026)",
+        "selected": true
+      }
+    ],
+    "compId": "3b7fa728-0624-4d9b-a707-67f9085bb0f0",
+    "compLabel": "East Women's Division 4 South West (2025-2026)"
+  },
+  {
+    "name": "St Albans 6 (M)",
+    "teamId": "3896f4e5-7d73-483b-b735-31f976ed7312",
+    "competitions": [
+      {
+        "compId": "d98e8166-f9ed-40dc-b4db-c517dc8468df",
+        "label": "East Open - Men's Division 5 South West (2025-2026)",
+        "selected": true
+      }
+    ],
+    "compId": "d98e8166-f9ed-40dc-b4db-c517dc8468df",
+    "compLabel": "East Open - Men's Division 5 South West (2025-2026)"
+  },
+  {
+    "name": "St Albans 6 (F)",
+    "teamId": "30cc8f2b-3eae-47fb-a5fb-f0b976c3d3a2",
+    "competitions": [
+      {
+        "compId": "3b7fa728-0624-4d9b-a707-67f9085bb0f0",
+        "label": "East Women's Division 4 South West (2025-2026)",
+        "selected": true
+      }
+    ],
+    "compId": "3b7fa728-0624-4d9b-a707-67f9085bb0f0",
+    "compLabel": "East Women's Division 4 South West (2025-2026)"
+  },
+  {
+    "name": "St Albans 7 (M)",
+    "teamId": "61325529-1ddf-4011-9913-2073c8f457f7",
+    "competitions": [
+      {
+        "compId": "d98e8166-f9ed-40dc-b4db-c517dc8468df",
+        "label": "East Open - Men's Division 5 South West (2025-2026)",
+        "selected": true
+      }
+    ],
+    "compId": "d98e8166-f9ed-40dc-b4db-c517dc8468df",
+    "compLabel": "East Open - Men's Division 5 South West (2025-2026)"
+  },
+  {
+    "name": "St Albans 7 (F)",
+    "teamId": "1b96b793-1dd0-4e01-98b1-d07139fa44c4",
+    "competitions": [
+      {
+        "compId": "9ccc79ed-17aa-4f3f-b3d5-acf09c8c2ced",
+        "label": "East Women's Division 5 South West (2025-2026)",
+        "selected": true
+      }
+    ],
+    "compId": "9ccc79ed-17aa-4f3f-b3d5-acf09c8c2ced",
+    "compLabel": "East Women's Division 5 South West (2025-2026)"
+  },
+  {
+    "name": "St Albans 8 (M)",
+    "teamId": "5949dcf2-d51f-4e27-9bd3-0639e58261c6",
+    "competitions": [
+      {
+        "compId": "d45e986f-45b4-43db-9ccc-793bd41a6a79",
+        "label": "East Open - Men's Division 6 South West (2025-2026)",
+        "selected": true
+      }
+    ],
+    "compId": "d45e986f-45b4-43db-9ccc-793bd41a6a79",
+    "compLabel": "East Open - Men's Division 6 South West (2025-2026)"
+  },
+  {
+    "name": "St Albans 8 (F)",
+    "teamId": "7df3c3cf-94cd-4e54-bb74-b85f0f93bcb8",
+    "competitions": [
+      {
+        "compId": "c36cfbd8-b419-4fec-8a53-bb01977a30da",
+        "label": "East Women's Division 6 South West (2025-2026)",
+        "selected": true
+      }
+    ],
+    "compId": "c36cfbd8-b419-4fec-8a53-bb01977a30da",
+    "compLabel": "East Women's Division 6 South West (2025-2026)"
+  },
+  {
+    "name": "St Albans 9 (M)",
+    "teamId": "2d0cbcaa-ddfe-4aa9-ba90-47f28ee800e1",
+    "competitions": [
+      {
+        "compId": "423f44ad-8455-4233-8abe-4c4543dc0d38",
+        "label": "East Open - Men's Division 7 South West (2025-2026)",
+        "selected": true
+      }
+    ],
+    "compId": "423f44ad-8455-4233-8abe-4c4543dc0d38",
+    "compLabel": "East Open - Men's Division 7 South West (2025-2026)"
+  }
+]
