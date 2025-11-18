@@ -1,5 +1,5 @@
 {
-  "generated_at": "2025-11-17T00:00:17.264797+00:00",
+  "generated_at": "2025-11-18T17:29:09.122693+00:00",
   "home": [
     {
       "date": "2025-11-22T10:30:00+00:00",
@@ -173,20 +173,6 @@
     },
     {
       "date": "2025-11-22T15:00:00+00:00",
-      "team": "St Albans Centurions",
-      "category": "men",
-      "home_team": "Surbiton Vintage",
-      "away_team": "St Albans Centurions",
-      "kickoff": "15:00",
-      "division": "South Masters Open - Men's O60 Premier",
-      "location": "Away",
-      "status": "Scheduled",
-      "fixtureId": "1-17900025",
-      "home_score": null,
-      "away_score": null
-    },
-    {
-      "date": "2025-11-22T15:00:00+00:00",
       "team": "St Albans 2",
       "category": "women",
       "home_team": "Cambridge University 2",
@@ -196,6 +182,20 @@
       "location": "Away",
       "status": "Scheduled",
       "fixtureId": "1-17779725",
+      "home_score": null,
+      "away_score": null
+    },
+    {
+      "date": "2025-11-22T15:00:00+00:00",
+      "team": "St Albans Centurions",
+      "category": "men",
+      "home_team": "Surbiton Vintage",
+      "away_team": "St Albans Centurions",
+      "kickoff": "15:00",
+      "division": "South Masters Open - Men's O60 Premier",
+      "location": "Away",
+      "status": "Scheduled",
+      "fixtureId": "1-17900025",
       "home_score": null,
       "away_score": null
     },
