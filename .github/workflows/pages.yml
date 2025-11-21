@@ -21,13 +21,51 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Prepare Pages Structure
+        run: |
+          # Create a staging directory
+          mkdir -p _site
+          
+          # Copy scoreboard pages to root
+          cp apps/scoreboard/*.html _site/
+          cp apps/scoreboard/*.js _site/
+          
+          # Copy league pages to root
+          cp apps/league/*.html _site/
+          cp apps/league/*.js _site/
+          
+          # Copy shared assets
+          mkdir -p _site/fonts _site/images
+          cp -r apps/shared/fonts/* _site/fonts/
+          cp -r apps/shared/images/* _site/images/
+          cp apps/shared/styles.css _site/styles.css
+          
+          # Copy data files (needed by JS)
+          mkdir -p _site/data
+          cp -r data/scoreboard _site/data/
+          cp -r data/league _site/data/
+          
+          # Update HTML file paths to work from root
+          # Fix CSS path
+          find _site -name "*.html" -exec sed -i 's|href="../shared/styles.css"|href="styles.css"|g' {} \;
+          # Fix JS paths (they're already in same dir, but ensure)
+          find _site -name "*.html" -exec sed -i 's|src="fixtures.js"|src="fixtures.js"|g' {} \;
+          find _site -name "*.html" -exec sed -i 's|src="league.js"|src="league.js"|g' {} \;
+          
+          # Update CSS font/image paths
+          sed -i 's|url('\''fonts/|url('\''fonts/|g' _site/styles.css
+          sed -i 's|url('\''images/|url('\''images/|g' _site/styles.css
+          
+          # Update JS data paths (they reference ../../data/)
+          sed -i 's|../../data/|data/|g' _site/*.js
+
       - name: Configure Pages
         uses: actions/configure-pages@v5
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: "."       # IMPORTANT: publish the entire repo root
+          path: "_site"
 
   deploy:
     runs-on: ubuntu-latest
