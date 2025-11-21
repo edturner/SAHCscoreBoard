@@ -43,19 +43,49 @@ python scripts/gms_fetcher.py validate-snapshots `
 
 ### 4. Deploy Static Assets
 - Upload `data/league/teamData.json` and `teamData.prev.json` wherever the HTML is hosted (static site, CDN, CMS).
-- Serve `apps/league/leagueOfLeagues.html` (and the shared `apps/shared` folder) from the repo root so relative paths resolve.
+- Serve `apps/league/leagueOfLeagues-men.html` and `leagueOfLeagues-women.html` (and the shared `apps/shared` folder) from the repo root so relative paths resolve.
 
 ---
 
 ### 5. Front-End Notes
 - `league.js` fetches both snapshots from `../../data/league/`.
-- The `data-gender` attribute on `<body>` controls which teams render; duplicate the HTML and switch to `data-gender="F"` for a women-only view.
+- The `data-gender` attribute on `<body>` controls which teams render. Use `leagueOfLeagues-men.html` (M) or `leagueOfLeagues-women.html` (F) for gender-specific views.
 - Missing `teamData.prev.json` simply results in neutral arrows (“steady”).
 
 ---
 
+### 6. Live Updates (Optional)
+
+For real-time updates, use the live updater script:
+
+**Standalone script (runs continuously):**
+```powershell
+python scripts/live_league_updater.py
+```
+
+**Run once (for cron/scheduled tasks):**
+```powershell
+python scripts/live_league_updater.py --once
+```
+
+**With validation:**
+```powershell
+python scripts/live_league_updater.py --once --validate --expect-count 26
+```
+
+**Custom interval (default is 5 minutes):**
+```powershell
+python scripts/live_league_updater.py --interval 10
+```
+
+**GitHub Actions automation:**
+- `.github/workflows/league-live.yml` runs every 5 minutes automatically
+- Fetches fresh data and commits updates to keep the display live
+- Can be triggered manually via workflow_dispatch
+
 ### Automation Ideas
-- Schedule `scripts/gms_fetcher.py bulk-team-data --rotate-snapshots` midweek via cron or GitHub Actions.
+- The live updater (`scripts/live_league_updater.py`) provides continuous updates every 5 minutes.
+- For weekly snapshots, schedule `scripts/gms_fetcher.py bulk-team-data --rotate-snapshots` midweek via cron or GitHub Actions.
 - Optionally push snapshots to object storage (S3/Azure) to keep the repo lightweight; just update `apps/league/league.js` to point at the hosted URLs.
 
 ---

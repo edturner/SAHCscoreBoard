@@ -129,7 +129,7 @@ body.away .pattern-overlay {
     font-weight: bold;
     font-style: italic;
     letter-spacing: 4px;
-    line-height: 1;
+    line-height: 0.8;
     text-align: center;
     font-family: 'TT Bluescreens', 'Inter', Arial, sans-serif;
 }
@@ -213,7 +213,7 @@ body.home .subtitle {
     margin-bottom: 20px;
     text-transform: uppercase;
     letter-spacing: 2px;
-    font-family: 'TT Bluescreens', 'Inter', Arial, sans-serif;
+    font-family:  'Inter', Arial, sans-serif;
     flex-shrink: 0;
     order: -1; /* This puts the date at the top of the flex container */
 }
@@ -244,7 +244,7 @@ body.home .subtitle {
     font-size: 22px;
     font-weight: bold;
     text-transform: uppercase;
-    font-family: 'TT Bluescreens', 'Inter', Arial, sans-serif;
+    font-family:  'Inter', Arial, sans-serif;
 }
 
 .team-home {
@@ -258,7 +258,7 @@ body.home .subtitle {
     font-size: 19px;
     margin: 0 15px;
     font-weight: bold;
-    font-family: 'TT Bluescreens', 'Inter', Arial, sans-serif;
+    font-family: 'Inter', Arial, sans-serif;
 }
 
 .team-away {
@@ -279,7 +279,7 @@ body.home .subtitle {
     font-size: 20px;
     font-weight: bold;
     margin-bottom: 5px;
-    font-family: 'TT Bluescreens', 'Inter', Arial, sans-serif;
+    font-family: 'Inter', Arial, sans-serif;
 }
 
 .score-info {
@@ -292,7 +292,7 @@ body.home .subtitle {
     text-transform: uppercase;
     letter-spacing: 1px;
     transition: all 0.3s ease;
-    font-family: 'TT Bluescreens', 'Inter', Arial, sans-serif;
+    font-family:  'Inter', Arial, sans-serif;
 }
 
 .score-active {
@@ -339,7 +339,7 @@ body.home .subtitle {
 }
 
 .league-title {
-    padding-top: 10px;
+    padding-top: 100px;
 }
 
 .league-title .title {

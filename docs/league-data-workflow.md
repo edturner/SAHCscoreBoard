@@ -116,7 +116,7 @@ The front-end is resilient: if `data/league/teamData.prev.json` cannot be fetche
 | 2 | Confirm console summary: “Saved N team records …” and no “Skipping rotation” warning. |
 | 3 | `python scripts/gms_fetcher.py validate-snapshots ...` | ensures both current/prev files are healthy. |
 | 4 | Upload `data/league/teamData.json` and `data/league/teamData.prev.json` to hosting (keep both!). |
-| 5 | Load `leagueOfLeagues.html` in a browser and confirm arrows/ranks look sensible. |
+| 5 | Load `leagueOfLeagues-men.html` or `leagueOfLeagues-women.html` in a browser and confirm arrows/ranks look sensible. |
 
 ---
 

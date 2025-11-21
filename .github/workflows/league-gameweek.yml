@@ -1,0 +1,33 @@
+name: Save Gameweek Snapshot
+
+on:
+  schedule:
+    - cron: '0 6 * * 1'   # Monday 6 AM UTC (after the weekend)
+  workflow_dispatch:       # Allow manual trigger
+
+jobs:
+  save-gameweek:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Save gameweek snapshot
+        run: |
+          if [ -f data/league/teamData.json ]; then
+            cp data/league/teamData.json data/league/teamData.lastGameweek.json
+            echo "Gameweek snapshot saved"
+          else
+            echo "Warning: teamData.json not found, skipping gameweek snapshot"
+            exit 0
+          fi
+
+      - name: Commit and push gameweek snapshot
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@users.noreply.github.com"
+          git add data/league/teamData.lastGameweek.json || true
+          git commit -m "Save gameweek snapshot [skip ci]" || echo "No changes"
+          git push

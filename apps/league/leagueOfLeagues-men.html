@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1080, height=1920, initial-scale=1.0, user-scalable=no">
+    <title>League of Leagues | Men</title>
+    <link rel="stylesheet" href="../shared/styles.css">
+</head>
+<body class="home league" data-gender="M">
+    <div class="pattern-background"></div>
+    <div class="pattern-overlay"></div>
+
+    <div class="content-container">
+        <div class="top-graphic"></div>
+
+        <div class="center-content league-layout">
+            <div class="text-container league-title">
+                <div class="title">LEAGUE</div>
+                <div class="subtitle">OF LEAGUES</div>
+                <div class="tagline">Ranked by Points Per Game (PPG)</div>
+                <div class="filter-label">Men's Teams</div>
+            </div>
+
+            <div class="league-container">
+                <div class="league-table">
+                    <div class="league-grid" id="league-grid">
+                        <div class="table-row table-header">
+                            <div class="col col-rank">Pos</div>
+                            <div class="col col-team">Team</div>
+                            <div class="col col-ppg">PPG</div>
+                            <div class="col col-points">Pts</div>
+                            <div class="col col-record">Record<br>W-D-L</div>
+                            <div class="col col-form">Last 5</div>
+                        </div>
+                        <!-- Rows injected by league.js -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="bottom-bar">
+                <!-- reserved for club logos if needed -->
+            </div>
+        </div>
+    </div>
+
+    <script src="league.js"></script>
+</body>
+</html>
+

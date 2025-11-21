@@ -185,10 +185,18 @@ async function loadLeague() {
 
         const rawTeams = await response.json();
         let previousTeamsRaw = [];
+        
+        // Try to load last gameweek snapshot first, fallback to prev snapshot
         try {
-            const previousResponse = await fetch('../../data/league/teamData.prev.json', { cache: 'no-store' });
-            if (previousResponse.ok) {
-                previousTeamsRaw = await previousResponse.json();
+            const gameweekResponse = await fetch('../../data/league/teamData.lastGameweek.json', { cache: 'no-store' });
+            if (gameweekResponse.ok) {
+                previousTeamsRaw = await gameweekResponse.json();
+            } else {
+                // Fallback to previous snapshot if gameweek snapshot doesn't exist
+                const previousResponse = await fetch('../../data/league/teamData.prev.json', { cache: 'no-store' });
+                if (previousResponse.ok) {
+                    previousTeamsRaw = await previousResponse.json();
+                }
             }
         } catch (prevError) {
             // eslint-disable-next-line no-console

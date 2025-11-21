@@ -13,7 +13,7 @@ Unified data pipeline, automation, and static assets for St Albans Hockey Club�
 ```
 apps/
   scoreboard/        # home/away HTML + fixtures.js
-  league/            # leagueOfLeagues.html + league.js
+  league/            # leagueOfLeagues-men.html, leagueOfLeagues-women.html + league.js
   shared/            # styles.css, fonts/, images/ shared by both apps
 config/              # teamIDs.json + teamCompIDs.json (GMS config)
 data/
@@ -72,7 +72,8 @@ Each doc links the relevant scripts, cron jobs, and troubleshooting tips so new 
 ### Automation Reference
 - `.github/workflows/fixtures.yml` – Thu/Fri overnight build; runs `scripts/main.py` and `scripts/filter.py` to refresh structure ahead of the weekend.
 - `.github/workflows/scores.yml` – Every 5 minutes on Sat/Sun; re-runs the same scripts to capture score updates mid-weekend.
-- Both workflows commit only `data/scoreboard/weekend_fixtures.json` to keep history clean.
+- `.github/workflows/league-live.yml` – Every 5 minutes; runs `scripts/live_league_updater.py` to keep League of Leagues data current.
+- All workflows commit only their respective JSON files to keep history clean.
 
 ---
 
