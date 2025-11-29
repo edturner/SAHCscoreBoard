@@ -1,5 +1,5 @@
 {
-  "generated_at": "2025-11-29T11:19:49.945808+00:00",
+  "generated_at": "2025-11-29T11:24:51.228180+00:00",
   "home": [
     {
       "date": "2025-11-29T10:30:00+00:00",
@@ -68,20 +68,6 @@
       "location": "Home",
       "status": "Scheduled",
       "fixtureId": "1-17747894",
-      "home_score": null,
-      "away_score": null
-    },
-    {
-      "date": "2025-11-29T13:30:00+00:00",
-      "team": "St Albans Centurions",
-      "category": "men",
-      "home_team": "St Albans Centurions",
-      "away_team": "Bromley & Beckenham O60",
-      "kickoff": "13:30",
-      "division": "South Masters Open - Men's O60 Premier",
-      "location": "Home",
-      "status": "Scheduled",
-      "fixtureId": "1-17900031",
       "home_score": null,
       "away_score": null
     },
