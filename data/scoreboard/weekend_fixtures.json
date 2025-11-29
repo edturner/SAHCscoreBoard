@@ -1,5 +1,5 @@
 {
-  "generated_at": "2025-11-29T17:28:27.694494+00:00",
+  "generated_at": "2025-11-29T17:38:00.830085+00:00",
   "home": [
     {
       "date": "2025-11-29T10:30:00+00:00",
@@ -96,8 +96,8 @@
       "location": "Home",
       "status": "Scheduled",
       "fixtureId": "1-17779553",
-      "home_score": null,
-      "away_score": null
+      "home_score": 0,
+      "away_score": 10
     },
     {
       "date": "2025-11-29T15:00:00+00:00",
@@ -224,8 +224,8 @@
       "location": "Away",
       "status": "Scheduled",
       "fixtureId": "1-17766956",
-      "home_score": null,
-      "away_score": null
+      "home_score": 2,
+      "away_score": 0
     },
     {
       "date": "2025-11-29T15:30:00+00:00",
