@@ -3,6 +3,10 @@ name: Deploy GitHub Pages
 on:
   push:
     branches: [ main ]
+  workflow_run:
+    workflows: ["Update scores (weekend)", "Update League of Leagues (Live)"]
+    types:
+      - completed
   workflow_dispatch:
 
 permissions:
