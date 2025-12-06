@@ -1,5 +1,5 @@
 {
-  "generated_at": "2025-12-06T13:58:01.763752+00:00",
+  "generated_at": "2025-12-06T14:13:32.098007+00:00",
   "home": [
     {
       "date": "2025-12-06T10:30:00+00:00",
@@ -12,8 +12,8 @@
       "location": "Home",
       "status": "Scheduled",
       "fixtureId": "1-17780923",
-      "home_score": null,
-      "away_score": null
+      "home_score": 3,
+      "away_score": 1
     },
     {
       "date": "2025-12-06T11:00:00+00:00",
