@@ -146,24 +146,36 @@ def has_tbc_kickoff(fixture):
 
 def filter_weekend_fixtures(fixtures):
     """
-    Filter fixtures to include only those on Saturday and Sunday of this week.
-    """
-    from datetime import timezone
+    Filter fixtures to include only those on Saturday and Sunday of the
+    *current* weekend.
 
+    Behaviour:
+    - On Saturday: use that same day's Saturday.
+    - On Sunday: still use the current weekend (yesterday's Saturday).
+    - Monday–Friday: use the upcoming Saturday of this week.
+    """
     weekend_fixtures = []
     today = datetime.now(UTC)
 
-    # Calculate next Saturday in UTC
-    days_ahead = (5 - today.weekday()) % 7
-    if days_ahead == 0 and today.weekday() == 5:
+    # Work out the "anchor" Saturday in UTC for the current weekend
+    if today.weekday() == 6:  # Sunday
+        # Stay on the current weekend: go back to yesterday (Saturday)
+        saturday_utc = (today - timedelta(days=1)).replace(
+            hour=0, minute=0, second=0, microsecond=0
+        )
+    elif today.weekday() == 5:  # Saturday
         saturday_utc = today.replace(hour=0, minute=0, second=0, microsecond=0)
     else:
-        saturday_utc = (today + timedelta(days=days_ahead)).replace(hour=0, minute=0, second=0, microsecond=0)
+        # Monday–Friday: find the upcoming Saturday
+        days_ahead = (5 - today.weekday()) % 7
+        saturday_utc = (today + timedelta(days=days_ahead)).replace(
+            hour=0, minute=0, second=0, microsecond=0
+        )
 
     monday_utc = saturday_utc + timedelta(days=2)
 
     # Adjust for BST/GMT - extend range to catch fixtures in local time
-    range_start = saturday_utc - timedelta(hours=2)  # Covers BST (UTC+1) and future UTC+2
+    range_start = saturday_utc - timedelta(hours=2)  # Covers BST (UTC+1) and potential UTC+2
     range_end = monday_utc + timedelta(hours=2)
 
     print(f"Filtering for fixtures between {range_start} and {range_end}")
@@ -175,7 +187,7 @@ def filter_weekend_fixtures(fixtures):
         # Exclude fixtures with TBC kickoff
         if has_tbc_kickoff(fixture):
             continue
-        fixture_datetime = datetime.fromisoformat(fixture['date']).astimezone(UTC)
+        fixture_datetime = datetime.fromisoformat(fixture["date"]).astimezone(UTC)
         if range_start <= fixture_datetime < range_end:
             weekend_fixtures.append(fixture)
 
