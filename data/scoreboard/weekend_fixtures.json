@@ -1,5 +1,5 @@
 {
-  "generated_at": "2025-12-06T09:57:41.196284+00:00",
+  "generated_at": "2025-12-06T10:14:48.331640+00:00",
   "home": [
     {
       "date": "2025-12-06T10:30:00+00:00",
@@ -126,20 +126,6 @@
       "location": "Away",
       "status": "Scheduled",
       "fixtureId": "1-17777106",
-      "home_score": null,
-      "away_score": null
-    },
-    {
-      "date": "2025-12-06T13:00:00+00:00",
-      "team": "St Albans Centurions",
-      "category": "men",
-      "home_team": "Spencer Grandmasters",
-      "away_team": "St Albans Centurions",
-      "kickoff": "13:00",
-      "division": "South Masters Open - Men's O60 Premier",
-      "location": "Away",
-      "status": "Scheduled",
-      "fixtureId": "1-17900033",
       "home_score": null,
       "away_score": null
     },
