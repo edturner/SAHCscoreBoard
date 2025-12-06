@@ -1,5 +1,5 @@
 {
-  "generated_at": "2025-12-06T21:59:34.245318+00:00",
+  "generated_at": "2025-12-06T22:18:03.146036+00:00",
   "home": [
     {
       "date": "2025-12-06T10:30:00+00:00",
@@ -117,20 +117,6 @@
     },
     {
       "date": "2025-12-06T13:00:00+00:00",
-      "team": "St Albans 2",
-      "category": "men",
-      "home_team": "Havering 1",
-      "away_team": "St Albans 2",
-      "kickoff": "13:00",
-      "division": "Division 1 South",
-      "location": "Away",
-      "status": "Scheduled",
-      "fixtureId": "1-17777106",
-      "home_score": null,
-      "away_score": null
-    },
-    {
-      "date": "2025-12-06T13:00:00+00:00",
       "team": "St Albans Centurions",
       "category": "men",
       "home_team": "Spencer Grandmasters",
@@ -142,6 +128,20 @@
       "fixtureId": "1-17747900",
       "home_score": 7,
       "away_score": 2
+    },
+    {
+      "date": "2025-12-06T13:00:00+00:00",
+      "team": "St Albans 2",
+      "category": "men",
+      "home_team": "Havering 1",
+      "away_team": "St Albans 2",
+      "kickoff": "13:00",
+      "division": "Division 1 South",
+      "location": "Away",
+      "status": "Scheduled",
+      "fixtureId": "1-17777106",
+      "home_score": null,
+      "away_score": null
     },
     {
       "date": "2025-12-06T13:00:00+00:00",
