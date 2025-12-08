@@ -1,4 +1,4 @@
-name: Build weekend fixtures (structure)
+name: Update Scoreboard Data
 
 on:
   workflow_dispatch:
@@ -12,13 +12,14 @@ on:
         required: false
         default: ""
   schedule:
-    - cron: '0 3 * * 4,5'     # Thu/Fri 03:00 UTC initial build (low frequency)
+    - cron: '0 3 * * 4,5'     # Thu/Fri 03:00 UTC initial build
+    - cron: '*/5 * * * 6,0'   # Every 5 min Sat/Sun UTC (Live Scores)
 
 jobs:
-  build:
+  update-data:
     runs-on: ubuntu-latest
     concurrency:
-      group: fixtures
+      group: scoreboard-data
       cancel-in-progress: true
     permissions:
       contents: write
@@ -36,22 +37,19 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt || pip install requests beautifulsoup4 pytz
 
-      - name: Fetch latest matches HTML
-        run: python scripts/main.py
-
-      - name: Build weekend fixtures JSON
+      - name: Update Scoreboard Data
         run: |
-          if [ -n "${{ github.event.inputs.start }}" ] && [ -n "${{ github.event.inputs.end }}" ]; then
-            python scripts/filter.py --start "${{ github.event.inputs.start }}" --end "${{ github.event.inputs.end }}" --output data/scoreboard/weekend_fixtures.json
+          if [ -n "${{ github.event.inputs.start }}" ]; then
+            python scripts/gms_fetcher.py update-scoreboard --weekend "${{ github.event.inputs.start }}"
           else
-            python scripts/filter.py --output data/scoreboard/weekend_fixtures.json
+            python scripts/gms_fetcher.py update-scoreboard
           fi
 
       - name: Commit and push changes
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@users.noreply.github.com"
-          git add data/scoreboard/weekend_fixtures.json || true
-          git commit -m "Update weekend fixtures [skip ci]" || echo "No changes"
+          git add data/scoreboard/weekend_fixtures.json data/scoreboard/mens_fixtures.csv data/scoreboard/womens_fixtures.csv || true
+          git commit -m "Update scoreboard data [skip ci]" || echo "No changes"
           git push
 

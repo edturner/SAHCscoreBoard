@@ -33,6 +33,8 @@ from pathlib import Path
 from datetime import date, datetime, timedelta
 from typing import Any, Dict, List, Optional, Sequence, Tuple
 from urllib.parse import urlencode
+import csv
+import csv
 
 import requests
 
@@ -53,6 +55,17 @@ def resolve_repo_path(path: Path) -> Path:
     """
     path = Path(path)
     return path if path.is_absolute() else REPO_ROOT / path
+
+
+def normalize_comp_label(label: Optional[str]) -> Optional[str]:
+    """Strip leading gender prefixes from competition labels for cleaner display."""
+    if not label:
+        return label
+    prefixes = ["East Open - Men's ", "East Women's "]
+    for prefix in prefixes:
+        if label.startswith(prefix):
+            return label[len(prefix) :]
+    return label
 
 def build_show_url(show: str, team_id: str, comp_id: Optional[str] = None, **extra) -> str:
     params = {
@@ -330,13 +343,14 @@ def build_team_record(entry: Dict[str, str], summary: Dict[str, Optional[str]]) 
     name = entry.get("name") or summary.get("teamName") or "Unknown Team"
     team_id = entry.get("teamId")
     comp_id = entry.get("compId")
+    comp_label = normalize_comp_label(entry.get("compLabel"))
     record = {
         "name": name,
         "teamId": team_id,
         "teamDisplay": summary.get("teamName") or name,
         "competition": {
             "id": comp_id,
-            "label": entry.get("compLabel"),
+            "label": comp_label,
         },
         "stats": {
             "played": summary.get("played"),
@@ -351,8 +365,6 @@ def build_team_record(entry: Dict[str, str], summary: Dict[str, Optional[str]]) 
         },
         "form": summary.get("form", []),
     }
-    if entry.get("compLabel"):
-        record["competition"]["label"] = entry["compLabel"]
     return record
 
 
@@ -788,6 +800,492 @@ def command_recent_results(
         print(f"\nSaved weekend results to {output_file.resolve()}")
 
 
+def determine_category_gender(team_name: str, comp_label: str) -> str:
+    """
+    Determine if a team is Men's or Women's based on name or competition.
+    """
+    team_lower = team_name.lower()
+    comp_lower = (comp_label or "").lower()
+
+    if "(f)" in team_lower or "women" in comp_lower or "ladies" in team_lower:
+        return "women"
+    if "(m)" in team_lower or "men" in comp_lower:
+        return "men"
+    
+    # Fallback/Heuristics
+    if "women" in team_lower:
+        return "women"
+    
+    # Default to men if unsure, or mixed? 
+    # Based on existing filter.py logic, defaults to men
+    return "men"
+
+
+def format_scoreboard_fixture(
+    fixture: Dict[str, Any], 
+    my_team_name: str, 
+    my_team_category: str,
+    comp_label: str,
+    fixture_id: str
+) -> Dict[str, Any]:
+    """
+    Convert a GMS fixture dict into the scoreboard JSON format.
+    """
+    # GMS fixture keys: date, time, homeTeam, score, awayTeam, venue, dateTime (iso), status...
+    
+    home_team = fixture.get("homeTeam", "Unknown")
+    away_team = fixture.get("awayTeam", "Unknown")
+    
+    # Determine if we are home or away
+    # simple substring check on the club name "St Albans" might be risky if playing another "St Albans"?
+    # But usually we filter by the squad name. 
+    # Let's assume the 'my_team_name' (e.g. St Albans 1 (M)) is close to what appears in GMS
+    # OR rely on the fact that we fetched this FOR a specific team.
+    # However, GMS fixtures table doesn't explicitly say "You are Home". 
+    # We have to infer from column position. 
+    # The fixture dict from parser has 'homeTeam' and 'awayTeam'.
+    
+    # Heuristic: Check which side contains "St Albans"
+    # Note: my_team_name might be "St Albans 1 (M)" but GMS says "St Albans 1"
+    # We'll treat the side containing "St Albans" as US. 
+    if "st albans" in home_team.lower():
+        ha = "h"
+        location = "Home"
+    else:
+        ha = "a"
+        location = "Away"
+
+    # Division name cleaning
+    # e.g. "East Open - Men's Division 1 South (2025-2026)" -> "Division 1 South"
+    division = comp_label
+    # Remove simple prefixes if present (using our existing helper or more aggressive)
+    if "East Open - Men's " in division:
+        division = division.replace("East Open - Men's ", "")
+    if "East Women's " in division:
+        division = division.replace("East Women's ", "")
+    if " (2025-2026)" in division:
+        division = division.replace(" (2025-2026)", "")
+        
+    # Scores
+    # score text "2 - 1" or similar? 
+    # The parser puts the score string in 'score'. 
+    # We might need to parse it if we want separate home_score/away_score integers.
+    score_str = fixture.get("score", "").strip()
+    home_score = None
+    away_score = None
+    
+    if " - " in score_str:
+        parts = score_str.split(" - ")
+        if len(parts) == 2 and parts[0].isdigit() and parts[1].isdigit():
+            home_score = int(parts[0])
+            away_score = int(parts[1])
+    elif ":" in score_str:
+        parts = score_str.split(":")
+        p0 = parts[0].strip()
+        p1 = parts[1].strip()
+        if len(parts) >= 2 and p0.isdigit() and p1.isdigit():
+            home_score = int(p0)
+            away_score = int(p1)
+
+    return {
+        "date": fixture.get("dateTime"), # ISO format expected
+        "team": my_team_name, # St Albans 1 (M)
+        "category": my_team_category,
+        "home_team": home_team,
+        "away_team": away_team,
+        "kickoff": fixture.get("time"),
+        "division": division,
+        "location": location, # "Home" or "Away"
+        "status": "Scheduled" if fixture.get("status") == "pending" else "Played", # specific status mapping if needed
+        "fixtureId": fixture_id, # We might not have a unique ID easily unless we construct one or parsing extracted it
+        "home_score": home_score,
+        "away_score": away_score,
+        # Internals for sorting/grouping
+        "_ha": ha 
+    }
+
+
+def load_previous_scoreboard(output_dir: Path) -> Dict[str, Any]:
+    """
+    Load the previous weekend_fixtures.json to use as fallback.
+    Returns a dict mapping fixtureId -> fixture_entry.
+    """
+    path = output_dir / "weekend_fixtures.json"
+    if not path.exists():
+        return {}
+    
+    try:
+        with path.open("r", encoding="utf-8") as f:
+            data = json.load(f)
+        
+        lookup = {}
+        for cat in ["home", "away"]:
+            for fix in data.get(cat, []):
+                fid = fix.get("fixtureId")
+                if fid:
+                    lookup[fid] = fix
+        return lookup
+    except Exception:
+        return {}
+
+
+def command_update_scoreboard(
+    config_file: Path, 
+    output_dir: Path,
+    weekend_str: Optional[str] = None
+):
+    print(f"Updating scoreboard data in {output_dir} using config {config_file}")
+    
+    client = GMSClient()
+    teams_config = load_team_file(config_file)
+    
+    start, end = weekend_range(weekend_str)
+    print(f"Filtering for weekend: {start} to {end}")
+    
+    # Load previous data for rollback
+    previous_fixtures_map = load_previous_scoreboard(output_dir)
+    print(f"Loaded {len(previous_fixtures_map)} previous fixtures for potential rollback.")
+
+    scoreboard_home = []
+    scoreboard_away = []
+    all_fixtures_flat = []
+
+    # Map team name to previous fixtures to handle complete fetch failure
+    previous_team_fixtures = {}
+    for fix in previous_fixtures_map.values():
+        tname = fix.get("team")
+        if tname:
+            previous_team_fixtures.setdefault(tname, []).append(fix)
+
+    for idx, entry in enumerate(teams_config, start=1):
+        name = entry.get("name")
+        team_id = entry.get("teamId")
+        comp_id = entry.get("compId")
+        comp_label = entry.get("compLabel", "")
+
+        if not team_id or not comp_id:
+            print(f"Skipping {name}: Missing ID config")
+            continue
+            
+        print(f"Fetching {name}...")
+        try:
+            raw_fixtures = client.get_results_and_fixtures(team_id, comp_id)
+            # Filter for weekend
+            weekend = weekend_fixtures(raw_fixtures, start, end)
+            
+            if weekend:
+                print(f"  -> Found {len(weekend)} fixture(s) for weekend.")
+            else:
+                print(f"  -> No fixtures found for weekend.")
+            
+            category = determine_category_gender(name, comp_label)
+            
+            for f in weekend:
+                # Synthesize a fixture ID if not present. 
+                # GMS parser doesn't currently extract unique fixture IDs from the table (they aren't always in data attrs).
+                # We'll make a composite one.
+                f_id = f"{team_id}-{f.get('date')}-{f.get('time')}"
+                
+                # Check for colon in score (format GMS sometimes uses)
+                # This debug print is removed as we handled it, but good to keep logic
+                
+                formatted = format_scoreboard_fixture(f, name, category, comp_label, f_id)
+                
+                # ROLLBACK / MERGE LOGIC
+                # If we have a previous version of this fixture that has a result (Played), 
+                # and the new one is 'Scheduled' or missing score, preserve the old one.
+                # This handles temporary API glitches where result disappears.
+                prev = previous_fixtures_map.get(f_id)
+                if prev:
+                    prev_status = prev.get("status")
+                    curr_status = formatted.get("status")
+                    
+                    # If previously played but now scheduled/unknown -> keep previous
+                    if prev_status == "Played" and curr_status != "Played":
+                        print(f"  [Rollback] Keeping result for {name} (was Played, now {curr_status})")
+                        formatted = prev
+                    
+                    # If previously had score but now score is None -> keep previous
+                    elif (prev.get("home_score") is not None) and (formatted.get("home_score") is None):
+                        print(f"  [Rollback] Keeping score for {name} (was {prev['home_score']}-{prev['away_score']}, now None)")
+                        formatted = prev
+
+                all_fixtures_flat.append(formatted)
+                
+                if formatted["_ha"] == "h":
+                    scoreboard_home.append(formatted)
+                else:
+                    scoreboard_away.append(formatted)
+                    
+        except Exception as e:
+            print(f"Error fetching {name}: {e}")
+            # Fallback: use previous data for this team if fetch failed completely
+            saved_fixtures = previous_team_fixtures.get(name, [])
+            if saved_fixtures:
+                print(f"  [Rollback] Fetch failed. Using {len(saved_fixtures)} saved fixtures for {name}.")
+                for sf in saved_fixtures:
+                    all_fixtures_flat.append(sf)
+                    if sf.get("_ha") == "h":
+                        scoreboard_home.append(sf)
+                    else:
+                        scoreboard_away.append(sf)
+            else:
+                print(f"  [Rollback] No saved fixtures found for {name}.")
+
+    # 1. Generate weekend_fixtures.json
+    json_output = {
+        "generated_at": datetime.now().astimezone().isoformat(),
+        "home": scoreboard_home,
+        "away": scoreboard_away
+    }
+    
+    out_json_path = output_dir / "weekend_fixtures.json"
+    save_json(json_output, out_json_path)
+    print(f"Wrote {out_json_path}")
+
+    # 2. Generate CSVs
+    # Sort key: Team name numeric part? Or just team name. 
+    # filter.py logic: sort by team number.
+    def get_team_number(item):
+        val = item["team"]
+        nums = [int(s) for s in val.split() if s.isdigit()]
+        return nums[0] if nums else 999
+
+    mens_fixtures = [x for x in all_fixtures_flat if x["category"] == "men"]
+    womens_fixtures = [x for x in all_fixtures_flat if x["category"] == "women"]
+    
+    mens_fixtures.sort(key=get_team_number)
+    womens_fixtures.sort(key=get_team_number)
+    
+    def write_csv(fixtures, filename):
+        path = output_dir / filename
+        with path.open('w', newline='', encoding='utf-8') as csvfile:
+            writer = csv.writer(csvfile)
+            writer.writerow(['Team', 'Opponent', 'Match_Time', 'Location', 'Division'])
+            for f in fixtures:
+                opponent = f['away_team'] if f['location'] == 'Home' else f['home_team']
+                writer.writerow([
+                    f['team'],
+                    opponent,
+                    f['kickoff'],
+                    f['location'],
+                    f['division']
+                ])
+        print(f"Wrote {path}")
+
+    write_csv(mens_fixtures, "mens_fixtures.csv")
+    write_csv(womens_fixtures, "womens_fixtures.csv")
+
+
+
+def determine_category_gender(team_name: str, comp_label: str) -> str:
+    """
+    Determine if a team is Men's or Women's based on name or competition.
+    """
+    team_lower = team_name.lower()
+    comp_lower = (comp_label or "").lower()
+
+    if "(f)" in team_lower or "women" in comp_lower or "ladies" in team_lower:
+        return "women"
+    if "(m)" in team_lower or "men" in comp_lower:
+        return "men"
+    
+    # Fallback/Heuristics
+    if "women" in team_lower:
+        return "women"
+    
+    # Default to men if unsure, or mixed? 
+    # Based on existing filter.py logic, defaults to men
+    return "men"
+
+
+def format_scoreboard_fixture(
+    fixture: Dict[str, Any], 
+    my_team_name: str, 
+    my_team_category: str,
+    comp_label: str,
+    fixture_id: str
+) -> Dict[str, Any]:
+    """
+    Convert a GMS fixture dict into the scoreboard JSON format.
+    """
+    # GMS fixture keys: date, time, homeTeam, score, awayTeam, venue, dateTime (iso), status...
+    
+    home_team = fixture.get("homeTeam", "Unknown")
+    away_team = fixture.get("awayTeam", "Unknown")
+    
+    # Determine if we are home or away
+    # simple substring check on the club name "St Albans" might be risky if playing another "St Albans"?
+    # But usually we filter by the squad name. 
+    # Let's assume the 'my_team_name' (e.g. St Albans 1 (M)) is close to what appears in GMS
+    # OR rely on the fact that we fetched this FOR a specific team.
+    # However, GMS fixtures table doesn't explicitly say "You are Home". 
+    # We have to infer from column position. 
+    # The fixture dict from parser has 'homeTeam' and 'awayTeam'.
+    
+    # Heuristic: Check which side contains "St Albans"
+    # Note: my_team_name might be "St Albans 1 (M)" but GMS says "St Albans 1"
+    # We'll treat the side containing "St Albans" as US. 
+    if "st albans" in home_team.lower():
+        ha = "h"
+        location = "Home"
+    else:
+        ha = "a"
+        location = "Away"
+
+    # Division name cleaning
+    # e.g. "East Open - Men's Division 1 South (2025-2026)" -> "Division 1 South"
+    division = comp_label
+    # Remove simple prefixes if present (using our existing helper or more aggressive)
+    if "East Open - Men's " in division:
+        division = division.replace("East Open - Men's ", "")
+    if "East Women's " in division:
+        division = division.replace("East Women's ", "")
+    if " (2025-2026)" in division:
+        division = division.replace(" (2025-2026)", "")
+        
+    # Scores
+    # score text "2 - 1" or similar? 
+    # The parser puts the score string in 'score'. 
+    # We might need to parse it if we want separate home_score/away_score integers.
+    score_str = fixture.get("score", "").strip()
+    home_score = None
+    away_score = None
+    
+    if " - " in score_str:
+        parts = score_str.split(" - ")
+        if len(parts) == 2 and parts[0].isdigit() and parts[1].isdigit():
+            home_score = int(parts[0])
+            away_score = int(parts[1])
+    elif ":" in score_str:
+        parts = score_str.split(":")
+        p0 = parts[0].strip()
+        p1 = parts[1].strip()
+        if len(parts) >= 2 and p0.isdigit() and p1.isdigit():
+            home_score = int(p0)
+            away_score = int(p1)
+
+    return {
+        "date": fixture.get("dateTime"), # ISO format expected
+        "team": my_team_name, # St Albans 1 (M)
+        "category": my_team_category,
+        "home_team": home_team,
+        "away_team": away_team,
+        "kickoff": fixture.get("time"),
+        "division": division,
+        "location": location, # "Home" or "Away"
+        "status": "Scheduled" if fixture.get("status") == "pending" else "Played", # specific status mapping if needed
+        "fixtureId": fixture_id, # We might not have a unique ID easily unless we construct one or parsing extracted it
+        "home_score": home_score,
+        "away_score": away_score,
+        # Internals for sorting/grouping
+        "_ha": ha 
+    }
+
+def command_update_scoreboard(
+    config_file: Path, 
+    output_dir: Path,
+    weekend_str: Optional[str] = None
+):
+    print(f"Updating scoreboard data in {output_dir} using config {config_file}")
+    
+    client = GMSClient()
+    teams_config = load_team_file(config_file)
+    
+    start, end = weekend_range(weekend_str)
+    print(f"Filtering for weekend: {start} to {end}")
+    
+    scoreboard_home = []
+    scoreboard_away = []
+    all_fixtures_flat = []
+
+    for idx, entry in enumerate(teams_config, start=1):
+        name = entry.get("name")
+        team_id = entry.get("teamId")
+        comp_id = entry.get("compId")
+        comp_label = entry.get("compLabel", "")
+
+        if not team_id or not comp_id:
+            print(f"Skipping {name}: Missing ID config")
+            continue
+            
+        print(f"Fetching {name}...")
+        try:
+            raw_fixtures = client.get_results_and_fixtures(team_id, comp_id)
+            # Filter for weekend
+            weekend = weekend_fixtures(raw_fixtures, start, end)
+            
+            if weekend:
+                print(f"  -> Found {len(weekend)} fixture(s) for weekend.")
+            else:
+                print(f"  -> No fixtures found for weekend.")
+            
+            category = determine_category_gender(name, comp_label)
+            
+            for f in weekend:
+                # Synthesize a fixture ID if not present. 
+                # GMS parser doesn't currently extract unique fixture IDs from the table (they aren't always in data attrs).
+                # We'll make a composite one.
+                f_id = f"{team_id}-{f.get('date')}-{f.get('time')}"
+                
+                formatted = format_scoreboard_fixture(f, name, category, comp_label, f_id)
+                
+                all_fixtures_flat.append(formatted)
+                
+                if formatted["_ha"] == "h":
+                    scoreboard_home.append(formatted)
+                else:
+                    scoreboard_away.append(formatted)
+                    
+        except Exception as e:
+            print(f"Error fetching {name}: {e}")
+
+    # 1. Generate weekend_fixtures.json
+    json_output = {
+        "generated_at": datetime.now().astimezone().isoformat(),
+        "home": scoreboard_home,
+        "away": scoreboard_away
+    }
+    
+    out_json_path = output_dir / "weekend_fixtures.json"
+    save_json(json_output, out_json_path)
+    print(f"Wrote {out_json_path}")
+
+    # 2. Generate CSVs
+    # Sort key: Team name numeric part? Or just team name. 
+    # filter.py logic: sort by team number.
+    def get_team_number(item):
+        val = item["team"]
+        nums = [int(s) for s in val.split() if s.isdigit()]
+        return nums[0] if nums else 999
+
+    mens_fixtures = [x for x in all_fixtures_flat if x["category"] == "men"]
+    womens_fixtures = [x for x in all_fixtures_flat if x["category"] == "women"]
+    
+    mens_fixtures.sort(key=get_team_number)
+    womens_fixtures.sort(key=get_team_number)
+    
+    def write_csv(fixtures, filename):
+        path = output_dir / filename
+        with path.open('w', newline='', encoding='utf-8') as csvfile:
+            writer = csv.writer(csvfile)
+            writer.writerow(['Team', 'Opponent', 'Match_Time', 'Location', 'Division'])
+            for f in fixtures:
+                opponent = f['away_team'] if f['location'] == 'Home' else f['home_team']
+                writer.writerow([
+                    f['team'],
+                    opponent,
+                    f['kickoff'],
+                    f['location'],
+                    f['division']
+                ])
+        print(f"Wrote {path}")
+
+    write_csv(mens_fixtures, "mens_fixtures.csv")
+    write_csv(womens_fixtures, "womens_fixtures.csv")
+
+
+
 def command_bulk_team_data(
     config_file: Path,
     output_file: Path,
@@ -1015,6 +1513,26 @@ def build_parser() -> argparse.ArgumentParser:
         help="Expected number of team entries; validation fails if counts differ.",
     )
 
+    sb_parser = subparsers.add_parser(
+        "update-scoreboard", help="Update the scoreboard data (JSON + CSV) using GMS."
+    )
+    sb_parser.add_argument(
+        "--config",
+        type=Path,
+        default=DEFAULT_COMP_OUTPUT,
+        help=f"Path to teamCompIDs.json (default: {DEFAULT_COMP_OUTPUT})",
+    )
+    sb_parser.add_argument(
+        "--output-dir",
+        type=Path,
+        default=LEAGUE_DATA_DIR.parent / "scoreboard",
+        help="Directory to write scoreboard output files.",
+    )
+    sb_parser.add_argument(
+        "--weekend",
+        help="Optional weekend date (YYYY-MM-DD)",
+    )
+
     return parser
 
 
@@ -1041,6 +1559,8 @@ def main():
         command_recent_results(args.team_id, args.comp_id, args.weekend, args.output)
     elif args.command == "validate-snapshots":
         command_validate_snapshots(args.current, args.previous, args.expect_count)
+    elif args.command == "update-scoreboard":
+        command_update_scoreboard(args.config, args.output_dir, args.weekend)
 
 
 if __name__ == "__main__":

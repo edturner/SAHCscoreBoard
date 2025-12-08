@@ -4,7 +4,7 @@ on:
   push:
     branches: [ main ]
   workflow_run:
-    workflows: ["Update scores (weekend)", "Update League of Leagues (Live)"]
+    workflows: ["Update Scoreboard Data"]
     types:
       - completed
   workflow_dispatch:

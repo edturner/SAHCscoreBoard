@@ -23,13 +23,11 @@ function determineTrend(team, rank, previousLookup, previousRankMap) {
     const previousRank = previousRankMap.get(teamKey);
 
     const rankDelta = typeof previousRank === 'number' ? previousRank - rank : 0;
-    const ppgDelta = currentPpg - previousPpg;
-    const ppgThreshold = 0.01;
 
-    if (rankDelta > 0 || (rankDelta === 0 && ppgDelta > ppgThreshold)) {
+    if (rankDelta > 0) {
         return { type: 'up', arrow: '↑', label: 'Improved rank' };
     }
-    if (rankDelta < 0 || (rankDelta === 0 && ppgDelta < -ppgThreshold)) {
+    if (rankDelta < 0) {
         return { type: 'down', arrow: '↓', label: 'Dropped rank' };
     }
     return defaultTrend;
@@ -94,9 +92,18 @@ function filterTeamsByGender(rawTeams = [], genderFilter = 'ALL') {
 }
 
 function sortTeamsByPPG(teams = []) {
-    return [...teams].sort(
-        (a, b) => Number.parseFloat(b?.stats?.ppg ?? '0') - Number.parseFloat(a?.stats?.ppg ?? '0'),
-    );
+    return [...teams].sort((a, b) => {
+        const ppgA = Number.parseFloat(a?.stats?.ppg ?? '0');
+        const ppgB = Number.parseFloat(b?.stats?.ppg ?? '0');
+
+        if (ppgB !== ppgA) {
+            return ppgB - ppgA;
+        }
+
+        const gdA = Number.parseInt(a?.stats?.goalDiff ?? '0', 10);
+        const gdB = Number.parseInt(b?.stats?.goalDiff ?? '0', 10);
+        return gdB - gdA;
+    });
 }
 
 function buildRankMap(teams = []) {
@@ -185,20 +192,21 @@ async function loadLeague() {
 
         const rawTeams = await response.json();
         let previousTeamsRaw = [];
-        
-        // Try to load last gameweek snapshot first, fallback to prev snapshot
+
+        // Try to load previous snapshot (live updates) first, fallback to gameweek snapshot
         try {
-            const gameweekResponse = await fetch('../../data/league/teamData.lastGameweek.json', { cache: 'no-store' });
-            if (gameweekResponse.ok) {
-                previousTeamsRaw = await gameweekResponse.json();
+            const previousResponse = await fetch('../../data/league/teamData.prev.json', { cache: 'no-store' });
+            if (previousResponse.ok) {
+                previousTeamsRaw = await previousResponse.json();
             } else {
-                // Fallback to previous snapshot if gameweek snapshot doesn't exist
-                const previousResponse = await fetch('../../data/league/teamData.prev.json', { cache: 'no-store' });
-                if (previousResponse.ok) {
-                    previousTeamsRaw = await previousResponse.json();
+                // Fallback to gameweek snapshot if prev snapshot doesn't exist
+                const gameweekResponse = await fetch('../../data/league/teamData.lastGameweek.json', { cache: 'no-store' });
+                if (gameweekResponse.ok) {
+                    previousTeamsRaw = await gameweekResponse.json();
                 }
             }
         } catch (prevError) {
+
             // eslint-disable-next-line no-console
             console.warn('Unable to load previous snapshot, trends will show as steady.', prevError);
         }
