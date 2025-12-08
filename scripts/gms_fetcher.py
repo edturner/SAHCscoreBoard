@@ -44,6 +44,16 @@ LEAGUE_DATA_DIR = REPO_ROOT / "data" / "league"
 CONFIG_DIR.mkdir(parents=True, exist_ok=True)
 LEAGUE_DATA_DIR.mkdir(parents=True, exist_ok=True)
 
+
+def resolve_repo_path(path: Path) -> Path:
+    """
+    Resolve a provided path relative to the repository root if it is not
+    already absolute. This lets callers pass paths from anywhere (e.g. running
+    scripts from the scripts/ directory) without hitting FileNotFoundError.
+    """
+    path = Path(path)
+    return path if path.is_absolute() else REPO_ROOT / path
+
 def build_show_url(show: str, team_id: str, comp_id: Optional[str] = None, **extra) -> str:
     params = {
         "method": "api",
@@ -682,6 +692,7 @@ class GMSClient:
 
 
 def load_team_file(team_file: Path) -> List[Dict[str, str]]:
+    team_file = resolve_repo_path(team_file)
     with team_file.open("r", encoding="utf-8") as fh:
         teams = json.load(fh)
         if not isinstance(teams, list):
@@ -785,9 +796,11 @@ def command_bulk_team_data(
     rotate: bool = False,
     snapshot_date: Optional[str] = None,
 ):
-    publish_path = Path(publish_path) if publish_path else Path(output_file)
+    config_file = resolve_repo_path(config_file)
+    output_file = resolve_repo_path(output_file)
+    publish_path = resolve_repo_path(publish_path) if publish_path else Path(output_file)
     if previous_path:
-        previous_path = Path(previous_path)
+        previous_path = resolve_repo_path(previous_path)
     else:
         previous_path = qualified_snapshot_path(publish_path, "prev")
 

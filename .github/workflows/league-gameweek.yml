@@ -13,6 +13,16 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Debug - repo state before snapshot
+        run: |
+          set -xeuo pipefail
+          git status --short || true
+          ls -l data/league || true
+          head -n 5 data/league/teamData.json || true
+          sha256sum data/league/teamData.json || true
 
       - name: Save gameweek snapshot
         run: |
@@ -23,6 +33,15 @@ jobs:
             echo "Warning: teamData.json not found, skipping gameweek snapshot"
             exit 0
           fi
+
+      - name: Debug - repo state after snapshot
+        run: |
+          set -xeuo pipefail
+          ls -l data/league || true
+          head -n 5 data/league/teamData.lastGameweek.json || true
+          sha256sum data/league/teamData.lastGameweek.json || true
+          git status --short || true
+          git diff --stat -- data/league/teamData.lastGameweek.json || true
 
       - name: Commit and push gameweek snapshot
         run: |
