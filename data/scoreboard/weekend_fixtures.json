@@ -1,5 +1,5 @@
 {
-  "generated_at": "2025-12-13T19:58:42.484859+00:00",
+  "generated_at": "2025-12-13T20:30:44.976148+00:00",
   "home": [
     {
       "date": "2025-12-06T13:00:00",
@@ -166,6 +166,21 @@
       "fixtureId": "91e2a40f-fe91-4c8e-9ca6-aed40e6178b2-06 Dec 2025-11:30",
       "home_score": 2,
       "away_score": 3,
+      "_ha": "a"
+    },
+    {
+      "date": "2025-12-06T13:15:00",
+      "team": "St Albans 6 (M)",
+      "category": "men",
+      "home_team": "Bedford 6",
+      "away_team": "St Albans 6",
+      "kickoff": "13:15",
+      "division": "Division 5 South West",
+      "location": "Away",
+      "status": "Played",
+      "fixtureId": "3896f4e5-7d73-483b-b735-31f976ed7312-06 Dec 2025-13:15",
+      "home_score": 1,
+      "away_score": 2,
       "_ha": "a"
     },
     {
