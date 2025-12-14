@@ -21,8 +21,9 @@ This document explains how the St Albans League of Leagues dashboard stays up to
 |-------------|----------|---------|
 | `competitions` | `https://gmsfeed.co.uk/api/competitions?team=<team>` | Scrapes the competitions dropdown for each club team, persisting `teamId` → `compId`. |
 | `team-summary` | `.../show=league` | Parses the “summary” row for a single team (played, won/drawn/lost, points, PPG, form). |
-| `bulk-team-data` | same as `team-summary` but scripted for every team in `teamCompIDs.json`. |
-| `recent-results` | `show=results+fixtures` | (Existing helper) pulls last weekend’s fixtures for fixture dashboards. |
+| `bulk-team-data` | same as `team-summary` | Scripted fetch for every team in `teamCompIDs.json`. |
+| `recent-results` | `show=results+fixtures` | Pulls last weekend’s fixtures for fixture dashboards. |
+| `update-scoreboard`| `show=results+fixtures` | **New**: Fetches full scoreboard data (fixtures/results) for home/away displays. |
 
 API safety measures:
 - Client-side rate limiting (default 1200 ms) and automatic retry/backoff when 429s occur.
@@ -47,7 +48,7 @@ API safety measures:
        --output data/league/teamData.new.json `
        --publish-path data/league/teamData.json `
        --rotate-snapshots `
-       --snapshot-date 2025-11-19
+       --snapshot-date YYYY-MM-DD
    ```
    - Writes to `data/league/teamData.new.json` when `--output` equals the publish path.
    - On success, rotates: `data/league/teamData.json` → `data/league/teamData.prev.json`, `data/league/teamData.new.json` → `data/league/teamData.json`.
@@ -62,7 +63,7 @@ API safety measures:
    ```
    Fails with actionable messages if counts diverge, errors remain, PPG is missing, or teamId sets drift between snapshots.
 
-4. **Deploy/Upload**: once validation passes, sync `data/league/teamData.json` (current) and `data/league/teamData.prev.json` (previous) wherever the website expects them (e.g., CDN, CMS, or static hosting).
+4. **Deploy/Upload**: once validation passes, sync `data/league/teamData.json` (current) and `data/league/teamData.prev.json` (previous) wherever the website expects them.
 
 ---
 
@@ -79,7 +80,7 @@ During `bulk-team-data`:
    ```json
    "meta": {
      "source": "fallback",
-    "fallbackSnapshot": "data/league/teamData.json",
+     "fallbackSnapshot": "data/league/teamData.json",
      "fallbackAppliedAt": "2025-11-19T09:12:41Z",
      "snapshotDate": "2025-11-19"
    }
@@ -129,4 +130,3 @@ The front-end is resilient: if `data/league/teamData.prev.json` cannot be fetche
 ---
 
 With this workflow in place, the League of Leagues stays fresh every Wednesday, displays meaningful movement indicators, and degrades gracefully when the GMS API has hiccups. Adjust snapshot timing, retry counts, or validation thresholds as needed for future seasons.
-

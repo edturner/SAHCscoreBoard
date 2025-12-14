@@ -22,7 +22,7 @@ python scripts/gms_fetcher.py bulk-team-data `
     --output data/league/teamData.new.json `
     --publish-path data/league/teamData.json `
     --rotate-snapshots `
-    --snapshot-date 2025-11-19
+    --snapshot-date YYYY-MM-DD
 ```
 - `--rotate-snapshots` automatically moves the previous `teamData.json` to `teamData.prev.json` before promoting the new export.
 - If any teams fail after retries, rotation is skipped to protect the current snapshot.
@@ -56,7 +56,7 @@ python scripts/gms_fetcher.py validate-snapshots `
 
 ### 6. Live Updates (Optional)
 
-For real-time updates, use the live updater script:
+For real-time updates, use the live updater script (which wraps `gms_fetcher.py`):
 
 **Standalone script (runs continuously):**
 ```powershell
@@ -73,15 +73,9 @@ python scripts/live_league_updater.py --once
 python scripts/live_league_updater.py --once --validate --expect-count 26
 ```
 
-**Custom interval (default is 5 minutes):**
-```powershell
-python scripts/live_league_updater.py --interval 10
-```
-
 **GitHub Actions automation:**
-- `.github/workflows/league-live.yml` runs every 5 minutes automatically
-- Fetches fresh data and commits updates to keep the display live
-- Can be triggered manually via workflow_dispatch
+- `.github/workflows/league-live.yml` runs every 5 minutes automatically.
+- Fetches fresh data and commits updates to keep the display live.
 
 ### Automation Ideas
 - The live updater (`scripts/live_league_updater.py`) provides continuous updates every 5 minutes.
@@ -98,4 +92,3 @@ python scripts/live_league_updater.py --interval 10
 | Trend arrows look wrong | Ensure `teamData.prev.json` truly is last week’s file; delete and rerun rotation if someone overwrote it manually. |
 
 For everything else (parser internals, fallback metadata, API schemas), refer to `docs/league-data-workflow.md`.
-

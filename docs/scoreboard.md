@@ -1,84 +1,67 @@
 ## Scoreboard Workflow
 
-This document captures the end-to-end flow for the home/away scoreboard displays: how data is fetched, filtered, stored, and rendered.
+This document captures the end-to-end flow for the home/away scoreboard displays: how data is fetched from the GMS API, filtered, stored, and rendered.
 
 ---
 
 ### Components
-- `scripts/main.py` – grabs raw HTML from `stalbanshc.co.uk/matches` and writes `data/raw/matches_data_<timestamp>.html`.
-- `scripts/filter.py` – parses the freshest raw HTML, applies weekend/date filters, excludes unwanted fixtures, and emits all scoreboard outputs.
+- `scripts/gms_fetcher.py` – Unified CLI tool. The `update-scoreboard` command fetches fixtures/results directly from GMS.
 - `apps/scoreboard/` – `homeFixtures.html`, `awayFixtures.html`, and `fixtures.js` (front-end polling logic).
 - `apps/shared/` – shared styles, fonts, and background imagery.
 - `data/scoreboard/`
   - `weekend_fixtures.json` – authoritative payload consumed by the displays.
-  - `full_json_data.json` – optional debug dump of the raw schedule JSON.
   - `mens_fixtures.csv` / `womens_fixtures.csv` – helpers for social/media teams.
-  - `exclusions.json` – fixture IDs to omit permanently.
+  - `weekend_fixtures.json` (previous) – used for automatic rollback/merging if the API returns incomplete data during a game.
+
+> **Note**: `main.py` and `filter.py` are deprecated legacy scripts. `gms_fetcher.py` replaces them entirely.
 
 ---
 
 ### Running the Pipeline Manually
-1. **Fetch raw HTML**
-   ```powershell
-   python scripts/main.py
-   ```
-   - Creates `data/raw/matches_data_<timestamp>.html`.
-   - Safe to run multiple times per day; the newest timestamp wins.
+To fetch the latest fixtures and update the JSON/CSV files:
 
-2. **Build fixtures JSON**
-   ```powershell
-   python scripts/filter.py --output data/scoreboard/weekend_fixtures.json
-   ```
-   Optional arguments:
-   - `--start dd/mm/YYYY --end dd/mm/YYYY` – restrict to a custom range instead of “upcoming weekend”.
-   - `--output <path>` – override the destination (defaults to `data/scoreboard/weekend_fixtures.json`).
+```powershell
+python scripts/gms_fetcher.py update-scoreboard --config config/teamCompIDs.json
+```
 
-3. **Review artefacts**
-   - Open `apps/scoreboard/homeFixtures.html` / `awayFixtures.html` in a browser (from repo root) to confirm layout.
-   - Inspect `data/scoreboard/mens_fixtures.csv` and `womens_fixtures.csv` if the comms team needs structured exports.
+**Optional arguments:**
+- `--weekend YYYY-MM-DD`: Target a specific weekend (defaults to upcoming/current weekend).
+- `--output-dir <path>`: Override output location (defaults to `data/scoreboard`).
+
+The script will:
+1. Load team configs from `config/teamCompIDs.json`.
+2. Fetch results/fixtures for each team from GMS.
+3. Filter for the relevant weekend.
+4. Merge with previous data (rollback logic) to ensure in-progress or completed scores aren't lost if the API glitches.
+5. Write `weekend_fixtures.json` and CSV exports.
 
 ---
 
-### Excluding Fixtures
-- Edit `data/scoreboard/exclusions.json` and add the `fixtureId` you want to hide. Example:
-  ```json
-  {
-    "fixtureIds": [
-      "123456",
-      "789012"
-    ]
-  }
-  ```
-- Re-run `python scripts/filter.py` to regenerate the outputs. The script accepts either a plain array or the object form above.
+### Exclusions & Rollback
+- **Rollback**: The script automatically loads the *existing* `weekend_fixtures.json` before writing. If a fixture was previously "Played" but the new fetch says "Scheduled" (or missing scores), it preserves the "Played" state. This prevents scores from vanishing mid-game.
+- **Exclusions**: Currently handled via code logic or config. (Note: The old `exclusions.json` file used by `filter.py` is not currently used by `gms_fetcher.py`. If specific fixtures need hiding, logic should be added to `gms_fetcher.py` or the specific team config).
 
 ---
 
 ### Automation (GitHub Actions)
-- **`fixtures.yml`** (Thu/Fri @ 03:00 UTC)
-  1. Runs `python scripts/main.py`.
-  2. Runs `python scripts/filter.py --output data/scoreboard/weekend_fixtures.json`.
-  3. Commits/pushes the regenerated JSON if it changed.
-- **`scores.yml`** (Sat/Sun every 5 minutes)
-  - Same commands as above so boards receive live scores during the weekend.
-
-Both workflows respect the new folder layout, so local runs and CI/CD stay aligned.
+- **`fixtures.yml`**
+  - Runs `python scripts/gms_fetcher.py update-scoreboard`.
+  - Scheduled:
+    - Thu/Fri @ 03:00 UTC (Initial build).
+    - Sat/Sun every 5 minutes (Live scores).
+  - Commits changes to `data/scoreboard/` back to the repo.
 
 ---
 
 ### Troubleshooting
 | Symptom | Checks |
 |---------|--------|
-| `weekend_fixtures.json` missing / empty | Ensure a recent `matches_data_*.html` exists in `data/raw`. `scripts/main.py` might have hit a site outage—rerun it manually. |
-| Kids fixtures sneaking in | Confirm `is_kids_fixture` rules fit the naming convention. Adjust `filter.py` or extend `exclusions.json`. |
-| TBC games showing | `filter.py` already drops “TBC” kickoff entries. If they still appear, verify the source feed isn’t sending a different token. |
+| `weekend_fixtures.json` missing / empty | Run the script manually and check for API errors. Ensure `teamCompIDs.json` is populated (`scripts/gms_fetcher.py competitions`). |
+| Teams missing | Check `config/teamCompIDs.json`. If a team isn't there, run `gms_fetcher.py competitions` to refresh the mappings. |
 | Board not updating | Check browser console for `fetch` errors; confirm the HTML is served from repo root so `../../data/...` resolves correctly. |
 
 ---
 
 ### Deployment Tips
-- Host the repo (or the `apps/` + `data/` subsets) on any static host. The only requirement is that `apps/scoreboard` can reach `data/scoreboard/weekend_fixtures.json` via the relative path.
-- For kiosk PCs, a simple scheduled task can run `scripts/filter.py` locally and copy the JSON to the signage machine.
-- Keep `data/raw/` under version control if you want historical debugging. Otherwise you can `.gitignore` old dumps once the JSON is confirmed.
-
-The scoreboard code path is now isolated, documented, and aligned with automation so weekend updates are a single command—or entirely hands-off via Actions.
-
+- Host the repo (or the `apps/` + `data/` subsets) on any static host.
+- The `apps/scoreboard` HTML expects `data/scoreboard/weekend_fixtures.json` to be reachable via relative path.

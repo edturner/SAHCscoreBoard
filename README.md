@@ -1,81 +1,103 @@
-## SAHC ScoreBoard
+# SAHC ScoreBoard
 
-Unified data pipeline, automation, and static assets for St Albans Hockey Club’s digital displays:
+![Python Version](https://img.shields.io/badge/python-3.11%2B-blue)
+![License](https://img.shields.io/badge/license-MIT-green)
+![Status](https://img.shields.io/badge/status-active-success)
 
-- **Scoreboard fixtures** – 1080×1920 portrait layouts for home/away boards that refresh every five minutes.
-- **League of Leagues** – combined men’s/women’s league table that highlights movement week-to-week.
-- **Data collectors** – Python utilities and GitHub Actions that keep JSON snapshots fresh.
+**Unified data pipeline, automation, and static assets for St Albans Hockey Club’s digital displays.**
 
 ---
 
-### Directory Layout
+## 🚀 About
+
+SAHC ScoreBoard is a robust system designed to power the digital experience at St Albans Hockey Club. It seamlessly aggregates fixture data, league standings, and results to drive dynamic displays and web views (like the "League of Leagues").
+
+## ✨ Features
+
+*   **Scoreboard Fixtures**: Portrait layouts (1080×1920) for home and away screens that automatically refresh every five minutes.
+*   **League of Leagues**: A combined men’s and women’s league table tracking weekly performance and ranking shifts.
+*   **Automated Data Collection**: Python utilities and GitHub Actions keep JSON snapshots fresh without manual intervention.
+
+## 🛠 Tech Stack
+
+*   **Core**: Python 3.11+
+*   **Frontend**: HTML5, CSS3, Vanilla JavaScript
+*   **Automation**: GitHub Actions
+
+---
+
+## 🏁 Getting Started
+
+### Prerequisites
+
+*   Python 3.11 or higher
+
+### Installation
+
+1.  Clone the repository:
+    ```bash
+    git clone https://github.com/edturner/SAHCscoreBoard.git
+    cd SAHCscoreBoard
+    ```
+2.  Install dependencies:
+    ```bash
+    pip install requests beautifulsoup4 pytz
+    ```
+
+### Running Locally
+
+HTML files can be served via any static web server. For local development:
+
+```bash
+# Serve from the root directory
+python -m http.server 8000
+```
+Visit `http://localhost:8000/apps/scoreboard/home.html` to view the displays.
+
+> **Note**: When testing scripts locally, prefer using the existing `data/` directories to keep automation and manual runs aligned.
+
+---
+
+## 📂 Project Architecture
 
 ```
 apps/
-  scoreboard/        # home/away HTML + fixtures.js
-  league/            # leagueOfLeagues-men.html, leagueOfLeagues-women.html + league.js
-  shared/            # styles.css, fonts/, images/ shared by both apps
-config/              # teamIDs.json + teamCompIDs.json (GMS config)
+  scoreboard/        # Home/Away displays & fixture logic
+  league/            # League of Leagues views & logic
+  shared/            # Shared styles, fonts, and assets
+config/              # Team and Competition IDs (GMS)
 data/
-  scoreboard/        # weekend_fixtures.json + csv exports + exclusions.json
-  league/            # teamData.json + teamData.prev.json snapshots
-  raw/               # matches_data_*.html (source dumps from stalbanshc.co.uk)
-docs/                # deep dives (see docs/scoreboard.md & docs/league.md)
-scripts/             # main.py (HTML fetcher), filter.py (fixtures builder), gms_fetcher.py
-.github/workflows/   # fixtures.yml + scores.yml automation
+  scoreboard/        # Generated fixture data, exclusions, and CSV exports
+  league/            # League snapshots (current & previous)
+  raw/               # Raw HTML dumps for debugging
+docs/                # Detailed technical documentation
+scripts/             # Core Python ETL scripts
+.github/workflows/   # CI/CD Automation pipelines (Fixtures, Scores, League)
 ```
 
-Static assets live under `apps/`; data and configs stay under `data/` and `config/` so they can be synced or deployed independently.
+## 🔄 Pipelines
+
+### Scoreboard (Fixtures & Results)
+The scoreboard pipeline fetches data directly from the GMS API, filters it based on exclusions, and generates JSON for the frontend.
+*   **Source**: England Hockey GMS API.
+*   **Update Frequency**: Every 5 minutes (Sat/Sun) via `.github/workflows/fixtures.yml`.
+*   **Core Script**: `scripts/gms_fetcher.py update-scoreboard`.
+
+### League of Leagues
+Weekly aggregation of team performance across all leagues, highlighting movement and stats.
+*   **Source**: GMS (Game Management System) API.
+*   **Update Frequency**: Weekly + Live updates during match days via `.github/workflows/league-live.yml`.
+*   **Core Script**: `scripts/gms_fetcher.py`.
 
 ---
 
-### Pipelines at a Glance
-
-#### Scoreboard (fixtures/results)
-1. `python scripts/main.py` – pulls the latest `/matches` page HTML into `data/raw/matches_data_<timestamp>.html`.
-2. `python scripts/filter.py [--start dd/mm/YYYY --end dd/mm/YYYY]` – parses the freshest raw HTML, filters out kids/TBC fixtures, applies exclusions from `data/scoreboard/exclusions.json`, then exports:
-   - `data/scoreboard/weekend_fixtures.json` (consumed by `fixtures.js`)
-   - `data/scoreboard/mens_fixtures.csv` / `womens_fixtures.csv` (optional reference)
-   - `data/scoreboard/full_json_data.json` (debug snapshot)
-3. `apps/scoreboard/*.html` + `fixtures.js` load `../../data/scoreboard/weekend_fixtures.json` and refresh every five minutes.
-4. GitHub Actions (`.github/workflows/fixtures.yml` and `scores.yml`) run the same scripts on a schedule so the JSON stays current without manual pushes.
-
-Detailed operator notes live in `docs/scoreboard.md`.
-
-#### League of Leagues
-1. `python scripts/gms_fetcher.py competitions --team-file config/teamIDs.json` (pre-season) produces `config/teamCompIDs.json`.
-2. `python scripts/gms_fetcher.py bulk-team-data --config config/teamCompIDs.json --output data/league/teamData.new.json --publish-path data/league/teamData.json --rotate-snapshots` refreshes weekly stats and automatically rolls `teamData.prev.json`.
-3. `python scripts/gms_fetcher.py validate-snapshots --current data/league/teamData.json --previous data/league/teamData.prev.json --expect-count <N>` ensures both snapshots look sane before publishing.
-4. `apps/league/league.js` fetches `../../data/league/teamData.json` (+ `.prev`) to build the combined table, flagging rank/PPG deltas.
-
-Deep dive (API behaviour, retries, trend logic) remains in `docs/league-data-workflow.md`, with a shorter quick-start in `docs/league.md`.
+## 📚 Documentation
+For deeper dives into specific components, check out the `docs/` directory:
+*   [Scoreboard Workflow](docs/scoreboard.md) – Ingestion, exclusion rules, and manual overrides.
+*   [League Pipeline](docs/league.md) – Weekly checklist for the League of Leagues.
+*   [Data Workflow & Retries](docs/league-data-workflow.md) – API behavior and retry strategies.
 
 ---
 
-### Local Development
-- Use Python 3.11+ (Actions run on `python-version: "3.x"`). Install dependencies from `requirements.txt` if present, otherwise `pip install requests beautifulsoup4 pytz`.
-- Serve the HTML files via any static server (or open directly) from the repo root so relative paths to `apps/shared` and `data/...` resolve correctly.
-- When testing scripts locally, prefer the existing directories (`data/raw`, `data/scoreboard`, `data/league`) to keep automation and manual runs aligned.
-- Need to hide a rogue fixture? Add its `fixtureId` to `data/scoreboard/exclusions.json` before rerunning `filter.py`.
-
----
-
-### Documentation
-- `docs/scoreboard.md` – Scoreboard ingestion + display workflow, exclusion rules, manual overrides.
-- `docs/league.md` – Concise weekly checklist for the League of Leagues pipeline.
-- `docs/league-data-workflow.md` – Original long-form reference (API breakdown, retry/fallback strategy).
-
-Each doc links the relevant scripts, cron jobs, and troubleshooting tips so new contributors can ramp quickly.
-
----
-
-### Automation Reference
-- `.github/workflows/fixtures.yml` – Thu/Fri overnight build; runs `scripts/main.py` and `scripts/filter.py` to refresh structure ahead of the weekend.
-- `.github/workflows/scores.yml` – Every 5 minutes on Sat/Sun; re-runs the same scripts to capture score updates mid-weekend.
-- `.github/workflows/league-live.yml` – Every 5 minutes; runs `scripts/live_league_updater.py` to keep League of Leagues data current.
-- All workflows commit only their respective JSON files to keep history clean.
-
----
-
-Questions, ideas, or new display requirements? Add them under `docs/` (or open a ticket) so the pipeline stays transparent and maintainable.
-
+## 🤝 Contributing
+Contributions are welcome! Please ensure you test local scripts before submitting a PR.
