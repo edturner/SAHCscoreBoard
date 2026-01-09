@@ -621,7 +621,9 @@ def parse_results_and_fixtures(html: str) -> List[Dict[str, Optional[str]]]:
 
 def weekend_range(reference: Optional[str] = None) -> Tuple[date, date]:
     if reference:
-        saturday = datetime.strptime(reference, "%Y-%m-%d").date()
+        ref_date = datetime.strptime(reference, "%Y-%m-%d").date()
+        # If user provides Sunday, assume they mean the weekend ending on that Sunday
+        saturday = ref_date - timedelta(days=1) if ref_date.weekday() == 6 else ref_date
     else:
         today = date.today()
         days_since_saturday = (today.weekday() - 5) % 7
