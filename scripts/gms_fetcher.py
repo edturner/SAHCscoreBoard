@@ -626,8 +626,19 @@ def weekend_range(reference: Optional[str] = None) -> Tuple[date, date]:
         saturday = ref_date - timedelta(days=1) if ref_date.weekday() == 6 else ref_date
     else:
         today = date.today()
-        days_since_saturday = (today.weekday() - 5) % 7
-        saturday = today - timedelta(days=days_since_saturday if days_since_saturday != 0 else 7)
+        wd = today.weekday()  # Mon=0, ..., Sun=6
+        
+        if wd in {3, 4}:  # Thu, Fri -> Upcoming weekend
+            days_until_saturday = 5 - wd
+            saturday = today + timedelta(days=days_until_saturday)
+        elif wd == 6:  # Sun -> This weekend (start yesterday)
+            saturday = today - timedelta(days=1)
+        elif wd == 5:  # Sat -> This weekend (today)
+            saturday = today
+        else:  # Mon, Tue, Wed -> Previous weekend results
+            # Mon(0)->Sat(-2), Tue(1)->Sat(-3), Wed(2)->Sat(-4)
+            days_since_sat = wd + 2
+            saturday = today - timedelta(days=days_since_sat)
     sunday = saturday + timedelta(days=1)
     return saturday, sunday
 
