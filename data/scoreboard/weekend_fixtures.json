@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-09T19:56:18.892220+00:00",
+  "generated_at": "2026-01-09T20:07:25.744941+00:00",
   "home": [
     {
       "date": "2026-01-10T10:30:00",
@@ -12,21 +12,6 @@
       "location": "Home",
       "status": "Scheduled",
       "fixtureId": "91e2a40f-fe91-4c8e-9ca6-aed40e6178b2-10 Jan 2026-10:30",
-      "home_score": null,
-      "away_score": null,
-      "_ha": "h"
-    },
-    {
-      "date": "2026-01-10T10:30:00",
-      "team": "St Albans 6 (F)",
-      "category": "women",
-      "home_team": "St Albans 5",
-      "away_team": "St Albans 6",
-      "kickoff": "10:30",
-      "division": "Division 4 South West",
-      "location": "Home",
-      "status": "Scheduled",
-      "fixtureId": "30cc8f2b-3eae-47fb-a5fb-f0b976c3d3a2-10 Jan 2026-10:30",
       "home_score": null,
       "away_score": null,
       "_ha": "h"
@@ -92,21 +77,6 @@
       "_ha": "h"
     },
     {
-      "date": "2026-01-10T14:00:00",
-      "team": "St Albans 7 (M)",
-      "category": "men",
-      "home_team": "St Albans 6",
-      "away_team": "St Albans 7",
-      "kickoff": "14:00",
-      "division": "Division 5 South West",
-      "location": "Home",
-      "status": "Scheduled",
-      "fixtureId": "61325529-1ddf-4011-9913-2073c8f457f7-10 Jan 2026-14:00",
-      "home_score": null,
-      "away_score": null,
-      "_ha": "h"
-    },
-    {
       "date": "2026-01-10T15:00:00",
       "team": "St Albans 3 (M)",
       "category": "men",
@@ -117,21 +87,6 @@
       "location": "Home",
       "status": "Scheduled",
       "fixtureId": "39486394-dad6-4e98-b4fb-6cc03cbc7910-10 Jan 2026-15:00",
-      "home_score": null,
-      "away_score": null,
-      "_ha": "h"
-    },
-    {
-      "date": "2026-01-10T15:00:00",
-      "team": "St Albans 4 (M)",
-      "category": "men",
-      "home_team": "St Albans 3",
-      "away_team": "St Albans 4",
-      "kickoff": "15:00",
-      "division": "Division 2 South West",
-      "location": "Home",
-      "status": "Scheduled",
-      "fixtureId": "3d7ecaa8-5810-4721-9e4c-a8cea9ff8581-10 Jan 2026-15:00",
       "home_score": null,
       "away_score": null,
       "_ha": "h"
