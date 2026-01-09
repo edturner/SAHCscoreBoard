@@ -1253,6 +1253,13 @@ def command_update_scoreboard(
         except Exception as e:
             print(f"Error fetching {name}: {e}")
 
+    # Sort by date
+    def sort_by_date(item):
+        return item.get("date") or ""
+
+    scoreboard_home.sort(key=sort_by_date)
+    scoreboard_away.sort(key=sort_by_date)
+
     # 1. Generate weekend_fixtures.json
     json_output = {
         "generated_at": datetime.now().astimezone().isoformat(),
