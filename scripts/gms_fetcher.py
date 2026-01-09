@@ -1211,6 +1211,14 @@ def command_update_scoreboard(
     scoreboard_home = []
     scoreboard_away = []
     all_fixtures_flat = []
+    seen_matches = set()
+
+    # Map team name to previous fixtures to handle complete fetch failure
+    previous_team_fixtures = {}
+    for fix in previous_fixtures_map.values():
+        tname = fix.get("team")
+        if tname:
+            previous_team_fixtures.setdefault(tname, []).append(fix)
 
     for idx, entry in enumerate(teams_config, start=1):
         name = entry.get("name")
@@ -1243,6 +1251,40 @@ def command_update_scoreboard(
                 
                 formatted = format_scoreboard_fixture(f, name, category, comp_label, f_id)
                 
+                # Deduplication logic
+                # Key: Date + Time + HomeTeam + AwayTeam
+                dedupe_key = (
+                    formatted.get("date"),
+                    formatted.get("kickoff"),
+                    formatted.get("home_team"),
+                    formatted.get("away_team")
+                )
+                
+                if dedupe_key in seen_matches:
+                    print(f"  [Skipping] Duplicate internal match: {formatted['home_team']} vs {formatted['away_team']}")
+                    continue
+                
+                seen_matches.add(dedupe_key)
+
+                # ROLLBACK / MERGE LOGIC
+                # If we have a previous version of this fixture that has a result (Played), 
+                # and the new one is 'Scheduled' or missing score, preserve the old one.
+                # This handles temporary API glitches where result disappears.
+                prev = previous_fixtures_map.get(f_id)
+                if prev:
+                    prev_status = prev.get("status")
+                    curr_status = formatted.get("status")
+                    
+                    # If previously played but now scheduled/unknown -> keep previous
+                    if prev_status == "Played" and curr_status != "Played":
+                        print(f"  [Rollback] Keeping result for {name} (was Played, now {curr_status})")
+                        formatted = prev
+                    
+                    # If previously had score but now score is None -> keep previous
+                    elif (prev.get("home_score") is not None) and (formatted.get("home_score") is None):
+                        print(f"  [Rollback] Keeping score for {name} (was {prev['home_score']}-{prev['away_score']}, now None)")
+                        formatted = prev
+
                 all_fixtures_flat.append(formatted)
                 
                 if formatted["_ha"] == "h":
@@ -1252,6 +1294,30 @@ def command_update_scoreboard(
                     
         except Exception as e:
             print(f"Error fetching {name}: {e}")
+            # Fallback: use previous data for this team if fetch failed completely
+            saved_fixtures = previous_team_fixtures.get(name, [])
+            if saved_fixtures:
+                print(f"  [Rollback] Fetch failed. Using {len(saved_fixtures)} saved fixtures for {name}.")
+                for sf in saved_fixtures:
+                    
+                    # Apply deduplication to fallbacks too (though less critical if they were already unique, but good for safety)
+                    dedupe_key = (
+                        sf.get("date"),
+                        sf.get("kickoff"),
+                        sf.get("home_team"),
+                        sf.get("away_team")
+                    )
+                    if dedupe_key in seen_matches:
+                         continue
+                    seen_matches.add(dedupe_key)
+
+                    all_fixtures_flat.append(sf)
+                    if sf.get("_ha") == "h":
+                        scoreboard_home.append(sf)
+                    else:
+                        scoreboard_away.append(sf)
+            else:
+                print(f"  [Rollback] No saved fixtures found for {name}.")
 
     # Sort by date
     def sort_by_date(item):
