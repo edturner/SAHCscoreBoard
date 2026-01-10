@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-10T15:48:09.019319+00:00",
+  "generated_at": "2026-01-10T15:56:13.828660+00:00",
   "home": [
     {
       "date": "2026-01-10T10:30:00",
@@ -162,10 +162,10 @@
       "kickoff": "13:15",
       "division": "Division 4 South West",
       "location": "Away",
-      "status": "Scheduled",
+      "status": "Played",
       "fixtureId": "f657d2bb-dafe-4b84-8b33-2c51c690bd5c-10 Jan 2026-13:15",
-      "home_score": null,
-      "away_score": null,
+      "home_score": 3,
+      "away_score": 2,
       "_ha": "a"
     },
     {
