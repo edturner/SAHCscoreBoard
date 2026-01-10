@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-10T17:53:08.758227+00:00",
+  "generated_at": "2026-01-10T18:00:36.782236+00:00",
   "home": [
     {
       "date": "2026-01-10T10:30:00",
@@ -147,10 +147,10 @@
       "kickoff": "12:00",
       "division": "Division 6 South West",
       "location": "Away",
-      "status": "Scheduled",
+      "status": "Played",
       "fixtureId": "7df3c3cf-94cd-4e54-bb74-b85f0f93bcb8-10 Jan 2026-12:00",
-      "home_score": null,
-      "away_score": null,
+      "home_score": 0,
+      "away_score": 3,
       "_ha": "a"
     },
     {
@@ -177,10 +177,10 @@
       "kickoff": "14:30",
       "division": "Division 1 South",
       "location": "Away",
-      "status": "Scheduled",
+      "status": "Played",
       "fixtureId": "b00d4fe3-eacf-4b31-92cf-4ec4798eb44e-10 Jan 2026-14:30",
-      "home_score": null,
-      "away_score": null,
+      "home_score": 1,
+      "away_score": 3,
       "_ha": "a"
     }
   ]
