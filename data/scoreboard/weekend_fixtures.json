@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-11T16:33:43.831473+00:00",
+  "generated_at": "2026-01-11T16:51:52.681863+00:00",
   "home": [
     {
       "date": "2026-01-10T10:30:00",
@@ -55,7 +55,7 @@
       "kickoff": "13:00",
       "division": "Division 1 South",
       "location": "Home",
-      "status": "Scheduled",
+      "status": "Played",
       "fixtureId": "f1c3a876-4de3-4c99-9800-171fe4667602-10 Jan 2026-13:00",
       "home_score": null,
       "away_score": null,
