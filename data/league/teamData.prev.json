@@ -1,35 +1,35 @@
 [
   {
-    "name": "St Albans 1 (M)",
+    "name": "St Albans 1(M)",
     "teamId": "d2d0b65e-bf96-476b-8d38-6d28dae65a61",
-    "teamDisplay": "St Albans 1",
+    "teamDisplay": "St Albans",
     "competition": {
       "id": "c14af471-9386-4f7b-a873-8772fe3bf343",
       "label": "Conference Midlands (2025-2026)"
     },
     "stats": {
-      "played": "8",
-      "won": "2",
-      "drawn": "5",
+      "played": "10",
+      "won": "3",
+      "drawn": "6",
       "lost": "1",
-      "goalsFor": "16",
-      "goalsAgainst": "14",
-      "goalDiff": "2",
-      "points": "11",
-      "ppg": "1.48"
+      "goalsFor": "21",
+      "goalsAgainst": "17",
+      "goalDiff": "4",
+      "points": "15",
+      "ppg": "1.50"
     },
     "form": [
-      {
-        "result": "W"
-      },
-      {
-        "result": "D"
-      },
       {
         "result": "D"
       },
       {
         "result": "L"
+      },
+      {
+        "result": "D"
+      },
+      {
+        "result": "W"
       },
       {
         "result": "D"
@@ -45,19 +45,19 @@
       "label": "Women's Conference Midlands (2025-2026)"
     },
     "stats": {
-      "played": "8",
-      "won": "3",
+      "played": "10",
+      "won": "4",
       "drawn": "3",
-      "lost": "2",
-      "goalsFor": "19",
-      "goalsAgainst": "10",
-      "goalDiff": "9",
-      "points": "12",
+      "lost": "3",
+      "goalsFor": "23",
+      "goalsAgainst": "13",
+      "goalDiff": "10",
+      "points": "15",
       "ppg": "1.50"
     },
     "form": [
       {
-        "result": "W"
+        "result": "L"
       },
       {
         "result": "D"
@@ -66,7 +66,7 @@
         "result": "L"
       },
       {
-        "result": "D"
+        "result": "W"
       },
       {
         "result": "L"
@@ -74,29 +74,23 @@
     ]
   },
   {
-    "name": "St Albans 10 (M)",
-    "teamId": "fe68372e-c867-48bf-8262-9e0db5d72500",
-    "compId": "",
-    "error": "Missing teamId or compId"
-  },
-  {
     "name": "St Albans 2 (M)",
     "teamId": "f1c3a876-4de3-4c99-9800-171fe4667602",
     "teamDisplay": "St Albans 2",
     "competition": {
       "id": "19353043-685d-47f5-9c77-3b49f3b8e90a",
-      "label": "East Division 1 South (2025-2026)"
+      "label": "Division 1 South (2025-2026)"
     },
     "stats": {
-      "played": "9",
-      "won": "6",
+      "played": "12",
+      "won": "9",
       "drawn": "2",
       "lost": "1",
-      "goalsFor": "23",
-      "goalsAgainst": "14",
-      "goalDiff": "9",
-      "points": "20",
-      "ppg": "2.12"
+      "goalsFor": "36",
+      "goalsAgainst": "20",
+      "goalDiff": "16",
+      "points": "29",
+      "ppg": "2.42"
     },
     "form": [
       {
@@ -106,7 +100,7 @@
         "result": "W"
       },
       {
-        "result": "D"
+        "result": "W"
       },
       {
         "result": "W"
@@ -122,34 +116,34 @@
     "teamDisplay": "St Albans 2",
     "competition": {
       "id": "c9eb7874-fda3-45aa-962d-b9278abec54c",
-      "label": "East Women's Premier Division (2025-2026)"
+      "label": "Premier Division (2025-2026)"
     },
     "stats": {
-      "played": "9",
-      "won": "2",
+      "played": "12",
+      "won": "4",
       "drawn": "5",
-      "lost": "2",
-      "goalsFor": "12",
-      "goalsAgainst": "14",
-      "goalDiff": "-2",
-      "points": "11",
-      "ppg": "1.22"
+      "lost": "3",
+      "goalsFor": "16",
+      "goalsAgainst": "19",
+      "goalDiff": "-3",
+      "points": "17",
+      "ppg": "1.42"
     },
     "form": [
       {
-        "result": "D"
-      },
-      {
         "result": "L"
       },
       {
         "result": "D"
       },
       {
+        "result": "W"
+      },
+      {
         "result": "L"
       },
       {
-        "result": "D"
+        "result": "W"
       }
     ]
   },
@@ -159,25 +153,25 @@
     "teamDisplay": "St Albans 3",
     "competition": {
       "id": "13f89328-f53b-422c-9aff-22ec2ff92215",
-      "label": "East Women's Division 1 South (2025-2026)"
+      "label": "Division 1 South (2025-2026)"
     },
     "stats": {
-      "played": "9",
+      "played": "12",
       "won": "2",
-      "drawn": "1",
-      "lost": "6",
-      "goalsFor": "15",
-      "goalsAgainst": "20",
-      "goalDiff": "-5",
-      "points": "7",
-      "ppg": "0.78"
+      "drawn": "2",
+      "lost": "8",
+      "goalsFor": "19",
+      "goalsAgainst": "26",
+      "goalDiff": "-7",
+      "points": "8",
+      "ppg": "0.67"
     },
     "form": [
       {
-        "result": "L"
+        "result": "D"
       },
       {
-        "result": "W"
+        "result": "L"
       },
       {
         "result": "L"
@@ -196,34 +190,34 @@
     "teamDisplay": "St Albans 3",
     "competition": {
       "id": "2d9f6c8d-3794-444a-9f05-03b54eea5754",
-      "label": "East Division 2 South West (2025-2026)"
+      "label": "Division 2 South West (2025-2026)"
     },
     "stats": {
-      "played": "9",
-      "won": "5",
+      "played": "12",
+      "won": "7",
       "drawn": "1",
-      "lost": "3",
-      "goalsFor": "27",
-      "goalsAgainst": "20",
-      "goalDiff": "7",
-      "points": "16",
-      "ppg": "1.78"
+      "lost": "4",
+      "goalsFor": "40",
+      "goalsAgainst": "23",
+      "goalDiff": "17",
+      "points": "22",
+      "ppg": "1.83"
     },
     "form": [
       {
-        "result": "W"
-      },
-      {
-        "result": "W"
-      },
-      {
-        "result": "W"
+        "result": "L"
       },
       {
         "result": "L"
       },
       {
         "result": "L"
+      },
+      {
+        "result": "W"
+      },
+      {
+        "result": "W"
       }
     ]
   },
@@ -233,34 +227,34 @@
     "teamDisplay": "St Albans 4",
     "competition": {
       "id": "2d9f6c8d-3794-444a-9f05-03b54eea5754",
-      "label": "East Division 2 South West (2025-2026)"
+      "label": "Division 2 South West (2025-2026)"
     },
     "stats": {
-      "played": "9",
-      "won": "2",
-      "drawn": "1",
-      "lost": "6",
-      "goalsFor": "15",
-      "goalsAgainst": "39",
-      "goalDiff": "-24",
-      "points": "7",
-      "ppg": "0.78"
+      "played": "12",
+      "won": "3",
+      "drawn": "2",
+      "lost": "7",
+      "goalsFor": "23",
+      "goalsAgainst": "49",
+      "goalDiff": "-26",
+      "points": "11",
+      "ppg": "0.92"
     },
     "form": [
       {
-        "result": "L"
+        "result": "W"
       },
       {
-        "result": "L"
+        "result": "D"
+      },
+      {
+        "result": "D"
       },
       {
         "result": "L"
       },
       {
         "result": "W"
-      },
-      {
-        "result": "D"
       }
     ]
   },
@@ -270,31 +264,31 @@
     "teamDisplay": "St Albans 4",
     "competition": {
       "id": "42cf0648-247f-4956-b9b0-6fe89d2367c3",
-      "label": "East Women's Division 2 South West (2025-2026)"
+      "label": "Division 2 South West (2025-2026)"
     },
     "stats": {
-      "played": "9",
-      "won": "2",
+      "played": "12",
+      "won": "3",
       "drawn": "1",
-      "lost": "6",
-      "goalsFor": "8",
-      "goalsAgainst": "34",
-      "goalDiff": "-26",
-      "points": "7",
-      "ppg": "0.74"
+      "lost": "8",
+      "goalsFor": "12",
+      "goalsAgainst": "42",
+      "goalDiff": "-30",
+      "points": "10",
+      "ppg": "0.83"
     },
     "form": [
+      {
+        "result": "D"
+      },
+      {
+        "result": "L"
+      },
       {
         "result": "L"
       },
       {
         "result": "W"
-      },
-      {
-        "result": "L"
-      },
-      {
-        "result": "D"
       },
       {
         "result": "L"
@@ -307,18 +301,18 @@
     "teamDisplay": "St Albans 5",
     "competition": {
       "id": "cf871089-4fcc-4f96-8cd5-a03864ae64ab",
-      "label": "East Division 4 South West (2025-2026)"
+      "label": "Division 4 South West (2025-2026)"
     },
     "stats": {
-      "played": "8",
-      "won": "5",
-      "drawn": "1",
+      "played": "10",
+      "won": "6",
+      "drawn": "2",
       "lost": "2",
-      "goalsFor": "23",
-      "goalsAgainst": "20",
-      "goalDiff": "3",
-      "points": "16",
-      "ppg": "2.10"
+      "goalsFor": "27",
+      "goalsAgainst": "22",
+      "goalDiff": "5",
+      "points": "20",
+      "ppg": "2.00"
     },
     "form": [
       {
@@ -328,13 +322,13 @@
         "result": "W"
       },
       {
-        "result": "W"
-      },
-      {
-        "result": "W"
-      },
-      {
         "result": "L"
+      },
+      {
+        "result": "D"
+      },
+      {
+        "result": "W"
       }
     ]
   },
@@ -344,31 +338,31 @@
     "teamDisplay": "St Albans 5",
     "competition": {
       "id": "3b7fa728-0624-4d9b-a707-67f9085bb0f0",
-      "label": "East Women's Division 4 South West (2025-2026)"
+      "label": "Division 4 South West (2025-2026)"
     },
     "stats": {
-      "played": "9",
-      "won": "7",
+      "played": "12",
+      "won": "10",
       "drawn": "2",
       "lost": "0",
-      "goalsFor": "24",
-      "goalsAgainst": "4",
-      "goalDiff": "20",
-      "points": "23",
-      "ppg": "2.56"
+      "goalsFor": "29",
+      "goalsAgainst": "6",
+      "goalDiff": "23",
+      "points": "32",
+      "ppg": "2.67"
     },
     "form": [
       {
-        "result": "W"
-      },
-      {
         "result": "D"
       },
       {
         "result": "W"
       },
       {
-        "result": "D"
+        "result": "W"
+      },
+      {
+        "result": "W"
       },
       {
         "result": "W"
@@ -381,20 +375,23 @@
     "teamDisplay": "St Albans 6",
     "competition": {
       "id": "d98e8166-f9ed-40dc-b4db-c517dc8468df",
-      "label": "East Division 5 South West (2025-2026)"
+      "label": "Division 5 South West (2025-2026)"
     },
     "stats": {
-      "played": "9",
-      "won": "4",
+      "played": "12",
+      "won": "6",
       "drawn": "2",
-      "lost": "3",
-      "goalsFor": "20",
-      "goalsAgainst": "18",
-      "goalDiff": "2",
-      "points": "14",
-      "ppg": "1.56"
+      "lost": "4",
+      "goalsFor": "27",
+      "goalsAgainst": "24",
+      "goalDiff": "3",
+      "points": "20",
+      "ppg": "1.67"
     },
     "form": [
+      {
+        "result": "D"
+      },
       {
         "result": "W"
       },
@@ -403,9 +400,6 @@
       },
       {
         "result": "L"
-      },
-      {
-        "result": "D"
       },
       {
         "result": "W"
@@ -418,34 +412,34 @@
     "teamDisplay": "St Albans 6",
     "competition": {
       "id": "3b7fa728-0624-4d9b-a707-67f9085bb0f0",
-      "label": "East Women's Division 4 South West (2025-2026)"
+      "label": "Division 4 South West (2025-2026)"
     },
     "stats": {
-      "played": "9",
+      "played": "12",
       "won": "2",
       "drawn": "1",
-      "lost": "6",
-      "goalsFor": "10",
-      "goalsAgainst": "20",
-      "goalDiff": "-10",
+      "lost": "9",
+      "goalsFor": "11",
+      "goalsAgainst": "30",
+      "goalDiff": "-19",
       "points": "7",
-      "ppg": "0.78"
+      "ppg": "0.58"
     },
     "form": [
       {
-        "result": "W"
-      },
-      {
-        "result": "L"
-      },
-      {
-        "result": "L"
-      },
-      {
         "result": "L"
       },
       {
         "result": "W"
+      },
+      {
+        "result": "L"
+      },
+      {
+        "result": "L"
+      },
+      {
+        "result": "L"
       }
     ]
   },
@@ -455,34 +449,34 @@
     "teamDisplay": "St Albans 7",
     "competition": {
       "id": "d98e8166-f9ed-40dc-b4db-c517dc8468df",
-      "label": "East Division 5 South West (2025-2026)"
+      "label": "Division 5 South West (2025-2026)"
     },
     "stats": {
-      "played": "9",
-      "won": "1",
+      "played": "12",
+      "won": "2",
       "drawn": "5",
-      "lost": "3",
-      "goalsFor": "21",
-      "goalsAgainst": "22",
-      "goalDiff": "-1",
-      "points": "8",
-      "ppg": "0.89"
+      "lost": "5",
+      "goalsFor": "28",
+      "goalsAgainst": "32",
+      "goalDiff": "-4",
+      "points": "11",
+      "ppg": "0.92"
     },
     "form": [
+      {
+        "result": "D"
+      },
+      {
+        "result": "D"
+      },
+      {
+        "result": "L"
+      },
       {
         "result": "W"
       },
       {
         "result": "L"
-      },
-      {
-        "result": "L"
-      },
-      {
-        "result": "D"
-      },
-      {
-        "result": "D"
       }
     ]
   },
@@ -492,25 +486,25 @@
     "teamDisplay": "St Albans 7",
     "competition": {
       "id": "9ccc79ed-17aa-4f3f-b3d5-acf09c8c2ced",
-      "label": "East Women's Division 5 South West (2025-2026)"
+      "label": "Division 5 South West (2025-2026)"
     },
     "stats": {
-      "played": "9",
-      "won": "6",
+      "played": "12",
+      "won": "7",
       "drawn": "1",
-      "lost": "2",
-      "goalsFor": "30",
-      "goalsAgainst": "15",
-      "goalDiff": "15",
-      "points": "19",
-      "ppg": "2.11"
+      "lost": "4",
+      "goalsFor": "35",
+      "goalsAgainst": "21",
+      "goalDiff": "14",
+      "points": "22",
+      "ppg": "1.83"
     },
     "form": [
       {
-        "result": "W"
+        "result": "L"
       },
       {
-        "result": "D"
+        "result": "W"
       },
       {
         "result": "W"
@@ -519,7 +513,7 @@
         "result": "L"
       },
       {
-        "result": "W"
+        "result": "L"
       }
     ]
   },
@@ -529,34 +523,34 @@
     "teamDisplay": "St Albans 8",
     "competition": {
       "id": "d45e986f-45b4-43db-9ccc-793bd41a6a79",
-      "label": "East Division 6 South West (2025-2026)"
+      "label": "Division 6 South West (2025-2026)"
     },
     "stats": {
-      "played": "9",
-      "won": "4",
+      "played": "12",
+      "won": "6",
       "drawn": "1",
-      "lost": "4",
-      "goalsFor": "21",
-      "goalsAgainst": "19",
-      "goalDiff": "2",
-      "points": "13",
-      "ppg": "1.44"
+      "lost": "5",
+      "goalsFor": "30",
+      "goalsAgainst": "25",
+      "goalDiff": "5",
+      "points": "19",
+      "ppg": "1.58"
     },
     "form": [
       {
-        "result": "W"
-      },
-      {
-        "result": "D"
-      },
-      {
-        "result": "L"
-      },
-      {
         "result": "L"
       },
       {
         "result": "W"
+      },
+      {
+        "result": "W"
+      },
+      {
+        "result": "W"
+      },
+      {
+        "result": "L"
       }
     ]
   },
@@ -566,31 +560,31 @@
     "teamDisplay": "St Albans 8",
     "competition": {
       "id": "c36cfbd8-b419-4fec-8a53-bb01977a30da",
-      "label": "East Women's Division 6 South West (2025-2026)"
+      "label": "Division 6 South West (2025-2026)"
     },
     "stats": {
-      "played": "9",
-      "won": "6",
-      "drawn": "1",
+      "played": "12",
+      "won": "8",
+      "drawn": "2",
       "lost": "2",
-      "goalsFor": "23",
-      "goalsAgainst": "11",
-      "goalDiff": "12",
-      "points": "19",
-      "ppg": "2.11"
+      "goalsFor": "33",
+      "goalsAgainst": "15",
+      "goalDiff": "18",
+      "points": "26",
+      "ppg": "2.17"
     },
     "form": [
       {
-        "result": "W"
-      },
-      {
-        "result": "W"
-      },
-      {
-        "result": "W"
-      },
-      {
         "result": "L"
+      },
+      {
+        "result": "W"
+      },
+      {
+        "result": "D"
+      },
+      {
+        "result": "W"
       },
       {
         "result": "W"
@@ -603,26 +597,20 @@
     "teamDisplay": "St Albans 9",
     "competition": {
       "id": "423f44ad-8455-4233-8abe-4c4543dc0d38",
-      "label": "East Division 7 South West (2025-2026)"
+      "label": "Division 7 South West (2025-2026)"
     },
     "stats": {
-      "played": "9",
-      "won": "2",
+      "played": "11",
+      "won": "3",
       "drawn": "3",
-      "lost": "4",
-      "goalsFor": "10",
-      "goalsAgainst": "21",
-      "goalDiff": "-11",
-      "points": "9",
-      "ppg": "1.00"
+      "lost": "5",
+      "goalsFor": "12",
+      "goalsAgainst": "31",
+      "goalDiff": "-19",
+      "points": "12",
+      "ppg": "1.09"
     },
     "form": [
-      {
-        "result": "L"
-      },
-      {
-        "result": "L"
-      },
       {
         "result": "W"
       },
@@ -631,6 +619,12 @@
       },
       {
         "result": "L"
+      },
+      {
+        "result": "L"
+      },
+      {
+        "result": "W"
       }
     ]
   }
