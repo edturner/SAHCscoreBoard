@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-17T18:54:47.620503+00:00",
+  "generated_at": "2026-01-17T19:08:39.534583+00:00",
   "home": [
     {
       "date": "2026-01-17T10:30:00",
@@ -100,10 +100,10 @@
       "kickoff": "15:00",
       "division": "Division 7 South West",
       "location": "Home",
-      "status": "Scheduled",
+      "status": "Played",
       "fixtureId": "2d0cbcaa-ddfe-4aa9-ba90-47f28ee800e1-17 Jan 2026-15:00",
-      "home_score": null,
-      "away_score": null,
+      "home_score": 1,
+      "away_score": 1,
       "_ha": "h"
     },
     {
