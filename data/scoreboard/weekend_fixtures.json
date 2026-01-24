@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-24T12:00:12.006963+00:00",
+  "generated_at": "2026-01-24T12:49:51.299733+00:00",
   "home": [
     {
       "date": "2026-01-24T10:30:00",
@@ -10,10 +10,10 @@
       "kickoff": "10:30",
       "division": "Division 2 South West",
       "location": "Home",
-      "status": "Scheduled",
+      "status": "Played",
       "fixtureId": "3d7ecaa8-5810-4721-9e4c-a8cea9ff8581-24 Jan 2026-10:30",
-      "home_score": null,
-      "away_score": null,
+      "home_score": 2,
+      "away_score": 4,
       "_ha": "h"
     },
     {
