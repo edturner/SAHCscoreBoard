@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-24T17:15:14.847375+00:00",
+  "generated_at": "2026-01-24T17:34:25.942811+00:00",
   "home": [
     {
       "date": "2026-01-24T10:30:00",
@@ -55,10 +55,10 @@
       "kickoff": "13:00",
       "division": "Premier Division",
       "location": "Home",
-      "status": "Scheduled",
+      "status": "Played",
       "fixtureId": "a5b838ee-1d9d-491e-b1bb-f05388eff199-24 Jan 2026-13:00",
-      "home_score": null,
-      "away_score": null,
+      "home_score": 2,
+      "away_score": 1,
       "_ha": "h"
     },
     {
@@ -85,10 +85,10 @@
       "kickoff": "15:00",
       "division": "Division 1 South",
       "location": "Home",
-      "status": "Scheduled",
+      "status": "Played",
       "fixtureId": "f1c3a876-4de3-4c99-9800-171fe4667602-24 Jan 2026-15:00",
-      "home_score": null,
-      "away_score": null,
+      "home_score": 3,
+      "away_score": 1,
       "_ha": "h"
     },
     {
@@ -132,10 +132,10 @@
       "kickoff": "13:00",
       "division": "Division 4 South West",
       "location": "Away",
-      "status": "Scheduled",
+      "status": "Played",
       "fixtureId": "f657d2bb-dafe-4b84-8b33-2c51c690bd5c-24 Jan 2026-13:00",
-      "home_score": null,
-      "away_score": null,
+      "home_score": 1,
+      "away_score": 1,
       "_ha": "a"
     },
     {
@@ -177,10 +177,10 @@
       "kickoff": "14:30",
       "division": "Division 2 South West",
       "location": "Away",
-      "status": "Scheduled",
+      "status": "Played",
       "fixtureId": "39486394-dad6-4e98-b4fb-6cc03cbc7910-24 Jan 2026-14:30",
-      "home_score": null,
-      "away_score": null,
+      "home_score": 1,
+      "away_score": 4,
       "_ha": "a"
     },
     {
@@ -192,10 +192,10 @@
       "kickoff": "14:30",
       "division": "Division 2 South West",
       "location": "Away",
-      "status": "Scheduled",
+      "status": "Played",
       "fixtureId": "e61f49a1-4ebb-4d1e-b346-bbfe5e7763a5-24 Jan 2026-14:30",
-      "home_score": null,
-      "away_score": null,
+      "home_score": 5,
+      "away_score": 0,
       "_ha": "a"
     },
     {
@@ -207,10 +207,10 @@
       "kickoff": "14:30",
       "division": "Division 7 South West",
       "location": "Away",
-      "status": "Scheduled",
+      "status": "Played",
       "fixtureId": "2d0cbcaa-ddfe-4aa9-ba90-47f28ee800e1-24 Jan 2026-14:30",
-      "home_score": null,
-      "away_score": null,
+      "home_score": 3,
+      "away_score": 2,
       "_ha": "a"
     },
     {
