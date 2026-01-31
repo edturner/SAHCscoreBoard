@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-31T14:12:54.341220+00:00",
+  "generated_at": "2026-01-31T14:43:04.758365+00:00",
   "home": [
     {
       "date": "2026-01-31T10:30:00",
@@ -177,10 +177,10 @@
       "kickoff": "11:00",
       "division": "Division 6 South West",
       "location": "Away",
-      "status": "Scheduled",
+      "status": "Played",
       "fixtureId": "5949dcf2-d51f-4e27-9bd3-0639e58261c6-31 Jan 2026-11:00",
-      "home_score": null,
-      "away_score": null,
+      "home_score": 1,
+      "away_score": 4,
       "_ha": "a"
     },
     {
