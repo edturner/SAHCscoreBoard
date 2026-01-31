@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-31T16:25:19.682030+00:00",
+  "generated_at": "2026-01-31T16:52:37.214826+00:00",
   "home": [
     {
       "date": "2026-01-31T10:30:00",
@@ -40,10 +40,10 @@
       "kickoff": "12:00",
       "division": "Division 4 South West",
       "location": "Home",
-      "status": "Scheduled",
+      "status": "Played",
       "fixtureId": "f657d2bb-dafe-4b84-8b33-2c51c690bd5c-31 Jan 2026-12:00",
-      "home_score": null,
-      "away_score": null,
+      "home_score": 4,
+      "away_score": 1,
       "_ha": "h"
     },
     {
@@ -70,10 +70,10 @@
       "kickoff": "13:30",
       "division": "Division 5 South West",
       "location": "Home",
-      "status": "Scheduled",
+      "status": "Played",
       "fixtureId": "1b96b793-1dd0-4e01-98b1-d07139fa44c4-31 Jan 2026-13:30",
-      "home_score": null,
-      "away_score": null,
+      "home_score": 4,
+      "away_score": 0,
       "_ha": "h"
     },
     {
@@ -207,10 +207,10 @@
       "kickoff": "14:00",
       "division": "Premier Division",
       "location": "Away",
-      "status": "Scheduled",
+      "status": "Played",
       "fixtureId": "a5b838ee-1d9d-491e-b1bb-f05388eff199-31 Jan 2026-14:00",
-      "home_score": null,
-      "away_score": null,
+      "home_score": 2,
+      "away_score": 1,
       "_ha": "a"
     },
     {
@@ -222,10 +222,10 @@
       "kickoff": "14:30",
       "division": "Women's Conference Midlands",
       "location": "Away",
-      "status": "Scheduled",
+      "status": "Played",
       "fixtureId": "d9f0f20b-37ae-4a51-aa7c-6b4c2718da54-31 Jan 2026-14:30",
-      "home_score": null,
-      "away_score": null,
+      "home_score": 0,
+      "away_score": 6,
       "_ha": "a"
     },
     {
@@ -237,10 +237,10 @@
       "kickoff": "14:30",
       "division": "Division 2 South West",
       "location": "Away",
-      "status": "Scheduled",
+      "status": "Played",
       "fixtureId": "3d7ecaa8-5810-4721-9e4c-a8cea9ff8581-31 Jan 2026-14:30",
-      "home_score": null,
-      "away_score": null,
+      "home_score": 4,
+      "away_score": 1,
       "_ha": "a"
     },
     {
