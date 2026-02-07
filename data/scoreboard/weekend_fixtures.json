@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-07T19:58:22.193955+00:00",
+  "generated_at": "2026-02-07T20:26:28.874725+00:00",
   "home": [
     {
       "date": "2026-02-07T10:30:00",
@@ -222,10 +222,10 @@
       "kickoff": "16:30",
       "division": "Conference Midlands",
       "location": "Away",
-      "status": "Scheduled",
+      "status": "Played",
       "fixtureId": "d2d0b65e-bf96-476b-8d38-6d28dae65a61-07 Feb 2026-16:30",
-      "home_score": null,
-      "away_score": null,
+      "home_score": 2,
+      "away_score": 2,
       "_ha": "a"
     },
     {
@@ -237,10 +237,10 @@
       "kickoff": "16:30",
       "division": "Division 2 South West",
       "location": "Away",
-      "status": "Scheduled",
+      "status": "Played",
       "fixtureId": "39486394-dad6-4e98-b4fb-6cc03cbc7910-07 Feb 2026-16:30",
-      "home_score": null,
-      "away_score": null,
+      "home_score": 1,
+      "away_score": 5,
       "_ha": "a"
     },
     {
