@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-21T14:56:52.840000+00:00",
+  "generated_at": "2026-02-21T15:20:43.669082+00:00",
   "home": [
     {
       "date": "2026-02-21T10:30:00",
@@ -70,10 +70,10 @@
       "kickoff": "13:00",
       "division": "Women's Conference Midlands",
       "location": "Home",
-      "status": "Scheduled",
+      "status": "Played",
       "fixtureId": "d9f0f20b-37ae-4a51-aa7c-6b4c2718da54-21 Feb 2026-13:00",
-      "home_score": null,
-      "away_score": null,
+      "home_score": 2,
+      "away_score": 2,
       "_ha": "h"
     },
     {
@@ -192,10 +192,10 @@
       "kickoff": "12:00",
       "division": "Premier Division",
       "location": "Away",
-      "status": "Scheduled",
+      "status": "Played",
       "fixtureId": "a5b838ee-1d9d-491e-b1bb-f05388eff199-21 Feb 2026-12:00",
-      "home_score": null,
-      "away_score": null,
+      "home_score": 4,
+      "away_score": 1,
       "_ha": "a"
     },
     {
