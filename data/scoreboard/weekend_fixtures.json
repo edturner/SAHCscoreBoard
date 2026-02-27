@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-26T04:52:49.637496+00:00",
+  "generated_at": "2026-02-27T04:47:16.533267+00:00",
   "home": [
     {
       "date": "2026-02-28T10:30:00",
@@ -109,21 +109,6 @@
   ],
   "away": [
     {
-      "date": "2026-02-21T10:30:00",
-      "team": "St Albans 6 (M)",
-      "category": "men",
-      "home_team": "Bedford 5",
-      "away_team": "St Albans 6",
-      "kickoff": "10:30",
-      "division": "Division 5 South West",
-      "location": "Away",
-      "status": "Played",
-      "fixtureId": "3896f4e5-7d73-483b-b735-31f976ed7312-21 Feb 2026-10:30",
-      "home_score": 1,
-      "away_score": 1,
-      "_ha": "a"
-    },
-    {
       "date": "2026-02-28T12:00:00",
       "team": "St Albans 7 (F)",
       "category": "women",
@@ -194,6 +179,21 @@
       "location": "Away",
       "status": "Scheduled",
       "fixtureId": "39486394-dad6-4e98-b4fb-6cc03cbc7910-28 Feb 2026-13:15",
+      "home_score": null,
+      "away_score": null,
+      "_ha": "a"
+    },
+    {
+      "date": "2026-02-28T13:30:00",
+      "team": "St Albans 6 (M)",
+      "category": "men",
+      "home_team": "Letchworth 4",
+      "away_team": "St Albans 6",
+      "kickoff": "13:30",
+      "division": "Division 5 South West",
+      "location": "Away",
+      "status": "Scheduled",
+      "fixtureId": "3896f4e5-7d73-483b-b735-31f976ed7312-28 Feb 2026-13:30",
       "home_score": null,
       "away_score": null,
       "_ha": "a"
