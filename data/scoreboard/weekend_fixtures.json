@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-28T14:01:57.089546+00:00",
+  "generated_at": "2026-02-28T14:31:48.461984+00:00",
   "home": [
     {
       "date": "2026-02-28T10:30:00",
@@ -40,10 +40,10 @@
       "kickoff": "12:15",
       "division": "Division 2 South West",
       "location": "Home",
-      "status": "Scheduled",
+      "status": "Played",
       "fixtureId": "3d7ecaa8-5810-4721-9e4c-a8cea9ff8581-28 Feb 2026-12:15",
-      "home_score": null,
-      "away_score": null,
+      "home_score": 1,
+      "away_score": 3,
       "_ha": "h"
     },
     {
@@ -132,10 +132,10 @@
       "kickoff": "12:30",
       "division": "Women's Conference Midlands",
       "location": "Away",
-      "status": "Scheduled",
+      "status": "Played",
       "fixtureId": "d9f0f20b-37ae-4a51-aa7c-6b4c2718da54-28 Feb 2026-12:30",
-      "home_score": null,
-      "away_score": null,
+      "home_score": 1,
+      "away_score": 0,
       "_ha": "a"
     },
     {
