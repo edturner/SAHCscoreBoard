@@ -84,6 +84,7 @@ def run_fetch(validate: bool = False, expect_count: int | None = None) -> bool:
             capture_output=True,
             text=True,
             check=False,
+            encoding="utf-8",
         )
 
         if result.returncode != 0:
@@ -117,6 +118,7 @@ def run_fetch(validate: bool = False, expect_count: int | None = None) -> bool:
                 capture_output=True,
                 text=True,
                 check=False,
+                encoding="utf-8",
             )
 
             if validate_result.returncode != 0:

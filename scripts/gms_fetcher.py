@@ -1234,8 +1234,8 @@ def command_bulk_team_data(
             rotate_snapshots(target_output, publish_path, previous_path)
             print(
                 "Snapshot rotation complete:\n"
-                f"  current → previous: {publish_path.name} → {previous_path.name}\n"
-                f"  new → current: {target_output.name} → {publish_path.name}"
+                f"  current -> previous: {publish_path.name} -> {previous_path.name}\n"
+                f"  new -> current: {target_output.name} -> {publish_path.name}"
             )
             if auto_snapshot:
                 print(
