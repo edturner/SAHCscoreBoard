@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-07T17:01:11.742223+00:00",
+  "generated_at": "2026-03-07T17:28:37.084824+00:00",
   "home": [
     {
       "date": "2026-03-07T10:30:00",
@@ -70,10 +70,10 @@
       "kickoff": "13:30",
       "division": "Division 4 South West",
       "location": "Home",
-      "status": "Scheduled",
+      "status": "Played",
       "fixtureId": "91e2a40f-fe91-4c8e-9ca6-aed40e6178b2-07 Mar 2026-13:30",
-      "home_score": null,
-      "away_score": null,
+      "home_score": 4,
+      "away_score": 1,
       "_ha": "h"
     },
     {
@@ -177,10 +177,10 @@
       "kickoff": "14:00",
       "division": "Premier Division",
       "location": "Away",
-      "status": "Scheduled",
+      "status": "Played",
       "fixtureId": "a5b838ee-1d9d-491e-b1bb-f05388eff199-07 Mar 2026-14:00",
-      "home_score": null,
-      "away_score": null,
+      "home_score": 2,
+      "away_score": 2,
       "_ha": "a"
     },
     {
@@ -192,10 +192,10 @@
       "kickoff": "14:30",
       "division": "Division 1 South",
       "location": "Away",
-      "status": "Scheduled",
+      "status": "Played",
       "fixtureId": "f1c3a876-4de3-4c99-9800-171fe4667602-07 Mar 2026-14:30",
-      "home_score": null,
-      "away_score": null,
+      "home_score": 0,
+      "away_score": 4,
       "_ha": "a"
     },
     {
@@ -207,10 +207,10 @@
       "kickoff": "14:30",
       "division": "Division 6 South West",
       "location": "Away",
-      "status": "Scheduled",
+      "status": "Played",
       "fixtureId": "5949dcf2-d51f-4e27-9bd3-0639e58261c6-07 Mar 2026-14:30",
-      "home_score": null,
-      "away_score": null,
+      "home_score": 1,
+      "away_score": 2,
       "_ha": "a"
     },
     {
@@ -222,10 +222,10 @@
       "kickoff": "15:00",
       "division": "Division 2 South West",
       "location": "Away",
-      "status": "Scheduled",
+      "status": "Played",
       "fixtureId": "3d7ecaa8-5810-4721-9e4c-a8cea9ff8581-07 Mar 2026-15:00",
-      "home_score": null,
-      "away_score": null,
+      "home_score": 2,
+      "away_score": 1,
       "_ha": "a"
     },
     {
