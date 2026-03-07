@@ -36,7 +36,7 @@
       }
     ],
     "meta": {
-      "snapshotDate": "2026-03-07 14:45:22"
+      "snapshotDate": "2026-03-07 14:59:12"
     }
   },
   {
@@ -48,20 +48,17 @@
       "label": "Women's Conference Midlands (2025-2026)"
     },
     "stats": {
-      "played": "14",
-      "won": "5",
+      "played": "15",
+      "won": "6",
       "drawn": "5",
       "lost": "4",
-      "goalsFor": "31",
-      "goalsAgainst": "16",
-      "goalDiff": "15",
-      "points": "20",
-      "ppg": "1.43"
+      "goalsFor": "33",
+      "goalsAgainst": "17",
+      "goalDiff": "16",
+      "points": "23",
+      "ppg": "1.53"
     },
     "form": [
-      {
-        "result": "L"
-      },
       {
         "result": "W"
       },
@@ -73,10 +70,13 @@
       },
       {
         "result": "L"
+      },
+      {
+        "result": "W"
       }
     ],
     "meta": {
-      "snapshotDate": "2026-03-07 14:45:22"
+      "snapshotDate": "2026-03-07 14:59:12"
     }
   },
   {
@@ -116,7 +116,7 @@
       }
     ],
     "meta": {
-      "snapshotDate": "2026-03-07 14:45:22"
+      "snapshotDate": "2026-03-07 14:59:12"
     }
   },
   {
@@ -156,7 +156,7 @@
       }
     ],
     "meta": {
-      "snapshotDate": "2026-03-07 14:45:22"
+      "snapshotDate": "2026-03-07 14:59:12"
     }
   },
   {
@@ -196,7 +196,7 @@
       }
     ],
     "meta": {
-      "snapshotDate": "2026-03-07 14:45:22"
+      "snapshotDate": "2026-03-07 14:59:12"
     }
   },
   {
@@ -236,7 +236,7 @@
       }
     ],
     "meta": {
-      "snapshotDate": "2026-03-07 14:45:22"
+      "snapshotDate": "2026-03-07 14:59:12"
     }
   },
   {
@@ -276,7 +276,7 @@
       }
     ],
     "meta": {
-      "snapshotDate": "2026-03-07 14:45:22"
+      "snapshotDate": "2026-03-07 14:59:12"
     }
   },
   {
@@ -316,7 +316,7 @@
       }
     ],
     "meta": {
-      "snapshotDate": "2026-03-07 14:45:22"
+      "snapshotDate": "2026-03-07 14:59:12"
     }
   },
   {
@@ -356,7 +356,7 @@
       }
     ],
     "meta": {
-      "snapshotDate": "2026-03-07 14:45:22"
+      "snapshotDate": "2026-03-07 14:59:12"
     }
   },
   {
@@ -396,7 +396,7 @@
       }
     ],
     "meta": {
-      "snapshotDate": "2026-03-07 14:45:22"
+      "snapshotDate": "2026-03-07 14:59:12"
     }
   },
   {
@@ -436,7 +436,7 @@
       }
     ],
     "meta": {
-      "snapshotDate": "2026-03-07 14:45:22"
+      "snapshotDate": "2026-03-07 14:59:12"
     }
   },
   {
@@ -476,7 +476,7 @@
       }
     ],
     "meta": {
-      "snapshotDate": "2026-03-07 14:45:22"
+      "snapshotDate": "2026-03-07 14:59:12"
     }
   },
   {
@@ -516,7 +516,7 @@
       }
     ],
     "meta": {
-      "snapshotDate": "2026-03-07 14:45:22"
+      "snapshotDate": "2026-03-07 14:59:12"
     }
   },
   {
@@ -556,7 +556,7 @@
       }
     ],
     "meta": {
-      "snapshotDate": "2026-03-07 14:45:22"
+      "snapshotDate": "2026-03-07 14:59:12"
     }
   },
   {
@@ -596,7 +596,7 @@
       }
     ],
     "meta": {
-      "snapshotDate": "2026-03-07 14:45:22"
+      "snapshotDate": "2026-03-07 14:59:12"
     }
   },
   {
@@ -636,7 +636,7 @@
       }
     ],
     "meta": {
-      "snapshotDate": "2026-03-07 14:45:22"
+      "snapshotDate": "2026-03-07 14:59:12"
     }
   },
   {
@@ -648,20 +648,17 @@
       "label": "Division 7 South West (2025-2026)"
     },
     "stats": {
-      "played": "18",
+      "played": "19",
       "won": "4",
       "drawn": "4",
-      "lost": "10",
+      "lost": "11",
       "goalsFor": "17",
-      "goalsAgainst": "44",
-      "goalDiff": "-27",
+      "goalsAgainst": "45",
+      "goalDiff": "-28",
       "points": "16",
-      "ppg": "0.89"
+      "ppg": "0.84"
     },
     "form": [
-      {
-        "result": "L"
-      },
       {
         "result": "L"
       },
@@ -673,10 +670,13 @@
       },
       {
         "result": "L"
+      },
+      {
+        "result": "L"
       }
     ],
     "meta": {
-      "snapshotDate": "2026-03-07 14:45:22"
+      "snapshotDate": "2026-03-07 14:59:12"
     }
   }
 ]
