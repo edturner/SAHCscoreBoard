@@ -36,7 +36,7 @@
       }
     ],
     "meta": {
-      "snapshotDate": "2026-03-07 19:20:04"
+      "snapshotDate": "2026-03-07 19:40:01"
     }
   },
   {
@@ -76,7 +76,7 @@
       }
     ],
     "meta": {
-      "snapshotDate": "2026-03-07 19:20:04"
+      "snapshotDate": "2026-03-07 19:40:01"
     }
   },
   {
@@ -116,7 +116,7 @@
       }
     ],
     "meta": {
-      "snapshotDate": "2026-03-07 19:20:04"
+      "snapshotDate": "2026-03-07 19:40:01"
     }
   },
   {
@@ -156,7 +156,7 @@
       }
     ],
     "meta": {
-      "snapshotDate": "2026-03-07 19:20:04"
+      "snapshotDate": "2026-03-07 19:40:01"
     }
   },
   {
@@ -168,20 +168,17 @@
       "label": "Division 1 South (2025-2026)"
     },
     "stats": {
-      "played": "19",
+      "played": "20",
       "won": "4",
-      "drawn": "5",
+      "drawn": "6",
       "lost": "10",
-      "goalsFor": "27",
-      "goalsAgainst": "34",
+      "goalsFor": "32",
+      "goalsAgainst": "39",
       "goalDiff": "-7",
-      "points": "17",
-      "ppg": "0.89"
+      "points": "18",
+      "ppg": "0.90"
     },
     "form": [
-      {
-        "result": "L"
-      },
       {
         "result": "L"
       },
@@ -193,10 +190,13 @@
       },
       {
         "result": "D"
+      },
+      {
+        "result": "D"
       }
     ],
     "meta": {
-      "snapshotDate": "2026-03-07 19:20:04"
+      "snapshotDate": "2026-03-07 19:40:01"
     }
   },
   {
@@ -208,15 +208,15 @@
       "label": "Division 2 South West (2025-2026)"
     },
     "stats": {
-      "played": "19",
-      "won": "14",
+      "played": "20",
+      "won": "15",
       "drawn": "1",
       "lost": "4",
-      "goalsFor": "71",
-      "goalsAgainst": "30",
-      "goalDiff": "41",
-      "points": "43",
-      "ppg": "2.26"
+      "goalsFor": "74",
+      "goalsAgainst": "32",
+      "goalDiff": "42",
+      "points": "46",
+      "ppg": "2.30"
     },
     "form": [
       {
@@ -236,7 +236,7 @@
       }
     ],
     "meta": {
-      "snapshotDate": "2026-03-07 19:20:04"
+      "snapshotDate": "2026-03-07 19:40:01"
     }
   },
   {
@@ -276,7 +276,7 @@
       }
     ],
     "meta": {
-      "snapshotDate": "2026-03-07 19:20:04"
+      "snapshotDate": "2026-03-07 19:40:01"
     }
   },
   {
@@ -316,7 +316,7 @@
       }
     ],
     "meta": {
-      "snapshotDate": "2026-03-07 19:20:04"
+      "snapshotDate": "2026-03-07 19:40:01"
     }
   },
   {
@@ -356,7 +356,7 @@
       }
     ],
     "meta": {
-      "snapshotDate": "2026-03-07 19:20:04"
+      "snapshotDate": "2026-03-07 19:40:01"
     }
   },
   {
@@ -396,7 +396,7 @@
       }
     ],
     "meta": {
-      "snapshotDate": "2026-03-07 19:20:04"
+      "snapshotDate": "2026-03-07 19:40:01"
     }
   },
   {
@@ -436,7 +436,7 @@
       }
     ],
     "meta": {
-      "snapshotDate": "2026-03-07 19:20:04"
+      "snapshotDate": "2026-03-07 19:40:01"
     }
   },
   {
@@ -476,7 +476,7 @@
       }
     ],
     "meta": {
-      "snapshotDate": "2026-03-07 19:20:04"
+      "snapshotDate": "2026-03-07 19:40:01"
     }
   },
   {
@@ -516,7 +516,7 @@
       }
     ],
     "meta": {
-      "snapshotDate": "2026-03-07 19:20:04"
+      "snapshotDate": "2026-03-07 19:40:01"
     }
   },
   {
@@ -556,7 +556,7 @@
       }
     ],
     "meta": {
-      "snapshotDate": "2026-03-07 19:20:04"
+      "snapshotDate": "2026-03-07 19:40:01"
     }
   },
   {
@@ -596,7 +596,7 @@
       }
     ],
     "meta": {
-      "snapshotDate": "2026-03-07 19:20:04"
+      "snapshotDate": "2026-03-07 19:40:01"
     }
   },
   {
@@ -636,7 +636,7 @@
       }
     ],
     "meta": {
-      "snapshotDate": "2026-03-07 19:20:04"
+      "snapshotDate": "2026-03-07 19:40:01"
     }
   },
   {
@@ -676,7 +676,7 @@
       }
     ],
     "meta": {
-      "snapshotDate": "2026-03-07 19:20:04"
+      "snapshotDate": "2026-03-07 19:40:01"
     }
   }
 ]
