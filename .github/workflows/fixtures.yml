@@ -45,11 +45,16 @@ jobs:
             python scripts/gms_fetcher.py update-scoreboard
           fi
 
+      - name: Update League Data
+        run: |
+          python scripts/live_league_updater.py --once
+
       - name: Commit and push changes
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@users.noreply.github.com"
           git add data/scoreboard/weekend_fixtures.json data/scoreboard/mens_fixtures.csv data/scoreboard/womens_fixtures.csv || true
-          git commit -m "Update scoreboard data [skip ci]" || echo "No changes"
+          git add data/league/teamData.json data/league/teamData.prev.json || true
+          git commit -m "Update scoreboard and league data [skip ci]" || echo "No changes"
           git push
 
