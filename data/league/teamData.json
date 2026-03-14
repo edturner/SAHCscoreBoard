@@ -36,7 +36,7 @@
       }
     ],
     "meta": {
-      "snapshotDate": "2026-03-14 12:00:59"
+      "snapshotDate": "2026-03-14 13:05:26"
     }
   },
   {
@@ -76,7 +76,7 @@
       }
     ],
     "meta": {
-      "snapshotDate": "2026-03-14 12:00:59"
+      "snapshotDate": "2026-03-14 13:05:26"
     }
   },
   {
@@ -116,7 +116,7 @@
       }
     ],
     "meta": {
-      "snapshotDate": "2026-03-14 12:00:59"
+      "snapshotDate": "2026-03-14 13:05:26"
     }
   },
   {
@@ -156,7 +156,7 @@
       }
     ],
     "meta": {
-      "snapshotDate": "2026-03-14 12:00:59"
+      "snapshotDate": "2026-03-14 13:05:26"
     }
   },
   {
@@ -196,7 +196,7 @@
       }
     ],
     "meta": {
-      "snapshotDate": "2026-03-14 12:00:59"
+      "snapshotDate": "2026-03-14 13:05:26"
     }
   },
   {
@@ -236,7 +236,7 @@
       }
     ],
     "meta": {
-      "snapshotDate": "2026-03-14 12:00:59"
+      "snapshotDate": "2026-03-14 13:05:26"
     }
   },
   {
@@ -276,7 +276,7 @@
       }
     ],
     "meta": {
-      "snapshotDate": "2026-03-14 12:00:59"
+      "snapshotDate": "2026-03-14 13:05:26"
     }
   },
   {
@@ -316,7 +316,7 @@
       }
     ],
     "meta": {
-      "snapshotDate": "2026-03-14 12:00:59"
+      "snapshotDate": "2026-03-14 13:05:26"
     }
   },
   {
@@ -356,7 +356,7 @@
       }
     ],
     "meta": {
-      "snapshotDate": "2026-03-14 12:00:59"
+      "snapshotDate": "2026-03-14 13:05:26"
     }
   },
   {
@@ -396,7 +396,7 @@
       }
     ],
     "meta": {
-      "snapshotDate": "2026-03-14 12:00:59"
+      "snapshotDate": "2026-03-14 13:05:26"
     }
   },
   {
@@ -436,7 +436,7 @@
       }
     ],
     "meta": {
-      "snapshotDate": "2026-03-14 12:00:59"
+      "snapshotDate": "2026-03-14 13:05:26"
     }
   },
   {
@@ -448,15 +448,15 @@
       "label": "Division 4 South West (2025-2026)"
     },
     "stats": {
-      "played": "20",
+      "played": "21",
       "won": "2",
-      "drawn": "1",
+      "drawn": "2",
       "lost": "17",
-      "goalsFor": "18",
-      "goalsAgainst": "57",
+      "goalsFor": "19",
+      "goalsAgainst": "58",
       "goalDiff": "-39",
-      "points": "7",
-      "ppg": "0.35"
+      "points": "8",
+      "ppg": "0.38"
     },
     "form": [
       {
@@ -472,11 +472,11 @@
         "result": "L"
       },
       {
-        "result": "L"
+        "result": "D"
       }
     ],
     "meta": {
-      "snapshotDate": "2026-03-14 12:00:59"
+      "snapshotDate": "2026-03-14 13:05:26"
     }
   },
   {
@@ -516,7 +516,7 @@
       }
     ],
     "meta": {
-      "snapshotDate": "2026-03-14 12:00:59"
+      "snapshotDate": "2026-03-14 13:05:26"
     }
   },
   {
@@ -528,15 +528,15 @@
       "label": "Division 5 South West (2025-2026)"
     },
     "stats": {
-      "played": "20",
-      "won": "14",
+      "played": "21",
+      "won": "15",
       "drawn": "1",
       "lost": "5",
-      "goalsFor": "64",
-      "goalsAgainst": "30",
-      "goalDiff": "34",
-      "points": "43",
-      "ppg": "2.15"
+      "goalsFor": "70",
+      "goalsAgainst": "31",
+      "goalDiff": "39",
+      "points": "46",
+      "ppg": "2.19"
     },
     "form": [
       {
@@ -556,7 +556,7 @@
       }
     ],
     "meta": {
-      "snapshotDate": "2026-03-14 12:00:59"
+      "snapshotDate": "2026-03-14 13:05:26"
     }
   },
   {
@@ -596,7 +596,7 @@
       }
     ],
     "meta": {
-      "snapshotDate": "2026-03-14 12:00:59"
+      "snapshotDate": "2026-03-14 13:05:26"
     }
   },
   {
@@ -636,7 +636,7 @@
       }
     ],
     "meta": {
-      "snapshotDate": "2026-03-14 12:00:59"
+      "snapshotDate": "2026-03-14 13:05:26"
     }
   },
   {
@@ -676,7 +676,7 @@
       }
     ],
     "meta": {
-      "snapshotDate": "2026-03-14 12:00:59"
+      "snapshotDate": "2026-03-14 13:05:26"
     }
   }
 ]
