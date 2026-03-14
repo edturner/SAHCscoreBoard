@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-14T14:49:17.555518+00:00",
+  "generated_at": "2026-03-14T15:13:56.665118+00:00",
   "home": [
     {
       "date": "2026-03-14T10:30:00",
@@ -177,10 +177,10 @@
       "kickoff": "12:00",
       "division": "Division 5 South West",
       "location": "Away",
-      "status": "Scheduled",
+      "status": "Played",
       "fixtureId": "3896f4e5-7d73-483b-b735-31f976ed7312-14 Mar 2026-12:00",
-      "home_score": null,
-      "away_score": null,
+      "home_score": 3,
+      "away_score": 2,
       "_ha": "a"
     },
     {
