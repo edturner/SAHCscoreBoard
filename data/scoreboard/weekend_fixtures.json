@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-14T19:00:36.131450+00:00",
+  "generated_at": "2026-03-14T19:31:51.149226+00:00",
   "home": [
     {
       "date": "2026-03-14T10:30:00",
@@ -85,10 +85,10 @@
       "kickoff": "15:00",
       "division": "Premier Division",
       "location": "Home",
-      "status": "Scheduled",
+      "status": "Played",
       "fixtureId": "a5b838ee-1d9d-491e-b1bb-f05388eff199-14 Mar 2026-15:00",
-      "home_score": null,
-      "away_score": null,
+      "home_score": 1,
+      "away_score": 0,
       "_ha": "h"
     },
     {
@@ -100,10 +100,10 @@
       "kickoff": "16:30",
       "division": "Division 2 South West",
       "location": "Home",
-      "status": "Scheduled",
+      "status": "Played",
       "fixtureId": "3d7ecaa8-5810-4721-9e4c-a8cea9ff8581-14 Mar 2026-16:30",
-      "home_score": null,
-      "away_score": null,
+      "home_score": 0,
+      "away_score": 3,
       "_ha": "h"
     },
     {
@@ -115,10 +115,10 @@
       "kickoff": "16:30",
       "division": "Division 5 South West",
       "location": "Home",
-      "status": "Scheduled",
+      "status": "Played",
       "fixtureId": "61325529-1ddf-4011-9913-2073c8f457f7-14 Mar 2026-16:30",
-      "home_score": null,
-      "away_score": null,
+      "home_score": 2,
+      "away_score": 3,
       "_ha": "h"
     },
     {
@@ -237,10 +237,10 @@
       "kickoff": "15:30",
       "division": "Division 4 South West",
       "location": "Away",
-      "status": "Scheduled",
+      "status": "Played",
       "fixtureId": "f657d2bb-dafe-4b84-8b33-2c51c690bd5c-14 Mar 2026-15:30",
-      "home_score": null,
-      "away_score": null,
+      "home_score": 4,
+      "away_score": 3,
       "_ha": "a"
     }
   ]

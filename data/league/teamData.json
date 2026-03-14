@@ -36,7 +36,7 @@
       }
     ],
     "meta": {
-      "snapshotDate": "2026-03-14 19:00:36"
+      "snapshotDate": "2026-03-14 19:31:51"
     }
   },
   {
@@ -76,7 +76,7 @@
       }
     ],
     "meta": {
-      "snapshotDate": "2026-03-14 19:00:36"
+      "snapshotDate": "2026-03-14 19:31:51"
     }
   },
   {
@@ -116,7 +116,7 @@
       }
     ],
     "meta": {
-      "snapshotDate": "2026-03-14 19:00:36"
+      "snapshotDate": "2026-03-14 19:31:51"
     }
   },
   {
@@ -128,15 +128,15 @@
       "label": "Premier Division (2025-2026)"
     },
     "stats": {
-      "played": "20",
-      "won": "5",
+      "played": "21",
+      "won": "6",
       "drawn": "7",
       "lost": "8",
-      "goalsFor": "24",
+      "goalsFor": "25",
       "goalsAgainst": "38",
-      "goalDiff": "-14",
-      "points": "22",
-      "ppg": "1.10"
+      "goalDiff": "-13",
+      "points": "25",
+      "ppg": "1.19"
     },
     "form": [
       {
@@ -146,17 +146,17 @@
         "result": "L"
       },
       {
-        "result": "L"
-      },
-      {
         "result": "D"
       },
       {
         "result": "D"
+      },
+      {
+        "result": "W"
       }
     ],
     "meta": {
-      "snapshotDate": "2026-03-14 19:00:36"
+      "snapshotDate": "2026-03-14 19:31:51"
     }
   },
   {
@@ -196,7 +196,7 @@
       }
     ],
     "meta": {
-      "snapshotDate": "2026-03-14 19:00:36"
+      "snapshotDate": "2026-03-14 19:31:51"
     }
   },
   {
@@ -236,7 +236,7 @@
       }
     ],
     "meta": {
-      "snapshotDate": "2026-03-14 19:00:36"
+      "snapshotDate": "2026-03-14 19:31:51"
     }
   },
   {
@@ -248,15 +248,15 @@
       "label": "Division 2 South West (2025-2026)"
     },
     "stats": {
-      "played": "20",
+      "played": "21",
       "won": "3",
       "drawn": "2",
-      "lost": "15",
+      "lost": "16",
       "goalsFor": "30",
-      "goalsAgainst": "89",
-      "goalDiff": "-59",
+      "goalsAgainst": "92",
+      "goalDiff": "-62",
       "points": "11",
-      "ppg": "0.55"
+      "ppg": "0.52"
     },
     "form": [
       {
@@ -276,7 +276,7 @@
       }
     ],
     "meta": {
-      "snapshotDate": "2026-03-14 19:00:36"
+      "snapshotDate": "2026-03-14 19:31:51"
     }
   },
   {
@@ -316,7 +316,7 @@
       }
     ],
     "meta": {
-      "snapshotDate": "2026-03-14 19:00:36"
+      "snapshotDate": "2026-03-14 19:31:51"
     }
   },
   {
@@ -328,20 +328,17 @@
       "label": "Division 4 South West (2025-2026)"
     },
     "stats": {
-      "played": "18",
+      "played": "19",
       "won": "9",
       "drawn": "5",
-      "lost": "4",
-      "goalsFor": "49",
-      "goalsAgainst": "38",
-      "goalDiff": "11",
+      "lost": "5",
+      "goalsFor": "52",
+      "goalsAgainst": "42",
+      "goalDiff": "10",
       "points": "32",
-      "ppg": "1.78"
+      "ppg": "1.68"
     },
     "form": [
-      {
-        "result": "W"
-      },
       {
         "result": "D"
       },
@@ -353,10 +350,13 @@
       },
       {
         "result": "L"
+      },
+      {
+        "result": "L"
       }
     ],
     "meta": {
-      "snapshotDate": "2026-03-14 19:00:36"
+      "snapshotDate": "2026-03-14 19:31:51"
     }
   },
   {
@@ -396,7 +396,7 @@
       }
     ],
     "meta": {
-      "snapshotDate": "2026-03-14 19:00:36"
+      "snapshotDate": "2026-03-14 19:31:51"
     }
   },
   {
@@ -436,7 +436,7 @@
       }
     ],
     "meta": {
-      "snapshotDate": "2026-03-14 19:00:36"
+      "snapshotDate": "2026-03-14 19:31:51"
     }
   },
   {
@@ -476,7 +476,7 @@
       }
     ],
     "meta": {
-      "snapshotDate": "2026-03-14 19:00:36"
+      "snapshotDate": "2026-03-14 19:31:51"
     }
   },
   {
@@ -488,15 +488,15 @@
       "label": "Division 5 South West (2025-2026)"
     },
     "stats": {
-      "played": "20",
+      "played": "21",
       "won": "5",
       "drawn": "5",
-      "lost": "10",
-      "goalsFor": "42",
-      "goalsAgainst": "51",
-      "goalDiff": "-9",
+      "lost": "11",
+      "goalsFor": "44",
+      "goalsAgainst": "54",
+      "goalDiff": "-10",
       "points": "20",
-      "ppg": "1.00"
+      "ppg": "0.95"
     },
     "form": [
       {
@@ -506,7 +506,7 @@
         "result": "W"
       },
       {
-        "result": "W"
+        "result": "L"
       },
       {
         "result": "L"
@@ -516,7 +516,7 @@
       }
     ],
     "meta": {
-      "snapshotDate": "2026-03-14 19:00:36"
+      "snapshotDate": "2026-03-14 19:31:51"
     }
   },
   {
@@ -556,7 +556,7 @@
       }
     ],
     "meta": {
-      "snapshotDate": "2026-03-14 19:00:36"
+      "snapshotDate": "2026-03-14 19:31:51"
     }
   },
   {
@@ -596,7 +596,7 @@
       }
     ],
     "meta": {
-      "snapshotDate": "2026-03-14 19:00:36"
+      "snapshotDate": "2026-03-14 19:31:51"
     }
   },
   {
@@ -636,7 +636,7 @@
       }
     ],
     "meta": {
-      "snapshotDate": "2026-03-14 19:00:36"
+      "snapshotDate": "2026-03-14 19:31:51"
     }
   },
   {
@@ -676,7 +676,7 @@
       }
     ],
     "meta": {
-      "snapshotDate": "2026-03-14 19:00:36"
+      "snapshotDate": "2026-03-14 19:31:51"
     }
   }
 ]
