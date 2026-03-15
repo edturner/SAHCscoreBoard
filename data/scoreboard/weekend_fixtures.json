@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-15T16:42:28.834338+00:00",
+  "generated_at": "2026-03-15T17:03:05.116098+00:00",
   "home": [
     {
       "date": "2026-03-14T10:30:00",
@@ -130,10 +130,10 @@
       "kickoff": "14:00",
       "division": "Conference Midlands",
       "location": "Home",
-      "status": "Scheduled",
+      "status": "Played",
       "fixtureId": "d2d0b65e-bf96-476b-8d38-6d28dae65a61-15 Mar 2026-14:00",
-      "home_score": null,
-      "away_score": null,
+      "home_score": 4,
+      "away_score": 3,
       "_ha": "h"
     }
   ],

@@ -8,22 +8,22 @@
       "label": "Conference Midlands (2025-2026)"
     },
     "stats": {
-      "played": "15",
-      "won": "7",
+      "played": "16",
+      "won": "8",
       "drawn": "7",
       "lost": "1",
-      "goalsFor": "36",
-      "goalsAgainst": "23",
-      "goalDiff": "13",
-      "points": "28",
-      "ppg": "1.87"
+      "goalsFor": "40",
+      "goalsAgainst": "26",
+      "goalDiff": "14",
+      "points": "31",
+      "ppg": "1.94"
     },
     "form": [
       {
-        "result": "W"
+        "result": "D"
       },
       {
-        "result": "D"
+        "result": "W"
       },
       {
         "result": "W"
@@ -36,7 +36,7 @@
       }
     ],
     "meta": {
-      "snapshotDate": "2026-03-15 16:42:28"
+      "snapshotDate": "2026-03-15 17:03:05"
     }
   },
   {
@@ -76,7 +76,7 @@
       }
     ],
     "meta": {
-      "snapshotDate": "2026-03-15 16:42:28"
+      "snapshotDate": "2026-03-15 17:03:05"
     }
   },
   {
@@ -116,7 +116,7 @@
       }
     ],
     "meta": {
-      "snapshotDate": "2026-03-15 16:42:28"
+      "snapshotDate": "2026-03-15 17:03:05"
     }
   },
   {
@@ -156,7 +156,7 @@
       }
     ],
     "meta": {
-      "snapshotDate": "2026-03-15 16:42:28"
+      "snapshotDate": "2026-03-15 17:03:05"
     }
   },
   {
@@ -196,7 +196,7 @@
       }
     ],
     "meta": {
-      "snapshotDate": "2026-03-15 16:42:28"
+      "snapshotDate": "2026-03-15 17:03:05"
     }
   },
   {
@@ -236,7 +236,7 @@
       }
     ],
     "meta": {
-      "snapshotDate": "2026-03-15 16:42:28"
+      "snapshotDate": "2026-03-15 17:03:05"
     }
   },
   {
@@ -276,7 +276,7 @@
       }
     ],
     "meta": {
-      "snapshotDate": "2026-03-15 16:42:28"
+      "snapshotDate": "2026-03-15 17:03:05"
     }
   },
   {
@@ -316,7 +316,7 @@
       }
     ],
     "meta": {
-      "snapshotDate": "2026-03-15 16:42:28"
+      "snapshotDate": "2026-03-15 17:03:05"
     }
   },
   {
@@ -356,7 +356,7 @@
       }
     ],
     "meta": {
-      "snapshotDate": "2026-03-15 16:42:28"
+      "snapshotDate": "2026-03-15 17:03:05"
     }
   },
   {
@@ -396,7 +396,7 @@
       }
     ],
     "meta": {
-      "snapshotDate": "2026-03-15 16:42:28"
+      "snapshotDate": "2026-03-15 17:03:05"
     }
   },
   {
@@ -436,7 +436,7 @@
       }
     ],
     "meta": {
-      "snapshotDate": "2026-03-15 16:42:28"
+      "snapshotDate": "2026-03-15 17:03:05"
     }
   },
   {
@@ -476,7 +476,7 @@
       }
     ],
     "meta": {
-      "snapshotDate": "2026-03-15 16:42:28"
+      "snapshotDate": "2026-03-15 17:03:05"
     }
   },
   {
@@ -516,7 +516,7 @@
       }
     ],
     "meta": {
-      "snapshotDate": "2026-03-15 16:42:28"
+      "snapshotDate": "2026-03-15 17:03:05"
     }
   },
   {
@@ -556,7 +556,7 @@
       }
     ],
     "meta": {
-      "snapshotDate": "2026-03-15 16:42:28"
+      "snapshotDate": "2026-03-15 17:03:05"
     }
   },
   {
@@ -596,7 +596,7 @@
       }
     ],
     "meta": {
-      "snapshotDate": "2026-03-15 16:42:28"
+      "snapshotDate": "2026-03-15 17:03:05"
     }
   },
   {
@@ -636,7 +636,7 @@
       }
     ],
     "meta": {
-      "snapshotDate": "2026-03-15 16:42:28"
+      "snapshotDate": "2026-03-15 17:03:05"
     }
   },
   {
@@ -676,7 +676,7 @@
       }
     ],
     "meta": {
-      "snapshotDate": "2026-03-15 16:42:28"
+      "snapshotDate": "2026-03-15 17:03:05"
     }
   }
 ]
