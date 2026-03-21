@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-21T17:14:24.535492+00:00",
+  "generated_at": "2026-03-21T17:42:53.338816+00:00",
   "home": [
     {
       "date": "2026-03-21T10:30:00",
@@ -40,10 +40,10 @@
       "kickoff": "12:15",
       "division": "Division 4 South West",
       "location": "Home",
-      "status": "Scheduled",
+      "status": "Played",
       "fixtureId": "91e2a40f-fe91-4c8e-9ca6-aed40e6178b2-21 Mar 2026-12:15",
-      "home_score": null,
-      "away_score": null,
+      "home_score": 3,
+      "away_score": 1,
       "_ha": "h"
     },
     {
@@ -55,10 +55,10 @@
       "kickoff": "13:00",
       "division": "Division 2 South West",
       "location": "Home",
-      "status": "Scheduled",
+      "status": "Played",
       "fixtureId": "39486394-dad6-4e98-b4fb-6cc03cbc7910-21 Mar 2026-13:00",
-      "home_score": null,
-      "away_score": null,
+      "home_score": 2,
+      "away_score": 0,
       "_ha": "h"
     },
     {
@@ -117,10 +117,10 @@
       "kickoff": "11:30",
       "division": "Division 2 South West",
       "location": "Away",
-      "status": "Scheduled",
+      "status": "Played",
       "fixtureId": "3d7ecaa8-5810-4721-9e4c-a8cea9ff8581-21 Mar 2026-11:30",
-      "home_score": null,
-      "away_score": null,
+      "home_score": 4,
+      "away_score": 1,
       "_ha": "a"
     },
     {
