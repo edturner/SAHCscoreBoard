@@ -36,7 +36,7 @@
       }
     ],
     "meta": {
-      "snapshotDate": "2026-03-21 13:27:09"
+      "snapshotDate": "2026-03-21 13:58:06"
     }
   },
   {
@@ -76,7 +76,7 @@
       }
     ],
     "meta": {
-      "snapshotDate": "2026-03-21 13:27:09"
+      "snapshotDate": "2026-03-21 13:58:06"
     }
   },
   {
@@ -116,7 +116,7 @@
       }
     ],
     "meta": {
-      "snapshotDate": "2026-03-21 13:27:09"
+      "snapshotDate": "2026-03-21 13:58:06"
     }
   },
   {
@@ -156,7 +156,7 @@
       }
     ],
     "meta": {
-      "snapshotDate": "2026-03-21 13:27:09"
+      "snapshotDate": "2026-03-21 13:58:06"
     }
   },
   {
@@ -196,7 +196,7 @@
       }
     ],
     "meta": {
-      "snapshotDate": "2026-03-21 13:27:09"
+      "snapshotDate": "2026-03-21 13:58:06"
     }
   },
   {
@@ -236,7 +236,7 @@
       }
     ],
     "meta": {
-      "snapshotDate": "2026-03-21 13:27:09"
+      "snapshotDate": "2026-03-21 13:58:06"
     }
   },
   {
@@ -276,7 +276,7 @@
       }
     ],
     "meta": {
-      "snapshotDate": "2026-03-21 13:27:09"
+      "snapshotDate": "2026-03-21 13:58:06"
     }
   },
   {
@@ -288,25 +288,25 @@
       "label": "Division 2 South West (2025-2026)"
     },
     "stats": {
-      "played": "21",
+      "played": "22",
       "won": "6",
       "drawn": "2",
-      "lost": "13",
-      "goalsFor": "18",
-      "goalsAgainst": "56",
-      "goalDiff": "-38",
+      "lost": "14",
+      "goalsFor": "19",
+      "goalsAgainst": "59",
+      "goalDiff": "-40",
       "points": "20",
-      "ppg": "0.95"
+      "ppg": "0.91"
     },
     "form": [
       {
-        "result": "D"
-      },
-      {
         "result": "W"
       },
       {
         "result": "W"
+      },
+      {
+        "result": "L"
       },
       {
         "result": "L"
@@ -316,7 +316,7 @@
       }
     ],
     "meta": {
-      "snapshotDate": "2026-03-21 13:27:09"
+      "snapshotDate": "2026-03-21 13:58:06"
     }
   },
   {
@@ -356,7 +356,7 @@
       }
     ],
     "meta": {
-      "snapshotDate": "2026-03-21 13:27:09"
+      "snapshotDate": "2026-03-21 13:58:06"
     }
   },
   {
@@ -396,7 +396,7 @@
       }
     ],
     "meta": {
-      "snapshotDate": "2026-03-21 13:27:09"
+      "snapshotDate": "2026-03-21 13:58:06"
     }
   },
   {
@@ -408,20 +408,17 @@
       "label": "Division 5 South West (2025-2026)"
     },
     "stats": {
-      "played": "21",
+      "played": "22",
       "won": "11",
-      "drawn": "5",
+      "drawn": "6",
       "lost": "5",
-      "goalsFor": "50",
-      "goalsAgainst": "37",
+      "goalsFor": "51",
+      "goalsAgainst": "38",
       "goalDiff": "13",
-      "points": "38",
-      "ppg": "1.81"
+      "points": "39",
+      "ppg": "1.77"
     },
     "form": [
-      {
-        "result": "W"
-      },
       {
         "result": "D"
       },
@@ -433,10 +430,13 @@
       },
       {
         "result": "L"
+      },
+      {
+        "result": "D"
       }
     ],
     "meta": {
-      "snapshotDate": "2026-03-21 13:27:09"
+      "snapshotDate": "2026-03-21 13:58:06"
     }
   },
   {
@@ -448,15 +448,15 @@
       "label": "Division 4 South West (2025-2026)"
     },
     "stats": {
-      "played": "21",
-      "won": "2",
+      "played": "22",
+      "won": "3",
       "drawn": "2",
       "lost": "17",
-      "goalsFor": "19",
-      "goalsAgainst": "58",
-      "goalDiff": "-39",
-      "points": "8",
-      "ppg": "0.38"
+      "goalsFor": "22",
+      "goalsAgainst": "60",
+      "goalDiff": "-38",
+      "points": "11",
+      "ppg": "0.50"
     },
     "form": [
       {
@@ -469,14 +469,14 @@
         "result": "L"
       },
       {
-        "result": "L"
+        "result": "D"
       },
       {
-        "result": "D"
+        "result": "W"
       }
     ],
     "meta": {
-      "snapshotDate": "2026-03-21 13:27:09"
+      "snapshotDate": "2026-03-21 13:58:06"
     }
   },
   {
@@ -516,7 +516,7 @@
       }
     ],
     "meta": {
-      "snapshotDate": "2026-03-21 13:27:09"
+      "snapshotDate": "2026-03-21 13:58:06"
     }
   },
   {
@@ -556,7 +556,7 @@
       }
     ],
     "meta": {
-      "snapshotDate": "2026-03-21 13:27:09"
+      "snapshotDate": "2026-03-21 13:58:06"
     }
   },
   {
@@ -596,7 +596,7 @@
       }
     ],
     "meta": {
-      "snapshotDate": "2026-03-21 13:27:09"
+      "snapshotDate": "2026-03-21 13:58:06"
     }
   },
   {
@@ -636,7 +636,7 @@
       }
     ],
     "meta": {
-      "snapshotDate": "2026-03-21 13:27:09"
+      "snapshotDate": "2026-03-21 13:58:06"
     }
   },
   {
@@ -676,7 +676,7 @@
       }
     ],
     "meta": {
-      "snapshotDate": "2026-03-21 13:27:09"
+      "snapshotDate": "2026-03-21 13:58:06"
     }
   }
 ]
