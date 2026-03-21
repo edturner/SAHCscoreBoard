@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-21T19:59:23.523678+00:00",
+  "generated_at": "2026-03-21T20:29:57.503420+00:00",
   "home": [
     {
       "date": "2026-03-21T10:30:00",
@@ -147,10 +147,10 @@
       "kickoff": "14:00",
       "division": "Premier Division",
       "location": "Away",
-      "status": "Scheduled",
+      "status": "Played",
       "fixtureId": "a5b838ee-1d9d-491e-b1bb-f05388eff199-21 Mar 2026-14:00",
-      "home_score": null,
-      "away_score": null,
+      "home_score": 4,
+      "away_score": 2,
       "_ha": "a"
     },
     {
