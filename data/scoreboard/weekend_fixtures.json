@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-22T12:00:27.541499+00:00",
+  "generated_at": "2026-03-22T13:01:41.553495+00:00",
   "home": [
     {
       "date": "2026-03-21T10:30:00",
@@ -70,10 +70,10 @@
       "kickoff": "14:00",
       "division": "Division 5 South West",
       "location": "Home",
-      "status": "Scheduled",
+      "status": "Played",
       "fixtureId": "1b96b793-1dd0-4e01-98b1-d07139fa44c4-21 Mar 2026-14:00",
-      "home_score": null,
-      "away_score": null,
+      "home_score": 3,
+      "away_score": 3,
       "_ha": "h"
     },
     {
@@ -85,10 +85,10 @@
       "kickoff": "15:00",
       "division": "Division 4 South West",
       "location": "Home",
-      "status": "Scheduled",
+      "status": "Played",
       "fixtureId": "f657d2bb-dafe-4b84-8b33-2c51c690bd5c-21 Mar 2026-15:00",
-      "home_score": null,
-      "away_score": null,
+      "home_score": 7,
+      "away_score": 2,
       "_ha": "h"
     }
   ],
@@ -192,10 +192,10 @@
       "kickoff": "14:30",
       "division": "Division 7 South West",
       "location": "Away",
-      "status": "Scheduled",
+      "status": "Played",
       "fixtureId": "2d0cbcaa-ddfe-4aa9-ba90-47f28ee800e1-21 Mar 2026-14:30",
-      "home_score": null,
-      "away_score": null,
+      "home_score": 6,
+      "away_score": 1,
       "_ha": "a"
     },
     {
@@ -222,10 +222,10 @@
       "kickoff": "16:00",
       "division": "Division 6 South West",
       "location": "Away",
-      "status": "Scheduled",
+      "status": "Played",
       "fixtureId": "7df3c3cf-94cd-4e54-bb74-b85f0f93bcb8-21 Mar 2026-16:00",
-      "home_score": null,
-      "away_score": null,
+      "home_score": 1,
+      "away_score": 4,
       "_ha": "a"
     },
     {
@@ -237,10 +237,10 @@
       "kickoff": "16:30",
       "division": "Division 6 South West",
       "location": "Away",
-      "status": "Scheduled",
+      "status": "Played",
       "fixtureId": "5949dcf2-d51f-4e27-9bd3-0639e58261c6-21 Mar 2026-16:30",
-      "home_score": null,
-      "away_score": null,
+      "home_score": 0,
+      "away_score": 2,
       "_ha": "a"
     },
     {
@@ -252,10 +252,10 @@
       "kickoff": "18:00",
       "division": "Conference Midlands",
       "location": "Away",
-      "status": "Scheduled",
+      "status": "Played",
       "fixtureId": "d2d0b65e-bf96-476b-8d38-6d28dae65a61-21 Mar 2026-18:00",
-      "home_score": null,
-      "away_score": null,
+      "home_score": 2,
+      "away_score": 2,
       "_ha": "a"
     }
   ]
