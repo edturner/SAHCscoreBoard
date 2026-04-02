@@ -1,37 +1,5 @@
 {
-  "generated_at": "2026-03-30T00:04:44.043438+00:00",
-  "home": [
-    {
-      "date": "2026-03-29T14:00:00",
-      "team": "St Albans 1(M)",
-      "category": "men",
-      "home_team": "St Albans",
-      "away_team": "Barford Tigers",
-      "kickoff": "14:00",
-      "division": "Conference Midlands",
-      "location": "Home",
-      "status": "Played",
-      "fixtureId": "d2d0b65e-bf96-476b-8d38-6d28dae65a61-29 Mar 2026-14:00",
-      "home_score": 1,
-      "away_score": 2,
-      "_ha": "h"
-    }
-  ],
-  "away": [
-    {
-      "date": "2026-03-28T14:00:00",
-      "team": "St Albans 1 (F)",
-      "category": "women",
-      "home_team": "Cannock 1",
-      "away_team": "St Albans 1",
-      "kickoff": "14:00",
-      "division": "Women's Conference Midlands",
-      "location": "Away",
-      "status": "Played",
-      "fixtureId": "d9f0f20b-37ae-4a51-aa7c-6b4c2718da54-28 Mar 2026-14:00",
-      "home_score": 2,
-      "away_score": 2,
-      "_ha": "a"
-    }
-  ]
+  "generated_at": "2026-04-02T05:05:16.913325+00:00",
+  "home": [],
+  "away": []
 }
