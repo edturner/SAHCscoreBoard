@@ -64,6 +64,8 @@ The frontend (`apps/league/league.js`) loads both `teamData.json` (current) and 
 
 ### Config dependency
 
+`config/club.json` holds the club's display name and `short_name`. The `short_name` must match the prefix GMS uses in fixture team names (e.g. `"St Albans"` for teams listed as "St Albans 1", "St Albans 2", etc.). It is used by `gms_fetcher.py` to determine home vs away for each fixture, and to normalise the 1st men's team name which GMS reports without a squad number.
+
 `config/teamIDs.json` is the source of truth for team UUIDs. `config/teamCompIDs.json` is **generated** from it — it pairs each team with its current competition UUID and must be regenerated at the start of each season via the `competitions` command. Both pipelines read `teamCompIDs.json` at runtime.
 
 ### GitHub Pages path rewriting

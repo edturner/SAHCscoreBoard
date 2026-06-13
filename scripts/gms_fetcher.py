@@ -26,6 +26,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 import time
 from dataclasses import dataclass
 from html.parser import HTMLParser
@@ -33,7 +34,6 @@ from pathlib import Path
 from datetime import date, datetime, timedelta
 from typing import Any, Dict, List, Optional, Sequence, Tuple
 from urllib.parse import urlencode
-import csv
 import csv
 
 import requests
@@ -55,6 +55,14 @@ def resolve_repo_path(path: Path) -> Path:
     """
     path = Path(path)
     return path if path.is_absolute() else REPO_ROOT / path
+
+
+def load_club_config(config_dir: Path = CONFIG_DIR) -> Dict[str, Any]:
+    path = config_dir / "club.json"
+    if not path.exists():
+        return {}
+    with path.open("r", encoding="utf-8") as f:
+        return json.load(f)
 
 
 def normalize_comp_label(label: Optional[str]) -> Optional[str]:
@@ -379,8 +387,11 @@ def fetch_team_record(client: GMSClient, entry: Dict[str, str], index: int):
     try:
         summary = client.get_team_summary(team_id)
         team_name = (summary.get("teamName") or "").strip()
-        if team_name.lower() == "st albans (m)":
-            summary["teamName"] = "St Albans 1"
+        # GMS omits the squad number for the 1st men's team, e.g. "St Albans (M)" instead of "St Albans 1 (M)".
+        # Normalise it so the display name is consistent with other squads.
+        club_short = load_club_config().get("short_name", "")
+        if club_short and team_name.lower() == f"{club_short.lower()} (m)":
+            summary["teamName"] = f"{club_short} 1"
         record = build_team_record(entry, summary)
         return True, record
     except Exception as exc:  # pragma: no cover - diagnostic
@@ -835,11 +846,12 @@ def determine_category_gender(team_name: str, comp_label: str) -> str:
 
 
 def format_scoreboard_fixture(
-    fixture: Dict[str, Any], 
-    my_team_name: str, 
+    fixture: Dict[str, Any],
+    my_team_name: str,
     my_team_category: str,
     comp_label: str,
-    fixture_id: str
+    fixture_id: str,
+    club_short_name: str = "",
 ) -> Dict[str, Any]:
     """
     Convert a GMS fixture dict into the scoreboard JSON format.
@@ -858,26 +870,20 @@ def format_scoreboard_fixture(
     # We have to infer from column position. 
     # The fixture dict from parser has 'homeTeam' and 'awayTeam'.
     
-    # Heuristic: Check which side contains "St Albans"
-    # Note: my_team_name might be "St Albans 1 (M)" but GMS says "St Albans 1"
-    # We'll treat the side containing "St Albans" as US. 
-    if "st albans" in home_team.lower():
+    # Determine home/away by checking which side contains the club's short name.
+    # Falls back to away if club_short_name is not set.
+    lookup = club_short_name.lower() if club_short_name else ""
+    if lookup and lookup in home_team.lower():
         ha = "h"
         location = "Home"
     else:
         ha = "a"
         location = "Away"
 
-    # Division name cleaning
+    # Division name cleaning — strip league-prefix and season suffix
     # e.g. "East Open - Men's Division 1 South (2025-2026)" -> "Division 1 South"
-    division = comp_label
-    # Remove simple prefixes if present (using our existing helper or more aggressive)
-    if "East Open - Men's " in division:
-        division = division.replace("East Open - Men's ", "")
-    if "East Women's " in division:
-        division = division.replace("East Women's ", "")
-    if " (2025-2026)" in division:
-        division = division.replace(" (2025-2026)", "")
+    division = normalize_comp_label(comp_label) or comp_label
+    division = re.sub(r"\s*\(\d{4}-\d{4}\)\s*$", "", division).strip()
         
     # Scores
     # score text "2 - 1" or similar? 
@@ -953,7 +959,8 @@ def command_update_scoreboard(
     
     client = GMSClient()
     teams_config = load_team_file(config_file)
-    
+    club_short_name = load_club_config().get("short_name", "")
+
     start, end = weekend_range(weekend_str)
     print(f"Filtering for weekend: {start} to {end}")
     
@@ -1002,7 +1009,7 @@ def command_update_scoreboard(
                 # We'll make a composite one.
                 f_id = f"{team_id}-{f.get('date')}-{f.get('time')}"
                 
-                formatted = format_scoreboard_fixture(f, name, category, comp_label, f_id)
+                formatted = format_scoreboard_fixture(f, name, category, comp_label, f_id, club_short_name)
                 
                 # Deduplication logic
                 # Key: Date + Time + HomeTeam + AwayTeam

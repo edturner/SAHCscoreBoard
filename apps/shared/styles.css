@@ -33,6 +33,14 @@
 }
 
 :root {
+    /* =============================================
+     * Club branding — edit these to match your club
+     * ============================================= */
+    --color-primary: #ff6600;       /* Main accent: home title, VS text, active scores */
+    --color-primary-dark: #a64a0d;  /* Darker accent: home subtitle */
+    --color-background: #1a1464;    /* Screen background */
+    --color-surface: #2f3a73;       /* Content card background */
+
     /* Adjust this to scale the pattern size */
     --pattern-zoom: 0%;
 }
@@ -55,7 +63,7 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: #1a1464;
+    background-color: var(--color-background);
 }
 
 /* White pattern overlay, stretched over the navy background */
@@ -106,7 +114,7 @@ body.away .pattern-overlay {
     flex: 1;
     display: flex;
     flex-direction: column;
-    background-color: rgb(47, 58, 115);
+    background-color: var(--color-surface);
     margin: 50px 100px;
     position: relative;
     padding-bottom: 120px; /* Add space for bottom bar */
@@ -147,11 +155,11 @@ body.away .pattern-overlay {
 
 /* Home fixtures - tangerine colors */
 body.home .title {
-    color: #ff6600; /* Bright tangerine */
+    color: var(--color-primary);
 }
 
 body.home .subtitle {
-    color: #a64a0d; /* Darker tangerine */
+    color: var(--color-primary-dark);
 }
 
 /* Bottom orange bar */
@@ -161,7 +169,7 @@ body.home .subtitle {
     left: 0;
     right: 0;
     height: 100px;
-    background-color: #ff6b35;
+    background-color: var(--color-primary);
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -254,7 +262,7 @@ body.home .subtitle {
 }
 
 .vs {
-    color: #FF6600;
+    color: var(--color-primary);
     font-size: 19px;
     margin: 0 15px;
     font-weight: bold;
@@ -296,7 +304,7 @@ body.home .subtitle {
 }
 
 .score-active {
-    background: #FF6600;
+    background: var(--color-primary);
     color: white;
     box-shadow: 0 0 10px rgba(255, 102, 0, 0.6);
 }

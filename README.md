@@ -1,103 +1,123 @@
-# SAHC ScoreBoard
+# ClubScript
 
-![Python Version](https://img.shields.io/badge/python-3.11%2B-blue)
-![License](https://img.shields.io/badge/license-MIT-green)
-![Status](https://img.shields.io/badge/status-active-success)
+**Automated digital signage for hockey clubs — portrait fixture displays and a live League of Leagues table, powered by England Hockey's GMS.**
 
-**Unified data pipeline, automation, and static assets for St Albans Hockey Club’s digital displays.**
+No server required. Data updates automatically via GitHub Actions and is served as a static site on GitHub Pages.
 
 ---
 
-## 🚀 About
+## What it shows
 
-SAHC ScoreBoard is a robust system designed to power the digital experience at St Albans Hockey Club. It seamlessly aggregates fixture data, league standings, and results to drive dynamic displays and web views (like the "League of Leagues").
-
-## ✨ Features
-
-*   **Scoreboard Fixtures**: Portrait layouts (1080×1920) for home and away screens that automatically refresh every five minutes.
-*   **League of Leagues**: A combined men’s and women’s league table tracking weekly performance and ranking shifts.
-*   **Automated Data Collection**: Python utilities and GitHub Actions keep JSON snapshots fresh without manual intervention.
-
-## 🛠 Tech Stack
-
-*   **Core**: Python 3.11+
-*   **Frontend**: HTML5, CSS3, Vanilla JavaScript
-*   **Automation**: GitHub Actions
+- **Home & Away Fixtures** — portrait 1080×1920 screens updated every 5 minutes on match days, showing kick-off times and live scores as they come in
+- **League of Leagues** — weekly ranking of all your club's squads by points-per-game, with form badges and rank-change trend arrows
 
 ---
 
-## 🏁 Getting Started
+## Setup for a new club
 
-### Prerequisites
+### 1. Get your team IDs from England Hockey GMS
 
-*   Python 3.11 or higher
+Each team registered with England Hockey has a UUID in the GMS system. Find them at `gmsfeed.co.uk` and populate `config/teamIDs.json`:
 
-### Installation
+```json
+[
+  { "name": "Anytown 1 (M)", "teamId": "your-uuid-here" },
+  { "name": "Anytown 1 (F)", "teamId": "your-uuid-here" }
+]
+```
 
-1.  Clone the repository:
-    ```bash
-    git clone https://github.com/edturner/SAHCscoreBoard.git
-    cd SAHCscoreBoard
-    ```
-2.  Install dependencies:
-    ```bash
-    pip install requests beautifulsoup4 pytz
-    ```
+The `(M)` / `(F)` suffix is used to split the League of Leagues into men's and women's tables.
 
-### Running Locally
+### 2. Set your club details
 
-HTML files can be served via any static web server. For local development:
+Edit `config/club.json`:
+
+```json
+{
+  "name": "Anytown Hockey Club",
+  "short_name": "Anytown"
+}
+```
+
+`short_name` must match the prefix GMS uses for your team names (e.g. if GMS shows "Anytown 1", use `"Anytown"`). This is used to determine home vs away for each fixture.
+
+### 3. Set your club colours
+
+Edit the `:root` block at the top of `apps/shared/styles.css`:
+
+```css
+:root {
+    --color-primary: #ff6600;       /* Main accent colour */
+    --color-primary-dark: #a64a0d;  /* Darker accent */
+    --color-background: #1a1464;    /* Screen background */
+    --color-surface: #2f3a73;       /* Content card background */
+}
+```
+
+### 4. Generate competition IDs
+
+Run once at the start of each season (or when a team changes division):
 
 ```bash
-# Serve from the root directory
+python scripts/gms_fetcher.py competitions \
+    --team-file config/teamIDs.json \
+    --output config/teamCompIDs.json
+```
+
+This generates `config/teamCompIDs.json`, which pairs each team with their current competition UUID. Commit this file.
+
+### 5. Enable GitHub Pages
+
+In your repo settings, enable GitHub Pages from the `gh-pages` environment (created automatically by the `pages.yml` workflow on first push).
+
+### 6. Connect your screens
+
+Point your display screens at the GitHub Pages URLs:
+
+| Screen | URL |
+|--------|-----|
+| Home fixtures | `https://<your-org>.github.io/<repo>/homeFixtures.html` |
+| Away fixtures | `https://<your-org>.github.io/<repo>/awayFixtures.html` |
+| Men's league | `https://<your-org>.github.io/<repo>/leagueOfLeagues-men.html` |
+| Women's league | `https://<your-org>.github.io/<repo>/leagueOfLeagues-women.html` |
+
+---
+
+## How data stays fresh
+
+| What | How often | Workflow |
+|------|-----------|----------|
+| Fixture scores (match days) | Every 5 min, Sat–Sun | `fixtures.yml` |
+| Initial fixture build | Thu & Fri at 03:00 UTC | `fixtures.yml` |
+| League of Leagues | Every 5 min (live updater) | `fixtures.yml` |
+| Weekly league snapshot | Monday 06:00 UTC | `league-gameweek.yml` |
+
+All workflows commit updated JSON back to the repo, which triggers a Pages redeploy. The displays poll for new data every 5 minutes.
+
+---
+
+## Running locally
+
+```bash
+pip install requests beautifulsoup4 pytz
 python -m http.server 8000
+# Open http://localhost:8000/apps/scoreboard/homeFixtures.html
 ```
-Visit `http://localhost:8000/apps/scoreboard/home.html` to view the displays.
 
-> **Note**: When testing scripts locally, prefer using the existing `data/` directories to keep automation and manual runs aligned.
+## Manual data refresh
+
+```bash
+# Fetch this weekend's fixtures
+python scripts/gms_fetcher.py update-scoreboard --config config/teamCompIDs.json
+
+# Fetch league standings
+python scripts/live_league_updater.py --once
+```
 
 ---
 
-## 📂 Project Architecture
+## Tech stack
 
-```
-apps/
-  scoreboard/        # Home/Away displays & fixture logic
-  league/            # League of Leagues views & logic
-  shared/            # Shared styles, fonts, and assets
-config/              # Team and Competition IDs (GMS)
-data/
-  scoreboard/        # Generated fixture data, exclusions, and CSV exports
-  league/            # League snapshots (current & previous)
-  raw/               # Raw HTML dumps for debugging
-docs/                # Detailed technical documentation
-scripts/             # Core Python ETL scripts
-.github/workflows/   # CI/CD Automation pipelines (Fixtures, Scores, League)
-```
-
-## 🔄 Pipelines
-
-### Scoreboard (Fixtures & Results)
-The scoreboard pipeline fetches data directly from the GMS API, filters it based on exclusions, and generates JSON for the frontend.
-*   **Source**: England Hockey GMS API.
-*   **Update Frequency**: Every 5 minutes (Sat/Sun) via `.github/workflows/fixtures.yml`.
-*   **Core Script**: `scripts/gms_fetcher.py update-scoreboard`.
-
-### League of Leagues
-Weekly aggregation of team performance across all leagues, highlighting movement and stats.
-*   **Source**: GMS (Game Management System) API.
-*   **Update Frequency**: Weekly + Live updates during match days via `.github/workflows/league-live.yml`.
-*   **Core Script**: `scripts/gms_fetcher.py`.
-
----
-
-## 📚 Documentation
-For deeper dives into specific components, check out the `docs/` directory:
-*   [Scoreboard Workflow](docs/scoreboard.md) – Ingestion, exclusion rules, and manual overrides.
-*   [League Pipeline](docs/league.md) – Weekly checklist for the League of Leagues.
-*   [Data Workflow & Retries](docs/league-data-workflow.md) – API behavior and retry strategies.
-
----
-
-## 🤝 Contributing
-Contributions are welcome! Please ensure you test local scripts before submitting a PR.
+- **Python 3.11+** — ETL scripts pulling from the England Hockey GMS API
+- **HTML / CSS / Vanilla JS** — static display pages, no framework
+- **GitHub Actions** — automated data refresh and Pages deployment
