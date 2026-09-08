@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1080, height=1920, initial-scale=1.0">
+  <title>Fixtures — Mockup</title>
+  <style>
+  @font-face {
+    font-family: 'TT';
+    src: url('apps/shared/fonts/TT Bluescreens Trial Condensed Black Italic.ttf') format('truetype');
+    font-weight: 900; font-style: italic;
+  }
+  @font-face {
+    font-family: 'TT';
+    src: url('apps/shared/fonts/TT Bluescreens Trial Bold Italic.ttf') format('truetype');
+    font-weight: bold; font-style: italic;
+  }
+  @font-face {
+    font-family: 'TT';
+    src: url('apps/shared/fonts/TT Bluescreens Trial Bold.ttf') format('truetype');
+    font-weight: bold; font-style: normal;
+  }
+
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --orange:      #ff6600;
+    --orange-lit:  #ff8c40;
+    --orange-glow: rgba(255,102,0,0.3);
+    --navy:        #0c0a28;
+    --navy-mid:    #15124a;
+    --glass:       rgba(255,255,255,0.045);
+    --glass-edge:  rgba(255,255,255,0.08);
+    --text:        #ffffff;
+    --muted:       rgba(255,255,255,0.45);
+  }
+
+  html, body { width: 1080px; height: 1920px; overflow: hidden; }
+
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background: var(--navy);
+    color: var(--text);
+  }
+
+  /* ─── Background ─── */
+  .bg {
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse 900px 500px at 540px -40px, rgba(255,102,0,0.16) 0%, transparent 65%),
+      radial-gradient(ellipse 120% 70% at 50% 110%,  rgba(8,6,30,0.9) 0%, transparent 70%),
+      linear-gradient(165deg, #14114a 0%, #1a1464 40%, #0c0a28 100%);
+  }
+
+  .bg-pattern {
+    position: absolute; inset: 0;
+    background-image: url('apps/shared/images/bg_pattern_home.png');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.1;
+    mix-blend-mode: screen;
+  }
+
+  /* Subtle animated top glow */
+  .bg-glow {
+    position: absolute;
+    width: 700px; height: 700px;
+    top: -180px; left: 50%;
+    transform: translateX(-50%);
+    background: radial-gradient(circle, rgba(255,102,0,0.13) 0%, transparent 70%);
+    animation: glow-breathe 5s ease-in-out infinite;
+    pointer-events: none;
+  }
+  @keyframes glow-breathe {
+    0%,100% { opacity: 0.8; transform: translateX(-50%) scale(1);   }
+    50%      { opacity: 1;   transform: translateX(-50%) scale(1.15); }
+  }
+
+  /* ─── Layout ─── */
+  .screen {
+    position: relative; z-index: 1;
+    width: 100%; height: 100%;
+    display: flex; flex-direction: column;
+  }
+
+  /* ─── Header ─── */
+  .header {
+    padding: 80px 90px 0;
+    flex-shrink: 0;
+  }
+
+  /* "Live · This Saturday" pill */
+  .live-pill {
+    display: inline-flex; align-items: center; gap: 12px;
+    background: var(--orange-glow);
+    border: 1px solid rgba(255,102,0,0.4);
+    border-radius: 999px;
+    padding: 10px 28px;
+    font-size: 23px; font-weight: 700;
+    letter-spacing: 3px; text-transform: uppercase;
+    color: var(--orange-lit);
+    margin-bottom: 32px;
+    animation: fade-in 0.4s ease both;
+  }
+  .live-pill .dot {
+    width: 11px; height: 11px;
+    border-radius: 50%;
+    background: var(--orange);
+    animation: dot-blink 2s ease-in-out infinite;
+  }
+  @keyframes dot-blink {
+    0%,100% { opacity: 1; }
+    50%      { opacity: 0.25; }
+  }
+
+  /* Main title */
+  .title-block {
+    line-height: 0.86;
+    margin-bottom: 28px;
+    animation: slide-up 0.45s ease both;
+    animation-delay: 0.1s;
+  }
+  .t1 {
+    font-family: 'TT', sans-serif;
+    font-weight: 900; font-style: italic;
+    font-size: 220px;
+    color: #fff;
+    letter-spacing: 1px;
+    display: block;
+  }
+  .t2 {
+    font-family: 'TT', sans-serif;
+    font-weight: 900; font-style: italic;
+    font-size: 220px;
+    letter-spacing: 1px;
+    display: block;
+    background: linear-gradient(90deg, var(--orange) 0%, var(--orange-lit) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Animated divider */
+  .divider {
+    height: 3px;
+    background: linear-gradient(90deg, var(--orange), rgba(255,102,0,0.08) 70%, transparent);
+    border-radius: 2px;
+    margin-bottom: 44px;
+    transform-origin: left;
+    animation: grow-x 0.6s ease both;
+    animation-delay: 0.3s;
+  }
+  @keyframes grow-x {
+    from { transform: scaleX(0); }
+    to   { transform: scaleX(1); }
+  }
+
+  /* Date row */
+  .date-row {
+    display: flex; align-items: center; gap: 20px;
+    font-size: 29px; font-weight: 600;
+    color: var(--muted); letter-spacing: 3px; text-transform: uppercase;
+    margin-bottom: 44px;
+    animation: fade-in 0.5s ease both;
+    animation-delay: 0.4s;
+  }
+  .date-row .accent-bar {
+    width: 32px; height: 4px;
+    background: var(--orange); border-radius: 2px;
+  }
+
+  /* ─── Fixtures ─── */
+  .fixtures {
+    flex: 1;
+    padding: 0 90px 140px;
+    display: flex; flex-direction: column;
+    gap: 22px;
+    overflow: hidden;
+  }
+
+  .card {
+    display: flex;
+    border-radius: 16px;
+    overflow: hidden;
+    background: var(--glass);
+    border: 1px solid var(--glass-edge);
+    /* subtle inner top highlight */
+    box-shadow:
+      inset 0 1px 0 rgba(255,255,255,0.07),
+      0 4px 24px rgba(0,0,0,0.3);
+    opacity: 0;
+    animation: card-in 0.4s ease both;
+    flex: 1 1 0;
+    min-height: 80px;
+    max-height: 130px;
+  }
+  .card:nth-child(1) { animation-delay: 0.50s; }
+  .card:nth-child(2) { animation-delay: 0.60s; }
+  .card:nth-child(3) { animation-delay: 0.70s; }
+  .card:nth-child(4) { animation-delay: 0.80s; }
+  .card:nth-child(5) { animation-delay: 0.90s; }
+  .card:nth-child(6) { animation-delay: 1.00s; }
+  .card:nth-child(7) { animation-delay: 1.10s; }
+  .card:nth-child(8) { animation-delay: 1.20s; }
+  .card:nth-child(9) { animation-delay: 1.30s; }
+  @keyframes card-in {
+    from { opacity: 0; transform: translateY(14px); }
+    to   { opacity: 1; transform: translateY(0);    }
+  }
+
+  /* Left colour strip */
+  .strip {
+    width: 6px;
+    flex-shrink: 0;
+    background: linear-gradient(180deg, var(--orange), var(--orange-lit));
+  }
+
+  .card-inner {
+    flex: 1;
+    padding: 0 32px;
+    display: flex; align-items: center;
+    gap: 24px;
+    height: 100%;
+  }
+
+  /* Teams */
+  .teams {
+    flex: 1;
+    display: flex; align-items: center; gap: 20px;
+  }
+  .team {
+    flex: 1;
+    font-size: 26px; font-weight: 800;
+    letter-spacing: 0.5px; text-transform: uppercase;
+    color: #fff; line-height: 1.2;
+  }
+  .team-home { text-align: right; }
+  .team-away { text-align: left;  }
+
+  .vs-badge {
+    width: 48px; height: 48px;
+    border-radius: 50%;
+    border: 2px solid rgba(255,102,0,0.45);
+    background: rgba(255,102,0,0.08);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 13px; font-weight: 900;
+    color: var(--orange); letter-spacing: 1px;
+    flex-shrink: 0;
+  }
+
+  /* Time + score */
+  .meta {
+    display: flex; flex-direction: column;
+    align-items: center; gap: 7px;
+    min-width: 110px;
+  }
+  .kick-time {
+    font-size: 24px; font-weight: 700;
+    color: rgba(255,255,255,0.9);
+    font-variant-numeric: tabular-nums;
+    letter-spacing: 1px;
+  }
+  .score {
+    padding: 5px 16px;
+    border-radius: 20px;
+    font-size: 15px; font-weight: 700;
+    letter-spacing: 2px;
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.1);
+    color: var(--muted);
+  }
+  .score.live {
+    background: var(--orange);
+    border-color: var(--orange);
+    color: #fff;
+    box-shadow: 0 0 22px var(--orange-glow);
+    animation: score-glow 2s ease-in-out infinite;
+  }
+  .score.full-time {
+    background: rgba(255,255,255,0.12);
+    border-color: rgba(255,255,255,0.2);
+    color: rgba(255,255,255,0.75);
+  }
+  @keyframes score-glow {
+    0%,100% { box-shadow: 0 0 18px var(--orange-glow); }
+    50%      { box-shadow: 0 0 36px rgba(255,102,0,0.5); }
+  }
+
+  /* ─── Bottom bar ─── */
+  .bottom-bar {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 110px;
+    background: linear-gradient(90deg, #d95200, var(--orange) 50%, var(--orange-lit));
+    display: flex; align-items: center;
+    justify-content: space-between;
+    padding: 0 70px;
+    z-index: 10;
+  }
+  .bar-name {
+    font-family: 'TT', sans-serif;
+    font-weight: 900; font-style: italic;
+    font-size: 48px;
+    color: rgba(255,255,255,0.92);
+    letter-spacing: 2px;
+  }
+  .bar-tagline {
+    font-size: 21px; font-weight: 600;
+    color: rgba(255,255,255,0.55);
+    letter-spacing: 3px; text-transform: uppercase;
+  }
+
+  /* ─── Shared animations ─── */
+  @keyframes fade-in  { from { opacity: 0; } to { opacity: 1; } }
+  @keyframes slide-up { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
+  </style>
+</head>
+<body>
+
+  <div class="bg"></div>
+  <div class="bg-pattern"></div>
+  <div class="bg-glow"></div>
+
+  <div class="screen">
+    <div class="header">
+      <div class="live-pill"><span class="dot"></span>This Saturday</div>
+      <div class="title-block">
+        <span class="t1">HOME</span>
+        <span class="t2">FIXTURES</span>
+      </div>
+      <div class="divider"></div>
+      <div class="date-row"><div class="accent-bar"></div>Saturday · 14th June 2025</div>
+    </div>
+
+    <div class="fixtures">
+
+      <div class="card">
+        <div class="strip"></div>
+        <div class="card-inner">
+          <div class="teams">
+            <div class="team team-home">ST ALBANS M1</div>
+            <div class="vs-badge">VS</div>
+            <div class="team team-away">HERTFORD M1</div>
+          </div>
+          <div class="meta">
+            <div class="kick-time">14:00</div>
+            <div class="score">— : —</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="strip"></div>
+        <div class="card-inner">
+          <div class="teams">
+            <div class="team team-home">ST ALBANS M5</div>
+            <div class="vs-badge">VS</div>
+            <div class="team team-away">STEVENAGE M2</div>
+          </div>
+          <div class="meta">
+            <div class="kick-time">10:30</div>
+            <div class="score">— : —</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="strip"></div>
+        <div class="card-inner">
+          <div class="teams">
+            <div class="team team-home">ST ALBANS W1</div>
+            <div class="vs-badge">VS</div>
+            <div class="team team-away">CAMBRIDGE CITY W1</div>
+          </div>
+          <div class="meta">
+            <div class="kick-time">13:00</div>
+            <div class="score live">2 – 1</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="strip"></div>
+        <div class="card-inner">
+          <div class="teams">
+            <div class="team team-home">ST ALBANS M9</div>
+            <div class="vs-badge">VS</div>
+            <div class="team team-away">BROXBOURNE M4</div>
+          </div>
+          <div class="meta">
+            <div class="kick-time">11:00</div>
+            <div class="score full-time">FT 3–2</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="strip"></div>
+        <div class="card-inner">
+          <div class="teams">
+            <div class="team team-home">ST ALBANS W5</div>
+            <div class="vs-badge">VS</div>
+            <div class="team team-away">LETCHWORTH W3</div>
+          </div>
+          <div class="meta">
+            <div class="kick-time">13:30</div>
+            <div class="score">— : —</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="bottom-bar">
+    <div class="bar-name">ST ALBANS HC</div>
+    <div class="bar-tagline">Home Fixtures</div>
+  </div>
+
+</body>
+</html>
