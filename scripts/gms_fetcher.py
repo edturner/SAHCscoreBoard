@@ -232,6 +232,9 @@ class TeamSummaryParser(HTMLParser):
         self.current_forms: List[Dict[str, str]] = []
         self.in_form_span = False
         self.form_span_class = ""
+        self.headers: List[str] = []
+        self.in_header_cell = False
+        self.header_text = ""
 
     def handle_starttag(self, tag, attrs):
         attrs_dict = dict(attrs)
@@ -240,6 +243,9 @@ class TeamSummaryParser(HTMLParser):
             self.in_target_row = data_team == self.target_team or (self.target_team == "" and "data-team" not in attrs_dict)
             if self.in_target_row:
                 self.row_cells = []
+        elif tag == "th":
+            self.in_header_cell = True
+            self.header_text = ""
         elif tag == "td" and self.in_target_row:
             self.in_cell = True
             self.current_text = ""
@@ -251,6 +257,8 @@ class TeamSummaryParser(HTMLParser):
                 self.form_span_class = " ".join(classes)
 
     def handle_data(self, data):
+        if self.in_header_cell:
+            self.header_text += data
         if self.in_cell:
             self.current_text += data
         if self.in_form_span:
@@ -262,6 +270,9 @@ class TeamSummaryParser(HTMLParser):
         if tag == "span" and self.in_form_span:
             self.in_form_span = False
             self.form_span_class = ""
+        elif tag == "th" and self.in_header_cell:
+            self.headers.append(self.header_text.strip())
+            self.in_header_cell = False
         elif tag == "td" and self.in_cell:
             cell_data = {"text": self.current_text.strip()}
             if self.current_forms:
@@ -274,28 +285,88 @@ class TeamSummaryParser(HTMLParser):
             self.in_target_row = False
 
 
+# Maps a normalised league-table column heading to the field we store it under.
+# GMS has changed this table's shape before (a leading position column appeared and
+# the PPG column was dropped in Sept 2026), so columns are matched by heading rather
+# than by index. Headings arrive with the mobile and desktop labels concatenated
+# (e.g. "PtsPoints"), hence the prefix matching in _match_header.
+SUMMARY_HEADER_FIELDS = {
+    "team": "teamName",
+    "played": "played",
+    "won": "won",
+    "drawn": "drawn",
+    "lost": "lost",
+    "for": "goalsFor",
+    "goalsfor": "goalsFor",
+    "against": "goalsAgainst",
+    "goalsagainst": "goalsAgainst",
+    "gd": "goalDiff",
+    "goaldifference": "goalDiff",
+    "pts": "points",
+    "points": "points",
+    "ppg": "ppg",
+    "pos": "position",
+    "position": "position",
+}
+
+SUMMARY_FIELDS = (
+    "position", "teamName", "played", "won", "drawn",
+    "lost", "goalsFor", "goalsAgainst", "goalDiff", "points", "ppg",
+)
+
+# Column order used when the table carries no usable headings.
+SUMMARY_FALLBACK_ORDER = (
+    "position", "teamName", "played", "won", "drawn",
+    "lost", "goalsFor", "goalsAgainst", "goalDiff", "points",
+)
+
+
+def _match_header(raw: str) -> Optional[str]:
+    key = re.sub(r"[^a-z]", "", (raw or "").lower())
+    if not key:
+        return "position"
+    if key in SUMMARY_HEADER_FIELDS:
+        return SUMMARY_HEADER_FIELDS[key]
+    for prefix, field in SUMMARY_HEADER_FIELDS.items():
+        if key.startswith(prefix):
+            return field
+    return None
+
+
+def compute_ppg(points: Optional[str], played: Optional[str]) -> Optional[str]:
+    """Points per game, derived because GMS stopped publishing a PPG column."""
+    try:
+        played_val = float(played)
+        if played_val <= 0:
+            return None
+        return f"{float(points) / played_val:.2f}"
+    except (TypeError, ValueError):
+        return None
+
+
 def parse_team_summary(html: str, team_id: str) -> Optional[Dict[str, Optional[str]]]:
     parser = TeamSummaryParser(team_id)
     parser.feed(html or "")
     if not parser.cells:
         return None
 
-    def cell_text(index: int) -> str:
-        return parser.cells[index].get("text", "") if index < len(parser.cells) else ""
+    values = [cell.get("text", "") for cell in parser.cells]
+    summary: Dict[str, Optional[str]] = {field: None for field in SUMMARY_FIELDS}
 
-    return {
-        "teamName": cell_text(0),
-        "played": cell_text(1),
-        "won": cell_text(2),
-        "drawn": cell_text(3),
-        "lost": cell_text(4),
-        "goalsFor": cell_text(5),
-        "goalsAgainst": cell_text(6),
-        "goalDiff": cell_text(7),
-        "points": cell_text(8),
-        "ppg": cell_text(9),
-        "form": parser.form_entries,
-    }
+    fields = [_match_header(h) for h in parser.headers]
+    # Only trust the headings if they actually identify the table's key columns.
+    if not {"teamName", "points"}.issubset({f for f in fields if f}):
+        fields = list(SUMMARY_FALLBACK_ORDER)
+
+    for index, field in enumerate(fields):
+        if field and index < len(values) and summary.get(field) is None:
+            summary[field] = values[index]
+
+    if not summary.get("ppg"):
+        summary["ppg"] = compute_ppg(summary.get("points"), summary.get("played"))
+
+    summary["form"] = parser.form_entries
+    return summary
 
 
 def select_competition(options: Sequence[Dict[str, str]]) -> Optional[Dict[str, str]]:
