@@ -17,7 +17,7 @@ No server required. Data updates automatically via GitHub Actions and is served 
 
 ### 1. Get your team IDs from England Hockey GMS
 
-Each team registered with England Hockey has a UUID in the GMS system. Find them at `gmsfeed.co.uk` and populate `config/teamIDs.json`:
+Each team registered with England Hockey has a UUID in the GMS system. Populate `config/teamIDs.json`:
 
 ```json
 [
@@ -35,13 +35,33 @@ Edit `config/club.json`:
 ```json
 {
   "name": "Anytown Hockey Club",
-  "short_name": "Anytown"
+  "short_name": "Anytown",
+  "club_id": "your-club-uuid"
 }
 ```
 
-`short_name` must match the prefix GMS uses for your team names (e.g. if GMS shows "Anytown 1", use `"Anytown"`). This is used to determine home vs away for each fixture.
+`club_id` is your club's GMS UUID. It lets the fetcher pull a whole match day in one request and
+identify home vs away by club ID rather than by name.
 
-### 3. Set your club colours
+`short_name` is the prefix GMS uses for your team names (e.g. if GMS shows "Anytown 1", use
+`"Anytown"`). Only the legacy gmsfeed path relies on it for home/away.
+
+### 3. Set your API key
+
+Data comes from England Hockey's GMS data warehouse, which requires a key. Request one from
+`gms.support@englandhockey.co.uk`, then:
+
+```bash
+# locally
+export GMS_API_KEY=your-key            # PowerShell: $env:GMS_API_KEY = "your-key"
+
+# for CI
+gh secret set GMS_API_KEY --body "your-key"
+```
+
+The scripts read `GMS_API_KEY` from the environment and never store it in the repo.
+
+### 4. Set your club colours
 
 Edit the `:root` block at the top of `apps/shared/styles.css`:
 
@@ -54,9 +74,10 @@ Edit the `:root` block at the top of `apps/shared/styles.css`:
 }
 ```
 
-### 4. Generate competition IDs
+### 5. Generate competition IDs *(legacy path only)*
 
-Run once at the start of each season (or when a team changes division):
+The API fetcher resolves competitions itself, so this is only needed if you fall back to the
+gmsfeed scraper in `gms_fetcher.py`. Run it once at the start of each season:
 
 ```bash
 python scripts/gms_fetcher.py competitions \
@@ -66,11 +87,11 @@ python scripts/gms_fetcher.py competitions \
 
 This generates `config/teamCompIDs.json`, which pairs each team with their current competition UUID. Commit this file.
 
-### 5. Enable GitHub Pages
+### 6. Enable GitHub Pages
 
 In your repo settings, enable GitHub Pages from the `gh-pages` environment (created automatically by the `pages.yml` workflow on first push).
 
-### 6. Connect your screens
+### 7. Connect your screens
 
 Point your display screens at the GitHub Pages URLs:
 
@@ -87,10 +108,13 @@ Point your display screens at the GitHub Pages URLs:
 
 | What | How often | Workflow |
 |------|-----------|----------|
-| Fixture scores (match days) | Every 5 min, Sat–Sun | `fixtures.yml` |
 | Initial fixture build | Thu & Fri at 03:00 UTC | `fixtures.yml` |
-| League of Leagues | Every 5 min (live updater) | `fixtures.yml` |
+| Fixture scores | Every 5 min, Sat 08:00–21:59 UTC | `fixtures.yml` |
+| Fixture scores | Hourly on Sunday | `fixtures.yml` |
+| League of Leagues | Hourly, Sat & Sun at :37 | `fixtures.yml` |
 | Weekly league snapshot | Monday 06:00 UTC | `league-gameweek.yml` |
+
+League tables only move once results are entered, so they run on a slower cadence than live scores.
 
 All workflows commit updated JSON back to the repo, which triggers a Pages redeploy. The displays poll for new data every 5 minutes.
 
@@ -99,7 +123,7 @@ All workflows commit updated JSON back to the repo, which triggers a Pages redep
 ## Running locally
 
 ```bash
-pip install requests beautifulsoup4 pytz
+pip install requests
 python -m http.server 8000
 # Open http://localhost:8000/apps/scoreboard/homeFixtures.html
 ```
@@ -107,17 +131,35 @@ python -m http.server 8000
 ## Manual data refresh
 
 ```bash
-# Fetch this weekend's fixtures
-python scripts/gms_fetcher.py update-scoreboard --config config/teamCompIDs.json
+# Fetch this weekend's fixtures (writes weekend_fixtures.json + the CSVs)
+python scripts/eh_api.py weekend
 
-# Fetch league standings
+# A specific weekend
+python scripts/eh_api.py weekend --weekend 2026-09-19
+
+# Fetch league standings (rotates teamData.json -> teamData.prev.json)
+python scripts/eh_api.py league
+
+# List seasons; the current one is marked
+python scripts/eh_api.py seasons
+```
+
+<details>
+<summary>Legacy gmsfeed commands</summary>
+
+`gms_fetcher.py` scrapes gmsfeed.co.uk instead of calling the API. It needs no key but returns
+less complete data, and depends on a third party's HTML.
+
+```bash
+python scripts/gms_fetcher.py update-scoreboard --config config/teamCompIDs.json
 python scripts/live_league_updater.py --once
 ```
+</details>
 
 ---
 
 ## Tech stack
 
-- **Python 3.11+** — ETL scripts pulling from the England Hockey GMS API
+- **Python 3.11+** — ETL scripts pulling from the England Hockey GMS data warehouse API
 - **HTML / CSS / Vanilla JS** — static display pages, no framework
 - **GitHub Actions** — automated data refresh and Pages deployment

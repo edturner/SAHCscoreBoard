@@ -6,67 +6,118 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ```powershell
 # Install dependencies
-pip install requests beautifulsoup4 pytz
+pip install requests
+
+# The API key is read from the environment and is never committed
+$env:GMS_API_KEY = "<key>"
 
 # Serve frontend locally
 python -m http.server 8000
 # Then open: http://localhost:8000/apps/scoreboard/homeFixtures.html
 
-# Refresh competition IDs (run pre-season when divisions change)
+# Fetch this weekend's fixtures (weekend_fixtures.json + mens/womens CSVs)
+python scripts/eh_api.py weekend
+
+# A specific weekend
+python scripts/eh_api.py weekend --weekend 2026-09-19
+
+# League standings (rotates teamData.json -> teamData.prev.json)
+python scripts/eh_api.py league
+python scripts/eh_api.py league --no-rotate     # leave the previous snapshot alone
+
+# Seasons; the current one is marked with *
+python scripts/eh_api.py seasons
+```
+
+### Legacy gmsfeed commands
+
+`gms_fetcher.py` scrapes gmsfeed.co.uk and needs no API key. It is the fallback, not the
+default -- it returns less complete data (see Pipeline 1 below).
+
+```powershell
+# Refresh competition IDs (only the legacy path uses teamCompIDs.json)
 python scripts/gms_fetcher.py competitions --team-file config/teamIDs.json --output config/teamCompIDs.json
 
-# Fetch this weekend's fixtures and update scoreboard JSON/CSV
 python scripts/gms_fetcher.py update-scoreboard --config config/teamCompIDs.json
-
-# Fetch for a specific weekend
-python scripts/gms_fetcher.py update-scoreboard --config config/teamCompIDs.json --weekend 2026-03-07
-
-# Fetch a full league snapshot and rotate snapshots
-python scripts/gms_fetcher.py bulk-team-data `
-    --config config/teamCompIDs.json `
-    --output data/league/teamData.json `
-    --publish-path data/league/teamData.json `
-    --rotate-snapshots `
-    --snapshot-date 2026-03-07
-
-# Validate current and previous league snapshots
-python scripts/gms_fetcher.py validate-snapshots `
-    --current data/league/teamData.json `
-    --previous data/league/teamData.prev.json `
-    --expect-count 17
-
-# Run league updater once (same as what CI does)
 python scripts/live_league_updater.py --once
-
-# Debug a single team's data
 python scripts/gms_fetcher.py team-summary --team-id <uuid> --comp-id <uuid>
 ```
 
-There are no automated tests. Manual verification means loading the HTML pages in a browser and checking the browser console for fetch errors.
+There are no automated tests. Manual verification means loading the HTML pages in a browser and
+checking the browser console for fetch errors. When changing a fetcher, run both implementations
+to a scratch directory and diff the output — that is how the API migration was validated.
 
 ## Architecture
 
-Two independent pipelines share the same API client and both feed into a static-file GitHub Pages site.
+Two pipelines feed a static-file GitHub Pages site. Both have an API implementation
+(`scripts/eh_api.py`, the default) and a legacy gmsfeed scraper (`scripts/gms_fetcher.py`).
+
+### The API client — `scripts/eh_api.py`
+
+Talks to England Hockey's GMS data warehouse at `https://ehdwapi.englandhockey.co.uk/api/`,
+authenticated with an `x-api-key` header read from `GMS_API_KEY`. Paths are
+`{resource}/{uuid}/{action}` and are keyed on the same team UUIDs already in `teamIDs.json`.
+
+Two traps worth knowing, both handled in the code:
+
+- `clubs/{clubId}/matchdays` looks like a whole-season feed but embeds fixtures for
+  **nextMatchDay only**; the rest are empty date placeholders. Full-season data comes from
+  `teams/{teamId}/fixturesandresults`, one call per team.
+- That club endpoint covers only the club's **area** competitions. Teams in national leagues
+  (the 1st XIs, in the EHL Conferences) never appear, so any configured team missing from a
+  day's response is looked up individually.
+
+League tables come from `competitiongroups/{competitionGroupId}/tables` — keyed on the
+competition *group*, not the competition, and paginated. Rows carry `teamId`, so no name
+matching. There is no PPG field; it is computed as `totalPoints / gamesPlayed`.
 
 ### Pipeline 1 — Scoreboard (Fixtures & Results)
 
-`gms_fetcher.py update-scoreboard` iterates every team in `config/teamCompIDs.json`, calls `show=results+fixtures` on the GMS API for each, filters to the relevant weekend, then merges results against the **existing** `data/scoreboard/weekend_fixtures.json` before overwriting it. The merge step is the rollback guard: if a fixture was `"Played"` in the previous file but the new API response says `"Scheduled"` (or omits it), the old result is kept. Deduplication keys on `(date, time, home_team, away_team)` because multiple teams can return overlapping fixtures.
+`eh_api.py weekend` fetches `clubs/{clubId}/matchdays/{date}` for Saturday and Sunday, filters
+to teams listed in `teamIDs.json`, and writes `data/scoreboard/weekend_fixtures.json` plus the
+two CSVs. Home vs away is decided by comparing `homeClubId` to the configured `club_id`, and
+men/women comes from the team object's `gender`.
 
-The frontend (`apps/scoreboard/fixtures.js`) fetches `weekend_fixtures.json` with no-cache headers and re-renders on a 5-minute timer.
+The legacy `gms_fetcher.py update-scoreboard` instead scrapes each team's HTML, identifies the
+club's team by name prefix, and merges against the existing JSON as a rollback guard (a fixture
+that was `"Played"` is never downgraded to `"Scheduled"`). Because it matches on name, it
+collapses teams that share a division: on 2026-09-19 it returned 13 of 17 teams, dropping the
+6th and 7th XIs in both genders. The API path returned all 17.
+
+The frontend (`apps/scoreboard/fixtures.js`) fetches `weekend_fixtures.json` with no-cache
+headers and re-renders on a 5-minute timer. It has no empty state: with zero fixtures it renders
+nothing under the hardcoded date header in the HTML.
 
 ### Pipeline 2 — League of Leagues
 
-`gms_fetcher.py bulk-team-data` calls `show=league` for each team, collecting points/PPG/form. On success it rotates the files: `teamData.json` → `teamData.prev.json`, new data → `teamData.json`. Rotation is **skipped entirely** if any team still failed after retries; a fallback copy of the team's previous record (tagged `meta.source: "fallback"`) is inserted instead.
+`eh_api.py league` reads every team's season, looks each team up in its competition group's
+table, derives form from played fixtures (newest first — the page renders the first five badges),
+and writes `data/league/teamData.json`, rotating the old file to `teamData.prev.json`.
 
-`live_league_updater.py` is a thin wrapper that shells out to `gms_fetcher.py bulk-team-data` with the correct arguments. It exists purely so CI can call one simple script.
+Rotation is **skipped** if any configured team is missing, so a partial snapshot can never become
+the baseline the movement arrows compare against.
 
-The frontend (`apps/league/league.js`) loads both `teamData.json` (current) and `teamData.prev.json` (previous), sorts by PPG, and compares ranks/PPG values to show `movement-up` / `movement-down` / `movement-steady` badges. If `teamData.prev.json` is missing it silently defaults to steady arrows.
+The frontend (`apps/league/league.js`) loads both files, sorts by PPG, and compares ranks and PPG
+to show `movement-up` / `movement-down` / `movement-steady`. If `teamData.prev.json` is missing it
+silently defaults to steady arrows.
 
 ### Config dependency
 
-`config/club.json` holds the club's display name and `short_name`. The `short_name` must match the prefix GMS uses in fixture team names (e.g. `"St Albans"` for teams listed as "St Albans 1", "St Albans 2", etc.). It is used by `gms_fetcher.py` to determine home vs away for each fixture, and to normalise the 1st men's team name which GMS reports without a squad number.
+`config/club.json` holds the club's display name, `short_name` and `club_id`.
 
-`config/teamIDs.json` is the source of truth for team UUIDs. `config/teamCompIDs.json` is **generated** from it — it pairs each team with its current competition UUID and must be regenerated at the start of each season via the `competitions` command. Both pipelines read `teamCompIDs.json` at runtime.
+- `club_id` is the club's GMS UUID. The API path uses it for the match-day endpoint and to decide
+  home vs away.
+- `short_name` is the prefix GMS uses in fixture team names (e.g. `"St Albans"`). Only the legacy
+  scraper depends on it. Note that `fetch_team_record`'s 1st-XI rename tests for `"st albans (m)"`
+  but GMS returns `"St Albans"`, so **that branch has never fired** — the 1st XI has always been
+  published without a squad number, and `eh_api.py` deliberately reproduces that.
+
+`config/teamIDs.json` is the source of truth for team UUIDs and is all the API path needs.
+
+`config/teamCompIDs.json` is **generated** from it and is used only by the legacy gmsfeed path.
+The API path resolves competitions per team, so it needs no annual regeneration.
+
+`GMS_API_KEY` must be set in the environment locally and as a GitHub Actions secret for CI.
 
 ### GitHub Pages path rewriting
 

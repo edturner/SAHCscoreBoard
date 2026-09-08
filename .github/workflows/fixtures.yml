@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       start:
-        description: "Start date dd/mm/YYYY (optional)"
+        description: "Any date in the target weekend, YYYY-MM-DD (optional)"
         required: false
         default: ""
       end:
@@ -12,8 +12,13 @@ on:
         required: false
         default: ""
   schedule:
-    - cron: '0 3 * * 4,5'     # Thu/Fri 03:00 UTC initial build
-    - cron: '*/5 * * * 6,0'   # Every 5 min Sat/Sun UTC (Live Scores)
+    # Fixtures move fast on a Saturday and barely at all on a Sunday; league tables
+    # only change once results are entered, so they run on their own slower cadence.
+    - cron: '0 3 * * 4,5'     # Thu/Fri 03:00 UTC - pre-weekend build (fixtures + league)
+    - cron: '*/5 8-21 * * 6'  # Saturday 08:00-21:59 UTC, every 5 min - live scores
+    - cron: '0 * * * 0'       # Sunday, hourly
+    - cron: '37 * * * 6,0'    # Sat/Sun, hourly at :37 - league tables only
+                              # (:37 avoids the */5 grid; concurrency cancels in-progress runs)
 
 jobs:
   update-data:
@@ -35,19 +40,30 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -r requirements.txt || pip install requests beautifulsoup4 pytz
+          pip install -r requirements.txt || pip install requests
 
       - name: Update Scoreboard Data
+        # Skipped on the league-only slot.
+        if: github.event_name != 'schedule' || github.event.schedule != '37 * * * 6,0'
+        env:
+          GMS_API_KEY: ${{ secrets.GMS_API_KEY }}
         run: |
           if [ -n "${{ github.event.inputs.start }}" ]; then
-            python scripts/gms_fetcher.py update-scoreboard --weekend "${{ github.event.inputs.start }}"
+            python scripts/eh_api.py weekend --weekend "${{ github.event.inputs.start }}"
           else
-            python scripts/gms_fetcher.py update-scoreboard
+            python scripts/eh_api.py weekend
           fi
 
       - name: Update League Data
+        # Pre-weekend build and the hourly league slot only - not every 5 minutes.
+        if: >-
+          github.event_name != 'schedule'
+          || github.event.schedule == '0 3 * * 4,5'
+          || github.event.schedule == '37 * * * 6,0'
+        env:
+          GMS_API_KEY: ${{ secrets.GMS_API_KEY }}
         run: |
-          python scripts/live_league_updater.py --once
+          python scripts/eh_api.py league
 
       - name: Commit and push changes
         run: |
