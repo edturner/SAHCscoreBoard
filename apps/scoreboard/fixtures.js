@@ -7,26 +7,32 @@ async function loadFixtures() {
         // Get the fixtures container
         const fixturesContainer = document.querySelector('.fixtures-container');
 
-        // Clear existing fixtures (except the header)
-        const existingFixtures = fixturesContainer.querySelectorAll('.fixture');
-        existingFixtures.forEach(fixture => fixture.remove());
+        // Clear whatever the last render left behind
+        fixturesContainer.querySelectorAll('.fixture, .empty-state')
+            .forEach(el => el.remove());
 
         // Determine which fixtures to load based on the page
         const isHomePage = document.body.classList.contains('home');
-        const fixtures = isHomePage ? data.home : data.away;
+        const fixtures = (isHomePage ? data.home : data.away) || [];
 
         // Sort fixtures by time
-        if (fixtures) {
-            fixtures.sort((a, b) => new Date(a.date) - new Date(b.date));
+        fixtures.sort((a, b) => new Date(a.date) - new Date(b.date));
+
+        // Prefer the first fixture's date; fall back to the weekend the file covers
+        // so the header is still right when there is nothing on.
+        const dateHeaderEl = fixturesContainer.querySelector('.date-header');
+        if (dateHeaderEl) {
+            const formatted = formatDateHeader(fixtures[0]?.date)
+                || formatDateHeader(data.weekend?.saturday);
+            // Without a date from either source, an out-of-date placeholder is worse
+            // than none at all.
+            dateHeaderEl.textContent = formatted || '';
+            dateHeaderEl.hidden = !formatted;
         }
 
-        // Update the date header based on the first fixture's date
-        const dateHeaderEl = fixturesContainer.querySelector('.date-header');
-        if (dateHeaderEl && fixtures && fixtures.length > 0) {
-            const formatted = formatDateHeader(fixtures[0].date);
-            if (formatted) {
-                dateHeaderEl.textContent = formatted;
-            }
+        if (fixtures.length === 0) {
+            fixturesContainer.appendChild(createEmptyState(isHomePage));
+            return;
         }
 
         // Populate fixtures
@@ -36,8 +42,19 @@ async function loadFixtures() {
         });
 
     } catch (error) {
+        // Leave whatever is already on screen rather than blanking the board.
         console.error('Error loading fixtures:', error);
     }
+}
+
+function createEmptyState(isHomePage) {
+    const wrapper = document.createElement('div');
+    wrapper.className = 'empty-state';
+    wrapper.innerHTML = `
+        <div class="empty-state-title">No ${isHomePage ? 'home' : 'away'} fixtures</div>
+        <div class="empty-state-subtitle">Check back on match day</div>
+    `;
+    return wrapper;
 }
 
 function createFixtureElement(fixture) {

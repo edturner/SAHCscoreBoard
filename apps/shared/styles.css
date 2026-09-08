@@ -593,3 +593,34 @@ body.home .subtitle {
     border-radius: 12px;
     background: rgba(0, 0, 0, 0.45);
 }
+/* =============================================
+ * Empty state
+ * Shown when a weekend has no fixtures, so the board reads as deliberate
+ * rather than broken. Sized to stay legible across a clubhouse.
+ * ============================================= */
+.empty-state {
+    margin: auto;              /* absorbs the free space, centring in the flex column */
+    padding: 40px 30px;
+    text-align: center;
+    animation: slideInUp 0.6s ease-out forwards;
+    opacity: 0;
+    transform: translateY(25px);
+}
+
+.empty-state-title {
+    color: white;
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 52px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 1.15;
+}
+
+.empty-state-subtitle {
+    margin-top: 18px;
+    color: rgba(255, 255, 255, 0.6);
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 28px;
+    letter-spacing: 1px;
+}

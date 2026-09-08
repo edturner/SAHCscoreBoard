@@ -238,7 +238,9 @@ def collect_fixtures(
 # -- output -------------------------------------------------------------
 
 
-def build_payload(records: List[Dict[str, Any]]) -> Dict[str, Any]:
+def build_payload(
+    records: List[Dict[str, Any]], saturday: date, sunday: date
+) -> Dict[str, Any]:
     unique: Dict[str, Dict[str, Any]] = {}
     for record in records:
         unique[record.get("fixtureId") or json.dumps(record, sort_keys=True)] = record
@@ -246,6 +248,9 @@ def build_payload(records: List[Dict[str, Any]]) -> Dict[str, Any]:
     ordered = sorted(unique.values(), key=lambda r: (r.get("date") or "", r.get("kickoff") or ""))
     return {
         "generated_at": datetime.now(timezone.utc).isoformat(),
+        # Which weekend this file covers, so the displays can title themselves
+        # correctly even when there are no fixtures to read a date from.
+        "weekend": {"saturday": saturday.isoformat(), "sunday": sunday.isoformat()},
         "home": [r for r in ordered if r["_ha"] == "h"],
         "away": [r for r in ordered if r["_ha"] == "a"],
     }
@@ -278,7 +283,7 @@ def command_weekend(weekend: Optional[str], output: Path, club_id: Optional[str]
 
     client = EHApiClient()
     records = collect_fixtures(client, club_id, (saturday, sunday))
-    payload = build_payload(records)
+    payload = build_payload(records, saturday, sunday)
 
     output.parent.mkdir(parents=True, exist_ok=True)
     with output.open("w", encoding="utf-8") as handle:
