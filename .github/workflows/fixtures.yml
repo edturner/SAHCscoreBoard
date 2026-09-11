@@ -65,12 +65,26 @@ jobs:
         run: |
           python scripts/eh_api.py league
 
+      - name: Update Top Scorers
+        # Same slots as the league: goals only appear once results and team sheets
+        # are in. A failure here must never stop the fixtures and league commit.
+        if: >-
+          github.event_name != 'schedule'
+          || github.event.schedule == '0 3 * * 4,5'
+          || github.event.schedule == '37 * * * 6,0'
+        continue-on-error: true
+        env:
+          GMS_API_KEY: ${{ secrets.GMS_API_KEY }}
+        run: |
+          python scripts/top_scorers.py
+
       - name: Commit and push changes
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@users.noreply.github.com"
           git add data/scoreboard/weekend_fixtures.json data/scoreboard/mens_fixtures.csv data/scoreboard/womens_fixtures.csv || true
           git add data/league/teamData.json data/league/teamData.prev.json || true
-          git commit -m "Update scoreboard and league data [skip ci]" || echo "No changes"
+          git add data/scorers/scorers.json data/scorers/fixture_goals.json || true
+          git commit -m "Update scoreboard, league and scorer data [skip ci]" || echo "No changes"
           git push
 

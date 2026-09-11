@@ -27,6 +27,9 @@ python scripts/eh_api.py league --no-rotate     # leave the previous snapshot al
 
 # Seasons; the current one is marked with *
 python scripts/eh_api.py seasons
+
+# Top scorers (writes data/scorers/scorers.json and its fixture cache)
+python scripts/top_scorers.py --print
 ```
 
 ### Legacy gmsfeed commands
@@ -84,9 +87,12 @@ that was `"Played"` is never downgraded to `"Scheduled"`). Because it matches on
 collapses teams that share a division: on 2026-09-19 it returned 13 of 17 teams, dropping the
 6th and 7th XIs in both genders. The API path returned all 17.
 
-The frontend (`apps/scoreboard/fixtures.js`) fetches `weekend_fixtures.json` with no-cache
-headers and re-renders on a 5-minute timer. It has no empty state: with zero fixtures it renders
-nothing under the hardcoded date header in the HTML.
+The frontend (`apps/scoreboard/fixtures.js`) fetches `weekend_fixtures.json` and re-renders
+every 5 minutes. `<body data-side="home|away">` picks the list, which is split into MEN and WOMEN
+panels by `category` because GMS names two same-numbered squads identically; under a panel heading
+our team is just "3s". A result that was not there at the previous refresh gets a brief highlight, tracked
+in memory by `fixtureId`. Games on the weekend's second day (usually the 1st XIs, whose national
+leagues often play on Sunday) get a small day tag over the kick-off time, and the pill shows both dates.
 
 ### Pipeline 2 — League of Leagues
 
@@ -97,9 +103,30 @@ and writes `data/league/teamData.json`, rotating the old file to `teamData.prev.
 Rotation is **skipped** if any configured team is missing, so a partial snapshot can never become
 the baseline the movement arrows compare against.
 
-The frontend (`apps/league/league.js`) loads both files, sorts by PPG, and compares ranks and PPG
-to show `movement-up` / `movement-down` / `movement-steady`. If `teamData.prev.json` is missing it
-silently defaults to steady arrows.
+The frontend (`apps/league/league.js`) loads both files, sorts by PPG (ties: goal difference,
+then squad number, so a pre-season table reads 1s, 2s, 3s) and compares ranks against the previous
+snapshot for the up / down arrows; unchanged teams get no arrow. If `teamData.prev.json` is
+missing it falls back to `teamData.lastGameweek.json`. Form is drawn oldest to newest left to
+right, the reverse of the data's order.
+
+### Pipeline 3 — Top Scorers
+
+`scripts/top_scorers.py` reads every configured team's season (the same per-team feed as the
+league), fetches `fixtures/{id}` for each played fixture and counts our team's FG / PC / PS events.
+Coverage depends entirely on captains completing GMS team sheets. Players without GMS `consent` are
+skipped, and member IDs are replaced by a truncated SHA-256, so nothing beyond the public display
+name is committed. Detail for fixtures older than 14 days is reused from
+`data/scorers/fixture_goals.json`. "On the day" is the latest weekend with results, Sunday included.
+It runs in `fixtures.yml` on the league slots with `continue-on-error`, so a scorer failure never
+blocks the fixtures and league commit. `--last-season --output <file>` looks back at 2025-26 via the
+competition IDs in git history.
+
+### Screens — shared frontend
+
+All five screens share `apps/shared/styles.css` (one design system: Barlow for text, TT
+Bluescreens for titles, flat navy panels, one accent colour: orange, or white on the away screen via `.board--away`) and `apps/shared/board.js` (fetching, text fitting,
+squad labels, the 5-minute refresh). `board.js` also reads the footer's club name from
+`config/club.json`. `topScorers.html` reads `data/scorers/scorers.json`, written by `scripts/top_scorers.py` (Pipeline 3).
 
 ### Config dependency
 
@@ -121,5 +148,5 @@ The API path resolves competitions per team, so it needs no annual regeneration.
 
 ### GitHub Pages path rewriting
 
-The HTML/JS files use relative paths suited for the `apps/` directory structure (`../../data/`, `../shared/styles.css`). `pages.yml` copies everything flat into `_site/` and rewrites those paths with `sed` so the site works when served from the Pages root. If paths break on the live site, check the `sed` substitutions in `pages.yml`.
+The HTML/JS files use relative paths suited for the `apps/` directory structure (`../../data/`, `../../config/`, `../shared/styles.css`, `../shared/board.js`). `pages.yml` copies everything flat into `_site/` (plus `config/club.json`) and rewrites those paths with `sed` so the site works when served from the Pages root. If paths break on the live site, check the `sed` substitutions in `pages.yml`.
 

@@ -47,7 +47,7 @@ class EHApiClient:
     api_key: str = ""
     base_url: str = EH_API_BASE
     timeout: int = 30
-    retry_limit: int = 4
+    retry_limit: int = 6
     session: requests.Session = field(default_factory=requests.Session)
 
     def __post_init__(self) -> None:
@@ -74,8 +74,23 @@ class EHApiClient:
                 return None
             last_error = f"{response.status_code} {response.reason}"
             if attempt < self.retry_limit:
-                time.sleep(min(2 ** attempt, 10))
+                time.sleep(self._backoff(response, attempt))
         raise RuntimeError(f"Failed to fetch {url}: {last_error}")
+
+    @staticmethod
+    def _backoff(response: requests.Response, attempt: int) -> float:
+        """Seconds to wait before retrying.
+
+        A 429 means the API is rate limiting us, so honour its Retry-After when it
+        sends one and otherwise back off far harder than for a 5xx: a scorer run can
+        make a few hundred requests, and short retries just hit the limit again.
+        """
+        retry_after = (response.headers.get("Retry-After") or "").strip()
+        if retry_after.isdigit():
+            return min(float(retry_after), 60.0)
+        if response.status_code == 429:
+            return min(5 * 2 ** attempt, 60)   # 10, 20, 40, 60, 60s
+        return min(2 ** attempt, 10)
 
     # -- resources -------------------------------------------------------
 

@@ -10,6 +10,7 @@ No server required. Data updates automatically via GitHub Actions and is served 
 
 - **Home & Away Fixtures** — portrait 1080×1920 screens updated every 5 minutes on match days, showing kick-off times and live scores as they come in
 - **League of Leagues** — weekly ranking of all your club's squads by points-per-game, with form badges and rank-change trend arrows
+- **Top Scorers** — the season's leading scorers for men and women, plus the scorers from the latest match day
 
 ---
 
@@ -67,12 +68,15 @@ Edit the `:root` block at the top of `apps/shared/styles.css`:
 
 ```css
 :root {
-    --color-primary: #ff6600;       /* Main accent colour */
-    --color-primary-dark: #a64a0d;  /* Darker accent */
-    --color-background: #1a1464;    /* Screen background */
-    --color-surface: #2f3a73;       /* Content card background */
+    --panel: #1c1668;          /* Content panels */
+    --ground: #140f52;         /* Page background */
+    --ground-deep: #0e0a3d;    /* Text on the accent */
+    --orange: #ff6600;         /* The one accent colour */
 }
 ```
+
+The club name in each screen's footer bar comes from `name` in `config/club.json`.
+The away fixtures screen swaps the accent to white for the away kit: see `.board--away` in the same file.
 
 ### 5. Generate competition IDs *(legacy path only)*
 
@@ -101,6 +105,7 @@ Point your display screens at the GitHub Pages URLs:
 | Away fixtures | `https://<your-org>.github.io/<repo>/awayFixtures.html` |
 | Men's league | `https://<your-org>.github.io/<repo>/leagueOfLeagues-men.html` |
 | Women's league | `https://<your-org>.github.io/<repo>/leagueOfLeagues-women.html` |
+| Top scorers | `https://<your-org>.github.io/<repo>/topScorers.html` |
 
 ---
 
@@ -112,6 +117,7 @@ Point your display screens at the GitHub Pages URLs:
 | Fixture scores | Every 5 min, Sat 08:00–21:59 UTC | `fixtures.yml` |
 | Fixture scores | Hourly on Sunday | `fixtures.yml` |
 | League of Leagues | Hourly, Sat & Sun at :37 | `fixtures.yml` |
+| Top scorers | With the league updates | `fixtures.yml` |
 | Weekly league snapshot | Monday 06:00 UTC | `league-gameweek.yml` |
 
 League tables only move once results are entered, so they run on a slower cadence than live scores.
@@ -142,6 +148,9 @@ python scripts/eh_api.py league
 
 # List seasons; the current one is marked
 python scripts/eh_api.py seasons
+
+# Top scorers (writes data/scorers/scorers.json)
+python scripts/top_scorers.py --print
 ```
 
 <details>
