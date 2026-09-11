@@ -1,626 +1,653 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
-
-@font-face {
-    font-family: 'TT Bluescreens';
-    src: url('fonts/TT Bluescreens Trial Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'TT Bluescreens';
-    src: url('fonts/TT Bluescreens Trial Bold.ttf') format('truetype');
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'TT Bluescreens';
-    src: url('fonts/TT Bluescreens Trial Italic.ttf') format('truetype');
-    font-weight: normal;
-    font-style: italic;
-    font-display: swap;
-}
+/* =============================================
+ * Club screens. 1080x1920 portrait, on a 65" TV in the clubhouse.
+ *
+ * One layout for every screen: a header (a pill with the date or season, a
+ * two-tone title, a short rule), the content in flat navy panels, then the
+ * club bar. Built to be read from the far end of the bar:
+ *   - Names in Barlow, a sturdy normal-width sans, in Title Case. Mixed case
+ *     is recognised faster than capitals at distance.
+ *   - The club's TT Bluescreens for titles and the club name only.
+ *   - Rows share one anatomy: time or rank on the left, the name plus one line
+ *     of context, and the number that matters on the right.
+ *   - One accent colour per screen: club orange, or white on the away screen
+ *     because away games are played in white. Green / amber / red appear only
+ *     for results.
+ *   - Flat: no gradient text, glass or glow.
+ * ============================================= */
 
 @font-face {
     font-family: 'TT Bluescreens';
     src: url('fonts/TT Bluescreens Trial Bold Italic.ttf') format('truetype');
     font-weight: bold;
     font-style: italic;
-    font-display: swap;
+    font-display: block;
 }
 
 :root {
     /* =============================================
-     * Club branding — edit these to match your club
+     * Club branding. Edit these to match your club.
      * ============================================= */
-    --color-primary: #ff6600;       /* Main accent: home title, VS text, active scores */
-    --color-primary-dark: #a64a0d;  /* Darker accent: home subtitle */
-    --color-background: #1a1464;    /* Screen background */
-    --color-surface: #2f3a73;       /* Content card background */
+    --ground: #140f52;          /* page */
+    --ground-deep: #0e0a3d;     /* text on the accent */
+    --panel: #1c1668;           /* content panels */
+    --orange: #ff6600;
 
-    /* Adjust this to scale the pattern size */
-    --pattern-zoom: 0%;
+    /* The accent. Everything orange on a screen reads from these, so a screen
+       can change colour in one place (see .board--away). */
+    --accent: var(--orange);
+    --accent-soft: rgba(255, 102, 0, 0.14);
+    --accent-edge: rgba(255, 102, 0, 0.45);
+    --accent-flash: rgba(255, 102, 0, 0.28);
+    --accent-title: var(--orange);
+    --on-accent: var(--ground-deep);
+
+    /* Text is solid colours rather than transparent white, so contrast is
+       the same wherever it lands. All pass WCAG AA on --panel. */
+    --ink: #f6f5fc;
+    --ink-2: #c3c0e4;           /* secondary: opponents, divisions, squads */
+    --ink-3: #8e8ac2;           /* tertiary: ranks, kicked-off times, notes */
+    --line: rgba(246, 245, 252, 0.12);
+    --panel-edge: rgba(246, 245, 252, 0.08);
+
+    --win: #3ccf8e;
+    --draw: #f5c04a;
+    --loss: #f0605d;
+
+    --sans: 'Barlow', 'Segoe UI', Arial, sans-serif;
+    --display: 'TT Bluescreens', 'Barlow', Arial, sans-serif;
+
+    --pad: 64px;
+    --bleed: 14px;              /* how far row lines and highlights overhang the text */
+    --radius: 8px;
 }
 
-* {
+/* Away games are played in white, so the away screen swaps orange for white:
+   the pill, strips, rule, bar and highlights. The second word of the title
+   goes to a cool grey, as it was on the original away board. */
+.board--away {
+    --accent: var(--ink);
+    --accent-soft: rgba(246, 245, 252, 0.1);
+    --accent-edge: rgba(246, 245, 252, 0.5);
+    --accent-flash: rgba(246, 245, 252, 0.18);
+    --accent-title: #a9adc6;
+}
+
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+html,
 body {
     width: 1080px;
     height: 1920px;
     overflow: hidden;
-    font-family:  'Inter', sans-serif;
 }
 
-/* Background pattern container */
-.pattern-background {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: var(--color-background);
+body {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background: var(--ground);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-variant-numeric: tabular-nums;
+    -webkit-font-smoothing: antialiased;
 }
 
-/* White pattern overlay, stretched over the navy background */
-.pattern-overlay {
+/* The club pattern: visible behind the panels, but kept low enough that it never competes with the text. */
+body::before {
+    content: '';
     position: absolute;
-    width: 100%;
-    height: 100%;
     inset: 0;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    z-index: 0;
+    background: url('images/bg_pattern_home.png') center / cover no-repeat;
+    opacity: 0.14;
+    pointer-events: none;
 }
 
-/* Different patterns for home and away */
-body.home .pattern-overlay {
-    background-image: url('images/bg_pattern_home.png');
-}
-
-body.away .pattern-overlay {
+.board--away::before {
     background-image: url('images/bg_pattern_away.png');
 }
 
-/* Main content container */
-.content-container {
+/* ─── Header ─── */
+.head {
     position: relative;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    z-index: 1;
-}
-
-/* Top section with graphic */
-.top-graphic {
-    width: 100%;
-    height: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-/* Center content area */
-.center-content {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    background-color: var(--color-surface);
-    margin: 50px 100px;
-    position: relative;
-    padding-bottom: 120px; /* Add space for bottom bar */
-}
-
-/* Text container */
-.text-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 100px 50px 20px 50px;
     flex-shrink: 0;
+    padding: 70px var(--pad) 0;
 }
 
-/* Title text */
-.title {
-    color: white;
-    font-size: 140px;
+.pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 24px;
+    border-radius: 999px;
+    background: var(--accent-soft);
+    border: 1px solid var(--accent-edge);
+    font-weight: 700;
+    font-size: 24px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--accent);
+}
+
+.pill-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--accent);
+}
+
+.head-title {
+    margin-top: 18px;
+    padding-bottom: 6px;        /* italic descenders */
+    font-family: var(--display);
     font-weight: bold;
     font-style: italic;
-    letter-spacing: 4px;
-    line-height: 0.8;
-    text-align: center;
-    font-family: 'TT Bluescreens', 'Inter', Arial, sans-serif;
+    font-size: 132px;
+    line-height: 1;
+    text-transform: uppercase;
+    white-space: nowrap;
+    overflow: hidden;           /* lets board.js shrink a long title to fit */
 }
 
-.subtitle {
-    color: #a0a5b8;
-    font-size: 140px;
-    font-weight: 900;
-    letter-spacing: 4px;
-    line-height: 0.8;
-    text-align: center;
+.head-title em {
     font-style: italic;
-    font-family: 'TT Bluescreens', 'Inter', Arial, sans-serif;
+    color: var(--accent-title);
 }
 
-/* Home fixtures - tangerine colors */
-body.home .title {
-    color: var(--color-primary);
+.head-rule {
+    width: 160px;
+    height: 4px;
+    margin-top: 18px;
+    border-radius: 2px;
+    background: var(--accent);
 }
 
-body.home .subtitle {
-    color: var(--color-primary-dark);
-}
-
-/* Bottom orange bar */
-.bottom-bar {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100px;
-    background-color: var(--color-primary);
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    padding: 0 50px;
-    gap: 25px;
-    z-index: 10;
-}
-
-/* Logo placeholders */
-.logo {
-    width: 90px;
-    height: 70px;
-    background-color: rgba(255, 255, 255, 0.2);
-    border-radius: 10px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.logo.womens {
-    /* background-image: url('womens-logo.png'); */
-}
-
-.logo.mens {
-    /* background-image: url('mens-logo.png'); */
-}
-
-.logo.main {
-    /* background-image: url('east-hockey-logo.png'); */
-}
-
-/* Fixtures styles */
-.fixtures-container {
+/* ─── Sheet: the area between header and bar ─── */
+.sheet {
+    position: relative;
     flex: 1;
+    min-height: 0;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    gap: 15px;
-    padding: 0 30px 40px 30px; /* Extra bottom padding to avoid bottom bar */
-    overflow-y: auto;
-    max-height: calc(100vh - 400px); /* Limit height to prevent overlap */
+    gap: 26px;
+    padding: 34px var(--pad) 146px;     /* bottom clears the bar */
 }
 
-.date-header {
-    color: white;
-    font-size: 35px;
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 20px;
+/* Two columns: men on the left, women on the right. */
+.sheet--quad {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-content: start;
+}
+
+/* A label spanning both columns of a quad sheet. */
+.band {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 4px 0 -8px;
+    font-weight: 800;
+    font-size: 26px;
+    letter-spacing: 4px;
     text-transform: uppercase;
+    color: var(--ink-2);
+}
+
+.band-bar {
+    width: 32px;
+    height: 4px;
+    border-radius: 2px;
+    background: var(--accent);
+}
+
+.band-note {
+    margin-left: auto;
     letter-spacing: 2px;
-    font-family:  'Inter', Arial, sans-serif;
-    flex-shrink: 0;
-    order: -1; /* This puts the date at the top of the flex container */
+    color: var(--accent);
 }
 
-.fixture {
-    background: rgba(0, 0, 0, 0.7);
-    border-radius: 6px;
-    overflow: hidden;
-    box-shadow: 0 3px 16px rgba(0, 0, 0, 0.3);
-    flex: 1 1 0;
-    min-height: 70px;
-    max-height: 115px;
-}
-
-.fixture-content {
-    padding: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 100%;
-}
-
-.teams {
-    display: flex;
-    align-items: center;
-    flex: 1;
-    color: white;
-    font-size: 22px;
-    font-weight: bold;
-    text-transform: uppercase;
-    font-family:  'Inter', Arial, sans-serif;
-}
-
-.team-home {
-    flex: 1;
-    text-align: right;
-    padding-right: 15px;
-}
-
-.vs {
-    color: var(--color-primary);
-    font-size: 19px;
-    margin: 0 15px;
-    font-weight: bold;
-    font-family: 'Inter', Arial, sans-serif;
-}
-
-.team-away {
-    flex: 1;
-    text-align: left;
-    padding-left: 15px;
-}
-
-.fixture-details {
+/* ─── Panels ─── */
+/* A panel is as tall as its rows. On a busy weekend the panels shrink
+   together to fit the screen, and board.js shortens the rows to match. */
+.panel {
+    min-width: 0;
+    min-height: 0;
+    flex: 0 1 auto;
     display: flex;
     flex-direction: column;
+    padding: 22px 28px 10px;
+    border-radius: 16px;
+    background: var(--panel);
+    border: 1px solid var(--panel-edge);
+}
+
+.panel-head {
+    flex-shrink: 0;
+    display: flex;
     align-items: center;
-    min-width: 125px;
+    gap: 14px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--line);
+}
+
+.panel-strip {
+    width: 6px;
+    height: 38px;
+    border-radius: 3px;
+    background: var(--accent);
+}
+
+.panel-title {
+    font-family: var(--display);
+    font-weight: bold;
+    font-style: italic;
+    font-size: 48px;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.panel-note {
+    margin-left: auto;
+    font-weight: 700;
+    font-size: 22px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--ink-3);
+}
+
+/* Clips, so rows can never run under the bar, and is widened by --bleed so
+   the clip doesn't cut off the rows' own overhang. */
+.panel-rows {
+    flex: 1 1 auto;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    margin: 0 calc(-1 * var(--bleed));
+    padding: 0 var(--bleed);
+}
+
+/* ─── Row anatomy ─── */
+.row {
+    display: grid;
+    align-items: center;
+    column-gap: 24px;
+    height: var(--row-h, 88px);
+    /* Overhangs the text so a highlighted row's background has room around
+       it, while the text stays aligned with the panel heading. */
+    margin: 0 calc(-1 * var(--bleed));
+    padding: 0 var(--bleed);
+    border-bottom: 1px solid var(--line);
+}
+
+.row:last-child {
+    border-bottom: 0;
+}
+
+.rank {
+    font-weight: 700;
+    font-size: 40px;
+    color: var(--ink-3);
+}
+
+.name {
+    min-width: 0;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 1.15;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.meta {
+    font-weight: 600;
+    font-size: 30px;
+    color: var(--ink-2);
+    white-space: nowrap;
+}
+
+.figure {
+    font-weight: 800;
+    font-size: 60px;
+    line-height: 1;
+    text-align: right;
+}
+
+.figure.is-empty {
+    color: var(--ink-3);
+}
+
+/* First place, on every screen: rank and number in the accent. */
+.row--lead .rank,
+.row--lead .figure {
+    color: var(--accent);
+}
+
+.empty {
+    padding: 28px 0;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 1.3;
+    color: var(--ink-2);
+}
+
+/* ─── Fixtures ─── */
+/* Our team on top in bold, the opposition beneath, each with its own score,
+   like a broadcast scorebug. Two lines means a long opponent never has to
+   share space with our name. */
+.row--fixture {
+    grid-template-columns: 108px minmax(0, 1fr) 60px;
+    height: var(--row-h, 128px);
 }
 
 .time {
-    color: white;
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 5px;
-    font-family: 'Inter', Arial, sans-serif;
-}
-
-.score-info {
-    background: rgba(255, 255, 255, 0.3);
-    color: #ccc;
-    padding: 6px 12px;
-    border-radius: 10px;
-    font-size: 15px;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: all 0.3s ease;
-    font-family:  'Inter', Arial, sans-serif;
-}
-
-.score-active {
-    background: var(--color-primary);
-    color: white;
-    box-shadow: 0 0 10px rgba(255, 102, 0, 0.6);
-}
-
-.score-placeholder {
-    background: rgba(255, 255, 255, 0.3);
-    color: #888;
-}
-
-/* Animation for subtle entrance effect */
-.fixture {
-    animation: slideInUp 0.6s ease-out forwards;
-    opacity: 0;
-    transform: translateY(25px);
-}
-
-/* Animation delays for normal column layout */
-.fixture:nth-child(2) { animation-delay: 0.1s; }
-.fixture:nth-child(3) { animation-delay: 0.2s; }
-.fixture:nth-child(4) { animation-delay: 0.3s; }
-.fixture:nth-child(5) { animation-delay: 0.4s; }
-.fixture:nth-child(6) { animation-delay: 0.5s; }
-.fixture:nth-child(7) { animation-delay: 0.6s; }
-.fixture:nth-child(8) { animation-delay: 0.7s; }
-.fixture:nth-child(9) { animation-delay: 0.8s; }
-.fixture:nth-child(10) { animation-delay: 0.9s; }
-
-@keyframes slideInUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* League of Leagues layout */
-.center-content.league-layout {
-    padding: 30px 50px 120px 50px;
-    gap: 20px;
-    background: linear-gradient(180deg, rgba(31, 39, 83, 0.95), rgba(20, 24, 52, 0.98));
-}
-
-.league-title {
-    padding-top: 100px;
-}
-
-.league-title .title {
-    font-size: 140px;
-}
-
-.league-title .subtitle {
-    font-size: 140px;
-}
-
-.league-title .tagline {
-    margin-top: 10px;
-    color: #f0f1f5;
-    font-size: 24px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    font-weight: 600;
-}
-
-.filter-label {
-    margin-top: 5px;
-    padding: 6px 18px;
-    border-radius: 999px;
-    /* background: rgba(255, 255, 255, 0.08); */
-    color: #ffffff;
-    font-size: 50px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    /* border: 1px solid rgba(255, 255, 255, 0.12); */
-}
-
-.league-container {
-    flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 16px;
-    overflow: hidden;
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 1.05;
 }
 
-.league-table {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
+/* Once there's a result, the kick-off time is no longer the news. */
+.row--fixture.is-played .time {
+    color: var(--ink-3);
 }
 
-.league-grid {
-    flex: 1;
-    overflow-y: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    padding-right: 4px;
-}
-
-.table-row {
-    display: grid;
-    grid-template-columns: 80px 180px 90px 65px 100px 170px; 
-    gap: 12px;
-    padding: 12px 20px;
-    border-radius: 12px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-    background: rgba(0, 0, 0, 0.6);
-    border: 1px solid rgba(255, 255, 255, 0.04);
-    align-items: center;
-    animation: slideInUp 0.4s ease forwards;
-}
-
-.table-row.table-header {
-    position: sticky;
-    top: 0;
-    z-index: 2;
-    background: rgba(255, 255, 255, 0.12);
-    border-radius: 10px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: 18px;
-    color: #edf0ff;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
-}
-
-
-.col {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    width: 100%;
-}
-
-.col-rank {
-    align-items: center;
-    justify-content: center;
-}
-
-.col-ppg,
-.col-points {
-    align-items: flex-center;
-    text-align: left;
-}
-
-.table-row.table-header .col-ppg,
-.table-row.table-header .col-points {
-    align-items: flex-start;
-    text-align: left;
-}
-
-.col-record {
-    align-items: flex-start;
-}
-
-.col-form {
-    align-items: flex-end;
-}
-
-.rank-chip {
-    width: 64px;
-    height: 64px;
-    border-radius: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white;
+/* "SUN" above the time of a game on the weekend's second day (usually the
+   1st XIs, whose national leagues often play on Sunday). Stays in the accent
+   after the result is in, so Sunday games are always easy to pick out. */
+.day-tag {
     font-weight: 800;
-    gap: 2px;
-    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.35);
+    font-size: 22px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent);
 }
 
-.rank-number {
-    font-size: 26px;
-    line-height: 1;
+.teams {
+    min-width: 0;
+    display: grid;
+    row-gap: 4px;
 }
 
-.rank-arrow {
-    font-size: 18px;
-}
-
-.badge-up {
-    background: linear-gradient(135deg, #11998e, #38ef7d);
-}
-
-.badge-steady {
-    background: linear-gradient(135deg, #3d3d3d, #918f8f);
-}
-
-.badge-down {
-    background: linear-gradient(135deg, #ff5858, #f09819);
+.team {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 64px;
+    align-items: baseline;
+    column-gap: 16px;
 }
 
 .team-name {
-    color: #ffffff;
-    font-size: 28px;
-    font-weight: 800;
-    letter-spacing: 0.5px;
+    min-width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-.competition-label {
-    color: #cfd3ff;
-    font-size: 16px;
-    letter-spacing: 0.5px;
-}
-
-.ppg-value {
-    font-size: 30px;
-    font-weight: 900;
-    color: #fbd38d;
-    line-height: 1;
-}
-
-.ppg-label {
-    font-size: 14px;
-    letter-spacing: 2px;
-    color: #9aa0ff;
-    text-transform: uppercase;
-}
-
-.points-value {
-    font-size: 28px;
-    font-weight: 800;
-    color: #ffffff;
-}
-
-.points-label {
-    font-size: 14px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: rgba(255, 255, 255, 0.7);
-}
-
-.record-main {
-    font-size: 24px;
+.team--ours .team-name {
     font-weight: 700;
-    color: #ffffff;
+    font-size: 46px;
+    line-height: 1.1;
 }
 
-.record-sub {
-    font-size: 14px;
-    color: rgba(255, 255, 255, 0.8);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.form-badges {
-    display: flex;
-    gap: 6px;
-}
-
-.form-badge {
-    width: 28px;
-    height: 28px;
-    border-radius: 6px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 12px;
-    font-weight: 800;
-    letter-spacing: 1px;
-    color: #0f1325;
-    background: rgba(255, 255, 255, 0.7);
-}
-
-.form-win {
-    background: #21c784;
-    color: #032011;
-}
-
-.form-draw {
-    background: #ffd64a;
-    color: #4a3000;
-}
-
-.form-loss {
-    background: #f14c4c;
-    color: #ffe5e5;
-}
-
-.error-state {
-    color: #ffe2e2;
-    font-size: 32px;
-    padding: 40px;
-    text-align: center;
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    border-radius: 12px;
-    background: rgba(0, 0, 0, 0.45);
-}
-/* =============================================
- * Empty state
- * Shown when a weekend has no fixtures, so the board reads as deliberate
- * rather than broken. Sized to stay legible across a clubhouse.
- * ============================================= */
-.empty-state {
-    margin: auto;              /* absorbs the free space, centring in the flex column */
-    padding: 40px 30px;
-    text-align: center;
-    animation: slideInUp 0.6s ease-out forwards;
-    opacity: 0;
-    transform: translateY(25px);
-}
-
-.empty-state-title {
-    color: white;
-    font-family: 'Inter', Arial, sans-serif;
-    font-size: 52px;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+.team--them .team-name {
+    font-weight: 600;
+    font-size: 36px;
     line-height: 1.15;
+    color: var(--ink-2);
 }
 
-.empty-state-subtitle {
-    margin-top: 18px;
-    color: rgba(255, 255, 255, 0.6);
-    font-family: 'Inter', Arial, sans-serif;
-    font-size: 28px;
-    letter-spacing: 1px;
+.team-score {
+    font-weight: 800;
+    font-size: 44px;
+    text-align: right;
+}
+
+.team--them .team-score {
+    color: var(--ink-2);
+}
+
+.result {
+    width: 56px;
+    height: 56px;
+    border-radius: var(--radius);
+    display: grid;
+    place-items: center;
+    font-weight: 800;
+    font-size: 32px;
+    color: var(--ground-deep);
+}
+
+.result--w { background: var(--win); }
+.result--d { background: var(--draw); }
+.result--l { background: var(--loss); }
+
+
+/* A busy weekend: board.js shortens the rows and this steps the type down
+   with them. */
+.panel-rows.is-dense .time { font-size: 34px; }
+.panel-rows.is-dense .team--ours .team-name { font-size: 38px; }
+.panel-rows.is-dense .team--them .team-name { font-size: 30px; }
+.panel-rows.is-dense .team-score { font-size: 38px; }
+.panel-rows.is-dense .result { width: 48px; height: 48px; font-size: 26px; }
+
+/* ─── League of Leagues ─── */
+.board--league {
+    --cols: 92px minmax(0, 1fr) 198px 120px;
+}
+
+.table-head,
+.row--league {
+    grid-template-columns: var(--cols);
+    column-gap: 24px;
+}
+
+.table-head {
+    flex-shrink: 0;
+    display: grid;
+    padding: 14px 0 4px;
+}
+
+.th {
+    font-weight: 700;
+    font-size: 22px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--ink-3);
+}
+
+.th--right {
+    text-align: right;
+}
+
+.row--league {
+    height: var(--row-h, 150px);
+}
+
+.rank-cell {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Up / down since the previous snapshot. Nothing at all for no change, so
+   the eye only catches teams that moved. */
+.move {
+    width: 20px;
+    height: 16px;
+}
+
+.move--up {
+    background: var(--win);
+    clip-path: polygon(50% 0, 100% 100%, 0 100%);
+}
+
+.move--down {
+    background: var(--loss);
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+}
+
+.team-cell {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.team-cell .meta {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Last five results, oldest to newest reading left to right. Unplayed slots
+   stay as outlines so the column keeps its shape before the season has
+   five games in it. */
+.form {
+    display: flex;
+    gap: 7px;
+}
+
+.form-cell {
+    width: 34px;
+    height: 34px;
+    border-radius: 6px;
+    border: 2px solid var(--line);
+    display: grid;
+    place-items: center;
+    font-weight: 800;
+    font-size: 20px;
+    color: var(--ground-deep);
+}
+
+.form--w { background: var(--win); border-color: var(--win); }
+.form--d { background: var(--draw); border-color: var(--draw); }
+.form--l { background: var(--loss); border-color: var(--loss); }
+
+.panel-rows.is-dense .row--league .name { font-size: 42px; }
+.panel-rows.is-dense .row--league .meta { font-size: 26px; }
+
+/* ─── Top scorers ─── */
+/* Fixed row heights, so a short list ends early instead of spreading its
+   names apart. */
+.row--scorer {
+    grid-template-columns: 40px minmax(0, 1fr) auto;
+    column-gap: 16px;
+    height: 108px;
+}
+
+.panel--day .row--scorer {
+    height: 84px;
+}
+
+.who {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.row--scorer .rank { font-size: 32px; }
+.row--scorer .name { font-size: 36px; }
+.row--scorer .figure { min-width: 60px; font-size: 52px; }
+
+.squad {
+    font-weight: 600;
+    font-size: 22px;
+    color: var(--ink-3);
+}
+
+/* The leader: a medal in place of the rank, the tally in the accent, and a
+   name allowed onto a second line so it is never cut short. */
+.row--scorer.row--lead {
+    height: 160px;
+}
+
+.row--scorer.row--lead .rank {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: var(--accent);
+    color: var(--on-accent);
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.row--scorer.row--lead .name {
+    font-size: 42px;
+    line-height: 1.05;
+    white-space: normal;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.row--scorer.row--lead .figure {
+    font-size: 84px;
+}
+
+.panel--day .row--scorer .name { font-size: 34px; }
+.panel--day .row--scorer .figure { font-size: 44px; color: var(--accent); }
+
+/* ─── Bar ─── */
+.bar {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 110px;
+    padding: 0 var(--pad);
+    background: var(--accent);
+    color: var(--on-accent);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bar-club {
+    font-family: var(--display);
+    font-weight: bold;
+    font-style: italic;
+    font-size: 52px;
+    text-transform: uppercase;
+}
+
+.bar-note {
+    font-weight: 700;
+    font-size: 32px;
+}
+
+/* ─── Motion ─── */
+/* Rows settle in once when the screen comes up (board.js adds .settled
+   afterwards, so five-minute refreshes don't replay it). A result that has
+   arrived since the last refresh lights up for a few seconds: the only
+   motion that carries news. Nothing loops. */
+@media (prefers-reduced-motion: no-preference) {
+    .board:not(.settled) .row,
+    .board:not(.settled) .empty {
+        animation: rise 520ms cubic-bezier(0.16, 1, 0.3, 1) both;
+        animation-delay: calc(var(--i, 0) * 55ms + 120ms);
+    }
+
+    .row.is-new {
+        animation: result-in 4s ease-out both;
+    }
+}
+
+@keyframes rise {
+    from { opacity: 0; transform: translateY(12px); }
+    to   { opacity: 1; transform: none; }
+}
+
+@keyframes result-in {
+    0%, 40% { background-color: var(--accent-flash); }
+    100%    { background-color: transparent; }
 }

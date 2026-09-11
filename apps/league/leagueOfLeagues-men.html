@@ -4,46 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=1080, height=1920, initial-scale=1.0, user-scalable=no">
     <title>League of Leagues | Men</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@500;600;700;800&display=swap">
     <link rel="stylesheet" href="../shared/styles.css">
 </head>
-<body class="home league" data-gender="M">
-    <div class="pattern-background"></div>
-    <div class="pattern-overlay"></div>
+<body class="board board--league" data-gender="M">
+    <header class="head">
+        <div class="pill"><span class="pill-dot"></span><span id="subtitle">This season</span></div>
+        <h1 class="head-title">League of <em>Leagues</em></h1>
+        <div class="head-rule"></div>
+    </header>
 
-    <div class="content-container">
-        <div class="top-graphic"></div>
-
-        <div class="center-content league-layout">
-            <div class="text-container league-title">
-                <div class="title">LEAGUE</div>
-                <div class="subtitle">OF LEAGUES</div>
-                <div class="tagline">Ranked by Points Per Game (PPG)</div>
-                <div class="filter-label">Men's Teams</div>
+    <main class="sheet">
+        <section class="panel">
+            <div class="panel-head">
+                <span class="panel-strip"></span>
+                <h2 class="panel-title">Men</h2>
+                <span class="panel-note" id="league-note"></span>
             </div>
-
-            <div class="league-container">
-                <div class="league-table">
-                    <div class="league-grid" id="league-grid">
-                        <div class="table-row table-header">
-                            <div class="col col-rank">Pos</div>
-                            <div class="col col-team">Team</div>
-                            <div class="col col-ppg">PPG</div>
-                            <div class="col col-points">Pts</div>
-                            <div class="col col-record">Record<br>W-D-L</div>
-                            <div class="col col-form">Last 5</div>
-                        </div>
-                        <!-- Rows injected by league.js -->
-                    </div>
-                </div>
+            <div class="table-head" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span class="th">Form</span>
+                <span class="th th--right">PPG</span>
             </div>
+            <div class="panel-rows" id="league"></div>
+        </section>
+    </main>
 
-            <div class="bottom-bar">
-                <!-- reserved for club logos if needed -->
-            </div>
-        </div>
-    </div>
+    <footer class="bar">
+        <span class="bar-club"></span>
+        <span class="bar-note">Ranked by points per game</span>
+    </footer>
 
+    <script src="../shared/board.js"></script>
     <script src="league.js"></script>
 </body>
 </html>
-

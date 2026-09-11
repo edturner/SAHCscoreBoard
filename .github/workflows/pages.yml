@@ -37,21 +37,33 @@ jobs:
           # Copy league pages to root
           cp apps/league/*.html _site/
           cp apps/league/*.js _site/
-          
+
+          # Copy top scorers page to root
+          cp apps/scorers/*.html _site/
+          cp apps/scorers/*.js _site/
+
           # Copy shared assets
           mkdir -p _site/fonts _site/images
           cp -r apps/shared/fonts/* _site/fonts/
           cp -r apps/shared/images/* _site/images/
           cp apps/shared/styles.css _site/styles.css
-          
+          cp apps/shared/board.js _site/board.js
+
           # Copy data files (needed by JS)
           mkdir -p _site/data
           cp -r data/scoreboard _site/data/
           cp -r data/league _site/data/
-          
+          # Scorer data only exists once its workflow step has run
+          if [ -d data/scorers ]; then cp -r data/scorers _site/data/; fi
+          # The screens read the club name from here (no secrets in this file)
+          mkdir -p _site/config
+          cp config/club.json _site/config/
+
           # Update HTML file paths to work from root
           # Fix CSS path
           find _site -name "*.html" -exec sed -i 's|href="../shared/styles.css"|href="styles.css"|g' {} \;
+          # Fix shared script path
+          find _site -name "*.html" -exec sed -i 's|src="../shared/board.js"|src="board.js"|g' {} \;
           # Fix JS paths (they're already in same dir, but ensure)
           find _site -name "*.html" -exec sed -i 's|src="fixtures.js"|src="fixtures.js"|g' {} \;
           find _site -name "*.html" -exec sed -i 's|src="league.js"|src="league.js"|g' {} \;
@@ -60,8 +72,9 @@ jobs:
           sed -i 's|url('\''fonts/|url('\''fonts/|g' _site/styles.css
           sed -i 's|url('\''images/|url('\''images/|g' _site/styles.css
           
-          # Update JS data paths (they reference ../../data/)
+          # Update JS data paths (they reference ../../data/ and ../../config/)
           sed -i 's|../../data/|data/|g' _site/*.js
+          sed -i 's|../../config/|config/|g' _site/*.js
 
       - name: Configure Pages
         uses: actions/configure-pages@v5

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1080, height=1920, initial-scale=1.0, user-scalable=no">
+    <title>Top Scorers</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@500;600;700;800&display=swap">
+    <link rel="stylesheet" href="../shared/styles.css">
+</head>
+<body class="board board--scorers">
+    <header class="head">
+        <div class="pill"><span class="pill-dot"></span><span id="subtitle">Season</span></div>
+        <h1 class="head-title">Top <em>scorers</em></h1>
+        <div class="head-rule"></div>
+    </header>
+
+    <main class="sheet sheet--quad">
+        <!-- Season leaderboards -->
+        <section class="panel">
+            <div class="panel-head">
+                <span class="panel-strip"></span>
+                <h2 class="panel-title">Men</h2>
+                <span class="panel-note" id="season-M-note"></span>
+            </div>
+            <div class="panel-rows" id="season-M"></div>
+        </section>
+        <section class="panel">
+            <div class="panel-head">
+                <span class="panel-strip"></span>
+                <h2 class="panel-title">Women</h2>
+                <span class="panel-note" id="season-F-note"></span>
+            </div>
+            <div class="panel-rows" id="season-F"></div>
+        </section>
+
+        <!-- Most recent match day -->
+        <div class="band">
+            <span class="band-bar"></span>
+            <span>On the day</span>
+            <span class="band-note" id="day-date"></span>
+        </div>
+        <section class="panel panel--day">
+            <div class="panel-head">
+                <span class="panel-strip"></span>
+                <h2 class="panel-title">Men</h2>
+                <span class="panel-note" id="day-M-note"></span>
+            </div>
+            <div class="panel-rows" id="day-M"></div>
+        </section>
+        <section class="panel panel--day">
+            <div class="panel-head">
+                <span class="panel-strip"></span>
+                <h2 class="panel-title">Women</h2>
+                <span class="panel-note" id="day-F-note"></span>
+            </div>
+            <div class="panel-rows" id="day-F"></div>
+        </section>
+    </main>
+
+    <footer class="bar">
+        <span class="bar-club"></span>
+        <span class="bar-note">From GMS team sheets</span>
+    </footer>
+
+    <script src="../shared/board.js"></script>
+    <script src="scorers.js"></script>
+</body>
+</html>

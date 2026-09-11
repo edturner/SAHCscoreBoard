@@ -4,40 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=1080, height=1920, initial-scale=1.0, user-scalable=no">
     <title>Away Fixtures</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@500;600;700;800&display=swap">
     <link rel="stylesheet" href="../shared/styles.css">
 </head>
-<body class="away">
-    <!-- Pattern background -->
-    <div class="pattern-background"></div>
-    <div class="pattern-overlay"></div>
+<!-- board--away: white accents in place of orange, for the away kit. -->
+<body class="board board--fixtures board--away" data-side="away">
+    <header class="head">
+        <div class="pill"><span class="pill-dot"></span><span id="subtitle">This weekend</span></div>
+        <h1 class="head-title">Away <em>fixtures</em></h1>
+        <div class="head-rule"></div>
+    </header>
 
-    <!-- Main content -->
-    <div class="content-container">
-        <!-- Top graphic -->
-        <div class="top-graphic"></div>
-
-        <!-- Center content -->
-        <div class="center-content league-layout">
-            <div class="text-container">
-                <div class="title">AWAY</div>
-                <div class="subtitle">FIXTURES</div>
+    <main class="sheet">
+        <section class="panel">
+            <div class="panel-head">
+                <span class="panel-strip"></span>
+                <h2 class="panel-title">Men</h2>
+                <span class="panel-note" id="M-note"></span>
             </div>
-
-            <!-- Fixtures container -->
-            <div class="fixtures-container">
-                <div class="date-header">Saturday 11th October</div>
-                <!-- Fixtures will be populated by JavaScript -->
+            <div class="panel-rows" id="fixtures-M"></div>
+        </section>
+        <section class="panel">
+            <div class="panel-head">
+                <span class="panel-strip"></span>
+                <h2 class="panel-title">Women</h2>
+                <span class="panel-note" id="F-note"></span>
             </div>
+            <div class="panel-rows" id="fixtures-F"></div>
+        </section>
+    </main>
 
-            <!-- Bottom bar with logos -->
-            <div class="bottom-bar">
-                <!-- <div class="logo womens"></div>
-                <div class="logo mens"></div>
-                <div class="logo main"></div> -->
-            </div>
-        </div>
-    </div>
+    <footer class="bar">
+        <span class="bar-club"></span>
+    </footer>
 
+    <script src="../shared/board.js"></script>
     <script src="fixtures.js"></script>
 </body>
-</html> 
+</html>
