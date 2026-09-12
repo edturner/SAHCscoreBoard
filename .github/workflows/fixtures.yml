@@ -11,6 +11,12 @@ on:
         description: "End date dd/mm/YYYY (optional)"
         required: false
         default: ""
+      scope:
+        description: "fast = fixtures + scorers (match day); all = those plus league tables"
+        required: false
+        type: choice
+        options: [all, fast]
+        default: all
   schedule:
     # Fixtures move fast on a Saturday and barely at all on a Sunday; league tables
     # only change once results are entered, so they run on their own slower cadence.
@@ -56,10 +62,13 @@ jobs:
 
       - name: Update League Data
         # Pre-weekend build and the hourly league slot only - not every 5 minutes.
+        # A "fast" dispatch skips it too: that is the match-day trigger from
+        # scripts/trigger_update.sh, and tables barely move between results.
         if: >-
-          github.event_name != 'schedule'
-          || github.event.schedule == '0 3 * * 4,5'
-          || github.event.schedule == '37 * * * 6,0'
+          github.event.inputs.scope != 'fast'
+          && (github.event_name != 'schedule'
+              || github.event.schedule == '0 3 * * 4,5'
+              || github.event.schedule == '37 * * * 6,0')
         env:
           GMS_API_KEY: ${{ secrets.GMS_API_KEY }}
         run: |

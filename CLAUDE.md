@@ -123,6 +123,13 @@ re-reads only today's fixtures, plus any inside the 14-day window still missing 
 goals, so the steady-state cost is a handful of requests. `--last-season --output <file>` looks back at 2025-26 via the
 competition IDs in git history.
 
+### Match-day trigger
+
+GitHub's scheduled runs are best-effort and on a busy Saturday have been over an hour apart, so
+`scripts/trigger_update.sh` lets any always-on machine dispatch `fixtures.yml` on a cron instead;
+the schedules stay as the fallback. Its `scope` input is `fast` (fixtures + scorers) or `all`
+(those plus league tables), and the league step is skipped on a `fast` dispatch.
+
 ### Screens — shared frontend
 
 All five screens share `apps/shared/styles.css` (one design system: Barlow for text, TT

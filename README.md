@@ -122,6 +122,21 @@ Point your display screens at the GitHub Pages URLs:
 
 League tables only move once results are entered, so they run on a slower cadence than live scores.
 
+### Faster match-day updates (optional)
+
+GitHub's scheduled workflows are best-effort: on a busy Saturday they can run an hour late or be
+skipped entirely. If you have an always-on machine (a NAS, a media server, a Pi), let it dispatch
+the workflow instead. Dispatched runs start straight away, and the schedule above stays as a
+fallback for when that machine is off:
+
+    # crontab on the always-on machine
+    */5 8-21 * * 6   . ~/.clubscript-token && /path/to/scripts/trigger_update.sh fast
+    */15 9-19 * * 0  . ~/.clubscript-token && /path/to/scripts/trigger_update.sh fast
+
+`fast` refreshes fixtures and top scorers; `all` adds the league tables. The script needs a GitHub
+fine-grained token with "Actions: read and write" in `GITHUB_TOKEN`, and never sees your GMS key.
+See the comments at the top of `scripts/trigger_update.sh`.
+
 All workflows commit updated JSON back to the repo, which triggers a Pages redeploy. The displays poll for new data every 5 minutes.
 
 ---

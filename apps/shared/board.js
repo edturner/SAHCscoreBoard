@@ -5,7 +5,9 @@
  * page scripts stay short and read as "what goes on this screen".
  */
 const Board = (() => {
-    const REFRESH_MS = 300000; // 5 minutes, in step with the data workflow
+    // A minute: the data files are a few KB, and this is the last fixed delay
+    // between a result being entered and the screen showing it.
+    const REFRESH_MS = 60000;
     const CLUB_URL = '../../config/club.json';
 
     function el(tag, className, text) {
