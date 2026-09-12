@@ -114,6 +114,21 @@
       }
     }
   },
+  "b2c367be-a429-40fb-bb3e-b6c333e0d886": {
+    "day": "2026-09-12",
+    "teams": {
+      "3d7ecaa8-5810-4721-9e4c-a8cea9ff8581": {
+        "sheet": true,
+        "scorers": [
+          {
+            "player": "009e48e87b15",
+            "name": "Sayan Shah",
+            "goals": 1
+          }
+        ]
+      }
+    }
+  },
   "bc04064b-67e9-4710-9fa4-01462fbdcde6": {
     "day": "2026-09-12",
     "teams": {
