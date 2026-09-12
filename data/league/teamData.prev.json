@@ -239,17 +239,21 @@
       "label": "Division 5 South West (2026-2027)"
     },
     "stats": {
-      "played": "0",
+      "played": "1",
       "won": "0",
-      "drawn": "0",
+      "drawn": "1",
       "lost": "0",
       "goalsFor": "0",
       "goalsAgainst": "0",
       "goalDiff": "0",
-      "points": "0",
-      "ppg": "0.00"
+      "points": "1",
+      "ppg": "1.00"
     },
-    "form": []
+    "form": [
+      {
+        "result": "D"
+      }
+    ]
   },
   {
     "name": "St Albans 7 (M)",
@@ -260,17 +264,21 @@
       "label": "Division 5 South West (2026-2027)"
     },
     "stats": {
-      "played": "0",
-      "won": "0",
+      "played": "1",
+      "won": "1",
       "drawn": "0",
       "lost": "0",
-      "goalsFor": "0",
+      "goalsFor": "3",
       "goalsAgainst": "0",
-      "goalDiff": "0",
-      "points": "0",
-      "ppg": "0.00"
+      "goalDiff": "3",
+      "points": "3",
+      "ppg": "3.00"
     },
-    "form": []
+    "form": [
+      {
+        "result": "W"
+      }
+    ]
   },
   {
     "name": "St Albans 7 (F)",
@@ -344,16 +352,20 @@
       "label": "Division 7 South West (2026-2027)"
     },
     "stats": {
-      "played": "0",
+      "played": "1",
       "won": "0",
-      "drawn": "0",
+      "drawn": "1",
       "lost": "0",
-      "goalsFor": "0",
-      "goalsAgainst": "0",
+      "goalsFor": "1",
+      "goalsAgainst": "1",
       "goalDiff": "0",
-      "points": "0",
-      "ppg": "0.00"
+      "points": "1",
+      "ppg": "1.00"
     },
-    "form": []
+    "form": [
+      {
+        "result": "D"
+      }
+    ]
   }
 ]
