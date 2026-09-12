@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-12T17:30:48+00:00",
+  "generated_at": "2026-09-12T17:35:23+00:00",
   "season_label": "2026/27 season",
   "match_day": {
     "date": "2026-09-12",
@@ -7,6 +7,16 @@
   },
   "season": {
     "M": [
+      {
+        "name": "Oliver Bell",
+        "goals": 3,
+        "squad": "3s"
+      },
+      {
+        "name": "Ashley Dawes",
+        "goals": 2,
+        "squad": "3s"
+      },
       {
         "name": "Alastair Powell",
         "goals": 1,
@@ -16,6 +26,11 @@
         "name": "Arlo Balmforth",
         "goals": 1,
         "squad": "9s"
+      },
+      {
+        "name": "Ed Turner",
+        "goals": 1,
+        "squad": "3s"
       },
       {
         "name": "Jamie Rowland",
@@ -41,16 +56,6 @@
         "name": "Richard Baylis",
         "goals": 1,
         "squad": "6s"
-      },
-      {
-        "name": "Samuel Davey",
-        "goals": 1,
-        "squad": "7s"
-      },
-      {
-        "name": "Sayan Shah",
-        "goals": 1,
-        "squad": "4s"
       }
     ],
     "F": [
@@ -79,6 +84,16 @@
   "match_day_scorers": {
     "M": [
       {
+        "name": "Oliver Bell",
+        "goals": 3,
+        "squad": "3s"
+      },
+      {
+        "name": "Ashley Dawes",
+        "goals": 2,
+        "squad": "3s"
+      },
+      {
         "name": "Alastair Powell",
         "goals": 1,
         "squad": "8s"
@@ -87,6 +102,11 @@
         "name": "Arlo Balmforth",
         "goals": 1,
         "squad": "9s"
+      },
+      {
+        "name": "Ed Turner",
+        "goals": 1,
+        "squad": "3s"
       },
       {
         "name": "Jamie Rowland",
@@ -100,21 +120,6 @@
       },
       {
         "name": "John Turner",
-        "goals": 1,
-        "squad": "7s"
-      },
-      {
-        "name": "Matthew Stevens",
-        "goals": 1,
-        "squad": "7s"
-      },
-      {
-        "name": "Richard Baylis",
-        "goals": 1,
-        "squad": "6s"
-      },
-      {
-        "name": "Samuel Davey",
         "goals": 1,
         "squad": "7s"
       }
@@ -144,6 +149,6 @@
   },
   "coverage": {
     "results": 14,
-    "with_team_sheet": 11
+    "with_team_sheet": 12
   }
 }

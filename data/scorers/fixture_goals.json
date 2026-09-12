@@ -120,8 +120,24 @@
     "day": "2026-09-12",
     "teams": {
       "39486394-dad6-4e98-b4fb-6cc03cbc7910": {
-        "sheet": false,
-        "scorers": []
+        "sheet": true,
+        "scorers": [
+          {
+            "player": "d2b3d5cb7890",
+            "name": "Oliver Bell",
+            "goals": 3
+          },
+          {
+            "player": "82352df63e3a",
+            "name": "Ashley Dawes",
+            "goals": 2
+          },
+          {
+            "player": "1010a9d4295c",
+            "name": "Ed Turner",
+            "goals": 1
+          }
+        ]
       }
     }
   },
