@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-12T18:15:30+00:00",
+  "generated_at": "2026-09-12T18:20:24+00:00",
   "season_label": "2026/27 season",
   "match_day": {
     "date": "2026-09-12",
@@ -28,6 +28,11 @@
         "squad": "9s"
       },
       {
+        "name": "Benjamin West",
+        "goals": 1,
+        "squad": "5s"
+      },
+      {
         "name": "Ed Turner",
         "goals": 1,
         "squad": "3s"
@@ -51,11 +56,6 @@
         "name": "Matthew Stevens",
         "goals": 1,
         "squad": "7s"
-      },
-      {
-        "name": "Richard Baylis",
-        "goals": 1,
-        "squad": "6s"
       }
     ],
     "F": [
@@ -114,6 +114,11 @@
         "squad": "9s"
       },
       {
+        "name": "Benjamin West",
+        "goals": 1,
+        "squad": "5s"
+      },
+      {
         "name": "Ed Turner",
         "goals": 1,
         "squad": "3s"
@@ -127,11 +132,6 @@
         "name": "Joel Withey",
         "goals": 1,
         "squad": "2s"
-      },
-      {
-        "name": "John Turner",
-        "goals": 1,
-        "squad": "7s"
       }
     ],
     "F": [
@@ -169,6 +169,6 @@
   },
   "coverage": {
     "results": 15,
-    "with_team_sheet": 13
+    "with_team_sheet": 14
   }
 }

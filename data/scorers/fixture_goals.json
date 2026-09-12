@@ -3,8 +3,14 @@
     "day": "2026-09-12",
     "teams": {
       "f657d2bb-dafe-4b84-8b33-2c51c690bd5c": {
-        "sheet": false,
-        "scorers": []
+        "sheet": true,
+        "scorers": [
+          {
+            "player": "53ed7d98e1e7",
+            "name": "Benjamin West",
+            "goals": 1
+          }
+        ]
       }
     }
   },
