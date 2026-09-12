@@ -63,6 +63,21 @@
       }
     }
   },
+  "9afce727-a72a-4e5f-9ef5-d08e8d0aea35": {
+    "day": "2026-09-12",
+    "teams": {
+      "5949dcf2-d51f-4e27-9bd3-0639e58261c6": {
+        "sheet": true,
+        "scorers": [
+          {
+            "player": "275f15bbfa8b",
+            "name": "Alastair Powell",
+            "goals": 1
+          }
+        ]
+      }
+    }
+  },
   "9b53984e-e38f-4e77-9a3e-23c2bd2f26c3": {
     "day": "2026-09-12",
     "teams": {
@@ -76,6 +91,15 @@
     "day": "2026-09-12",
     "teams": {
       "91e2a40f-fe91-4c8e-9ca6-aed40e6178b2": {
+        "sheet": false,
+        "scorers": []
+      }
+    }
+  },
+  "a3d369a2-9b7d-4a83-a4f0-ac3d5af6e71e": {
+    "day": "2026-09-12",
+    "teams": {
+      "39486394-dad6-4e98-b4fb-6cc03cbc7910": {
         "sheet": false,
         "scorers": []
       }
