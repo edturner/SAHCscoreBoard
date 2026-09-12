@@ -182,6 +182,16 @@ python scripts/live_league_updater.py --once
 
 ---
 
+## Docs
+
+| File | What's in it |
+| --- | --- |
+| `CLAUDE.md` | Architecture: the three data pipelines and the shared frontend |
+| `docs/gms-api.md` | The England Hockey GMS API: endpoints, fields, traps, rate limits |
+| `docs/handover.md` | Current state, decisions made, open items, how to work on it |
+
+---
+
 ## Tech stack
 
 - **Python 3.11+** — ETL scripts pulling from the England Hockey GMS data warehouse API

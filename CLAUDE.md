@@ -57,6 +57,9 @@ Two pipelines feed a static-file GitHub Pages site. Both have an API implementat
 
 ### The API client — `scripts/eh_api.py`
 
+Full API notes - endpoints, response shapes, fixture and event fields, rate limits and the
+traps below - are in `docs/gms-api.md`. Project state and open items: `docs/handover.md`.
+
 Talks to England Hockey's GMS data warehouse at `https://ehdwapi.englandhockey.co.uk/api/`,
 authenticated with an `x-api-key` header read from `GMS_API_KEY`. Paths are
 `{resource}/{uuid}/{action}` and are keyed on the same team UUIDs already in `teamIDs.json`.
