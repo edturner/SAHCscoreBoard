@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-12T17:00:28+00:00",
+  "generated_at": "2026-09-12T17:05:41+00:00",
   "season_label": "2026/27 season",
   "match_day": {
     "date": "2026-09-12",
@@ -18,9 +18,9 @@
         "squad": "9s"
       },
       {
-        "name": "Joel Withey",
+        "name": "Jamie Rowland",
         "goals": 1,
-        "squad": "2s"
+        "squad": "6s"
       },
       {
         "name": "John Turner",
@@ -31,6 +31,11 @@
         "name": "Matthew Stevens",
         "goals": 1,
         "squad": "7s"
+      },
+      {
+        "name": "Richard Baylis",
+        "goals": 1,
+        "squad": "6s"
       },
       {
         "name": "Samuel Davey",
@@ -79,9 +84,9 @@
         "squad": "9s"
       },
       {
-        "name": "Joel Withey",
+        "name": "Jamie Rowland",
         "goals": 1,
-        "squad": "2s"
+        "squad": "6s"
       },
       {
         "name": "John Turner",
@@ -92,6 +97,11 @@
         "name": "Matthew Stevens",
         "goals": 1,
         "squad": "7s"
+      },
+      {
+        "name": "Richard Baylis",
+        "goals": 1,
+        "squad": "6s"
       },
       {
         "name": "Samuel Davey",

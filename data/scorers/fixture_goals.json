@@ -27,8 +27,19 @@
     "day": "2026-09-12",
     "teams": {
       "3896f4e5-7d73-483b-b735-31f976ed7312": {
-        "sheet": false,
-        "scorers": []
+        "sheet": true,
+        "scorers": [
+          {
+            "player": "c384219def05",
+            "name": "Jamie Rowland",
+            "goals": 1
+          },
+          {
+            "player": "3b97768c946a",
+            "name": "Richard Baylis",
+            "goals": 1
+          }
+        ]
       }
     }
   },
@@ -133,14 +144,8 @@
     "day": "2026-09-12",
     "teams": {
       "f1c3a876-4de3-4c99-9800-171fe4667602": {
-        "sheet": true,
-        "scorers": [
-          {
-            "player": "19604eff206d",
-            "name": "Joel Withey",
-            "goals": 1
-          }
-        ]
+        "sheet": false,
+        "scorers": []
       }
     }
   },
