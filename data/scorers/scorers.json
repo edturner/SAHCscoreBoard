@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-12T13:08:14+00:00",
+  "generated_at": "2026-09-12T15:24:51+00:00",
   "season_label": "2026/27 season",
   "match_day": {
     "date": "2026-09-12",
@@ -11,9 +11,45 @@
         "name": "Arlo Balmforth",
         "goals": 1,
         "squad": "9s"
+      },
+      {
+        "name": "John Turner",
+        "goals": 1,
+        "squad": "7s"
+      },
+      {
+        "name": "Matthew Stevens",
+        "goals": 1,
+        "squad": "7s"
+      },
+      {
+        "name": "Samuel Davey",
+        "goals": 1,
+        "squad": "7s"
       }
     ],
-    "F": []
+    "F": [
+      {
+        "name": "Fiona Coope",
+        "goals": 2,
+        "squad": "8s"
+      },
+      {
+        "name": "Alice Wetters",
+        "goals": 1,
+        "squad": "2s"
+      },
+      {
+        "name": "Erin Hugo",
+        "goals": 1,
+        "squad": "2s"
+      },
+      {
+        "name": "Madison Foxcroft",
+        "goals": 1,
+        "squad": "2s"
+      }
+    ]
   },
   "match_day_scorers": {
     "M": [
@@ -21,12 +57,48 @@
         "name": "Arlo Balmforth",
         "goals": 1,
         "squad": "9s"
+      },
+      {
+        "name": "John Turner",
+        "goals": 1,
+        "squad": "7s"
+      },
+      {
+        "name": "Matthew Stevens",
+        "goals": 1,
+        "squad": "7s"
+      },
+      {
+        "name": "Samuel Davey",
+        "goals": 1,
+        "squad": "7s"
       }
     ],
-    "F": []
+    "F": [
+      {
+        "name": "Fiona Coope",
+        "goals": 2,
+        "squad": "8s"
+      },
+      {
+        "name": "Alice Wetters",
+        "goals": 1,
+        "squad": "2s"
+      },
+      {
+        "name": "Erin Hugo",
+        "goals": 1,
+        "squad": "2s"
+      },
+      {
+        "name": "Madison Foxcroft",
+        "goals": 1,
+        "squad": "2s"
+      }
+    ]
   },
   "coverage": {
-    "results": 3,
-    "with_team_sheet": 1
+    "results": 7,
+    "with_team_sheet": 5
   }
 }

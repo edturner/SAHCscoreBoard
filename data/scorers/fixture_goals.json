@@ -1,4 +1,53 @@
 {
+  "43265a0e-3af3-42a9-8524-2372b93fd7a5": {
+    "day": "2026-09-12",
+    "teams": {
+      "7df3c3cf-94cd-4e54-bb74-b85f0f93bcb8": {
+        "sheet": true,
+        "scorers": [
+          {
+            "player": "1abb4747a49d",
+            "name": "Fiona Coope",
+            "goals": 2
+          }
+        ]
+      }
+    }
+  },
+  "685a757f-81e2-49c5-b10b-973560ef87ff": {
+    "day": "2026-09-12",
+    "teams": {
+      "3896f4e5-7d73-483b-b735-31f976ed7312": {
+        "sheet": false,
+        "scorers": []
+      }
+    }
+  },
+  "759a69c7-467a-4c13-a58a-84a3c97345ae": {
+    "day": "2026-09-12",
+    "teams": {
+      "a5b838ee-1d9d-491e-b1bb-f05388eff199": {
+        "sheet": true,
+        "scorers": [
+          {
+            "player": "3ef38a506c43",
+            "name": "Erin Hugo",
+            "goals": 1
+          },
+          {
+            "player": "86be2246355d",
+            "name": "Madison Foxcroft",
+            "goals": 1
+          },
+          {
+            "player": "00a5a1a68df0",
+            "name": "Alice Wetters",
+            "goals": 1
+          }
+        ]
+      }
+    }
+  },
   "77dc4535-5c2d-410f-a80e-f1335c9978cc": {
     "day": "2026-09-12",
     "teams": {
@@ -18,6 +67,15 @@
     "day": "2026-09-12",
     "teams": {
       "30cc8f2b-3eae-47fb-a5fb-f0b976c3d3a2": {
+        "sheet": true,
+        "scorers": []
+      }
+    }
+  },
+  "a294d614-6fe8-49ed-811d-9641e3545e57": {
+    "day": "2026-09-12",
+    "teams": {
+      "91e2a40f-fe91-4c8e-9ca6-aed40e6178b2": {
         "sheet": false,
         "scorers": []
       }
@@ -27,8 +85,24 @@
     "day": "2026-09-12",
     "teams": {
       "61325529-1ddf-4011-9913-2073c8f457f7": {
-        "sheet": false,
-        "scorers": []
+        "sheet": true,
+        "scorers": [
+          {
+            "player": "bea7ff29b7a5",
+            "name": "Samuel Davey",
+            "goals": 1
+          },
+          {
+            "player": "a7bc77bbe9a2",
+            "name": "John Turner",
+            "goals": 1
+          },
+          {
+            "player": "61a03abc4e67",
+            "name": "Matthew Stevens",
+            "goals": 1
+          }
+        ]
       }
     }
   }
