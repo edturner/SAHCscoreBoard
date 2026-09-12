@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-12T18:50:43+00:00",
+  "generated_at": "2026-09-12T18:55:30+00:00",
   "season_label": "2026/27 season",
   "match_day": {
     "date": "2026-09-12",
@@ -85,6 +85,11 @@
         "squad": "2s"
       },
       {
+        "name": "Megan Fish",
+        "goals": 1,
+        "squad": "7s"
+      },
+      {
         "name": "Sarah Embrey",
         "goals": 1,
         "squad": "3s"
@@ -161,6 +166,11 @@
         "squad": "2s"
       },
       {
+        "name": "Megan Fish",
+        "goals": 1,
+        "squad": "7s"
+      },
+      {
         "name": "Sarah Embrey",
         "goals": 1,
         "squad": "3s"
@@ -169,6 +179,6 @@
   },
   "coverage": {
     "results": 15,
-    "with_team_sheet": 14
+    "with_team_sheet": 15
   }
 }

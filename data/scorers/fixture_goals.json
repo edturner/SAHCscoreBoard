@@ -235,8 +235,14 @@
     "day": "2026-09-12",
     "teams": {
       "1b96b793-1dd0-4e01-98b1-d07139fa44c4": {
-        "sheet": false,
-        "scorers": []
+        "sheet": true,
+        "scorers": [
+          {
+            "player": "7ecaa6716eb8",
+            "name": "Megan Fish",
+            "goals": 1
+          }
+        ]
       }
     }
   }
