@@ -150,17 +150,21 @@
       "label": "Division 3 South West (2026-2027)"
     },
     "stats": {
-      "played": "0",
+      "played": "1",
       "won": "0",
       "drawn": "0",
-      "lost": "0",
-      "goalsFor": "0",
-      "goalsAgainst": "0",
-      "goalDiff": "0",
+      "lost": "1",
+      "goalsFor": "1",
+      "goalsAgainst": "3",
+      "goalDiff": "-2",
       "points": "0",
       "ppg": "0.00"
     },
-    "form": []
+    "form": [
+      {
+        "result": "L"
+      }
+    ]
   },
   {
     "name": "St Albans 4 (F)",
@@ -171,17 +175,21 @@
       "label": "Division 2 South West (2026-2027)"
     },
     "stats": {
-      "played": "0",
+      "played": "1",
       "won": "0",
       "drawn": "0",
-      "lost": "0",
+      "lost": "1",
       "goalsFor": "0",
-      "goalsAgainst": "0",
-      "goalDiff": "0",
+      "goalsAgainst": "2",
+      "goalDiff": "-2",
       "points": "0",
       "ppg": "0.00"
     },
-    "form": []
+    "form": [
+      {
+        "result": "L"
+      }
+    ]
   },
   {
     "name": "St Albans 5 (M)",
@@ -192,17 +200,21 @@
       "label": "Division 4 South West (2026-2027)"
     },
     "stats": {
-      "played": "0",
+      "played": "1",
       "won": "0",
       "drawn": "0",
-      "lost": "0",
-      "goalsFor": "0",
-      "goalsAgainst": "0",
-      "goalDiff": "0",
+      "lost": "1",
+      "goalsFor": "1",
+      "goalsAgainst": "2",
+      "goalDiff": "-1",
       "points": "0",
       "ppg": "0.00"
     },
-    "form": []
+    "form": [
+      {
+        "result": "L"
+      }
+    ]
   },
   {
     "name": "St Albans 5 (F)",
@@ -313,17 +325,21 @@
       "label": "Division 5 South West (2026-2027)"
     },
     "stats": {
-      "played": "0",
+      "played": "1",
       "won": "0",
       "drawn": "0",
-      "lost": "0",
-      "goalsFor": "0",
-      "goalsAgainst": "0",
-      "goalDiff": "0",
+      "lost": "1",
+      "goalsFor": "1",
+      "goalsAgainst": "2",
+      "goalDiff": "-1",
       "points": "0",
       "ppg": "0.00"
     },
-    "form": []
+    "form": [
+      {
+        "result": "L"
+      }
+    ]
   },
   {
     "name": "St Albans 8 (M)",
