@@ -12,8 +12,19 @@
     "day": "2026-09-12",
     "teams": {
       "b00d4fe3-eacf-4b31-92cf-4ec4798eb44e": {
-        "sheet": false,
-        "scorers": []
+        "sheet": true,
+        "scorers": [
+          {
+            "player": "4ecd811e8ba4",
+            "name": "Sammie Archer-Overall",
+            "goals": 2
+          },
+          {
+            "player": "fabcb01c2b58",
+            "name": "Sarah Embrey",
+            "goals": 1
+          }
+        ]
       }
     }
   },

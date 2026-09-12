@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-12T17:55:50+00:00",
+  "generated_at": "2026-09-12T18:00:28+00:00",
   "season_label": "2026/27 season",
   "match_day": {
     "date": "2026-09-12",
@@ -65,6 +65,11 @@
         "squad": "8s"
       },
       {
+        "name": "Sammie Archer-Overall",
+        "goals": 2,
+        "squad": "3s"
+      },
+      {
         "name": "Alice Wetters",
         "goals": 1,
         "squad": "2s"
@@ -78,6 +83,11 @@
         "name": "Madison Foxcroft",
         "goals": 1,
         "squad": "2s"
+      },
+      {
+        "name": "Sarah Embrey",
+        "goals": 1,
+        "squad": "3s"
       }
     ]
   },
@@ -131,6 +141,11 @@
         "squad": "8s"
       },
       {
+        "name": "Sammie Archer-Overall",
+        "goals": 2,
+        "squad": "3s"
+      },
+      {
         "name": "Alice Wetters",
         "goals": 1,
         "squad": "2s"
@@ -144,11 +159,16 @@
         "name": "Madison Foxcroft",
         "goals": 1,
         "squad": "2s"
+      },
+      {
+        "name": "Sarah Embrey",
+        "goals": 1,
+        "squad": "3s"
       }
     ]
   },
   "coverage": {
     "results": 15,
-    "with_team_sheet": 12
+    "with_team_sheet": 13
   }
 }
