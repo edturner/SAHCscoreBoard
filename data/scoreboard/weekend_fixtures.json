@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-12T16:03:34.441993+00:00",
+  "generated_at": "2026-09-12T16:30:18.112914+00:00",
   "weekend": {
     "saturday": "2026-09-12",
     "sunday": "2026-09-13"
@@ -89,10 +89,10 @@
       "kickoff": "15:00",
       "division": "Division 2 South West",
       "location": "Home",
-      "status": "Scheduled",
+      "status": "Played",
       "fixtureId": "22760052-1295-4cac-a698-3f0f273b7595",
-      "home_score": null,
-      "away_score": null,
+      "home_score": 6,
+      "away_score": 1,
       "_ha": "h"
     },
     {
@@ -196,10 +196,10 @@
       "kickoff": "14:45",
       "division": "Premier Division",
       "location": "Away",
-      "status": "Scheduled",
+      "status": "Played",
       "fixtureId": "bc04064b-67e9-4710-9fa4-01462fbdcde6",
-      "home_score": null,
-      "away_score": null,
+      "home_score": 2,
+      "away_score": 0,
       "_ha": "a"
     },
     {
