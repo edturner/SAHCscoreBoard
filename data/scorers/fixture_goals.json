@@ -1,1 +1,35 @@
-{}
+{
+  "77dc4535-5c2d-410f-a80e-f1335c9978cc": {
+    "day": "2026-09-12",
+    "teams": {
+      "2d0cbcaa-ddfe-4aa9-ba90-47f28ee800e1": {
+        "sheet": true,
+        "scorers": [
+          {
+            "player": "ca117fc10bb3",
+            "name": "Arlo Balmforth",
+            "goals": 1
+          }
+        ]
+      }
+    }
+  },
+  "9b53984e-e38f-4e77-9a3e-23c2bd2f26c3": {
+    "day": "2026-09-12",
+    "teams": {
+      "30cc8f2b-3eae-47fb-a5fb-f0b976c3d3a2": {
+        "sheet": false,
+        "scorers": []
+      }
+    }
+  },
+  "de073af5-3fe7-493b-b674-d99b96220c99": {
+    "day": "2026-09-12",
+    "teams": {
+      "61325529-1ddf-4011-9913-2073c8f457f7": {
+        "sheet": false,
+        "scorers": []
+      }
+    }
+  }
+}

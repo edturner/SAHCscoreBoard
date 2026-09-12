@@ -1,17 +1,32 @@
 {
-  "generated_at": "2026-09-12T09:34:00+00:00",
+  "generated_at": "2026-09-12T13:08:14+00:00",
   "season_label": "2026/27 season",
-  "match_day": null,
+  "match_day": {
+    "date": "2026-09-12",
+    "label": "Saturday 12 September"
+  },
   "season": {
-    "M": [],
+    "M": [
+      {
+        "name": "Arlo Balmforth",
+        "goals": 1,
+        "squad": "9s"
+      }
+    ],
     "F": []
   },
   "match_day_scorers": {
-    "M": [],
+    "M": [
+      {
+        "name": "Arlo Balmforth",
+        "goals": 1,
+        "squad": "9s"
+      }
+    ],
     "F": []
   },
   "coverage": {
-    "results": 0,
-    "with_team_sheet": 0
+    "results": 3,
+    "with_team_sheet": 1
   }
 }
