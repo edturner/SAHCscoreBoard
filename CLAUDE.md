@@ -117,8 +117,10 @@ Coverage depends entirely on captains completing GMS team sheets. Players withou
 skipped, and member IDs are replaced by a truncated SHA-256, so nothing beyond the public display
 name is committed. Detail for fixtures older than 14 days is reused from
 `data/scorers/fixture_goals.json`. "On the day" is the latest weekend with results, Sunday included.
-It runs in `fixtures.yml` on the league slots with `continue-on-error`, so a scorer failure never
-blocks the fixtures and league commit. `--last-season --output <file>` looks back at 2025-26 via the
+It runs in `fixtures.yml` on every slot, including the Saturday five-minute one, with
+`continue-on-error` so a scorer failure never blocks the fixtures and league commit. Each run
+re-reads only today's fixtures, plus any inside the 14-day window still missing a team sheet or
+goals, so the steady-state cost is a handful of requests. `--last-season --output <file>` looks back at 2025-26 via the
 competition IDs in git history.
 
 ### Screens — shared frontend

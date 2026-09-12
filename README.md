@@ -117,7 +117,7 @@ Point your display screens at the GitHub Pages URLs:
 | Fixture scores | Every 5 min, Sat 08:00–21:59 UTC | `fixtures.yml` |
 | Fixture scores | Hourly on Sunday | `fixtures.yml` |
 | League of Leagues | Hourly, Sat & Sun at :37 | `fixtures.yml` |
-| Top scorers | With the league updates | `fixtures.yml` |
+| Top scorers | With every fixture update | `fixtures.yml` |
 | Weekly league snapshot | Monday 06:00 UTC | `league-gameweek.yml` |
 
 League tables only move once results are entered, so they run on a slower cadence than live scores.

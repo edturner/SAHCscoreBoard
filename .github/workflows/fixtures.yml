@@ -66,12 +66,10 @@ jobs:
           python scripts/eh_api.py league
 
       - name: Update Top Scorers
-        # Same slots as the league: goals only appear once results and team sheets
-        # are in. A failure here must never stop the fixtures and league commit.
-        if: >-
-          github.event_name != 'schedule'
-          || github.event.schedule == '0 3 * * 4,5'
-          || github.event.schedule == '37 * * * 6,0'
+        # Every slot, including the Saturday five-minute one: goals should land as
+        # fast as scores. Only today's fixtures are re-read each run (see the cache
+        # rule in top_scorers.py), so this stays cheap. A failure here must never
+        # stop the fixtures and league commit.
         continue-on-error: true
         env:
           GMS_API_KEY: ${{ secrets.GMS_API_KEY }}

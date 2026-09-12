@@ -190,21 +190,40 @@ def fetch_goals(client: EHApiClient, fixture_id: str, team_ids: Iterable[str]) -
     return teams
 
 
+def settled(cached: Dict[str, Any], team_ids: Iterable[str], day: str, cutoff: str, today: str) -> bool:
+    """Whether cached detail is worth reusing instead of asking the API again.
+
+    Today's fixtures never are: this runs every few minutes on a match day. Fixtures
+    older than REFRESH_DAYS always are. In between it depends on whether the fixture
+    still has something to gain: a missing team sheet, or a sheet with no goals on it,
+    means the captain may yet fill it in, so keep looking.
+    """
+    if day == today:
+        return False
+    if day < cutoff:
+        return True
+    teams = cached.get("teams", {})
+    return all(teams.get(team, {}).get("sheet") and teams.get(team, {}).get("scorers")
+               for team in team_ids)
+
+
 def gather(
     client: EHApiClient, results: List[Result], cache: Dict[str, Any], today: date
 ) -> Dict[str, Any]:
-    """fixture id -> {day, teams}, reusing cached detail for fixtures past REFRESH_DAYS."""
+    """fixture id -> {day, teams}, re-reading only the fixtures that could have changed."""
     by_fixture: Dict[str, List[Result]] = defaultdict(list)
     for result in results:
         by_fixture[result.fixture_id].append(result)
 
     cutoff = (today - timedelta(days=REFRESH_DAYS)).isoformat()
+    today_iso = today.isoformat()
     goals: Dict[str, Any] = {}
     fetched = reused = stale = 0
     for fixture_id, rows in by_fixture.items():
         team_ids = sorted({row.team_id for row in rows})
         cached = cache.get(fixture_id)
-        if cached and rows[0].day < cutoff and all(t in cached.get("teams", {}) for t in team_ids):
+        if (cached and all(t in cached.get("teams", {}) for t in team_ids)
+                and settled(cached, team_ids, rows[0].day, cutoff, today_iso)):
             goals[fixture_id] = cached
             reused += 1
             continue
