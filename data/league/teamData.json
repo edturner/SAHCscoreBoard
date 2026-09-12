@@ -50,17 +50,21 @@
       "label": "Premier Division (2026-2027)"
     },
     "stats": {
-      "played": "0",
+      "played": "1",
       "won": "0",
       "drawn": "0",
-      "lost": "0",
+      "lost": "1",
       "goalsFor": "0",
-      "goalsAgainst": "0",
-      "goalDiff": "0",
+      "goalsAgainst": "2",
+      "goalDiff": "-2",
       "points": "0",
       "ppg": "0.00"
     },
-    "form": []
+    "form": [
+      {
+        "result": "L"
+      }
+    ]
   },
   {
     "name": "St Albans 2 (F)",
@@ -96,17 +100,21 @@
       "label": "Division 2 South West (2026-2027)"
     },
     "stats": {
-      "played": "0",
-      "won": "0",
+      "played": "1",
+      "won": "1",
       "drawn": "0",
       "lost": "0",
-      "goalsFor": "0",
-      "goalsAgainst": "0",
-      "goalDiff": "0",
-      "points": "0",
-      "ppg": "0.00"
+      "goalsFor": "6",
+      "goalsAgainst": "1",
+      "goalDiff": "5",
+      "points": "3",
+      "ppg": "3.00"
     },
-    "form": []
+    "form": [
+      {
+        "result": "W"
+      }
+    ]
   },
   {
     "name": "St Albans 3 (M)",
@@ -117,17 +125,21 @@
       "label": "Division 2 South West (2026-2027)"
     },
     "stats": {
-      "played": "0",
-      "won": "0",
+      "played": "1",
+      "won": "1",
       "drawn": "0",
       "lost": "0",
-      "goalsFor": "0",
+      "goalsFor": "7",
       "goalsAgainst": "0",
-      "goalDiff": "0",
-      "points": "0",
-      "ppg": "0.00"
+      "goalDiff": "7",
+      "points": "3",
+      "ppg": "3.00"
     },
-    "form": []
+    "form": [
+      {
+        "result": "W"
+      }
+    ]
   },
   {
     "name": "St Albans 4 (M)",
@@ -332,7 +344,11 @@
       "points": "0",
       "ppg": "0.00"
     },
-    "form": []
+    "form": [
+      {
+        "result": "L"
+      }
+    ]
   },
   {
     "name": "St Albans 8 (F)",

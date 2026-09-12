@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-12T15:38:12+00:00",
+  "generated_at": "2026-09-12T16:28:38+00:00",
   "season_label": "2026/27 season",
   "match_day": {
     "date": "2026-09-12",
@@ -16,6 +16,11 @@
         "name": "Arlo Balmforth",
         "goals": 1,
         "squad": "9s"
+      },
+      {
+        "name": "Joel Withey",
+        "goals": 1,
+        "squad": "2s"
       },
       {
         "name": "John Turner",
@@ -69,6 +74,11 @@
         "squad": "9s"
       },
       {
+        "name": "Joel Withey",
+        "goals": 1,
+        "squad": "2s"
+      },
+      {
         "name": "John Turner",
         "goals": 1,
         "squad": "7s"
@@ -108,7 +118,7 @@
     ]
   },
   "coverage": {
-    "results": 9,
-    "with_team_sheet": 6
+    "results": 11,
+    "with_team_sheet": 8
   }
 }

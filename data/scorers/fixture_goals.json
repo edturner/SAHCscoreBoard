@@ -1,4 +1,13 @@
 {
+  "22760052-1295-4cac-a698-3f0f273b7595": {
+    "day": "2026-09-12",
+    "teams": {
+      "b00d4fe3-eacf-4b31-92cf-4ec4798eb44e": {
+        "sheet": false,
+        "scorers": []
+      }
+    }
+  },
   "43265a0e-3af3-42a9-8524-2372b93fd7a5": {
     "day": "2026-09-12",
     "teams": {
@@ -91,7 +100,7 @@
     "day": "2026-09-12",
     "teams": {
       "91e2a40f-fe91-4c8e-9ca6-aed40e6178b2": {
-        "sheet": false,
+        "sheet": true,
         "scorers": []
       }
     }
@@ -102,6 +111,21 @@
       "39486394-dad6-4e98-b4fb-6cc03cbc7910": {
         "sheet": false,
         "scorers": []
+      }
+    }
+  },
+  "bc04064b-67e9-4710-9fa4-01462fbdcde6": {
+    "day": "2026-09-12",
+    "teams": {
+      "f1c3a876-4de3-4c99-9800-171fe4667602": {
+        "sheet": true,
+        "scorers": [
+          {
+            "player": "19604eff206d",
+            "name": "Joel Withey",
+            "goals": 1
+          }
+        ]
       }
     }
   },
