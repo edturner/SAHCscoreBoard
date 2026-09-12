@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-12T17:10:24+00:00",
+  "generated_at": "2026-09-12T17:15:27+00:00",
   "season_label": "2026/27 season",
   "match_day": {
     "date": "2026-09-12",
@@ -21,6 +21,11 @@
         "name": "Jamie Rowland",
         "goals": 1,
         "squad": "6s"
+      },
+      {
+        "name": "Joel Withey",
+        "goals": 1,
+        "squad": "2s"
       },
       {
         "name": "John Turner",
@@ -89,6 +94,11 @@
         "squad": "6s"
       },
       {
+        "name": "Joel Withey",
+        "goals": 1,
+        "squad": "2s"
+      },
+      {
         "name": "John Turner",
         "goals": 1,
         "squad": "7s"
@@ -107,11 +117,6 @@
         "name": "Samuel Davey",
         "goals": 1,
         "squad": "7s"
-      },
-      {
-        "name": "Sayan Shah",
-        "goals": 1,
-        "squad": "4s"
       }
     ],
     "F": [
@@ -139,6 +144,6 @@
   },
   "coverage": {
     "results": 13,
-    "with_team_sheet": 9
+    "with_team_sheet": 10
   }
 }
