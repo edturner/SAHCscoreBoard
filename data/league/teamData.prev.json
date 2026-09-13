@@ -54,9 +54,9 @@
       "won": "0",
       "drawn": "0",
       "lost": "1",
-      "goalsFor": "0",
+      "goalsFor": "1",
       "goalsAgainst": "2",
-      "goalDiff": "-2",
+      "goalDiff": "-1",
       "points": "0",
       "ppg": "0.00"
     },
