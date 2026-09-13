@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-13T08:00:18.137528+00:00",
+  "generated_at": "2026-09-13T08:15:34.048445+00:00",
   "weekend": {
     "saturday": "2026-09-12",
     "sunday": "2026-09-13"
@@ -199,7 +199,7 @@
       "status": "Played",
       "fixtureId": "bc04064b-67e9-4710-9fa4-01462fbdcde6",
       "home_score": 2,
-      "away_score": 0,
+      "away_score": 1,
       "_ha": "a"
     },
     {
