@@ -317,5 +317,14 @@
         "scorers": []
       }
     }
+  },
+  "e90a77a7-d536-46ce-9c27-0dd9e2c8f4cb": {
+    "day": "2026-09-19",
+    "teams": {
+      "5949dcf2-d51f-4e27-9bd3-0639e58261c6": {
+        "sheet": false,
+        "scorers": []
+      }
+    }
   }
 }
