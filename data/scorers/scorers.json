@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-19T16:15:30+00:00",
+  "generated_at": "2026-09-19T16:20:44+00:00",
   "season_label": "2026/27 season",
   "match_day": {
     "date": "2026-09-19",
@@ -60,12 +60,27 @@
     ],
     "F": [
       {
+        "name": "Annie Barratt",
+        "goals": 3,
+        "squad": "3s"
+      },
+      {
+        "name": "Alicia Gibson",
+        "goals": 2,
+        "squad": "3s"
+      },
+      {
         "name": "Fiona Coope",
         "goals": 2,
         "squad": "8s"
       },
       {
         "name": "Sammie Archer-Overall",
+        "goals": 2,
+        "squad": "3s"
+      },
+      {
+        "name": "Sarah Embrey",
         "goals": 2,
         "squad": "3s"
       },
@@ -93,21 +108,6 @@
         "name": "Louise Wilding",
         "goals": 1,
         "squad": "6s"
-      },
-      {
-        "name": "Lucy Briscoe",
-        "goals": 1,
-        "squad": "5s"
-      },
-      {
-        "name": "Madison Foxcroft",
-        "goals": 1,
-        "squad": "2s"
-      },
-      {
-        "name": "Megan Fish",
-        "goals": 1,
-        "squad": "7s"
       }
     ]
   },
@@ -125,6 +125,16 @@
       }
     ],
     "F": [
+      {
+        "name": "Annie Barratt",
+        "goals": 3,
+        "squad": "3s"
+      },
+      {
+        "name": "Alicia Gibson",
+        "goals": 2,
+        "squad": "3s"
+      },
       {
         "name": "Heidi Griffith",
         "goals": 1,
@@ -151,14 +161,14 @@
         "squad": "7s"
       },
       {
-        "name": "Sophie Lamb",
+        "name": "Sarah Embrey",
         "goals": 1,
-        "squad": "6s"
+        "squad": "3s"
       }
     ]
   },
   "coverage": {
     "results": 27,
-    "with_team_sheet": 21
+    "with_team_sheet": 22
   }
 }
