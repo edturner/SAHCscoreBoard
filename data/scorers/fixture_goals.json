@@ -414,7 +414,7 @@
     "day": "2026-09-19",
     "teams": {
       "d9f0f20b-37ae-4a51-aa7c-6b4c2718da54": {
-        "sheet": false,
+        "sheet": true,
         "scorers": []
       }
     }
