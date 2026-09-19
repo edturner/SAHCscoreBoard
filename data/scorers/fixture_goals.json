@@ -255,6 +255,26 @@
       }
     }
   },
+  "94182c99-026b-4a54-a9a5-39fbcb954a9c": {
+    "day": "2026-09-19",
+    "teams": {
+      "30cc8f2b-3eae-47fb-a5fb-f0b976c3d3a2": {
+        "sheet": true,
+        "scorers": [
+          {
+            "player": "09066855cf0a",
+            "name": "Sophie Lamb",
+            "goals": 1
+          },
+          {
+            "player": "9e20138931e4",
+            "name": "Louise Wilding",
+            "goals": 1
+          }
+        ]
+      }
+    }
+  },
   "9b50d293-06fc-4438-8d83-5085a01b5d88": {
     "day": "2026-09-19",
     "teams": {

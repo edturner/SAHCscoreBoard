@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-19T12:45:20+00:00",
+  "generated_at": "2026-09-19T12:50:23+00:00",
   "season_label": "2026/27 season",
   "match_day": {
     "date": "2026-09-19",
@@ -80,6 +80,11 @@
         "squad": "2s"
       },
       {
+        "name": "Louise Wilding",
+        "goals": 1,
+        "squad": "6s"
+      },
+      {
         "name": "Madison Foxcroft",
         "goals": 1,
         "squad": "2s"
@@ -93,15 +98,31 @@
         "name": "Sarah Embrey",
         "goals": 1,
         "squad": "3s"
+      },
+      {
+        "name": "Sophie Lamb",
+        "goals": 1,
+        "squad": "6s"
       }
     ]
   },
   "match_day_scorers": {
     "M": [],
-    "F": []
+    "F": [
+      {
+        "name": "Louise Wilding",
+        "goals": 1,
+        "squad": "6s"
+      },
+      {
+        "name": "Sophie Lamb",
+        "goals": 1,
+        "squad": "6s"
+      }
+    ]
   },
   "coverage": {
-    "results": 17,
-    "with_team_sheet": 15
+    "results": 18,
+    "with_team_sheet": 16
   }
 }
