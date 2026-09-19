@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-19T18:20:44+00:00",
+  "generated_at": "2026-09-19T18:25:32+00:00",
   "season_label": "2026/27 season",
   "match_day": {
     "date": "2026-09-19",
@@ -28,6 +28,11 @@
         "squad": "5s"
       },
       {
+        "name": "Ian Loffler",
+        "goals": 2,
+        "squad": "4s"
+      },
+      {
         "name": "Arlo Balmforth",
         "goals": 1,
         "squad": "9s"
@@ -48,14 +53,9 @@
         "squad": "3s"
       },
       {
-        "name": "Jamie Rowland",
+        "name": "Jack Howard",
         "goals": 1,
-        "squad": "6s"
-      },
-      {
-        "name": "Joel Withey",
-        "goals": 1,
-        "squad": "2s"
+        "squad": "4s"
       }
     ],
     "F": [
@@ -119,6 +119,11 @@
         "squad": "5s"
       },
       {
+        "name": "Ian Loffler",
+        "goals": 2,
+        "squad": "4s"
+      },
+      {
         "name": "Alastair Powell",
         "goals": 1,
         "squad": "8s"
@@ -134,14 +139,19 @@
         "squad": "8s"
       },
       {
+        "name": "Jack Howard",
+        "goals": 1,
+        "squad": "4s"
+      },
+      {
+        "name": "Sachin Jallport",
+        "goals": 1,
+        "squad": "4s"
+      },
+      {
         "name": "Thomas Arden-davis",
         "goals": 1,
         "squad": "3s"
-      },
-      {
-        "name": "Troy Barrett",
-        "goals": 1,
-        "squad": "5s"
       }
     ],
     "F": [
@@ -189,6 +199,6 @@
   },
   "coverage": {
     "results": 31,
-    "with_team_sheet": 26
+    "with_team_sheet": 27
   }
 }

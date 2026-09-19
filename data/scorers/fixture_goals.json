@@ -268,8 +268,24 @@
     "day": "2026-09-19",
     "teams": {
       "3d7ecaa8-5810-4721-9e4c-a8cea9ff8581": {
-        "sheet": false,
-        "scorers": []
+        "sheet": true,
+        "scorers": [
+          {
+            "player": "3a453bf44823",
+            "name": "Ian Loffler",
+            "goals": 2
+          },
+          {
+            "player": "8594a6a42e32",
+            "name": "Jack Howard",
+            "goals": 1
+          },
+          {
+            "player": "91f359a3d87a",
+            "name": "Sachin Jallport",
+            "goals": 1
+          }
+        ]
       }
     }
   },
