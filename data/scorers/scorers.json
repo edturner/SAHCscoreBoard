@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-09-19T11:35:20+00:00",
+  "generated_at": "2026-09-19T11:40:33+00:00",
   "season_label": "2026/27 season",
   "match_day": {
-    "date": "2026-09-12",
-    "label": "Saturday 12 September"
+    "date": "2026-09-19",
+    "label": "Saturday 19 September"
   },
   "season": {
     "M": [
@@ -97,88 +97,11 @@
     ]
   },
   "match_day_scorers": {
-    "M": [
-      {
-        "name": "Oliver Bell",
-        "goals": 3,
-        "squad": "3s"
-      },
-      {
-        "name": "Ashley Dawes",
-        "goals": 2,
-        "squad": "3s"
-      },
-      {
-        "name": "Alastair Powell",
-        "goals": 1,
-        "squad": "8s"
-      },
-      {
-        "name": "Arlo Balmforth",
-        "goals": 1,
-        "squad": "9s"
-      },
-      {
-        "name": "Benjamin West",
-        "goals": 1,
-        "squad": "5s"
-      },
-      {
-        "name": "Ed Turner",
-        "goals": 1,
-        "squad": "3s"
-      },
-      {
-        "name": "Jamie Rowland",
-        "goals": 1,
-        "squad": "6s"
-      },
-      {
-        "name": "Joel Withey",
-        "goals": 1,
-        "squad": "2s"
-      }
-    ],
-    "F": [
-      {
-        "name": "Fiona Coope",
-        "goals": 2,
-        "squad": "8s"
-      },
-      {
-        "name": "Sammie Archer-Overall",
-        "goals": 2,
-        "squad": "3s"
-      },
-      {
-        "name": "Alice Wetters",
-        "goals": 1,
-        "squad": "2s"
-      },
-      {
-        "name": "Erin Hugo",
-        "goals": 1,
-        "squad": "2s"
-      },
-      {
-        "name": "Madison Foxcroft",
-        "goals": 1,
-        "squad": "2s"
-      },
-      {
-        "name": "Megan Fish",
-        "goals": 1,
-        "squad": "7s"
-      },
-      {
-        "name": "Sarah Embrey",
-        "goals": 1,
-        "squad": "3s"
-      }
-    ]
+    "M": [],
+    "F": []
   },
   "coverage": {
-    "results": 15,
+    "results": 16,
     "with_team_sheet": 15
   }
 }
