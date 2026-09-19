@@ -382,5 +382,20 @@
         "scorers": []
       }
     }
+  },
+  "fb33d0d0-b4e7-4f5e-94d2-3733d53fe4f3": {
+    "day": "2026-09-19",
+    "teams": {
+      "1b96b793-1dd0-4e01-98b1-d07139fa44c4": {
+        "sheet": true,
+        "scorers": [
+          {
+            "player": "c06651f07987",
+            "name": "Natalie Skilbeck",
+            "goals": 1
+          }
+        ]
+      }
+    }
   }
 }
