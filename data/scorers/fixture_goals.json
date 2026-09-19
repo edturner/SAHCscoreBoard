@@ -441,8 +441,19 @@
     "day": "2026-09-19",
     "teams": {
       "5949dcf2-d51f-4e27-9bd3-0639e58261c6": {
-        "sheet": false,
-        "scorers": []
+        "sheet": true,
+        "scorers": [
+          {
+            "player": "275f15bbfa8b",
+            "name": "Alastair Powell",
+            "goals": 1
+          },
+          {
+            "player": "6b9d4b2bb212",
+            "name": "Bob Morris",
+            "goals": 1
+          }
+        ]
       }
     }
   },

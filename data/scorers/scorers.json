@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-19T18:15:30+00:00",
+  "generated_at": "2026-09-19T18:20:44+00:00",
   "season_label": "2026/27 season",
   "match_day": {
     "date": "2026-09-19",
@@ -18,14 +18,14 @@
         "squad": "3s"
       },
       {
+        "name": "Alastair Powell",
+        "goals": 2,
+        "squad": "8s"
+      },
+      {
         "name": "Freddie Merriden",
         "goals": 2,
         "squad": "5s"
-      },
-      {
-        "name": "Alastair Powell",
-        "goals": 1,
-        "squad": "8s"
       },
       {
         "name": "Arlo Balmforth",
@@ -36,6 +36,11 @@
         "name": "Benjamin West",
         "goals": 1,
         "squad": "5s"
+      },
+      {
+        "name": "Bob Morris",
+        "goals": 1,
+        "squad": "8s"
       },
       {
         "name": "Ed Turner",
@@ -51,11 +56,6 @@
         "name": "Joel Withey",
         "goals": 1,
         "squad": "2s"
-      },
-      {
-        "name": "John Turner",
-        "goals": 1,
-        "squad": "7s"
       }
     ],
     "F": [
@@ -119,9 +119,19 @@
         "squad": "5s"
       },
       {
+        "name": "Alastair Powell",
+        "goals": 1,
+        "squad": "8s"
+      },
+      {
         "name": "Ashley Dawes",
         "goals": 1,
         "squad": "3s"
+      },
+      {
+        "name": "Bob Morris",
+        "goals": 1,
+        "squad": "8s"
       },
       {
         "name": "Thomas Arden-davis",
@@ -179,6 +189,6 @@
   },
   "coverage": {
     "results": 31,
-    "with_team_sheet": 25
+    "with_team_sheet": 26
   }
 }
