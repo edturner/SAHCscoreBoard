@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-19T16:55:36+00:00",
+  "generated_at": "2026-09-19T17:00:51+00:00",
   "season_label": "2026/27 season",
   "match_day": {
     "date": "2026-09-19",
@@ -16,6 +16,11 @@
         "name": "Oliver Bell",
         "goals": 3,
         "squad": "3s"
+      },
+      {
+        "name": "Freddie Merriden",
+        "goals": 2,
+        "squad": "5s"
       },
       {
         "name": "Alastair Powell",
@@ -49,11 +54,6 @@
       },
       {
         "name": "John Turner",
-        "goals": 1,
-        "squad": "7s"
-      },
-      {
-        "name": "Matthew Stevens",
         "goals": 1,
         "squad": "7s"
       }
@@ -114,6 +114,11 @@
   "match_day_scorers": {
     "M": [
       {
+        "name": "Freddie Merriden",
+        "goals": 2,
+        "squad": "5s"
+      },
+      {
         "name": "Ashley Dawes",
         "goals": 1,
         "squad": "3s"
@@ -122,6 +127,11 @@
         "name": "Thomas Arden-davis",
         "goals": 1,
         "squad": "3s"
+      },
+      {
+        "name": "Troy Barrett",
+        "goals": 1,
+        "squad": "5s"
       }
     ],
     "F": [
@@ -169,6 +179,6 @@
   },
   "coverage": {
     "results": 28,
-    "with_team_sheet": 22
+    "with_team_sheet": 23
   }
 }

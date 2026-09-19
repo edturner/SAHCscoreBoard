@@ -293,8 +293,19 @@
     "day": "2026-09-19",
     "teams": {
       "f657d2bb-dafe-4b84-8b33-2c51c690bd5c": {
-        "sheet": false,
-        "scorers": []
+        "sheet": true,
+        "scorers": [
+          {
+            "player": "1e9993af4621",
+            "name": "Freddie Merriden",
+            "goals": 2
+          },
+          {
+            "player": "448bacec0d17",
+            "name": "Troy Barrett",
+            "goals": 1
+          }
+        ]
       }
     }
   },
