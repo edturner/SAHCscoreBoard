@@ -94,11 +94,11 @@ Check it is alive with `tail /var/log/sahc-trigger.log` on the host; a healthy l
 
 ## Open items
 
-- **The trigger needs its token.** Everything above is installed on the home server and cron is
-  firing on schedule, but `/root/.sahc-token` does not exist yet, so nothing is dispatched — the log says
-  `ERROR: /root/.sahc-token missing or unreadable`. Create a fine-grained PAT scoped to this repo
-  with **Actions: read and write**, write it to that file mode 600, and the trigger goes live.
-  Until then GitHub's own best-effort schedules are still the only clock.
+- **The trigger's token expires.** The home-server trigger has been live since 19 September 2026,
+  on a fine-grained PAT (this repo only, Actions: read and write) that expires after a year. When
+  it lapses the log shows `HTTP 401` and GitHub's schedules quietly become the only clock again.
+  Regenerate it on GitHub and rewrite `/root/.sahc-token` — the file must hold exactly one line,
+  `export GITHUB_TOKEN=…`, because cron *sources* it as shell and runs anything else in it.
 - **The GMS API key is England Hockey's own website key.** Still worth requesting a club key from
   `gms.support@englandhockey.co.uk`; they could rotate theirs at any time.
 - **Duplicate member records.** Ed Turner has two GMS accounts, so his goals split across both.
