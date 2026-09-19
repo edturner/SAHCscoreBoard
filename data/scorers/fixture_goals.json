@@ -299,5 +299,23 @@
         ]
       }
     }
+  },
+  "ba4cb57a-f10c-4ac8-8eaa-d71b915a332e": {
+    "day": "2026-09-19",
+    "teams": {
+      "7df3c3cf-94cd-4e54-bb74-b85f0f93bcb8": {
+        "sheet": false,
+        "scorers": []
+      }
+    }
+  },
+  "cf29c479-f69a-4800-9db3-7870d8cbf658": {
+    "day": "2026-09-19",
+    "teams": {
+      "e61f49a1-4ebb-4d1e-b346-bbfe5e7763a5": {
+        "sheet": false,
+        "scorers": []
+      }
+    }
   }
 }
