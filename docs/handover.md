@@ -35,6 +35,46 @@ minutes. `scripts/trigger_update.sh` exists for that: any always-on machine can 
 workflow on a cron, and dispatched runs start immediately. The schedules stay as a fallback.
 A `fast` dispatch runs fixtures and scorers but skips the league tables.
 
+### The always-on machine (installed 12 September 2026)
+
+The always-on home server now does the dispatching — a Proxmox host, reachable on the home LAN
+and over Tailscale. **This repo is public, so its addresses and login details are deliberately
+not written here**; they live in the private Obsidian vault at
+`Resources/Home Server Documentation.md`.
+
+The trigger runs on the Proxmox host itself rather than in the media LXC: it is a
+dependency-free curl to `api.github.com`, and the host is up whenever the container is, so a
+container restart or maintenance window cannot silently stop match-day updates.
+
+| Path | What |
+| --- | --- |
+| `/usr/local/bin/sahc-trigger.sh` | copy of `scripts/trigger_update.sh` |
+| `/usr/local/bin/sahc-cron.sh` | cron entry point: loads the token, logs every outcome |
+| `/root/.sahc-token` | `export GITHUB_TOKEN=…`, mode 600. Not in the repo, not backed up |
+| `/var/log/sahc-trigger.log` | one line per dispatch; logrotate monthly, 3 kept |
+
+Root crontab, in **Europe/London** (the host's timezone, so these are local push-back times —
+note `trigger_update.sh`'s own header comments are written in UTC and are an hour out in BST):
+
+```
+*/5  9-21 * * 6   fast      # Saturday, every 5 minutes
+*/15 9-20 * * 0   fast      # Sunday, every 15 minutes
+5    22   * * 6   all       # Saturday evening, league tables
+5    21   * * 0   all       # Sunday evening, league tables
+```
+
+The `all` dispatches sit deliberately *after* the fast window: `fixtures.yml` sets
+`cancel-in-progress: true`, so a league run fired mid-afternoon would just be killed by the next
+`fast` five minutes later.
+
+`sahc-cron.sh` exists because the obvious crontab line is wrong. In
+`. /root/.sahc-token && sahc-trigger.sh fast >> log 2>&1` the redirect binds only to the trigger
+script, so a missing or unreadable token file fails *silently* — no dispatch, nothing in the log.
+The wrapper checks the token itself and logs the failure, so the trigger can never stop quietly.
+
+Check it is alive with `tail /var/log/sahc-trigger.log` on the host; a healthy line reads
+`dispatched fixtures.yml (fast) on edturner/SAHCscoreBoard`.
+
 ## Decisions worth not re-litigating
 
 - **Readability beat cleverness on the screens.** Two earlier designs were rejected: one looked
@@ -54,8 +94,11 @@ A `fast` dispatch runs fixtures and scorers but skips the league tables.
 
 ## Open items
 
-- **Sunday cadence.** Sunday score checks are hourly. The 1st XIs' national leagues often play
-  Sunday, so their results can be an hour stale. A one-line cron change if it annoys.
+- **The trigger's token expires.** The home-server trigger has been live since 19 September 2026,
+  on a fine-grained PAT (this repo only, Actions: read and write) that expires after a year. When
+  it lapses the log shows `HTTP 401` and GitHub's schedules quietly become the only clock again.
+  Regenerate it on GitHub and rewrite `/root/.sahc-token` — the file must hold exactly one line,
+  `export GITHUB_TOKEN=…`, because cron *sources* it as shell and runs anything else in it.
 - **The GMS API key is England Hockey's own website key.** Still worth requesting a club key from
   `gms.support@englandhockey.co.uk`; they could rotate theirs at any time.
 - **Duplicate member records.** Ed Turner has two GMS accounts, so his goals split across both.
