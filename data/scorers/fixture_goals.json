@@ -360,7 +360,7 @@
     "day": "2026-09-19",
     "teams": {
       "e61f49a1-4ebb-4d1e-b346-bbfe5e7763a5": {
-        "sheet": false,
+        "sheet": true,
         "scorers": []
       }
     }
