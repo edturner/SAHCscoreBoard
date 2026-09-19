@@ -279,8 +279,24 @@
     "day": "2026-09-19",
     "teams": {
       "91e2a40f-fe91-4c8e-9ca6-aed40e6178b2": {
-        "sheet": false,
-        "scorers": []
+        "sheet": true,
+        "scorers": [
+          {
+            "player": "b6cc48a0c2a7",
+            "name": "Lucy Briscoe",
+            "goals": 1
+          },
+          {
+            "player": "b7456554819e",
+            "name": "Heidi Griffith",
+            "goals": 1
+          },
+          {
+            "player": "32fa298c5197",
+            "name": "Karen Archer",
+            "goals": 1
+          }
+        ]
       }
     }
   }
