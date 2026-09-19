@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-19T14:15:30+00:00",
+  "generated_at": "2026-09-19T14:20:47+00:00",
   "season_label": "2026/27 season",
   "match_day": {
     "date": "2026-09-19",
@@ -8,13 +8,13 @@
   "season": {
     "M": [
       {
-        "name": "Oliver Bell",
+        "name": "Ashley Dawes",
         "goals": 3,
         "squad": "3s"
       },
       {
-        "name": "Ashley Dawes",
-        "goals": 2,
+        "name": "Oliver Bell",
+        "goals": 3,
         "squad": "3s"
       },
       {
@@ -112,7 +112,18 @@
     ]
   },
   "match_day_scorers": {
-    "M": [],
+    "M": [
+      {
+        "name": "Ashley Dawes",
+        "goals": 1,
+        "squad": "3s"
+      },
+      {
+        "name": "Thomas Arden-davis",
+        "goals": 1,
+        "squad": "3s"
+      }
+    ],
     "F": [
       {
         "name": "Heidi Griffith",
@@ -142,7 +153,7 @@
     ]
   },
   "coverage": {
-    "results": 22,
-    "with_team_sheet": 17
+    "results": 23,
+    "with_team_sheet": 18
   }
 }

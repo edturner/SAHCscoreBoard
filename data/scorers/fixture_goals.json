@@ -300,12 +300,32 @@
       }
     }
   },
+  "b0d9561c-0ddf-4955-ba58-ddfc3c9356be": {
+    "day": "2026-09-19",
+    "teams": {
+      "2d0cbcaa-ddfe-4aa9-ba90-47f28ee800e1": {
+        "sheet": false,
+        "scorers": []
+      }
+    }
+  },
   "b3551577-0afd-456a-96ca-69b31a4c74f1": {
     "day": "2026-09-19",
     "teams": {
       "39486394-dad6-4e98-b4fb-6cc03cbc7910": {
-        "sheet": false,
-        "scorers": []
+        "sheet": true,
+        "scorers": [
+          {
+            "player": "82352df63e3a",
+            "name": "Ashley Dawes",
+            "goals": 1
+          },
+          {
+            "player": "7de4cf7aa830",
+            "name": "Thomas Arden-davis",
+            "goals": 1
+          }
+        ]
       }
     }
   },
