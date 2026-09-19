@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-19T17:00:15.667875+00:00",
+  "generated_at": "2026-09-19T17:05:19.231580+00:00",
   "weekend": {
     "saturday": "2026-09-19",
     "sunday": "2026-09-20"
@@ -241,10 +241,10 @@
       "kickoff": "15:45",
       "division": "Premier Division",
       "location": "Away",
-      "status": "Scheduled",
+      "status": "Played",
       "fixtureId": "20028eae-9203-4c68-9aee-27f6d8ebcd21",
-      "home_score": null,
-      "away_score": null,
+      "home_score": 4,
+      "away_score": 0,
       "_ha": "a"
     },
     {
