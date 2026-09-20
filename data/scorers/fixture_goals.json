@@ -487,5 +487,35 @@
         ]
       }
     }
+  },
+  "348a1261-3450-4baa-9213-1eb1c7eb8d78": {
+    "day": "2026-09-20",
+    "teams": {
+      "d2d0b65e-bf96-476b-8d38-6d28dae65a61": {
+        "sheet": true,
+        "scorers": [
+          {
+            "player": "09a36235b746",
+            "name": "Jakob Plant",
+            "goals": 3
+          },
+          {
+            "player": "e51c1d039e1c",
+            "name": "Robert Shearer",
+            "goals": 1
+          },
+          {
+            "player": "bd6d0ade0b9f",
+            "name": "Spencer Hill",
+            "goals": 1
+          },
+          {
+            "player": "d81ad5d244fb",
+            "name": "Joshua Lee",
+            "goals": 1
+          }
+        ]
+      }
+    }
   }
 }

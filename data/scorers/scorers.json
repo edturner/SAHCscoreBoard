@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-09-20T15:00:43+00:00",
+  "generated_at": "2026-09-20T15:15:38+00:00",
   "season_label": "2026/27 season",
   "match_day": {
     "date": "2026-09-19",
-    "label": "Saturday 19 September"
+    "label": "Sat 19 & Sun 20 September"
   },
   "season": {
     "M": [
@@ -11,6 +11,11 @@
         "name": "Ashley Dawes",
         "goals": 3,
         "squad": "3s"
+      },
+      {
+        "name": "Jakob Plant",
+        "goals": 3,
+        "squad": "1s"
       },
       {
         "name": "Oliver Bell",
@@ -51,11 +56,6 @@
         "name": "Ed Turner",
         "goals": 1,
         "squad": "3s"
-      },
-      {
-        "name": "Jack Howard",
-        "goals": 1,
-        "squad": "4s"
       }
     ],
     "F": [
@@ -114,6 +114,11 @@
   "match_day_scorers": {
     "M": [
       {
+        "name": "Jakob Plant",
+        "goals": 3,
+        "squad": "1s"
+      },
+      {
         "name": "Freddie Merriden",
         "goals": 2,
         "squad": "5s"
@@ -144,14 +149,9 @@
         "squad": "4s"
       },
       {
-        "name": "Sachin Jallport",
+        "name": "Joshua Lee",
         "goals": 1,
-        "squad": "4s"
-      },
-      {
-        "name": "Thomas Arden-davis",
-        "goals": 1,
-        "squad": "3s"
+        "squad": "1s"
       }
     ],
     "F": [
@@ -198,7 +198,7 @@
     ]
   },
   "coverage": {
-    "results": 31,
-    "with_team_sheet": 28
+    "results": 32,
+    "with_team_sheet": 29
   }
 }
