@@ -318,8 +318,19 @@
     "day": "2026-09-19",
     "teams": {
       "3896f4e5-7d73-483b-b735-31f976ed7312": {
-        "sheet": false,
-        "scorers": []
+        "sheet": true,
+        "scorers": [
+          {
+            "player": "5c88d9e2c0f5",
+            "name": "Sandipan Chanda",
+            "goals": 1
+          },
+          {
+            "player": "817fd295415a",
+            "name": "Hamish Clark",
+            "goals": 1
+          }
+        ]
       }
     }
   },
