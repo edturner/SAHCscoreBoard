@@ -8,17 +8,21 @@
       "label": "Open - Men's Conference Midlands (2026-2027)"
     },
     "stats": {
-      "played": "0",
-      "won": "0",
+      "played": "1",
+      "won": "1",
       "drawn": "0",
       "lost": "0",
-      "goalsFor": "0",
+      "goalsFor": "6",
       "goalsAgainst": "0",
-      "goalDiff": "0",
-      "points": "0",
-      "ppg": "0.00"
+      "goalDiff": "6",
+      "points": "3",
+      "ppg": "3.00"
     },
-    "form": []
+    "form": [
+      {
+        "result": "W"
+      }
+    ]
   },
   {
     "name": "St Albans 1 (F)",
