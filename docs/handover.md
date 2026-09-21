@@ -57,15 +57,28 @@ Root crontab, in **Europe/London** (the host's timezone, so these are local push
 note `trigger_update.sh`'s own header comments are written in UTC and are an hour out in BST):
 
 ```
-*/5  9-21 * * 6   fast      # Saturday, every 5 minutes
-*/15 9-20 * * 0   fast      # Sunday, every 15 minutes
-5    22   * * 6   all       # Saturday evening, league tables
-5    21   * * 0   all       # Sunday evening, league tables
+*/5   9-21  * * 6    fast     # Saturday, every 5 minutes
+*/15  9-20  * * 0    fast     # Sunday, every 15 minutes
+2,32  10-21 * * 6    all      # Saturday, league tables every 30 minutes
+2,32  10-20 * * 0    all      # Sunday, league tables every 30 minutes
+5     22    * * 6    all      # Saturday evening, final
+5     21    * * 0    all      # Sunday evening, final
+15    8     * * 1-3  all      # Mon-Wed catch-up for late-entered results
 ```
 
-The `all` dispatches sit deliberately *after* the fast window: `fixtures.yml` sets
-`cancel-in-progress: true`, so a league run fired mid-afternoon would just be killed by the next
-`fast` five minutes later.
+`all` runs at **:02 and :32**, deliberately off the `*/5` grid. `fixtures.yml` sets
+`cancel-in-progress: true`, but a full run takes about 64 seconds end to end and the next `fast`
+is three minutes away, so it always finishes first.
+
+**Why the league tables need their own daytime slot** (found 21 September, after the screens were
+seen disagreeing in the clubhouse): `fast` skips the league step, so during play the *only* thing
+refreshing the tables was GitHub's own hourly `37 * * * 6,0` slot. On Saturday 19 September that
+slot did not fire once between 01:21 and 20:34 BST — the scoreboard updated every five minutes
+while the League of Leagues sat on Friday night's data all afternoon. The league tables were never
+wrong, just stale; treat GitHub's hourly slot as a fallback here exactly like the others.
+
+The Mon–Wed entry exists because results entered after Sunday evening otherwise waited until the
+Thursday 03:00 pre-weekend build to reach the table.
 
 `sahc-cron.sh` exists because the obvious crontab line is wrong. In
 `. /root/.sahc-token && sahc-trigger.sh fast >> log 2>&1` the redirect binds only to the trigger
