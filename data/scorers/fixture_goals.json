@@ -529,6 +529,15 @@
       }
     }
   },
+  "77c96ffa-47e6-4bba-8a36-895dd0cbeac7": {
+    "day": "2026-09-26",
+    "teams": {
+      "f1c3a876-4de3-4c99-9800-171fe4667602": {
+        "sheet": false,
+        "scorers": []
+      }
+    }
+  },
   "f255fd23-1d3e-4873-927e-12b48d63ba88": {
     "day": "2026-09-26",
     "teams": {
@@ -542,8 +551,14 @@
     "day": "2026-09-26",
     "teams": {
       "91e2a40f-fe91-4c8e-9ca6-aed40e6178b2": {
-        "sheet": false,
-        "scorers": []
+        "sheet": true,
+        "scorers": [
+          {
+            "player": "df025eb89e2b",
+            "name": "Jenny Birch",
+            "goals": 1
+          }
+        ]
       }
     }
   }

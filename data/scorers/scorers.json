@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-26T13:20:32+00:00",
+  "generated_at": "2026-09-26T13:25:40+00:00",
   "season_label": "2026/27 season",
   "match_day": {
     "date": "2026-09-26",
@@ -100,23 +100,29 @@
         "squad": "5s"
       },
       {
-        "name": "Karen Archer",
+        "name": "Jenny Birch",
         "goals": 1,
         "squad": "5s"
       },
       {
-        "name": "Louise Wilding",
+        "name": "Karen Archer",
         "goals": 1,
-        "squad": "6s"
+        "squad": "5s"
       }
     ]
   },
   "match_day_scorers": {
     "M": [],
-    "F": []
+    "F": [
+      {
+        "name": "Jenny Birch",
+        "goals": 1,
+        "squad": "5s"
+      }
+    ]
   },
   "coverage": {
-    "results": 34,
-    "with_team_sheet": 31
+    "results": 35,
+    "with_team_sheet": 32
   }
 }
