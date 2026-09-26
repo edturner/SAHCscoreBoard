@@ -695,8 +695,19 @@
     "day": "2026-09-26",
     "teams": {
       "e61f49a1-4ebb-4d1e-b346-bbfe5e7763a5": {
-        "sheet": false,
-        "scorers": []
+        "sheet": true,
+        "scorers": [
+          {
+            "player": "6d796fc65a62",
+            "name": "Grace Franklin",
+            "goals": 2
+          },
+          {
+            "player": "5abb80a959fc",
+            "name": "Carla Creasy",
+            "goals": 1
+          }
+        ]
       }
     }
   },
