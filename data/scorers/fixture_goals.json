@@ -592,6 +592,26 @@
       }
     }
   },
+  "a7a1315f-9622-4a13-82fe-17f6bcd36463": {
+    "day": "2026-09-26",
+    "teams": {
+      "1b96b793-1dd0-4e01-98b1-d07139fa44c4": {
+        "sheet": true,
+        "scorers": [
+          {
+            "player": "edab3a7bcce7",
+            "name": "Samantha Liles",
+            "goals": 1
+          },
+          {
+            "player": "7ecaa6716eb8",
+            "name": "Megan Fish",
+            "goals": 1
+          }
+        ]
+      }
+    }
+  },
   "f255fd23-1d3e-4873-927e-12b48d63ba88": {
     "day": "2026-09-26",
     "teams": {
