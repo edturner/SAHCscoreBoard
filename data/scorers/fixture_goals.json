@@ -547,6 +547,26 @@
       }
     }
   },
+  "6c679271-168a-4cc2-8f51-fafa8bad3710": {
+    "day": "2026-09-26",
+    "teams": {
+      "39486394-dad6-4e98-b4fb-6cc03cbc7910": {
+        "sheet": true,
+        "scorers": [
+          {
+            "player": "76409d382290",
+            "name": "Fergus Watson",
+            "goals": 1
+          },
+          {
+            "player": "d2b3d5cb7890",
+            "name": "Oliver Bell",
+            "goals": 1
+          }
+        ]
+      }
+    }
+  },
   "6e4d0d99-cff7-47c5-8e79-6d3054c325a8": {
     "day": "2026-09-26",
     "teams": {

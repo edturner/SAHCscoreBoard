@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-26T15:05:30+00:00",
+  "generated_at": "2026-09-26T15:10:56+00:00",
   "season_label": "2026/27 season",
   "match_day": {
     "date": "2026-09-26",
@@ -7,6 +7,11 @@
   },
   "season": {
     "M": [
+      {
+        "name": "Oliver Bell",
+        "goals": 4,
+        "squad": "3s"
+      },
       {
         "name": "Ashley Dawes",
         "goals": 3,
@@ -16,11 +21,6 @@
         "name": "Jakob Plant",
         "goals": 3,
         "squad": "1s"
-      },
-      {
-        "name": "Oliver Bell",
-        "goals": 3,
-        "squad": "3s"
       },
       {
         "name": "Alastair Powell",
@@ -119,9 +119,19 @@
         "squad": "2s"
       },
       {
+        "name": "Fergus Watson",
+        "goals": 1,
+        "squad": "3s"
+      },
+      {
         "name": "Kieran O'Leary",
         "goals": 1,
         "squad": "7s"
+      },
+      {
+        "name": "Oliver Bell",
+        "goals": 1,
+        "squad": "3s"
       }
     ],
     "F": [
@@ -148,7 +158,7 @@
     ]
   },
   "coverage": {
-    "results": 40,
-    "with_team_sheet": 37
+    "results": 41,
+    "with_team_sheet": 38
   }
 }
