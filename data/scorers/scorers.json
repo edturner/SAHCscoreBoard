@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-26T16:05:34+00:00",
+  "generated_at": "2026-09-26T16:10:59+00:00",
   "season_label": "2026/27 season",
   "match_day": {
     "date": "2026-09-26",
@@ -7,6 +7,11 @@
   },
   "season": {
     "M": [
+      {
+        "name": "Alastair Powell",
+        "goals": 4,
+        "squad": "8s"
+      },
       {
         "name": "Oliver Bell",
         "goals": 4,
@@ -23,11 +28,6 @@
         "squad": "1s"
       },
       {
-        "name": "Alastair Powell",
-        "goals": 2,
-        "squad": "8s"
-      },
-      {
         "name": "Freddie Merriden",
         "goals": 2,
         "squad": "5s"
@@ -36,6 +36,11 @@
         "name": "Ian Loffler",
         "goals": 2,
         "squad": "4s"
+      },
+      {
+        "name": "James Morris",
+        "goals": 2,
+        "squad": "8s"
       },
       {
         "name": "Sachin Jallport",
@@ -51,11 +56,6 @@
         "name": "Adam Wells",
         "goals": 1,
         "squad": "4s"
-      },
-      {
-        "name": "Arlo Balmforth",
-        "goals": 1,
-        "squad": "9s"
       }
     ],
     "F": [
@@ -114,6 +114,16 @@
   "match_day_scorers": {
     "M": [
       {
+        "name": "Alastair Powell",
+        "goals": 2,
+        "squad": "8s"
+      },
+      {
+        "name": "James Morris",
+        "goals": 2,
+        "squad": "8s"
+      },
+      {
         "name": "Zakariah Mohammedbhai",
         "goals": 2,
         "squad": "2s"
@@ -122,6 +132,11 @@
         "name": "Adam Wells",
         "goals": 1,
         "squad": "4s"
+      },
+      {
+        "name": "Eugene Cheuk",
+        "goals": 1,
+        "squad": "8s"
       },
       {
         "name": "Fergus Watson",
@@ -137,16 +152,6 @@
         "name": "Kieran O'Leary",
         "goals": 1,
         "squad": "7s"
-      },
-      {
-        "name": "Oliver Bell",
-        "goals": 1,
-        "squad": "3s"
-      },
-      {
-        "name": "Sachin Jallport",
-        "goals": 1,
-        "squad": "4s"
       }
     ],
     "F": [
@@ -173,7 +178,7 @@
     ]
   },
   "coverage": {
-    "results": 43,
-    "with_team_sheet": 39
+    "results": 44,
+    "with_team_sheet": 40
   }
 }

@@ -538,12 +538,37 @@
       }
     }
   },
+  "3c5cf4af-ba86-418b-bf5d-3ae6ee86f6f1": {
+    "day": "2026-09-26",
+    "teams": {
+      "a5b838ee-1d9d-491e-b1bb-f05388eff199": {
+        "sheet": false,
+        "scorers": []
+      }
+    }
+  },
   "59d68d2f-ae7e-445f-bad5-013d90b5033c": {
     "day": "2026-09-26",
     "teams": {
       "5949dcf2-d51f-4e27-9bd3-0639e58261c6": {
-        "sheet": false,
-        "scorers": []
+        "sheet": true,
+        "scorers": [
+          {
+            "player": "275f15bbfa8b",
+            "name": "Alastair Powell",
+            "goals": 2
+          },
+          {
+            "player": "9db458d03e6f",
+            "name": "James Morris",
+            "goals": 2
+          },
+          {
+            "player": "154966f107cd",
+            "name": "Eugene Cheuk",
+            "goals": 1
+          }
+        ]
       }
     }
   },
