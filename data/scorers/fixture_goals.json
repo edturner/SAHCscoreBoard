@@ -533,7 +533,7 @@
     "day": "2026-09-26",
     "teams": {
       "2d0cbcaa-ddfe-4aa9-ba90-47f28ee800e1": {
-        "sheet": true,
+        "sheet": false,
         "scorers": []
       }
     }
@@ -579,6 +579,15 @@
             "goals": 1
           }
         ]
+      }
+    }
+  },
+  "76878662-8ca9-4914-9360-ccc6f4ff090b": {
+    "day": "2026-09-26",
+    "teams": {
+      "3d7ecaa8-5810-4721-9e4c-a8cea9ff8581": {
+        "sheet": false,
+        "scorers": []
       }
     }
   },
