@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-26T15:56:01+00:00",
+  "generated_at": "2026-09-26T16:00:32+00:00",
   "season_label": "2026/27 season",
   "match_day": {
     "date": "2026-09-26",
@@ -38,24 +38,24 @@
         "squad": "4s"
       },
       {
+        "name": "Sachin Jallport",
+        "goals": 2,
+        "squad": "4s"
+      },
+      {
         "name": "Zakariah Mohammedbhai",
         "goals": 2,
         "squad": "2s"
       },
       {
+        "name": "Adam Wells",
+        "goals": 1,
+        "squad": "4s"
+      },
+      {
         "name": "Arlo Balmforth",
         "goals": 1,
         "squad": "9s"
-      },
-      {
-        "name": "Benjamin West",
-        "goals": 1,
-        "squad": "5s"
-      },
-      {
-        "name": "Bob Morris",
-        "goals": 1,
-        "squad": "8s"
       }
     ],
     "F": [
@@ -119,9 +119,19 @@
         "squad": "2s"
       },
       {
+        "name": "Adam Wells",
+        "goals": 1,
+        "squad": "4s"
+      },
+      {
         "name": "Fergus Watson",
         "goals": 1,
         "squad": "3s"
+      },
+      {
+        "name": "Jasmeet Singh Grewal",
+        "goals": 1,
+        "squad": "4s"
       },
       {
         "name": "Kieran O'Leary",
@@ -132,6 +142,11 @@
         "name": "Oliver Bell",
         "goals": 1,
         "squad": "3s"
+      },
+      {
+        "name": "Sachin Jallport",
+        "goals": 1,
+        "squad": "4s"
       }
     ],
     "F": [
@@ -159,6 +174,6 @@
   },
   "coverage": {
     "results": 43,
-    "with_team_sheet": 38
+    "with_team_sheet": 39
   }
 }
