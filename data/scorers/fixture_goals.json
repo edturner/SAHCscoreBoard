@@ -695,8 +695,24 @@
     "day": "2026-09-26",
     "teams": {
       "30cc8f2b-3eae-47fb-a5fb-f0b976c3d3a2": {
-        "sheet": false,
-        "scorers": []
+        "sheet": true,
+        "scorers": [
+          {
+            "player": "7734c04ede37",
+            "name": "Lauren Ramsay",
+            "goals": 1
+          },
+          {
+            "player": "09066855cf0a",
+            "name": "Sophie Lamb",
+            "goals": 1
+          },
+          {
+            "player": "e6546ef1dfb9",
+            "name": "Sian Ireland",
+            "goals": 1
+          }
+        ]
       }
     }
   },
