@@ -58,17 +58,20 @@
       "label": "Premier Division (2026-2027)"
     },
     "stats": {
-      "played": "2",
-      "won": "0",
+      "played": "3",
+      "won": "1",
       "drawn": "0",
       "lost": "2",
-      "goalsFor": "1",
+      "goalsFor": "3",
       "goalsAgainst": "6",
-      "goalDiff": "-5",
-      "points": "0",
-      "ppg": "0.00"
+      "goalDiff": "-3",
+      "points": "3",
+      "ppg": "1.00"
     },
     "form": [
+      {
+        "result": "W"
+      },
       {
         "result": "L"
       },
