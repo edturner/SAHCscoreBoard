@@ -538,6 +538,31 @@
       }
     }
   },
+  "0b1534d1-f1c2-44d5-ae85-b1107fe1c9e5": {
+    "day": "2026-09-26",
+    "teams": {
+      "f657d2bb-dafe-4b84-8b33-2c51c690bd5c": {
+        "sheet": true,
+        "scorers": [
+          {
+            "player": "11d8ae56c7a1",
+            "name": "Andrew Wilkie",
+            "goals": 1
+          },
+          {
+            "player": "2a1e0600c110",
+            "name": "Aidan Burger",
+            "goals": 1
+          },
+          {
+            "player": "71568d7ece7d",
+            "name": "Martin Jones",
+            "goals": 1
+          }
+        ]
+      }
+    }
+  },
   "3c5cf4af-ba86-418b-bf5d-3ae6ee86f6f1": {
     "day": "2026-09-26",
     "teams": {
@@ -668,6 +693,15 @@
             "goals": 1
           }
         ]
+      }
+    }
+  },
+  "9c94f8ce-be1f-49e0-b64e-bbf4b8d300df": {
+    "day": "2026-09-26",
+    "teams": {
+      "b00d4fe3-eacf-4b31-92cf-4ec4798eb44e": {
+        "sheet": false,
+        "scorers": []
       }
     }
   },
