@@ -529,6 +529,21 @@
       }
     }
   },
+  "6e4d0d99-cff7-47c5-8e79-6d3054c325a8": {
+    "day": "2026-09-26",
+    "teams": {
+      "d9f0f20b-37ae-4a51-aa7c-6b4c2718da54": {
+        "sheet": true,
+        "scorers": [
+          {
+            "player": "f1340e7f5848",
+            "name": "Emily Savident",
+            "goals": 1
+          }
+        ]
+      }
+    }
+  },
   "77c96ffa-47e6-4bba-8a36-895dd0cbeac7": {
     "day": "2026-09-26",
     "teams": {

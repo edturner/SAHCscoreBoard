@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-26T13:40:37+00:00",
+  "generated_at": "2026-09-26T13:45:42+00:00",
   "season_label": "2026/27 season",
   "match_day": {
     "date": "2026-09-26",
@@ -90,6 +90,11 @@
         "squad": "2s"
       },
       {
+        "name": "Emily Savident",
+        "goals": 1,
+        "squad": "1s"
+      },
+      {
         "name": "Erin Hugo",
         "goals": 1,
         "squad": "2s"
@@ -103,17 +108,17 @@
         "name": "Jenny Birch",
         "goals": 1,
         "squad": "5s"
-      },
-      {
-        "name": "Karen Archer",
-        "goals": 1,
-        "squad": "5s"
       }
     ]
   },
   "match_day_scorers": {
     "M": [],
     "F": [
+      {
+        "name": "Emily Savident",
+        "goals": 1,
+        "squad": "1s"
+      },
       {
         "name": "Jenny Birch",
         "goals": 1,
@@ -122,7 +127,7 @@
     ]
   },
   "coverage": {
-    "results": 35,
-    "with_team_sheet": 32
+    "results": 36,
+    "with_team_sheet": 33
   }
 }
