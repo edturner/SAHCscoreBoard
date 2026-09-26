@@ -784,5 +784,14 @@
         ]
       }
     }
+  },
+  "fc0e667b-04a3-4098-bb02-a75bc6f43c04": {
+    "day": "2026-09-26",
+    "teams": {
+      "7df3c3cf-94cd-4e54-bb74-b85f0f93bcb8": {
+        "sheet": true,
+        "scorers": []
+      }
+    }
   }
 }
