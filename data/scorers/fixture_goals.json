@@ -557,8 +557,14 @@
     "day": "2026-09-26",
     "teams": {
       "f1c3a876-4de3-4c99-9800-171fe4667602": {
-        "sheet": false,
-        "scorers": []
+        "sheet": true,
+        "scorers": [
+          {
+            "player": "504ba486860e",
+            "name": "Zakariah Mohammedbhai",
+            "goals": 2
+          }
+        ]
       }
     }
   },
