@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-26T15:50:16.907384+00:00",
+  "generated_at": "2026-09-26T15:55:19.698930+00:00",
   "weekend": {
     "saturday": "2026-09-26",
     "sunday": "2026-09-27"
@@ -226,10 +226,10 @@
       "kickoff": "14:30",
       "division": "Division 6 South West",
       "location": "Away",
-      "status": "Scheduled",
+      "status": "Played",
       "fixtureId": "59d68d2f-ae7e-445f-bad5-013d90b5033c",
-      "home_score": null,
-      "away_score": null,
+      "home_score": 0,
+      "away_score": 5,
       "_ha": "a"
     },
     {
