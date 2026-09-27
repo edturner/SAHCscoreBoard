@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-27T09:45:40+00:00",
+  "generated_at": "2026-09-27T10:00:48+00:00",
   "season_label": "2026/27 season",
   "match_day": {
     "date": "2026-09-26",
@@ -33,6 +33,11 @@
         "squad": "5s"
       },
       {
+        "name": "Hamish Clark",
+        "goals": 2,
+        "squad": "6s"
+      },
+      {
         "name": "Ian Loffler",
         "goals": 2,
         "squad": "4s"
@@ -48,14 +53,9 @@
         "squad": "4s"
       },
       {
-        "name": "Zakariah Mohammedbhai",
+        "name": "Sandipan Chanda",
         "goals": 2,
-        "squad": "2s"
-      },
-      {
-        "name": "Adam Wells",
-        "goals": 1,
-        "squad": "4s"
+        "squad": "6s"
       }
     ],
     "F": [
@@ -199,6 +199,6 @@
   },
   "coverage": {
     "results": 48,
-    "with_team_sheet": 45
+    "with_team_sheet": 46
   }
 }
