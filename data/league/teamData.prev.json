@@ -8,17 +8,20 @@
       "label": "Open - Men's Conference Midlands (2026-2027)"
     },
     "stats": {
-      "played": "1",
-      "won": "1",
+      "played": "2",
+      "won": "2",
       "drawn": "0",
       "lost": "0",
-      "goalsFor": "6",
-      "goalsAgainst": "0",
-      "goalDiff": "6",
-      "points": "3",
+      "goalsFor": "9",
+      "goalsAgainst": "1",
+      "goalDiff": "8",
+      "points": "6",
       "ppg": "3.00"
     },
     "form": [
+      {
+        "result": "W"
+      },
       {
         "result": "W"
       }
