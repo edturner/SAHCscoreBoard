@@ -809,8 +809,19 @@
     "day": "2026-09-27",
     "teams": {
       "d2d0b65e-bf96-476b-8d38-6d28dae65a61": {
-        "sheet": false,
-        "scorers": []
+        "sheet": true,
+        "scorers": [
+          {
+            "player": "bd6d0ade0b9f",
+            "name": "Spencer Hill",
+            "goals": 2
+          },
+          {
+            "player": "d81ad5d244fb",
+            "name": "Joshua Lee",
+            "goals": 1
+          }
+        ]
       }
     }
   }

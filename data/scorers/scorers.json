@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-27T15:15:41+00:00",
+  "generated_at": "2026-09-27T15:30:44+00:00",
   "season_label": "2026/27 season",
   "match_day": {
     "date": "2026-09-26",
@@ -28,6 +28,11 @@
         "squad": "1s"
       },
       {
+        "name": "Spencer Hill",
+        "goals": 3,
+        "squad": "1s"
+      },
+      {
         "name": "Freddie Merriden",
         "goals": 2,
         "squad": "5s"
@@ -48,14 +53,9 @@
         "squad": "8s"
       },
       {
-        "name": "Sachin Jallport",
+        "name": "Joshua Lee",
         "goals": 2,
-        "squad": "4s"
-      },
-      {
-        "name": "Sandipan Chanda",
-        "goals": 2,
-        "squad": "6s"
+        "squad": "1s"
       }
     ],
     "F": [
@@ -124,6 +124,11 @@
         "squad": "8s"
       },
       {
+        "name": "Spencer Hill",
+        "goals": 2,
+        "squad": "1s"
+      },
+      {
         "name": "Zakariah Mohammedbhai",
         "goals": 2,
         "squad": "2s"
@@ -147,11 +152,6 @@
         "name": "Eugene Cheuk",
         "goals": 1,
         "squad": "8s"
-      },
-      {
-        "name": "Fergus Watson",
-        "goals": 1,
-        "squad": "3s"
       }
     ],
     "F": [
@@ -199,6 +199,6 @@
   },
   "coverage": {
     "results": 49,
-    "with_team_sheet": 46
+    "with_team_sheet": 47
   }
 }
