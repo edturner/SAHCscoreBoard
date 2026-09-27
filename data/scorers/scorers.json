@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-09-27T14:45:44+00:00",
+  "generated_at": "2026-09-27T15:00:34+00:00",
   "season_label": "2026/27 season",
   "match_day": {
     "date": "2026-09-26",
-    "label": "Saturday 26 September"
+    "label": "Sat 26 & Sun 27 September"
   },
   "season": {
     "M": [
@@ -198,7 +198,7 @@
     ]
   },
   "coverage": {
-    "results": 48,
+    "results": 49,
     "with_team_sheet": 46
   }
 }
