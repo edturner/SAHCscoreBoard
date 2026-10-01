@@ -711,8 +711,19 @@
     "day": "2026-09-26",
     "teams": {
       "b00d4fe3-eacf-4b31-92cf-4ec4798eb44e": {
-        "sheet": false,
-        "scorers": []
+        "sheet": true,
+        "scorers": [
+          {
+            "player": "aa86a2100453",
+            "name": "Zara Ferns",
+            "goals": 1
+          },
+          {
+            "player": "b7c7ffeba0e3",
+            "name": "Alicia Gibson",
+            "goals": 1
+          }
+        ]
       }
     }
   },

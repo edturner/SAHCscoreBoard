@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-30T07:16:01+00:00",
+  "generated_at": "2026-10-01T09:50:23+00:00",
   "season_label": "2026/27 season",
   "match_day": {
     "date": "2026-09-26",
@@ -60,13 +60,13 @@
     ],
     "F": [
       {
-        "name": "Annie Barratt",
+        "name": "Alicia Gibson",
         "goals": 3,
         "squad": "3s"
       },
       {
-        "name": "Alicia Gibson",
-        "goals": 2,
+        "name": "Annie Barratt",
+        "goals": 3,
         "squad": "3s"
       },
       {
@@ -161,6 +161,11 @@
         "squad": "4s"
       },
       {
+        "name": "Alicia Gibson",
+        "goals": 1,
+        "squad": "3s"
+      },
+      {
         "name": "Carla Creasy",
         "goals": 1,
         "squad": "4s"
@@ -189,16 +194,11 @@
         "name": "Samantha Liles",
         "goals": 1,
         "squad": "7s"
-      },
-      {
-        "name": "Sian Ireland",
-        "goals": 1,
-        "squad": "6s"
       }
     ]
   },
   "coverage": {
     "results": 49,
-    "with_team_sheet": 47
+    "with_team_sheet": 48
   }
 }
