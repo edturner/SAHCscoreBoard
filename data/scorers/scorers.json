@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-03T17:32:35+00:00",
+  "generated_at": "2026-10-03T17:35:40+00:00",
   "season_label": "2026/27 season",
   "match_day": {
     "date": "2026-10-03",
@@ -43,6 +43,11 @@
         "squad": "1s"
       },
       {
+        "name": "Andrew Tyler",
+        "goals": 2,
+        "squad": "3s"
+      },
+      {
         "name": "Hamish Clark",
         "goals": 2,
         "squad": "6s"
@@ -51,11 +56,6 @@
         "name": "Ian Loffler",
         "goals": 2,
         "squad": "4s"
-      },
-      {
-        "name": "James Morris",
-        "goals": 2,
-        "squad": "8s"
       }
     ],
     "F": [
@@ -113,6 +113,11 @@
   },
   "match_day_scorers": {
     "M": [
+      {
+        "name": "Andrew Tyler",
+        "goals": 2,
+        "squad": "3s"
+      },
       {
         "name": "Freddie Merriden",
         "goals": 2,
@@ -194,6 +199,6 @@
   },
   "coverage": {
     "results": 63,
-    "with_team_sheet": 58
+    "with_team_sheet": 59
   }
 }

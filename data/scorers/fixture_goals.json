@@ -905,8 +905,29 @@
     "day": "2026-10-03",
     "teams": {
       "39486394-dad6-4e98-b4fb-6cc03cbc7910": {
-        "sheet": false,
-        "scorers": []
+        "sheet": true,
+        "scorers": [
+          {
+            "player": "6e6ee2a2addf",
+            "name": "Andrew Tyler",
+            "goals": 2
+          },
+          {
+            "player": "7de4cf7aa830",
+            "name": "Thomas Arden-davis",
+            "goals": 1
+          },
+          {
+            "player": "337008402ca4",
+            "name": "William Sauve",
+            "goals": 1
+          },
+          {
+            "player": "26992ca50be2",
+            "name": "Steve George",
+            "goals": 1
+          }
+        ]
       }
     }
   },
