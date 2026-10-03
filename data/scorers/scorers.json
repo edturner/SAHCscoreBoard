@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-03T15:05:23+00:00",
+  "generated_at": "2026-10-03T15:10:29+00:00",
   "season_label": "2026/27 season",
   "match_day": {
     "date": "2026-10-03",
@@ -33,6 +33,11 @@
         "squad": "1s"
       },
       {
+        "name": "Sayan Shah",
+        "goals": 3,
+        "squad": "4s"
+      },
+      {
         "name": "Spencer Hill",
         "goals": 3,
         "squad": "1s"
@@ -51,11 +56,6 @@
         "name": "James Morris",
         "goals": 2,
         "squad": "8s"
-      },
-      {
-        "name": "Joshua Lee",
-        "goals": 2,
-        "squad": "1s"
       }
     ],
     "F": [
@@ -119,6 +119,11 @@
         "squad": "5s"
       },
       {
+        "name": "Sayan Shah",
+        "goals": 2,
+        "squad": "4s"
+      },
+      {
         "name": "Martin Jones",
         "goals": 1,
         "squad": "5s"
@@ -137,6 +142,11 @@
         "name": "Paul Bennett-Hughes",
         "goals": 1,
         "squad": "5s"
+      },
+      {
+        "name": "Samuel Winter",
+        "goals": 1,
+        "squad": "4s"
       }
     ],
     "F": [
@@ -178,7 +188,7 @@
     ]
   },
   "coverage": {
-    "results": 56,
-    "with_team_sheet": 54
+    "results": 58,
+    "with_team_sheet": 55
   }
 }

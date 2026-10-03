@@ -904,6 +904,26 @@
       }
     }
   },
+  "a6258874-5de5-4c8c-b1e3-ef14f172d8e0": {
+    "day": "2026-10-03",
+    "teams": {
+      "3d7ecaa8-5810-4721-9e4c-a8cea9ff8581": {
+        "sheet": true,
+        "scorers": [
+          {
+            "player": "009e48e87b15",
+            "name": "Sayan Shah",
+            "goals": 2
+          },
+          {
+            "player": "f7cf00cc581d",
+            "name": "Samuel Winter",
+            "goals": 1
+          }
+        ]
+      }
+    }
+  },
   "ac45fdbe-6913-4484-b399-ca5e85fbf459": {
     "day": "2026-10-03",
     "teams": {
@@ -961,6 +981,15 @@
             "goals": 1
           }
         ]
+      }
+    }
+  },
+  "fff78320-afc6-4c03-bf6f-33e3322e30b1": {
+    "day": "2026-10-03",
+    "teams": {
+      "a5b838ee-1d9d-491e-b1bb-f05388eff199": {
+        "sheet": false,
+        "scorers": []
       }
     }
   }
