@@ -234,6 +234,9 @@
         "result": "W"
       },
       {
+        "result": "W"
+      },
+      {
         "result": "L"
       },
       {
@@ -250,17 +253,20 @@
       "label": "Division 4 South West (2026-2027)"
     },
     "stats": {
-      "played": "3",
-      "won": "2",
+      "played": "4",
+      "won": "3",
       "drawn": "0",
       "lost": "1",
-      "goalsFor": "7",
-      "goalsAgainst": "2",
-      "goalDiff": "5",
-      "points": "6",
-      "ppg": "2.00"
+      "goalsFor": "11",
+      "goalsAgainst": "3",
+      "goalDiff": "8",
+      "points": "9",
+      "ppg": "2.25"
     },
     "form": [
+      {
+        "result": "W"
+      },
       {
         "result": "W"
       },
