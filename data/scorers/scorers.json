@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-03T18:55:28+00:00",
+  "generated_at": "2026-10-03T19:00:33+00:00",
   "season_label": "2026/27 season",
   "match_day": {
     "date": "2026-10-03",
@@ -38,6 +38,11 @@
         "squad": "1s"
       },
       {
+        "name": "Robert Shearer",
+        "goals": 3,
+        "squad": "1s"
+      },
+      {
         "name": "Sayan Shah",
         "goals": 3,
         "squad": "4s"
@@ -51,11 +56,6 @@
         "name": "Andrew Tyler",
         "goals": 2,
         "squad": "3s"
-      },
-      {
-        "name": "Hamish Clark",
-        "goals": 2,
-        "squad": "6s"
       }
     ],
     "F": [
@@ -124,6 +124,11 @@
         "squad": "5s"
       },
       {
+        "name": "Robert Shearer",
+        "goals": 2,
+        "squad": "1s"
+      },
+      {
         "name": "Sayan Shah",
         "goals": 2,
         "squad": "4s"
@@ -145,11 +150,6 @@
       },
       {
         "name": "Miles Brooke-Williams",
-        "goals": 1,
-        "squad": "9s"
-      },
-      {
-        "name": "Oskars Bazarovs",
         "goals": 1,
         "squad": "9s"
       }
@@ -198,7 +198,7 @@
     ]
   },
   "coverage": {
-    "results": 64,
-    "with_team_sheet": 61
+    "results": 65,
+    "with_team_sheet": 62
   }
 }

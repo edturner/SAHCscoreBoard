@@ -1059,6 +1059,26 @@
       }
     }
   },
+  "d4c0f3ff-5656-4279-b3c4-1d7f26dc52fb": {
+    "day": "2026-10-03",
+    "teams": {
+      "d2d0b65e-bf96-476b-8d38-6d28dae65a61": {
+        "sheet": true,
+        "scorers": [
+          {
+            "player": "e51c1d039e1c",
+            "name": "Robert Shearer",
+            "goals": 2
+          },
+          {
+            "player": "b711199a71f6",
+            "name": "Praven ashley Sivarajah",
+            "goals": 1
+          }
+        ]
+      }
+    }
+  },
   "db1ae0c6-8079-413c-a6dd-205a1a952d83": {
     "day": "2026-10-03",
     "teams": {
