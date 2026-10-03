@@ -835,5 +835,45 @@
         ]
       }
     }
+  },
+  "55d4cfce-813c-4ccc-b90f-0b67ab25e1d2": {
+    "day": "2026-10-03",
+    "teams": {
+      "e61f49a1-4ebb-4d1e-b346-bbfe5e7763a5": {
+        "sheet": true,
+        "scorers": [
+          {
+            "player": "379dec262df1",
+            "name": "Elizabeth Cleverly",
+            "goals": 1
+          }
+        ]
+      }
+    }
+  },
+  "ac45fdbe-6913-4484-b399-ca5e85fbf459": {
+    "day": "2026-10-03",
+    "teams": {
+      "f657d2bb-dafe-4b84-8b33-2c51c690bd5c": {
+        "sheet": true,
+        "scorers": [
+          {
+            "player": "1e9993af4621",
+            "name": "Freddie Merriden",
+            "goals": 2
+          },
+          {
+            "player": "b25bb0ef5327",
+            "name": "Martin Jones",
+            "goals": 1
+          },
+          {
+            "player": "8e75dde24f31",
+            "name": "Paul Bennett-Hughes",
+            "goals": 1
+          }
+        ]
+      }
+    }
   }
 }
