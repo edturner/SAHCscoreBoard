@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-03T13:00:22+00:00",
+  "generated_at": "2026-10-03T13:02:49+00:00",
   "season_label": "2026/27 season",
   "match_day": {
     "date": "2026-10-03",
@@ -134,11 +134,16 @@
         "name": "Elizabeth Cleverly",
         "goals": 1,
         "squad": "4s"
+      },
+      {
+        "name": "Georgia Hines",
+        "goals": 1,
+        "squad": "5s"
       }
     ]
   },
   "coverage": {
-    "results": 51,
-    "with_team_sheet": 50
+    "results": 53,
+    "with_team_sheet": 51
   }
 }

@@ -851,6 +851,15 @@
       }
     }
   },
+  "a3e328d0-d7d0-4a90-8452-15fe687b1b7d": {
+    "day": "2026-10-03",
+    "teams": {
+      "3896f4e5-7d73-483b-b735-31f976ed7312": {
+        "sheet": false,
+        "scorers": []
+      }
+    }
+  },
   "ac45fdbe-6913-4484-b399-ca5e85fbf459": {
     "day": "2026-10-03",
     "teams": {
@@ -870,6 +879,21 @@
           {
             "player": "8e75dde24f31",
             "name": "Paul Bennett-Hughes",
+            "goals": 1
+          }
+        ]
+      }
+    }
+  },
+  "fbfa52fa-39c3-4943-a672-90037d8a4617": {
+    "day": "2026-10-03",
+    "teams": {
+      "91e2a40f-fe91-4c8e-9ca6-aed40e6178b2": {
+        "sheet": true,
+        "scorers": [
+          {
+            "player": "24f5b357aeb9",
+            "name": "Georgia Hines",
             "goals": 1
           }
         ]
