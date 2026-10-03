@@ -875,8 +875,14 @@
     "day": "2026-10-03",
     "teams": {
       "1b96b793-1dd0-4e01-98b1-d07139fa44c4": {
-        "sheet": false,
-        "scorers": []
+        "sheet": true,
+        "scorers": [
+          {
+            "player": "32fa298c5197",
+            "name": "Karen Archer",
+            "goals": 2
+          }
+        ]
       }
     }
   },
