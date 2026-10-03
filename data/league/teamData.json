@@ -48,6 +48,9 @@
     },
     "form": [
       {
+        "result": "D"
+      },
+      {
         "result": "W"
       },
       {
@@ -401,17 +404,20 @@
       "label": "Division 5 South West (2026-2027)"
     },
     "stats": {
-      "played": "3",
+      "played": "4",
       "won": "1",
       "drawn": "0",
-      "lost": "2",
+      "lost": "3",
       "goalsFor": "5",
-      "goalsAgainst": "7",
-      "goalDiff": "-2",
+      "goalsAgainst": "16",
+      "goalDiff": "-11",
       "points": "3",
-      "ppg": "1.00"
+      "ppg": "0.75"
     },
     "form": [
+      {
+        "result": "L"
+      },
       {
         "result": "L"
       },
