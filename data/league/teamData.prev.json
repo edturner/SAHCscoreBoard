@@ -138,6 +138,9 @@
     },
     "form": [
       {
+        "result": "W"
+      },
+      {
         "result": "D"
       },
       {
@@ -429,6 +432,9 @@
     },
     "form": [
       {
+        "result": "D"
+      },
+      {
         "result": "W"
       },
       {
@@ -510,17 +516,20 @@
       "label": "Division 7 South West (2026-2027)"
     },
     "stats": {
-      "played": "3",
-      "won": "2",
+      "played": "4",
+      "won": "3",
       "drawn": "1",
       "lost": "0",
-      "goalsFor": "7",
+      "goalsFor": "9",
       "goalsAgainst": "3",
-      "goalDiff": "4",
-      "points": "7",
-      "ppg": "2.33"
+      "goalDiff": "6",
+      "points": "10",
+      "ppg": "2.50"
     },
     "form": [
+      {
+        "result": "W"
+      },
       {
         "result": "W"
       },
