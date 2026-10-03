@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-03T17:55:32+00:00",
+  "generated_at": "2026-10-03T18:00:31+00:00",
   "season_label": "2026/27 season",
   "match_day": {
     "date": "2026-10-03",
@@ -21,6 +21,11 @@
         "name": "Oliver Bell",
         "goals": 4,
         "squad": "3s"
+      },
+      {
+        "name": "Zakariah Mohammedbhai",
+        "goals": 4,
+        "squad": "2s"
       },
       {
         "name": "Ashley Dawes",
@@ -51,11 +56,6 @@
         "name": "Hamish Clark",
         "goals": 2,
         "squad": "6s"
-      },
-      {
-        "name": "Ian Loffler",
-        "goals": 2,
-        "squad": "4s"
       }
     ],
     "F": [
@@ -129,6 +129,11 @@
         "squad": "4s"
       },
       {
+        "name": "Zakariah Mohammedbhai",
+        "goals": 2,
+        "squad": "2s"
+      },
+      {
         "name": "Martin Jones",
         "goals": 1,
         "squad": "5s"
@@ -147,11 +152,6 @@
         "name": "Paul Bennett-Hughes",
         "goals": 1,
         "squad": "5s"
-      },
-      {
-        "name": "Samuel Winter",
-        "goals": 1,
-        "squad": "4s"
       }
     ],
     "F": [
@@ -199,6 +199,6 @@
   },
   "coverage": {
     "results": 63,
-    "with_team_sheet": 59
+    "with_team_sheet": 60
   }
 }
