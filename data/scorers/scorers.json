@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-03T18:20:26+00:00",
+  "generated_at": "2026-10-03T18:25:31+00:00",
   "season_label": "2026/27 season",
   "match_day": {
     "date": "2026-10-03",
@@ -9,7 +9,7 @@
     "M": [
       {
         "name": "Alastair Powell",
-        "goals": 4,
+        "goals": 5,
         "squad": "8s"
       },
       {
@@ -134,6 +134,11 @@
         "squad": "2s"
       },
       {
+        "name": "Alastair Powell",
+        "goals": 1,
+        "squad": "8s"
+      },
+      {
         "name": "Martin Jones",
         "goals": 1,
         "squad": "5s"
@@ -147,11 +152,6 @@
         "name": "Oskars Bazarovs",
         "goals": 1,
         "squad": "9s"
-      },
-      {
-        "name": "Paul Bennett-Hughes",
-        "goals": 1,
-        "squad": "5s"
       }
     ],
     "F": [
@@ -198,7 +198,7 @@
     ]
   },
   "coverage": {
-    "results": 63,
-    "with_team_sheet": 60
+    "results": 64,
+    "with_team_sheet": 61
   }
 }
