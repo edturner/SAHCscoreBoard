@@ -1112,8 +1112,14 @@
     "day": "2026-10-03",
     "teams": {
       "30cc8f2b-3eae-47fb-a5fb-f0b976c3d3a2": {
-        "sheet": false,
-        "scorers": []
+        "sheet": true,
+        "scorers": [
+          {
+            "player": "9e20138931e4",
+            "name": "Louise Wilding",
+            "goals": 1
+          }
+        ]
       }
     }
   },

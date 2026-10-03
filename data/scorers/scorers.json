@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-03T20:40:27+00:00",
+  "generated_at": "2026-10-03T20:45:34+00:00",
   "season_label": "2026/27 season",
   "match_day": {
     "date": "2026-10-03",
@@ -90,6 +90,11 @@
         "squad": "4s"
       },
       {
+        "name": "Louise Wilding",
+        "goals": 2,
+        "squad": "6s"
+      },
+      {
         "name": "Megan Fish",
         "goals": 2,
         "squad": "7s"
@@ -103,11 +108,6 @@
         "name": "Sophie Lamb",
         "goals": 2,
         "squad": "6s"
-      },
-      {
-        "name": "Alice Wetters",
-        "goals": 1,
-        "squad": "2s"
       }
     ]
   },
@@ -186,12 +186,12 @@
         "squad": "5s"
       },
       {
-        "name": "Marie Jones",
+        "name": "Louise Wilding",
         "goals": 1,
-        "squad": "3s"
+        "squad": "6s"
       },
       {
-        "name": "Sara Robinson",
+        "name": "Marie Jones",
         "goals": 1,
         "squad": "3s"
       }
@@ -199,6 +199,6 @@
   },
   "coverage": {
     "results": 66,
-    "with_team_sheet": 63
+    "with_team_sheet": 64
   }
 }
