@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-03T14:10:12.872217+00:00",
+  "generated_at": "2026-10-03T14:15:12.437604+00:00",
   "weekend": {
     "saturday": "2026-10-03",
     "sunday": "2026-10-04"
@@ -29,10 +29,10 @@
       "kickoff": "10:30",
       "division": "Division 7 South West",
       "location": "Home",
-      "status": "Scheduled",
+      "status": "Played",
       "fixtureId": "baf8e1a5-53bf-4d5b-bc8f-138439082ccf",
-      "home_score": null,
-      "away_score": null,
+      "home_score": 2,
+      "away_score": 0,
       "_ha": "h"
     },
     {
@@ -44,10 +44,10 @@
       "kickoff": "12:00",
       "division": "Division 2 South West",
       "location": "Home",
-      "status": "Scheduled",
+      "status": "Played",
       "fixtureId": "216517f4-338d-4a56-b936-1d62dfcb9cda",
-      "home_score": null,
-      "away_score": null,
+      "home_score": 5,
+      "away_score": 0,
       "_ha": "h"
     },
     {
@@ -211,10 +211,10 @@
       "kickoff": "12:00",
       "division": "Division 5 South West",
       "location": "Away",
-      "status": "Scheduled",
+      "status": "Played",
       "fixtureId": "529ba180-fc26-435d-824a-b459ae3ec153",
-      "home_score": null,
-      "away_score": null,
+      "home_score": 2,
+      "away_score": 2,
       "_ha": "a"
     },
     {
