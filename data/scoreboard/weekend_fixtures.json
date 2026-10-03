@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-03T19:20:16.050550+00:00",
+  "generated_at": "2026-10-03T19:25:17.674244+00:00",
   "weekend": {
     "saturday": "2026-10-03",
     "sunday": "2026-10-04"
@@ -134,10 +134,10 @@
       "kickoff": "16:30",
       "division": "Division 6 South West",
       "location": "Home",
-      "status": "Scheduled",
+      "status": "Played",
       "fixtureId": "0d1a0411-1faa-46f0-9f15-b8cb90e7ec4f",
-      "home_score": null,
-      "away_score": null,
+      "home_score": 3,
+      "away_score": 1,
       "_ha": "h"
     },
     {
@@ -149,10 +149,10 @@
       "kickoff": "18:00",
       "division": "Open - Men's Conference Midlands",
       "location": "Home",
-      "status": "Scheduled",
+      "status": "Played",
       "fixtureId": "d4c0f3ff-5656-4279-b3c4-1d7f26dc52fb",
-      "home_score": null,
-      "away_score": null,
+      "home_score": 3,
+      "away_score": 1,
       "_ha": "h"
     }
   ],

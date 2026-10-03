@@ -836,6 +836,26 @@
       }
     }
   },
+  "0d1a0411-1faa-46f0-9f15-b8cb90e7ec4f": {
+    "day": "2026-10-03",
+    "teams": {
+      "7df3c3cf-94cd-4e54-bb74-b85f0f93bcb8": {
+        "sheet": true,
+        "scorers": [
+          {
+            "player": "1abb4747a49d",
+            "name": "Fiona Coope",
+            "goals": 2
+          },
+          {
+            "player": "606392ce088b",
+            "name": "Sarah Shreeves",
+            "goals": 1
+          }
+        ]
+      }
+    }
+  },
   "216517f4-338d-4a56-b936-1d62dfcb9cda": {
     "day": "2026-10-03",
     "teams": {

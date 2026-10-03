@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-03T19:20:34+00:00",
+  "generated_at": "2026-10-03T19:25:38+00:00",
   "season_label": "2026/27 season",
   "match_day": {
     "date": "2026-10-03",
@@ -65,6 +65,11 @@
         "squad": "3s"
       },
       {
+        "name": "Fiona Coope",
+        "goals": 4,
+        "squad": "8s"
+      },
+      {
         "name": "Alicia Gibson",
         "goals": 3,
         "squad": "3s"
@@ -78,11 +83,6 @@
         "name": "Sarah Embrey",
         "goals": 3,
         "squad": "3s"
-      },
-      {
-        "name": "Fiona Coope",
-        "goals": 2,
-        "squad": "8s"
       },
       {
         "name": "Grace Franklin",
@@ -156,6 +156,11 @@
     ],
     "F": [
       {
+        "name": "Fiona Coope",
+        "goals": 2,
+        "squad": "8s"
+      },
+      {
         "name": "Karen Archer",
         "goals": 2,
         "squad": "7s"
@@ -189,16 +194,11 @@
         "name": "Sara Robinson",
         "goals": 1,
         "squad": "3s"
-      },
-      {
-        "name": "Sarah Embrey",
-        "goals": 1,
-        "squad": "3s"
       }
     ]
   },
   "coverage": {
-    "results": 65,
-    "with_team_sheet": 62
+    "results": 66,
+    "with_team_sheet": 63
   }
 }
