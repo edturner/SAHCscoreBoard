@@ -79,6 +79,9 @@
         "result": "W"
       },
       {
+        "result": "W"
+      },
+      {
         "result": "L"
       },
       {
@@ -163,17 +166,20 @@
       "label": "Division 2 South West (2026-2027)"
     },
     "stats": {
-      "played": "3",
-      "won": "3",
+      "played": "4",
+      "won": "4",
       "drawn": "0",
       "lost": "0",
-      "goalsFor": "10",
-      "goalsAgainst": "0",
-      "goalDiff": "10",
-      "points": "9",
+      "goalsFor": "15",
+      "goalsAgainst": "2",
+      "goalDiff": "13",
+      "points": "12",
       "ppg": "3.00"
     },
     "form": [
+      {
+        "result": "W"
+      },
       {
         "result": "W"
       },
@@ -460,17 +466,20 @@
       "label": "Division 6 South West (2026-2027)"
     },
     "stats": {
-      "played": "3",
+      "played": "4",
       "won": "1",
       "drawn": "0",
-      "lost": "2",
-      "goalsFor": "8",
-      "goalsAgainst": "12",
-      "goalDiff": "-4",
+      "lost": "3",
+      "goalsFor": "11",
+      "goalsAgainst": "16",
+      "goalDiff": "-5",
       "points": "3",
-      "ppg": "1.00"
+      "ppg": "0.75"
     },
     "form": [
+      {
+        "result": "L"
+      },
       {
         "result": "W"
       },
