@@ -836,6 +836,50 @@
       }
     }
   },
+  "216517f4-338d-4a56-b936-1d62dfcb9cda": {
+    "day": "2026-10-03",
+    "teams": {
+      "b00d4fe3-eacf-4b31-92cf-4ec4798eb44e": {
+        "sheet": true,
+        "scorers": [
+          {
+            "player": "f00f8a4c42b1",
+            "name": "Amy Kee",
+            "goals": 1
+          },
+          {
+            "player": "64e76cbf4dd7",
+            "name": "Marie Jones",
+            "goals": 1
+          },
+          {
+            "player": "344492f546df",
+            "name": "Annie Barratt",
+            "goals": 1
+          },
+          {
+            "player": "35a9faba67c8",
+            "name": "Sara Robinson",
+            "goals": 1
+          },
+          {
+            "player": "fabcb01c2b58",
+            "name": "Sarah Embrey",
+            "goals": 1
+          }
+        ]
+      }
+    }
+  },
+  "529ba180-fc26-435d-824a-b459ae3ec153": {
+    "day": "2026-10-03",
+    "teams": {
+      "1b96b793-1dd0-4e01-98b1-d07139fa44c4": {
+        "sheet": false,
+        "scorers": []
+      }
+    }
+  },
   "55d4cfce-813c-4ccc-b90f-0b67ab25e1d2": {
     "day": "2026-10-03",
     "teams": {
@@ -879,6 +923,26 @@
           {
             "player": "8e75dde24f31",
             "name": "Paul Bennett-Hughes",
+            "goals": 1
+          }
+        ]
+      }
+    }
+  },
+  "baf8e1a5-53bf-4d5b-bc8f-138439082ccf": {
+    "day": "2026-10-03",
+    "teams": {
+      "2d0cbcaa-ddfe-4aa9-ba90-47f28ee800e1": {
+        "sheet": true,
+        "scorers": [
+          {
+            "player": "05e0ad587a48",
+            "name": "Oskars Bazarovs",
+            "goals": 1
+          },
+          {
+            "player": "acc06786e2ec",
+            "name": "Miles Brooke-Williams",
             "goals": 1
           }
         ]

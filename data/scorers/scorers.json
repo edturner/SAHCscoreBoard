@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-03T14:02:33+00:00",
+  "generated_at": "2026-10-03T14:05:31+00:00",
   "season_label": "2026/27 season",
   "match_day": {
     "date": "2026-10-03",
@@ -60,12 +60,17 @@
     ],
     "F": [
       {
+        "name": "Annie Barratt",
+        "goals": 4,
+        "squad": "3s"
+      },
+      {
         "name": "Alicia Gibson",
         "goals": 3,
         "squad": "3s"
       },
       {
-        "name": "Annie Barratt",
+        "name": "Sarah Embrey",
         "goals": 3,
         "squad": "3s"
       },
@@ -90,11 +95,6 @@
         "squad": "3s"
       },
       {
-        "name": "Sarah Embrey",
-        "goals": 2,
-        "squad": "3s"
-      },
-      {
         "name": "Sophie Lamb",
         "goals": 2,
         "squad": "6s"
@@ -105,9 +105,9 @@
         "squad": "2s"
       },
       {
-        "name": "Carla Creasy",
+        "name": "Amy Kee",
         "goals": 1,
-        "squad": "4s"
+        "squad": "3s"
       }
     ]
   },
@@ -124,12 +124,32 @@
         "squad": "5s"
       },
       {
+        "name": "Miles Brooke-Williams",
+        "goals": 1,
+        "squad": "9s"
+      },
+      {
+        "name": "Oskars Bazarovs",
+        "goals": 1,
+        "squad": "9s"
+      },
+      {
         "name": "Paul Bennett-Hughes",
         "goals": 1,
         "squad": "5s"
       }
     ],
     "F": [
+      {
+        "name": "Amy Kee",
+        "goals": 1,
+        "squad": "3s"
+      },
+      {
+        "name": "Annie Barratt",
+        "goals": 1,
+        "squad": "3s"
+      },
       {
         "name": "Elizabeth Cleverly",
         "goals": 1,
@@ -139,11 +159,26 @@
         "name": "Georgia Hines",
         "goals": 1,
         "squad": "5s"
+      },
+      {
+        "name": "Marie Jones",
+        "goals": 1,
+        "squad": "3s"
+      },
+      {
+        "name": "Sara Robinson",
+        "goals": 1,
+        "squad": "3s"
+      },
+      {
+        "name": "Sarah Embrey",
+        "goals": 1,
+        "squad": "3s"
       }
     ]
   },
   "coverage": {
-    "results": 53,
-    "with_team_sheet": 51
+    "results": 56,
+    "with_team_sheet": 53
   }
 }
