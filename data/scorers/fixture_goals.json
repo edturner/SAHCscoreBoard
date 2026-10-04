@@ -1142,8 +1142,14 @@
     "day": "2026-10-03",
     "teams": {
       "a5b838ee-1d9d-491e-b1bb-f05388eff199": {
-        "sheet": false,
-        "scorers": []
+        "sheet": true,
+        "scorers": [
+          {
+            "player": "8cdb34b74857",
+            "name": "Sian Gill",
+            "goals": 1
+          }
+        ]
       }
     }
   }
