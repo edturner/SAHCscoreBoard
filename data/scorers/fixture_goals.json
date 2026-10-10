@@ -1166,8 +1166,19 @@
     "day": "2026-10-10",
     "teams": {
       "39486394-dad6-4e98-b4fb-6cc03cbc7910": {
-        "sheet": false,
-        "scorers": []
+        "sheet": true,
+        "scorers": [
+          {
+            "player": "98c18990eac6",
+            "name": "Adam Tyrrell",
+            "goals": 1
+          },
+          {
+            "player": "003a28bc7b95",
+            "name": "David Guy",
+            "goals": 1
+          }
+        ]
       }
     }
   }

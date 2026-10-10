@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-10T11:25:22+00:00",
+  "generated_at": "2026-10-10T11:30:19+00:00",
   "season_label": "2026/27 season",
   "match_day": {
     "date": "2026-10-10",
@@ -112,11 +112,22 @@
     ]
   },
   "match_day_scorers": {
-    "M": [],
+    "M": [
+      {
+        "name": "Adam Tyrrell",
+        "goals": 1,
+        "squad": "3s"
+      },
+      {
+        "name": "David Guy",
+        "goals": 1,
+        "squad": "3s"
+      }
+    ],
     "F": []
   },
   "coverage": {
     "results": 68,
-    "with_team_sheet": 66
+    "with_team_sheet": 67
   }
 }
