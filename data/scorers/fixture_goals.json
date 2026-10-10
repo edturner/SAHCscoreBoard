@@ -1172,8 +1172,14 @@
     "day": "2026-10-10",
     "teams": {
       "61325529-1ddf-4011-9913-2073c8f457f7": {
-        "sheet": false,
-        "scorers": []
+        "sheet": true,
+        "scorers": [
+          {
+            "player": "5ac84af401d8",
+            "name": "Andy Forshaw",
+            "goals": 1
+          }
+        ]
       }
     }
   },

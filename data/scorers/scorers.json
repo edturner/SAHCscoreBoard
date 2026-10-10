@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-10T15:10:30+00:00",
+  "generated_at": "2026-10-10T15:15:26+00:00",
   "season_label": "2026/27 season",
   "match_day": {
     "date": "2026-10-10",
@@ -134,6 +134,11 @@
         "squad": "6s"
       },
       {
+        "name": "Andy Forshaw",
+        "goals": 1,
+        "squad": "7s"
+      },
+      {
         "name": "David Guy",
         "goals": 1,
         "squad": "3s"
@@ -147,11 +152,6 @@
         "name": "Jamie Perkins",
         "goals": 1,
         "squad": "6s"
-      },
-      {
-        "name": "Jonathan Allen",
-        "goals": 1,
-        "squad": "2s"
       }
     ],
     "F": [
@@ -164,6 +164,6 @@
   },
   "coverage": {
     "results": 76,
-    "with_team_sheet": 71
+    "with_team_sheet": 72
   }
 }
