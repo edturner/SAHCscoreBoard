@@ -1245,8 +1245,19 @@
     "day": "2026-10-10",
     "teams": {
       "a5b838ee-1d9d-491e-b1bb-f05388eff199": {
-        "sheet": false,
-        "scorers": []
+        "sheet": true,
+        "scorers": [
+          {
+            "player": "3ef38a506c43",
+            "name": "Erin Hugo",
+            "goals": 2
+          },
+          {
+            "player": "6f784653b790",
+            "name": "Mya Carter",
+            "goals": 1
+          }
+        ]
       }
     }
   },
