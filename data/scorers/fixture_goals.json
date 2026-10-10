@@ -1168,6 +1168,26 @@
       }
     }
   },
+  "4c929a92-a06f-4023-950c-b5a3a5e285b0": {
+    "day": "2026-10-10",
+    "teams": {
+      "d9f0f20b-37ae-4a51-aa7c-6b4c2718da54": {
+        "sheet": true,
+        "scorers": [
+          {
+            "player": "98b7e5f8f09c",
+            "name": "Georgina Hampson",
+            "goals": 3
+          },
+          {
+            "player": "4b6038510ecc",
+            "name": "Rebecca Ellis",
+            "goals": 1
+          }
+        ]
+      }
+    }
+  },
   "526cfd57-8394-41f3-988e-d86be18d45d7": {
     "day": "2026-10-10",
     "teams": {
@@ -1205,6 +1225,15 @@
     "day": "2026-10-10",
     "teams": {
       "a5b838ee-1d9d-491e-b1bb-f05388eff199": {
+        "sheet": false,
+        "scorers": []
+      }
+    }
+  },
+  "b046e77c-e3c1-46b9-ab4a-97ff089258e9": {
+    "day": "2026-10-10",
+    "teams": {
+      "2d0cbcaa-ddfe-4aa9-ba90-47f28ee800e1": {
         "sheet": false,
         "scorers": []
       }
