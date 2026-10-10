@@ -1162,6 +1162,31 @@
       }
     }
   },
+  "cb753007-3bd5-485b-8e0d-d5a588357a37": {
+    "day": "2026-10-10",
+    "teams": {
+      "f657d2bb-dafe-4b84-8b33-2c51c690bd5c": {
+        "sheet": true,
+        "scorers": [
+          {
+            "player": "b25bb0ef5327",
+            "name": "Martin Jones",
+            "goals": 1
+          },
+          {
+            "player": "2a1e0600c110",
+            "name": "Aidan Burger",
+            "goals": 1
+          },
+          {
+            "player": "1e9993af4621",
+            "name": "Freddie Merriden",
+            "goals": 1
+          }
+        ]
+      }
+    }
+  },
   "df64df69-1591-4b45-9cf2-0afe529d4d6c": {
     "day": "2026-10-10",
     "teams": {

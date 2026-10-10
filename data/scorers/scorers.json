@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-10T12:02:22+00:00",
+  "generated_at": "2026-10-10T12:05:25+00:00",
   "season_label": "2026/27 season",
   "match_day": {
     "date": "2026-10-10",
@@ -14,7 +14,7 @@
       },
       {
         "name": "Freddie Merriden",
-        "goals": 4,
+        "goals": 5,
         "squad": "5s"
       },
       {
@@ -53,9 +53,9 @@
         "squad": "1s"
       },
       {
-        "name": "Andrew Tyler",
+        "name": "Aidan Burger",
         "goals": 2,
-        "squad": "3s"
+        "squad": "5s"
       }
     ],
     "F": [
@@ -119,15 +119,30 @@
         "squad": "3s"
       },
       {
+        "name": "Aidan Burger",
+        "goals": 1,
+        "squad": "5s"
+      },
+      {
         "name": "David Guy",
         "goals": 1,
         "squad": "3s"
+      },
+      {
+        "name": "Freddie Merriden",
+        "goals": 1,
+        "squad": "5s"
+      },
+      {
+        "name": "Martin Jones",
+        "goals": 1,
+        "squad": "5s"
       }
     ],
     "F": []
   },
   "coverage": {
-    "results": 68,
-    "with_team_sheet": 67
+    "results": 69,
+    "with_team_sheet": 68
   }
 }
