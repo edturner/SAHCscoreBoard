@@ -1153,6 +1153,21 @@
       }
     }
   },
+  "0541e9fe-3ff0-455f-815c-3feb6eeffe1a": {
+    "day": "2026-10-10",
+    "teams": {
+      "7df3c3cf-94cd-4e54-bb74-b85f0f93bcb8": {
+        "sheet": true,
+        "scorers": [
+          {
+            "player": "d9520454fd47",
+            "name": "Lou Parkes",
+            "goals": 1
+          }
+        ]
+      }
+    }
+  },
   "526cfd57-8394-41f3-988e-d86be18d45d7": {
     "day": "2026-10-10",
     "teams": {
@@ -1249,6 +1264,15 @@
     "day": "2026-10-10",
     "teams": {
       "5949dcf2-d51f-4e27-9bd3-0639e58261c6": {
+        "sheet": false,
+        "scorers": []
+      }
+    }
+  },
+  "f258d17e-d5c6-4d40-9455-19ed5600c009": {
+    "day": "2026-10-10",
+    "teams": {
+      "b00d4fe3-eacf-4b31-92cf-4ec4798eb44e": {
         "sheet": false,
         "scorers": []
       }

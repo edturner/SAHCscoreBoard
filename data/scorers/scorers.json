@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-10T15:05:25+00:00",
+  "generated_at": "2026-10-10T15:10:30+00:00",
   "season_label": "2026/27 season",
   "match_day": {
     "date": "2026-10-10",
@@ -154,10 +154,16 @@
         "squad": "2s"
       }
     ],
-    "F": []
+    "F": [
+      {
+        "name": "Lou Parkes",
+        "goals": 1,
+        "squad": "8s"
+      }
+    ]
   },
   "coverage": {
-    "results": 74,
-    "with_team_sheet": 70
+    "results": 76,
+    "with_team_sheet": 71
   }
 }
