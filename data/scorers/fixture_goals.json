@@ -1162,12 +1162,41 @@
       }
     }
   },
+  "6797acce-8251-4454-a26a-69a6bacc9ea1": {
+    "day": "2026-10-10",
+    "teams": {
+      "3d7ecaa8-5810-4721-9e4c-a8cea9ff8581": {
+        "sheet": false,
+        "scorers": []
+      }
+    }
+  },
   "b9dbfc74-5f6d-4313-b2d8-6fc888e8c119": {
     "day": "2026-10-10",
     "teams": {
       "e61f49a1-4ebb-4d1e-b346-bbfe5e7763a5": {
         "sheet": true,
         "scorers": []
+      }
+    }
+  },
+  "be5ed6a8-d971-4c52-8f87-31aa2bf80a79": {
+    "day": "2026-10-10",
+    "teams": {
+      "f1c3a876-4de3-4c99-9800-171fe4667602": {
+        "sheet": true,
+        "scorers": [
+          {
+            "player": "50576fa95b88",
+            "name": "Richard Hesketh",
+            "goals": 1
+          },
+          {
+            "player": "57942cac1991",
+            "name": "Jonathan Allen",
+            "goals": 1
+          }
+        ]
       }
     }
   },
@@ -1210,6 +1239,40 @@
           {
             "player": "003a28bc7b95",
             "name": "David Guy",
+            "goals": 1
+          }
+        ]
+      }
+    }
+  },
+  "f12a4584-e741-4f83-b270-ace640a6e803": {
+    "day": "2026-10-10",
+    "teams": {
+      "5949dcf2-d51f-4e27-9bd3-0639e58261c6": {
+        "sheet": false,
+        "scorers": []
+      }
+    }
+  },
+  "f84bce10-02eb-4824-ba1c-12d636cdaa98": {
+    "day": "2026-10-10",
+    "teams": {
+      "3896f4e5-7d73-483b-b735-31f976ed7312": {
+        "sheet": true,
+        "scorers": [
+          {
+            "player": "817fd295415a",
+            "name": "Hamish Clark",
+            "goals": 3
+          },
+          {
+            "player": "2d8a30e4d66f",
+            "name": "Jamie Perkins",
+            "goals": 1
+          },
+          {
+            "player": "da740233fd80",
+            "name": "Alistair Sykes",
             "goals": 1
           }
         ]

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-10T14:05:24+00:00",
+  "generated_at": "2026-10-10T14:07:55+00:00",
   "season_label": "2026/27 season",
   "match_day": {
     "date": "2026-10-10",
@@ -16,6 +16,11 @@
         "name": "Freddie Merriden",
         "goals": 5,
         "squad": "5s"
+      },
+      {
+        "name": "Hamish Clark",
+        "goals": 5,
+        "squad": "6s"
       },
       {
         "name": "Oliver Bell",
@@ -51,11 +56,6 @@
         "name": "Spencer Hill",
         "goals": 3,
         "squad": "1s"
-      },
-      {
-        "name": "Aidan Burger",
-        "goals": 2,
-        "squad": "5s"
       }
     ],
     "F": [
@@ -114,6 +114,11 @@
   "match_day_scorers": {
     "M": [
       {
+        "name": "Hamish Clark",
+        "goals": 3,
+        "squad": "6s"
+      },
+      {
         "name": "Adam Tyrrell",
         "goals": 1,
         "squad": "3s"
@@ -122,6 +127,11 @@
         "name": "Aidan Burger",
         "goals": 1,
         "squad": "5s"
+      },
+      {
+        "name": "Alistair Sykes",
+        "goals": 1,
+        "squad": "6s"
       },
       {
         "name": "David Guy",
@@ -134,15 +144,20 @@
         "squad": "5s"
       },
       {
-        "name": "Martin Jones",
+        "name": "Jamie Perkins",
         "goals": 1,
-        "squad": "5s"
+        "squad": "6s"
+      },
+      {
+        "name": "Jonathan Allen",
+        "goals": 1,
+        "squad": "2s"
       }
     ],
     "F": []
   },
   "coverage": {
-    "results": 70,
-    "with_team_sheet": 68
+    "results": 74,
+    "with_team_sheet": 70
   }
 }
