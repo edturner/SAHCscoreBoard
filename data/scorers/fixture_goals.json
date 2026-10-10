@@ -1216,8 +1216,19 @@
     "day": "2026-10-10",
     "teams": {
       "30cc8f2b-3eae-47fb-a5fb-f0b976c3d3a2": {
-        "sheet": false,
-        "scorers": []
+        "sheet": true,
+        "scorers": [
+          {
+            "player": "09066855cf0a",
+            "name": "Sophie Lamb",
+            "goals": 1
+          },
+          {
+            "player": "bad80511aec7",
+            "name": "Louise Jackman",
+            "goals": 1
+          }
+        ]
       }
     }
   },

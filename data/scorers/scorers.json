@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-10T18:10:28+00:00",
+  "generated_at": "2026-10-10T18:15:28+00:00",
   "season_label": "2026/27 season",
   "match_day": {
     "date": "2026-10-10",
@@ -95,6 +95,11 @@
         "squad": "3s"
       },
       {
+        "name": "Sophie Lamb",
+        "goals": 3,
+        "squad": "6s"
+      },
+      {
         "name": "Grace Franklin",
         "goals": 2,
         "squad": "4s"
@@ -103,11 +108,6 @@
         "name": "Louise Wilding",
         "goals": 2,
         "squad": "6s"
-      },
-      {
-        "name": "Megan Fish",
-        "goals": 2,
-        "squad": "7s"
       }
     ]
   },
@@ -181,14 +181,24 @@
         "squad": "8s"
       },
       {
+        "name": "Louise Jackman",
+        "goals": 1,
+        "squad": "6s"
+      },
+      {
         "name": "Rebecca Ellis",
         "goals": 1,
         "squad": "1s"
+      },
+      {
+        "name": "Sophie Lamb",
+        "goals": 1,
+        "squad": "6s"
       }
     ]
   },
   "coverage": {
     "results": 81,
-    "with_team_sheet": 75
+    "with_team_sheet": 76
   }
 }
