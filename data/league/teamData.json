@@ -107,15 +107,15 @@
       "label": "Premier Division (2026-2027)"
     },
     "stats": {
-      "played": "4",
-      "won": "1",
+      "played": "5",
+      "won": "2",
       "drawn": "0",
       "lost": "3",
-      "goalsFor": "4",
-      "goalsAgainst": "8",
-      "goalDiff": "-4",
-      "points": "3",
-      "ppg": "0.75"
+      "goalsFor": "7",
+      "goalsAgainst": "9",
+      "goalDiff": "-2",
+      "points": "6",
+      "ppg": "1.20"
     },
     "form": [
       {
@@ -141,15 +141,15 @@
       "label": "Division 2 South West (2026-2027)"
     },
     "stats": {
-      "played": "4",
-      "won": "3",
+      "played": "5",
+      "won": "4",
       "drawn": "1",
       "lost": "0",
-      "goalsFor": "20",
-      "goalsAgainst": "8",
-      "goalDiff": "12",
-      "points": "10",
-      "ppg": "2.50"
+      "goalsFor": "25",
+      "goalsAgainst": "9",
+      "goalDiff": "16",
+      "points": "13",
+      "ppg": "2.60"
     },
     "form": [
       {
@@ -326,15 +326,15 @@
       "label": "Division 3 South West (2026-2027)"
     },
     "stats": {
-      "played": "4",
+      "played": "5",
       "won": "1",
       "drawn": "1",
-      "lost": "2",
-      "goalsFor": "5",
-      "goalsAgainst": "7",
-      "goalDiff": "-2",
+      "lost": "3",
+      "goalsFor": "6",
+      "goalsAgainst": "10",
+      "goalDiff": "-4",
       "points": "4",
-      "ppg": "1.00"
+      "ppg": "0.80"
     },
     "form": [
       {
@@ -397,15 +397,15 @@
       "label": "Division 5 South West (2026-2027)"
     },
     "stats": {
-      "played": "4",
+      "played": "5",
       "won": "2",
-      "drawn": "1",
+      "drawn": "2",
       "lost": "1",
-      "goalsFor": "6",
-      "goalsAgainst": "7",
+      "goalsFor": "8",
+      "goalsAgainst": "9",
       "goalDiff": "-1",
-      "points": "7",
-      "ppg": "1.75"
+      "points": "8",
+      "ppg": "1.60"
     },
     "form": [
       {
@@ -539,15 +539,15 @@
       "label": "Division 6 South West (2026-2027)"
     },
     "stats": {
-      "played": "4",
-      "won": "2",
+      "played": "5",
+      "won": "3",
       "drawn": "0",
       "lost": "2",
-      "goalsFor": "8",
+      "goalsFor": "10",
       "goalsAgainst": "12",
-      "goalDiff": "-4",
-      "points": "6",
-      "ppg": "1.50"
+      "goalDiff": "-2",
+      "points": "9",
+      "ppg": "1.80"
     },
     "form": [
       {
