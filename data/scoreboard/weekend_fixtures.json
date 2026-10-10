@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-10T16:05:15.972692+00:00",
+  "generated_at": "2026-10-10T16:10:16.898386+00:00",
   "weekend": {
     "saturday": "2026-10-10",
     "sunday": "2026-10-11"
@@ -59,10 +59,10 @@
       "kickoff": "13:00",
       "division": "Premier Division",
       "location": "Home",
-      "status": "Scheduled",
+      "status": "Played",
       "fixtureId": "74632ad8-c523-4bc2-8c13-0cf0b32278df",
-      "home_score": null,
-      "away_score": null,
+      "home_score": 3,
+      "away_score": 1,
       "_ha": "h"
     },
     {
@@ -74,10 +74,10 @@
       "kickoff": "15:00",
       "division": "Division 3 South West",
       "location": "Home",
-      "status": "Scheduled",
+      "status": "Played",
       "fixtureId": "fc944554-f275-49ee-8e7c-fbf3f98d6697",
-      "home_score": null,
-      "away_score": null,
+      "home_score": 1,
+      "away_score": 3,
       "_ha": "h"
     },
     {
@@ -196,10 +196,10 @@
       "kickoff": "13:30",
       "division": "Division 5 South West",
       "location": "Away",
-      "status": "Scheduled",
+      "status": "Played",
       "fixtureId": "6d3e40dd-3381-4824-af0e-ffcfb1870ae7",
-      "home_score": null,
-      "away_score": null,
+      "home_score": 2,
+      "away_score": 2,
       "_ha": "a"
     },
     {

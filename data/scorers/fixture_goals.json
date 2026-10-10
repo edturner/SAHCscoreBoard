@@ -1192,6 +1192,24 @@
       }
     }
   },
+  "6d3e40dd-3381-4824-af0e-ffcfb1870ae7": {
+    "day": "2026-10-10",
+    "teams": {
+      "30cc8f2b-3eae-47fb-a5fb-f0b976c3d3a2": {
+        "sheet": false,
+        "scorers": []
+      }
+    }
+  },
+  "74632ad8-c523-4bc2-8c13-0cf0b32278df": {
+    "day": "2026-10-10",
+    "teams": {
+      "a5b838ee-1d9d-491e-b1bb-f05388eff199": {
+        "sheet": false,
+        "scorers": []
+      }
+    }
+  },
   "b9dbfc74-5f6d-4313-b2d8-6fc888e8c119": {
     "day": "2026-10-10",
     "teams": {
@@ -1314,6 +1332,21 @@
           {
             "player": "da740233fd80",
             "name": "Alistair Sykes",
+            "goals": 1
+          }
+        ]
+      }
+    }
+  },
+  "fc944554-f275-49ee-8e7c-fbf3f98d6697": {
+    "day": "2026-10-10",
+    "teams": {
+      "91e2a40f-fe91-4c8e-9ca6-aed40e6178b2": {
+        "sheet": true,
+        "scorers": [
+          {
+            "player": "f2b4648243e2",
+            "name": "Hannah Cole",
             "goals": 1
           }
         ]

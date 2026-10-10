@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-10T16:05:27+00:00",
+  "generated_at": "2026-10-10T16:10:33+00:00",
   "season_label": "2026/27 season",
   "match_day": {
     "date": "2026-10-10",
@@ -166,6 +166,11 @@
         "squad": "3s"
       },
       {
+        "name": "Hannah Cole",
+        "goals": 1,
+        "squad": "5s"
+      },
+      {
         "name": "Lou Parkes",
         "goals": 1,
         "squad": "8s"
@@ -173,7 +178,7 @@
     ]
   },
   "coverage": {
-    "results": 76,
-    "with_team_sheet": 73
+    "results": 79,
+    "with_team_sheet": 74
   }
 }
