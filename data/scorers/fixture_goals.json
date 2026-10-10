@@ -1152,5 +1152,23 @@
         ]
       }
     }
+  },
+  "b9dbfc74-5f6d-4313-b2d8-6fc888e8c119": {
+    "day": "2026-10-10",
+    "teams": {
+      "e61f49a1-4ebb-4d1e-b346-bbfe5e7763a5": {
+        "sheet": true,
+        "scorers": []
+      }
+    }
+  },
+  "df64df69-1591-4b45-9cf2-0afe529d4d6c": {
+    "day": "2026-10-10",
+    "teams": {
+      "39486394-dad6-4e98-b4fb-6cc03cbc7910": {
+        "sheet": false,
+        "scorers": []
+      }
+    }
   }
 }
