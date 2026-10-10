@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-10T15:35:25+00:00",
+  "generated_at": "2026-10-10T15:40:24+00:00",
   "season_label": "2026/27 season",
   "match_day": {
     "date": "2026-10-10",
@@ -60,6 +60,11 @@
     ],
     "F": [
       {
+        "name": "Sammie Archer-Overall",
+        "goals": 6,
+        "squad": "3s"
+      },
+      {
         "name": "Annie Barratt",
         "goals": 4,
         "squad": "3s"
@@ -98,11 +103,6 @@
         "name": "Megan Fish",
         "goals": 2,
         "squad": "7s"
-      },
-      {
-        "name": "Sammie Archer-Overall",
-        "goals": 2,
-        "squad": "3s"
       },
       {
         "name": "Sophie Lamb",
@@ -156,6 +156,16 @@
     ],
     "F": [
       {
+        "name": "Sammie Archer-Overall",
+        "goals": 4,
+        "squad": "3s"
+      },
+      {
+        "name": "Donna Pringle",
+        "goals": 1,
+        "squad": "3s"
+      },
+      {
         "name": "Lou Parkes",
         "goals": 1,
         "squad": "8s"
@@ -164,6 +174,6 @@
   },
   "coverage": {
     "results": 76,
-    "with_team_sheet": 72
+    "with_team_sheet": 73
   }
 }

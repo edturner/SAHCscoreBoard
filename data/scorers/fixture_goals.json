@@ -1279,8 +1279,19 @@
     "day": "2026-10-10",
     "teams": {
       "b00d4fe3-eacf-4b31-92cf-4ec4798eb44e": {
-        "sheet": false,
-        "scorers": []
+        "sheet": true,
+        "scorers": [
+          {
+            "player": "4ecd811e8ba4",
+            "name": "Sammie Archer-Overall",
+            "goals": 4
+          },
+          {
+            "player": "34c714a46411",
+            "name": "Donna Pringle",
+            "goals": 1
+          }
+        ]
       }
     }
   },
