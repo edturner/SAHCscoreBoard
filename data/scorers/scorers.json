@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-11T01:13:45+00:00",
+  "generated_at": "2026-10-11T05:30:15+00:00",
   "season_label": "2026/27 season",
   "match_day": {
     "date": "2026-10-10",
@@ -43,6 +43,11 @@
         "squad": "1s"
       },
       {
+        "name": "Miles Brooke-Williams",
+        "goals": 3,
+        "squad": "9s"
+      },
+      {
         "name": "Robert Shearer",
         "goals": 3,
         "squad": "1s"
@@ -51,11 +56,6 @@
         "name": "Sayan Shah",
         "goals": 3,
         "squad": "4s"
-      },
-      {
-        "name": "Spencer Hill",
-        "goals": 3,
-        "squad": "1s"
       }
     ],
     "F": [
@@ -119,6 +119,11 @@
         "squad": "6s"
       },
       {
+        "name": "Miles Brooke-Williams",
+        "goals": 2,
+        "squad": "9s"
+      },
+      {
         "name": "Adam Tyrrell",
         "goals": 1,
         "squad": "3s"
@@ -147,11 +152,6 @@
         "name": "Freddie Merriden",
         "goals": 1,
         "squad": "5s"
-      },
-      {
-        "name": "Jamie Perkins",
-        "goals": 1,
-        "squad": "6s"
       }
     ],
     "F": [
@@ -199,6 +199,6 @@
   },
   "coverage": {
     "results": 82,
-    "with_team_sheet": 78
+    "with_team_sheet": 79
   }
 }

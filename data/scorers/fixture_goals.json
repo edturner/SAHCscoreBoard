@@ -1265,8 +1265,14 @@
     "day": "2026-10-10",
     "teams": {
       "2d0cbcaa-ddfe-4aa9-ba90-47f28ee800e1": {
-        "sheet": false,
-        "scorers": []
+        "sheet": true,
+        "scorers": [
+          {
+            "player": "acc06786e2ec",
+            "name": "Miles Brooke-Williams",
+            "goals": 2
+          }
+        ]
       }
     }
   },
