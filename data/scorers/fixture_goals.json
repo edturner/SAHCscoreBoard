@@ -1360,7 +1360,7 @@
     "day": "2026-10-10",
     "teams": {
       "5949dcf2-d51f-4e27-9bd3-0639e58261c6": {
-        "sheet": false,
+        "sheet": true,
         "scorers": []
       }
     }
