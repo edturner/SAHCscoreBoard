@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-11T10:32:27+00:00",
+  "generated_at": "2026-10-11T10:45:18+00:00",
   "season_label": "2026/27 season",
   "match_day": {
     "date": "2026-10-10",
@@ -129,6 +129,11 @@
         "squad": "3s"
       },
       {
+        "name": "Adam Wells",
+        "goals": 1,
+        "squad": "4s"
+      },
+      {
         "name": "Aidan Burger",
         "goals": 1,
         "squad": "5s"
@@ -147,11 +152,6 @@
         "name": "David Guy",
         "goals": 1,
         "squad": "3s"
-      },
-      {
-        "name": "Freddie Merriden",
-        "goals": 1,
-        "squad": "5s"
       }
     ],
     "F": [
@@ -199,6 +199,6 @@
   },
   "coverage": {
     "results": 82,
-    "with_team_sheet": 79
+    "with_team_sheet": 80
   }
 }
