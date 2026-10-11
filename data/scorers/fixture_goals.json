@@ -1424,5 +1424,20 @@
         ]
       }
     }
+  },
+  "baefa194-916c-483f-8d67-247ea172bac2": {
+    "day": "2026-10-11",
+    "teams": {
+      "d2d0b65e-bf96-476b-8d38-6d28dae65a61": {
+        "sheet": true,
+        "scorers": [
+          {
+            "player": "e51c1d039e1c",
+            "name": "Robert Shearer",
+            "goals": 1
+          }
+        ]
+      }
+    }
   }
 }

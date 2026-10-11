@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-10-11T15:15:19+00:00",
+  "generated_at": "2026-10-11T15:30:23+00:00",
   "season_label": "2026/27 season",
   "match_day": {
     "date": "2026-10-10",
-    "label": "Saturday 10 October"
+    "label": "Sat 10 & Sun 11 October"
   },
   "season": {
     "M": [
@@ -28,6 +28,11 @@
         "squad": "3s"
       },
       {
+        "name": "Robert Shearer",
+        "goals": 4,
+        "squad": "1s"
+      },
+      {
         "name": "Zakariah Mohammedbhai",
         "goals": 4,
         "squad": "2s"
@@ -46,11 +51,6 @@
         "name": "Miles Brooke-Williams",
         "goals": 3,
         "squad": "9s"
-      },
-      {
-        "name": "Robert Shearer",
-        "goals": 3,
-        "squad": "1s"
       },
       {
         "name": "Sayan Shah",
@@ -198,7 +198,7 @@
     ]
   },
   "coverage": {
-    "results": 82,
-    "with_team_sheet": 81
+    "results": 83,
+    "with_team_sheet": 82
   }
 }
