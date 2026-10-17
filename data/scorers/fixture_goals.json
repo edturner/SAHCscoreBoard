@@ -1489,8 +1489,24 @@
     "day": "2026-10-17",
     "teams": {
       "d2d0b65e-bf96-476b-8d38-6d28dae65a61": {
-        "sheet": false,
-        "scorers": []
+        "sheet": true,
+        "scorers": [
+          {
+            "player": "b711199a71f6",
+            "name": "Praven ashley Sivarajah",
+            "goals": 1
+          },
+          {
+            "player": "40708d272fb6",
+            "name": "Stanley Howard",
+            "goals": 1
+          },
+          {
+            "player": "bd6d0ade0b9f",
+            "name": "Spencer Hill",
+            "goals": 1
+          }
+        ]
       }
     }
   },

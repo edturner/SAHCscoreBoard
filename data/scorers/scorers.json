@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-17T16:30:27+00:00",
+  "generated_at": "2026-10-17T16:32:30+00:00",
   "season_label": "2026/27 season",
   "match_day": {
     "date": "2026-10-17",
@@ -33,6 +33,11 @@
         "squad": "1s"
       },
       {
+        "name": "Spencer Hill",
+        "goals": 4,
+        "squad": "1s"
+      },
+      {
         "name": "Zakariah Mohammedbhai",
         "goals": 4,
         "squad": "2s"
@@ -51,11 +56,6 @@
         "name": "Jakob Plant",
         "goals": 3,
         "squad": "1s"
-      },
-      {
-        "name": "Miles Brooke-Williams",
-        "goals": 3,
-        "squad": "9s"
       }
     ],
     "F": [
@@ -139,9 +139,19 @@
         "squad": "2s"
       },
       {
+        "name": "Praven ashley Sivarajah",
+        "goals": 1,
+        "squad": "1s"
+      },
+      {
         "name": "Richard Hesketh",
         "goals": 1,
         "squad": "2s"
+      },
+      {
+        "name": "Spencer Hill",
+        "goals": 1,
+        "squad": "1s"
       }
     ],
     "F": [
@@ -189,6 +199,6 @@
   },
   "coverage": {
     "results": 98,
-    "with_team_sheet": 94
+    "with_team_sheet": 95
   }
 }
