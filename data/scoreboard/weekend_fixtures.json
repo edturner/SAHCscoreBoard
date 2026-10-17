@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-17T16:15:15.253165+00:00",
+  "generated_at": "2026-10-17T16:20:18.544505+00:00",
   "weekend": {
     "saturday": "2026-10-17",
     "sunday": "2026-10-18"
@@ -104,10 +104,10 @@
       "kickoff": "15:00",
       "division": "Division 3 South West",
       "location": "Home",
-      "status": "Scheduled",
+      "status": "Played",
       "fixtureId": "082c040f-1e68-4bcd-b9c4-abbf95c3d575",
-      "home_score": null,
-      "away_score": null,
+      "home_score": 3,
+      "away_score": 1,
       "_ha": "h"
     },
     {
@@ -119,10 +119,10 @@
       "kickoff": "15:30",
       "division": "Open - Men's Conference Midlands",
       "location": "Home",
-      "status": "Scheduled",
+      "status": "Played",
       "fixtureId": "31bfd818-35fb-45c2-b694-f26b668ae062",
-      "home_score": null,
-      "away_score": null,
+      "home_score": 3,
+      "away_score": 1,
       "_ha": "h"
     },
     {
@@ -226,10 +226,10 @@
       "kickoff": "12:30",
       "division": "Division 5 South West",
       "location": "Away",
-      "status": "Scheduled",
+      "status": "Played",
       "fixtureId": "4f267e71-3c61-4cb6-8abb-95eb74c6857c",
-      "home_score": null,
-      "away_score": null,
+      "home_score": 2,
+      "away_score": 3,
       "_ha": "a"
     },
     {
@@ -243,8 +243,8 @@
       "location": "Away",
       "status": "Played",
       "fixtureId": "afe8e332-ed2d-4def-89fc-e5717a6c7bee",
-      "home_score": 0,
-      "away_score": 4,
+      "home_score": 2,
+      "away_score": 1,
       "_ha": "a"
     },
     {
@@ -256,10 +256,10 @@
       "kickoff": "15:00",
       "division": "Division 2 South West",
       "location": "Away",
-      "status": "Scheduled",
+      "status": "Played",
       "fixtureId": "66b094dc-b549-4b74-ab0e-ed7b2eabee48",
-      "home_score": null,
-      "away_score": null,
+      "home_score": 1,
+      "away_score": 1,
       "_ha": "a"
     }
   ]
