@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-17T15:10:21+00:00",
+  "generated_at": "2026-10-17T15:15:27+00:00",
   "season_label": "2026/27 season",
   "match_day": {
     "date": "2026-10-17",
@@ -141,6 +141,11 @@
         "squad": "3s"
       },
       {
+        "name": "Catryn Langley",
+        "goals": 1,
+        "squad": "1s"
+      },
+      {
         "name": "Mya Carter",
         "goals": 1,
         "squad": "2s"
@@ -153,7 +158,7 @@
     ]
   },
   "coverage": {
-    "results": 92,
-    "with_team_sheet": 88
+    "results": 94,
+    "with_team_sheet": 89
   }
 }

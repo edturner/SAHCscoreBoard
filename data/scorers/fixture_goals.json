@@ -1440,6 +1440,15 @@
       }
     }
   },
+  "10269697-9db1-4c35-93ff-aff4a8f06a9f": {
+    "day": "2026-10-17",
+    "teams": {
+      "1b96b793-1dd0-4e01-98b1-d07139fa44c4": {
+        "sheet": false,
+        "scorers": []
+      }
+    }
+  },
   "462bb0ec-ded0-4961-a010-002f6bad83af": {
     "day": "2026-10-17",
     "teams": {
@@ -1482,6 +1491,21 @@
             "player": "c3912f4a54ff",
             "name": "Edward Burns",
             "goals": 2
+          }
+        ]
+      }
+    }
+  },
+  "8c3a5244-d027-4856-8763-091d96feed3a": {
+    "day": "2026-10-17",
+    "teams": {
+      "d9f0f20b-37ae-4a51-aa7c-6b4c2718da54": {
+        "sheet": true,
+        "scorers": [
+          {
+            "player": "062281c09966",
+            "name": "Catryn Langley",
+            "goals": 1
           }
         ]
       }
