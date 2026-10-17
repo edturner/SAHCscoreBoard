@@ -527,14 +527,14 @@
     },
     "stats": {
       "played": "6",
-      "won": "2",
+      "won": "1",
       "drawn": "0",
-      "lost": "4",
-      "goalsFor": "15",
-      "goalsAgainst": "17",
-      "goalDiff": "-2",
-      "points": "6",
-      "ppg": "1.00"
+      "lost": "5",
+      "goalsFor": "12",
+      "goalsAgainst": "19",
+      "goalDiff": "-7",
+      "points": "3",
+      "ppg": "0.50"
     },
     "form": [
       {

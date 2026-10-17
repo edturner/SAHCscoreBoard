@@ -8,17 +8,20 @@
       "label": "Open - Men's Conference Midlands (2026-2027)"
     },
     "stats": {
-      "played": "4",
-      "won": "3",
+      "played": "5",
+      "won": "4",
       "drawn": "0",
       "lost": "1",
-      "goalsFor": "13",
-      "goalsAgainst": "7",
-      "goalDiff": "6",
-      "points": "9",
-      "ppg": "2.25"
+      "goalsFor": "16",
+      "goalsAgainst": "8",
+      "goalDiff": "8",
+      "points": "12",
+      "ppg": "2.40"
     },
     "form": [
+      {
+        "result": "W"
+      },
       {
         "result": "L"
       },
@@ -264,18 +267,21 @@
       "label": "Division 2 South West (2026-2027)"
     },
     "stats": {
-      "played": "5",
+      "played": "6",
       "won": "2",
-      "drawn": "0",
+      "drawn": "1",
       "lost": "3",
-      "goalsFor": "4",
-      "goalsAgainst": "12",
+      "goalsFor": "5",
+      "goalsAgainst": "13",
       "goalDiff": "-8",
-      "points": "6",
-      "ppg": "1.20"
+      "points": "7",
+      "ppg": "1.17"
     },
     "form": [
       {
+        "result": "D"
+      },
+      {
         "result": "L"
       },
       {
@@ -283,9 +289,6 @@
       },
       {
         "result": "W"
-      },
-      {
-        "result": "L"
       },
       {
         "result": "L"
@@ -338,17 +341,20 @@
       "label": "Division 3 South West (2026-2027)"
     },
     "stats": {
-      "played": "5",
-      "won": "1",
+      "played": "6",
+      "won": "2",
       "drawn": "1",
       "lost": "3",
-      "goalsFor": "6",
-      "goalsAgainst": "10",
-      "goalDiff": "-4",
-      "points": "4",
-      "ppg": "0.80"
+      "goalsFor": "9",
+      "goalsAgainst": "11",
+      "goalDiff": "-2",
+      "points": "7",
+      "ppg": "1.17"
     },
     "form": [
+      {
+        "result": "W"
+      },
       {
         "result": "L"
       },
@@ -360,9 +366,6 @@
       },
       {
         "result": "W"
-      },
-      {
-        "result": "D"
       }
     ]
   },
@@ -390,13 +393,13 @@
         "result": "W"
       },
       {
-        "result": "L"
-      },
-      {
-        "result": "L"
-      },
-      {
         "result": "W"
+      },
+      {
+        "result": "L"
+      },
+      {
+        "result": "L"
       },
       {
         "result": "W"
@@ -535,7 +538,7 @@
     },
     "form": [
       {
-        "result": "W"
+        "result": "L"
       },
       {
         "result": "L"

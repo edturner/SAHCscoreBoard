@@ -1532,8 +1532,19 @@
     "day": "2026-10-17",
     "teams": {
       "7df3c3cf-94cd-4e54-bb74-b85f0f93bcb8": {
-        "sheet": false,
-        "scorers": []
+        "sheet": true,
+        "scorers": [
+          {
+            "player": "302beadb17d6",
+            "name": "Kate Cohen",
+            "goals": 1
+          },
+          {
+            "player": "1abb4747a49d",
+            "name": "Fiona Coope",
+            "goals": 1
+          }
+        ]
       }
     }
   },
