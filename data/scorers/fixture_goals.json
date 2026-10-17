@@ -1589,6 +1589,21 @@
       }
     }
   },
+  "7606dce7-5a19-49b1-bcad-9865b8268d4c": {
+    "day": "2026-10-17",
+    "teams": {
+      "30cc8f2b-3eae-47fb-a5fb-f0b976c3d3a2": {
+        "sheet": true,
+        "scorers": [
+          {
+            "player": "eae590242c24",
+            "name": "Jodie Carter",
+            "goals": 1
+          }
+        ]
+      }
+    }
+  },
   "7f294554-a88a-4356-92d2-d8b778d72cad": {
     "day": "2026-10-17",
     "teams": {
