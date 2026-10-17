@@ -1440,10 +1440,44 @@
       }
     }
   },
+  "082c040f-1e68-4bcd-b9c4-abbf95c3d575": {
+    "day": "2026-10-17",
+    "teams": {
+      "91e2a40f-fe91-4c8e-9ca6-aed40e6178b2": {
+        "sheet": true,
+        "scorers": [
+          {
+            "player": "32fa298c5197",
+            "name": "Karen Archer",
+            "goals": 1
+          },
+          {
+            "player": "f87164d77654",
+            "name": "Sophie Mabbs",
+            "goals": 1
+          },
+          {
+            "player": "fd96b2a5b79c",
+            "name": "Eliza Peters",
+            "goals": 1
+          }
+        ]
+      }
+    }
+  },
   "10269697-9db1-4c35-93ff-aff4a8f06a9f": {
     "day": "2026-10-17",
     "teams": {
       "1b96b793-1dd0-4e01-98b1-d07139fa44c4": {
+        "sheet": false,
+        "scorers": []
+      }
+    }
+  },
+  "31bfd818-35fb-45c2-b694-f26b668ae062": {
+    "day": "2026-10-17",
+    "teams": {
+      "d2d0b65e-bf96-476b-8d38-6d28dae65a61": {
         "sheet": false,
         "scorers": []
       }
@@ -1473,6 +1507,36 @@
       "7df3c3cf-94cd-4e54-bb74-b85f0f93bcb8": {
         "sheet": false,
         "scorers": []
+      }
+    }
+  },
+  "4f267e71-3c61-4cb6-8abb-95eb74c6857c": {
+    "day": "2026-10-17",
+    "teams": {
+      "3896f4e5-7d73-483b-b735-31f976ed7312": {
+        "sheet": true,
+        "scorers": [
+          {
+            "player": "817fd295415a",
+            "name": "Hamish Clark",
+            "goals": 2
+          }
+        ]
+      }
+    }
+  },
+  "66b094dc-b549-4b74-ab0e-ed7b2eabee48": {
+    "day": "2026-10-17",
+    "teams": {
+      "e61f49a1-4ebb-4d1e-b346-bbfe5e7763a5": {
+        "sheet": true,
+        "scorers": [
+          {
+            "player": "379dec262df1",
+            "name": "Elizabeth Cleverly",
+            "goals": 1
+          }
+        ]
       }
     }
   },
@@ -1515,8 +1579,14 @@
     "day": "2026-10-17",
     "teams": {
       "5949dcf2-d51f-4e27-9bd3-0639e58261c6": {
-        "sheet": false,
-        "scorers": []
+        "sheet": true,
+        "scorers": [
+          {
+            "player": "275f15bbfa8b",
+            "name": "Alastair Powell",
+            "goals": 1
+          }
+        ]
       }
     }
   },
