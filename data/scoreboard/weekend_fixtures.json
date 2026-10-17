@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-17T19:30:12.161795+00:00",
+  "generated_at": "2026-10-17T19:32:16.521165+00:00",
   "weekend": {
     "saturday": "2026-10-17",
     "sunday": "2026-10-18"
@@ -149,10 +149,10 @@
       "kickoff": "17:00",
       "division": "Division 4 South West",
       "location": "Home",
-      "status": "Scheduled",
+      "status": "Played",
       "fixtureId": "09343915-67ff-4308-8951-3659af7aeccf",
-      "home_score": null,
-      "away_score": null,
+      "home_score": 3,
+      "away_score": 0,
       "_ha": "h"
     }
   ],
