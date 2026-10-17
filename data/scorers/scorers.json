@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-10-17T11:10:21+00:00",
+  "generated_at": "2026-10-17T11:15:17+00:00",
   "season_label": "2026/27 season",
   "match_day": {
-    "date": "2026-10-10",
-    "label": "Sat 10 & Sun 11 October"
+    "date": "2026-10-17",
+    "label": "Saturday 17 October"
   },
   "season": {
     "M": [
@@ -112,93 +112,11 @@
     ]
   },
   "match_day_scorers": {
-    "M": [
-      {
-        "name": "Hamish Clark",
-        "goals": 3,
-        "squad": "6s"
-      },
-      {
-        "name": "Miles Brooke-Williams",
-        "goals": 2,
-        "squad": "9s"
-      },
-      {
-        "name": "Adam Tyrrell",
-        "goals": 1,
-        "squad": "3s"
-      },
-      {
-        "name": "Adam Wells",
-        "goals": 1,
-        "squad": "4s"
-      },
-      {
-        "name": "Aidan Burger",
-        "goals": 1,
-        "squad": "5s"
-      },
-      {
-        "name": "Alistair Sykes",
-        "goals": 1,
-        "squad": "6s"
-      },
-      {
-        "name": "Andy Forshaw",
-        "goals": 1,
-        "squad": "7s"
-      },
-      {
-        "name": "David Guy",
-        "goals": 1,
-        "squad": "3s"
-      }
-    ],
-    "F": [
-      {
-        "name": "Sammie Archer-Overall",
-        "goals": 4,
-        "squad": "3s"
-      },
-      {
-        "name": "Georgina Hampson",
-        "goals": 3,
-        "squad": "1s"
-      },
-      {
-        "name": "Erin Hugo",
-        "goals": 2,
-        "squad": "2s"
-      },
-      {
-        "name": "Donna Pringle",
-        "goals": 1,
-        "squad": "3s"
-      },
-      {
-        "name": "Hannah Cole",
-        "goals": 1,
-        "squad": "5s"
-      },
-      {
-        "name": "Lou Parkes",
-        "goals": 1,
-        "squad": "8s"
-      },
-      {
-        "name": "Louise Jackman",
-        "goals": 1,
-        "squad": "6s"
-      },
-      {
-        "name": "Mya Carter",
-        "goals": 1,
-        "squad": "2s"
-      }
-    ]
+    "M": [],
+    "F": []
   },
   "coverage": {
-    "results": 83,
+    "results": 84,
     "with_team_sheet": 82
   }
 }
