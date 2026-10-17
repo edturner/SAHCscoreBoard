@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-17T13:00:24+00:00",
+  "generated_at": "2026-10-17T13:02:27+00:00",
   "season_label": "2026/27 season",
   "match_day": {
     "date": "2026-10-17",
@@ -53,12 +53,17 @@
         "squad": "9s"
       },
       {
-        "name": "Sayan Shah",
+        "name": "Richard Hesketh",
         "goals": 3,
-        "squad": "4s"
+        "squad": "2s"
       }
     ],
     "F": [
+      {
+        "name": "Alicia Gibson",
+        "goals": 6,
+        "squad": "3s"
+      },
       {
         "name": "Sammie Archer-Overall",
         "goals": 6,
@@ -73,11 +78,6 @@
         "name": "Fiona Coope",
         "goals": 4,
         "squad": "8s"
-      },
-      {
-        "name": "Alicia Gibson",
-        "goals": 3,
-        "squad": "3s"
       },
       {
         "name": "Erin Hugo",
@@ -112,11 +112,33 @@
     ]
   },
   "match_day_scorers": {
-    "M": [],
-    "F": []
+    "M": [
+      {
+        "name": "Nathan Fuller",
+        "goals": 1,
+        "squad": "2s"
+      },
+      {
+        "name": "Richard Hesketh",
+        "goals": 1,
+        "squad": "2s"
+      }
+    ],
+    "F": [
+      {
+        "name": "Alicia Gibson",
+        "goals": 3,
+        "squad": "3s"
+      },
+      {
+        "name": "Sara Robinson",
+        "goals": 1,
+        "squad": "3s"
+      }
+    ]
   },
   "coverage": {
-    "results": 86,
-    "with_team_sheet": 83
+    "results": 88,
+    "with_team_sheet": 85
   }
 }

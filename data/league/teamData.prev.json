@@ -236,19 +236,19 @@
     },
     "form": [
       {
-        "result": "L"
-      },
-      {
-        "result": "W"
-      },
-      {
-        "result": "W"
-      },
-      {
-        "result": "W"
+        "result": "D"
       },
       {
         "result": "L"
+      },
+      {
+        "result": "W"
+      },
+      {
+        "result": "W"
+      },
+      {
+        "result": "W"
       }
     ]
   },
@@ -575,13 +575,13 @@
         "result": "W"
       },
       {
-        "result": "L"
-      },
-      {
-        "result": "L"
-      },
-      {
         "result": "W"
+      },
+      {
+        "result": "L"
+      },
+      {
+        "result": "L"
       }
     ]
   },
