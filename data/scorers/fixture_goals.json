@@ -1458,6 +1458,24 @@
       }
     }
   },
+  "7f294554-a88a-4356-92d2-d8b778d72cad": {
+    "day": "2026-10-17",
+    "teams": {
+      "39486394-dad6-4e98-b4fb-6cc03cbc7910": {
+        "sheet": false,
+        "scorers": []
+      }
+    }
+  },
+  "afe8e332-ed2d-4def-89fc-e5717a6c7bee": {
+    "day": "2026-10-17",
+    "teams": {
+      "5949dcf2-d51f-4e27-9bd3-0639e58261c6": {
+        "sheet": false,
+        "scorers": []
+      }
+    }
+  },
   "caa400cb-121b-40b2-ae92-15aacc41f1aa": {
     "day": "2026-10-17",
     "teams": {
@@ -1501,6 +1519,21 @@
           {
             "player": "35a9faba67c8",
             "name": "Sara Robinson",
+            "goals": 1
+          }
+        ]
+      }
+    }
+  },
+  "d46a3983-8d31-4fbc-ac1e-51b6136124cc": {
+    "day": "2026-10-17",
+    "teams": {
+      "a5b838ee-1d9d-491e-b1bb-f05388eff199": {
+        "sheet": true,
+        "scorers": [
+          {
+            "player": "6f784653b790",
+            "name": "Mya Carter",
             "goals": 1
           }
         ]
