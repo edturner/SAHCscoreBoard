@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-17T17:32:35+00:00",
+  "generated_at": "2026-10-17T17:35:24+00:00",
   "season_label": "2026/27 season",
   "match_day": {
     "date": "2026-10-17",
@@ -134,6 +134,11 @@
         "squad": "8s"
       },
       {
+        "name": "Kirushanthan Sivagnanam",
+        "goals": 1,
+        "squad": "4s"
+      },
+      {
         "name": "Nathan Fuller",
         "goals": 1,
         "squad": "2s"
@@ -147,11 +152,6 @@
         "name": "Richard Hesketh",
         "goals": 1,
         "squad": "2s"
-      },
-      {
-        "name": "Spencer Hill",
-        "goals": 1,
-        "squad": "1s"
       }
     ],
     "F": [
@@ -199,6 +199,6 @@
   },
   "coverage": {
     "results": 98,
-    "with_team_sheet": 96
+    "with_team_sheet": 97
   }
 }
