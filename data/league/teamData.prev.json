@@ -113,31 +113,31 @@
       "label": "Premier Division (2026-2027)"
     },
     "stats": {
-      "played": "5",
+      "played": "6",
       "won": "2",
-      "drawn": "0",
+      "drawn": "1",
       "lost": "3",
-      "goalsFor": "7",
-      "goalsAgainst": "9",
+      "goalsFor": "8",
+      "goalsAgainst": "10",
       "goalDiff": "-2",
-      "points": "6",
-      "ppg": "1.20"
+      "points": "7",
+      "ppg": "1.17"
     },
     "form": [
       {
-        "result": "W"
-      },
-      {
-        "result": "L"
-      },
-      {
-        "result": "L"
-      },
-      {
-        "result": "L"
+        "result": "D"
       },
       {
         "result": "W"
+      },
+      {
+        "result": "L"
+      },
+      {
+        "result": "L"
+      },
+      {
+        "result": "L"
       }
     ]
   },
@@ -150,15 +150,15 @@
       "label": "Division 2 South West (2026-2027)"
     },
     "stats": {
-      "played": "5",
-      "won": "4",
+      "played": "6",
+      "won": "5",
       "drawn": "1",
       "lost": "0",
-      "goalsFor": "25",
+      "goalsFor": "29",
       "goalsAgainst": "9",
-      "goalDiff": "16",
-      "points": "13",
-      "ppg": "2.60"
+      "goalDiff": "20",
+      "points": "16",
+      "ppg": "2.67"
     },
     "form": [
       {
@@ -199,10 +199,10 @@
     },
     "form": [
       {
-        "result": "L"
+        "result": "W"
       },
       {
-        "result": "W"
+        "result": "L"
       },
       {
         "result": "W"
@@ -532,6 +532,9 @@
     },
     "form": [
       {
+        "result": "W"
+      },
+      {
         "result": "L"
       },
       {
@@ -539,9 +542,6 @@
       },
       {
         "result": "W"
-      },
-      {
-        "result": "L"
       },
       {
         "result": "L"
