@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-17T15:02:28+00:00",
+  "generated_at": "2026-10-17T15:05:20+00:00",
   "season_label": "2026/27 season",
   "match_day": {
     "date": "2026-10-17",
@@ -43,6 +43,11 @@
         "squad": "3s"
       },
       {
+        "name": "Ed Turner",
+        "goals": 3,
+        "squad": "3s"
+      },
+      {
         "name": "Jakob Plant",
         "goals": 3,
         "squad": "1s"
@@ -51,11 +56,6 @@
         "name": "Miles Brooke-Williams",
         "goals": 3,
         "squad": "9s"
-      },
-      {
-        "name": "Richard Hesketh",
-        "goals": 3,
-        "squad": "2s"
       }
     ],
     "F": [
@@ -114,6 +114,16 @@
   "match_day_scorers": {
     "M": [
       {
+        "name": "Ed Turner",
+        "goals": 2,
+        "squad": "3s"
+      },
+      {
+        "name": "Edward Burns",
+        "goals": 2,
+        "squad": "3s"
+      },
+      {
         "name": "Nathan Fuller",
         "goals": 1,
         "squad": "2s"
@@ -144,6 +154,6 @@
   },
   "coverage": {
     "results": 92,
-    "with_team_sheet": 86
+    "with_team_sheet": 88
   }
 }

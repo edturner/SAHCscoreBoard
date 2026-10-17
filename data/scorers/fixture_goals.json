@@ -1444,7 +1444,7 @@
     "day": "2026-10-17",
     "teams": {
       "2d0cbcaa-ddfe-4aa9-ba90-47f28ee800e1": {
-        "sheet": false,
+        "sheet": true,
         "scorers": []
       }
     }
@@ -1471,8 +1471,19 @@
     "day": "2026-10-17",
     "teams": {
       "39486394-dad6-4e98-b4fb-6cc03cbc7910": {
-        "sheet": false,
-        "scorers": []
+        "sheet": true,
+        "scorers": [
+          {
+            "player": "1010a9d4295c",
+            "name": "Ed Turner",
+            "goals": 2
+          },
+          {
+            "player": "c3912f4a54ff",
+            "name": "Edward Burns",
+            "goals": 2
+          }
+        ]
       }
     }
   },
