@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-18T08:00:25+00:00",
+  "generated_at": "2026-10-18T08:15:22+00:00",
   "season_label": "2026/27 season",
   "match_day": {
     "date": "2026-10-17",
@@ -134,24 +134,24 @@
         "squad": "8s"
       },
       {
+        "name": "Benjamin West",
+        "goals": 1,
+        "squad": "5s"
+      },
+      {
+        "name": "James Durham",
+        "goals": 1,
+        "squad": "5s"
+      },
+      {
         "name": "Kirushanthan Sivagnanam",
         "goals": 1,
         "squad": "4s"
       },
       {
-        "name": "Nathan Fuller",
+        "name": "Martin Jones",
         "goals": 1,
-        "squad": "2s"
-      },
-      {
-        "name": "Praven ashley Sivarajah",
-        "goals": 1,
-        "squad": "1s"
-      },
-      {
-        "name": "Richard Hesketh",
-        "goals": 1,
-        "squad": "2s"
+        "squad": "5s"
       }
     ],
     "F": [
@@ -199,6 +199,6 @@
   },
   "coverage": {
     "results": 100,
-    "with_team_sheet": 98
+    "with_team_sheet": 99
   }
 }

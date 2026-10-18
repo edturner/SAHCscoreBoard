@@ -1469,8 +1469,24 @@
     "day": "2026-10-17",
     "teams": {
       "f657d2bb-dafe-4b84-8b33-2c51c690bd5c": {
-        "sheet": false,
-        "scorers": []
+        "sheet": true,
+        "scorers": [
+          {
+            "player": "b25bb0ef5327",
+            "name": "Martin Jones",
+            "goals": 1
+          },
+          {
+            "player": "53ed7d98e1e7",
+            "name": "Benjamin West",
+            "goals": 1
+          },
+          {
+            "player": "3c6ffea0dc16",
+            "name": "James Durham",
+            "goals": 1
+          }
+        ]
       }
     }
   },
