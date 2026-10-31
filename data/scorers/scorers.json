@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-31T13:02:22+00:00",
+  "generated_at": "2026-10-31T13:05:24+00:00",
   "season_label": "2026/27 season",
   "match_day": {
     "date": "2026-10-31",
@@ -9,7 +9,7 @@
     "M": [
       {
         "name": "Hamish Clark",
-        "goals": 7,
+        "goals": 9,
         "squad": "6s"
       },
       {
@@ -112,11 +112,32 @@
     ]
   },
   "match_day_scorers": {
-    "M": [],
+    "M": [
+      {
+        "name": "Hamish Clark",
+        "goals": 2,
+        "squad": "6s"
+      },
+      {
+        "name": "Rob Fenton",
+        "goals": 2,
+        "squad": "6s"
+      },
+      {
+        "name": "Benjamin Scott",
+        "goals": 1,
+        "squad": "6s"
+      },
+      {
+        "name": "Sandipan Chanda",
+        "goals": 1,
+        "squad": "6s"
+      }
+    ],
     "F": []
   },
   "coverage": {
-    "results": 101,
-    "with_team_sheet": 99
+    "results": 103,
+    "with_team_sheet": 100
   }
 }
