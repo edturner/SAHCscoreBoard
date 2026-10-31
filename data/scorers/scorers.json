@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-31T13:10:22+00:00",
+  "generated_at": "2026-10-31T13:15:19+00:00",
   "season_label": "2026/27 season",
   "match_day": {
     "date": "2026-10-31",
@@ -20,6 +20,11 @@
       {
         "name": "Freddie Merriden",
         "goals": 5,
+        "squad": "5s"
+      },
+      {
+        "name": "Martin Jones",
+        "goals": 4,
         "squad": "5s"
       },
       {
@@ -51,11 +56,6 @@
         "name": "Ed Turner",
         "goals": 3,
         "squad": "3s"
-      },
-      {
-        "name": "Jakob Plant",
-        "goals": 3,
-        "squad": "1s"
       }
     ],
     "F": [
@@ -129,6 +129,16 @@
         "squad": "6s"
       },
       {
+        "name": "James Durham",
+        "goals": 1,
+        "squad": "5s"
+      },
+      {
+        "name": "Martin Jones",
+        "goals": 1,
+        "squad": "5s"
+      },
+      {
         "name": "Sandipan Chanda",
         "goals": 1,
         "squad": "6s"
@@ -137,7 +147,7 @@
     "F": []
   },
   "coverage": {
-    "results": 103,
-    "with_team_sheet": 100
+    "results": 104,
+    "with_team_sheet": 101
   }
 }

@@ -1782,6 +1782,26 @@
       }
     }
   },
+  "ed9f4379-1224-439c-8b06-c38bb70a8b85": {
+    "day": "2026-10-31",
+    "teams": {
+      "f657d2bb-dafe-4b84-8b33-2c51c690bd5c": {
+        "sheet": true,
+        "scorers": [
+          {
+            "player": "3c6ffea0dc16",
+            "name": "James Durham",
+            "goals": 1
+          },
+          {
+            "player": "b25bb0ef5327",
+            "name": "Martin Jones",
+            "goals": 1
+          }
+        ]
+      }
+    }
+  },
   "f6fb692c-f90d-4357-8192-cf1c20c66fb6": {
     "day": "2026-10-31",
     "teams": {
