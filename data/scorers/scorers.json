@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-31T14:35:19+00:00",
+  "generated_at": "2026-10-31T14:40:18+00:00",
   "season_label": "2026/27 season",
   "match_day": {
     "date": "2026-10-31",
@@ -124,6 +124,11 @@
         "squad": "6s"
       },
       {
+        "name": "Andy Forshaw",
+        "goals": 1,
+        "squad": "7s"
+      },
+      {
         "name": "Benjamin Scott",
         "goals": 1,
         "squad": "6s"
@@ -139,9 +144,14 @@
         "squad": "5s"
       },
       {
-        "name": "Sandipan Chanda",
+        "name": "Matthew Stevens",
         "goals": 1,
-        "squad": "6s"
+        "squad": "7s"
+      },
+      {
+        "name": "Samuel Davey",
+        "goals": 1,
+        "squad": "7s"
       }
     ],
     "F": [
@@ -154,6 +164,6 @@
   },
   "coverage": {
     "results": 107,
-    "with_team_sheet": 103
+    "with_team_sheet": 104
   }
 }
