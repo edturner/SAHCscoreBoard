@@ -1899,8 +1899,19 @@
     "day": "2026-10-31",
     "teams": {
       "3d7ecaa8-5810-4721-9e4c-a8cea9ff8581": {
-        "sheet": false,
-        "scorers": []
+        "sheet": true,
+        "scorers": [
+          {
+            "player": "8594a6a42e32",
+            "name": "Jack Howard",
+            "goals": 1
+          },
+          {
+            "player": "f7cf00cc581d",
+            "name": "Samuel Winter",
+            "goals": 1
+          }
+        ]
       }
     }
   },

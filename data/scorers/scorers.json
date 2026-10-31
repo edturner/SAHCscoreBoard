@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-31T18:10:21+00:00",
+  "generated_at": "2026-10-31T18:15:28+00:00",
   "season_label": "2026/27 season",
   "match_day": {
     "date": "2026-10-31",
@@ -139,6 +139,11 @@
         "squad": "6s"
       },
       {
+        "name": "Jack Howard",
+        "goals": 1,
+        "squad": "4s"
+      },
+      {
         "name": "James Durham",
         "goals": 1,
         "squad": "5s"
@@ -147,11 +152,6 @@
         "name": "Martin Jones",
         "goals": 1,
         "squad": "5s"
-      },
-      {
-        "name": "Matthew Stevens",
-        "goals": 1,
-        "squad": "7s"
       }
     ],
     "F": [
@@ -199,6 +199,6 @@
   },
   "coverage": {
     "results": 113,
-    "with_team_sheet": 110
+    "with_team_sheet": 111
   }
 }
