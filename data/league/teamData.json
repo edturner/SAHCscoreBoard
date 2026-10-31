@@ -304,15 +304,15 @@
       "label": "Division 4 South West (2026-2027)"
     },
     "stats": {
-      "played": "6",
-      "won": "5",
+      "played": "7",
+      "won": "6",
       "drawn": "0",
       "lost": "1",
-      "goalsFor": "17",
-      "goalsAgainst": "4",
-      "goalDiff": "13",
-      "points": "15",
-      "ppg": "2.50"
+      "goalsFor": "19",
+      "goalsAgainst": "5",
+      "goalDiff": "14",
+      "points": "18",
+      "ppg": "2.57"
     },
     "form": [
       {
@@ -378,15 +378,15 @@
       "label": "Division 5 South West (2026-2027)"
     },
     "stats": {
-      "played": "6",
-      "won": "4",
+      "played": "7",
+      "won": "5",
       "drawn": "0",
       "lost": "2",
-      "goalsFor": "16",
+      "goalsFor": "23",
       "goalsAgainst": "11",
-      "goalDiff": "5",
-      "points": "12",
-      "ppg": "2.00"
+      "goalDiff": "12",
+      "points": "15",
+      "ppg": "2.14"
     },
     "form": [
       {
@@ -396,13 +396,13 @@
         "result": "W"
       },
       {
-        "result": "L"
-      },
-      {
-        "result": "L"
-      },
-      {
         "result": "W"
+      },
+      {
+        "result": "L"
+      },
+      {
+        "result": "L"
       }
     ]
   },
@@ -526,17 +526,20 @@
       "label": "Division 6 South West (2026-2027)"
     },
     "stats": {
-      "played": "6",
+      "played": "7",
       "won": "1",
-      "drawn": "0",
+      "drawn": "1",
       "lost": "5",
-      "goalsFor": "12",
-      "goalsAgainst": "19",
+      "goalsFor": "14",
+      "goalsAgainst": "21",
       "goalDiff": "-7",
-      "points": "3",
-      "ppg": "0.50"
+      "points": "4",
+      "ppg": "0.57"
     },
     "form": [
+      {
+        "result": "D"
+      },
       {
         "result": "L"
       },
@@ -548,9 +551,6 @@
       },
       {
         "result": "W"
-      },
-      {
-        "result": "L"
       }
     ]
   },
