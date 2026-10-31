@@ -1919,8 +1919,19 @@
     "day": "2026-10-31",
     "teams": {
       "f1c3a876-4de3-4c99-9800-171fe4667602": {
-        "sheet": false,
-        "scorers": []
+        "sheet": true,
+        "scorers": [
+          {
+            "player": "476374c90033",
+            "name": "Noah Phethean",
+            "goals": 2
+          },
+          {
+            "player": "57942cac1991",
+            "name": "Jonathan Allen",
+            "goals": 1
+          }
+        ]
       }
     }
   },

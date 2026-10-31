@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-31T18:55:22+00:00",
+  "generated_at": "2026-10-31T19:00:26+00:00",
   "season_label": "2026/27 season",
   "match_day": {
     "date": "2026-10-31",
@@ -124,6 +124,11 @@
         "squad": "6s"
       },
       {
+        "name": "Noah Phethean",
+        "goals": 2,
+        "squad": "2s"
+      },
+      {
         "name": "Rob Fenton",
         "goals": 2,
         "squad": "6s"
@@ -145,11 +150,6 @@
       },
       {
         "name": "James Durham",
-        "goals": 1,
-        "squad": "5s"
-      },
-      {
-        "name": "Martin Jones",
         "goals": 1,
         "squad": "5s"
       }
@@ -199,6 +199,6 @@
   },
   "coverage": {
     "results": 114,
-    "with_team_sheet": 111
+    "with_team_sheet": 112
   }
 }
