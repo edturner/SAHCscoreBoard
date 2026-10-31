@@ -45,31 +45,31 @@
       "label": "Women's Conference Midlands (2026-2027)"
     },
     "stats": {
-      "played": "5",
+      "played": "6",
       "won": "2",
       "drawn": "2",
-      "lost": "1",
+      "lost": "2",
       "goalsFor": "6",
-      "goalsAgainst": "3",
-      "goalDiff": "3",
+      "goalsAgainst": "7",
+      "goalDiff": "-1",
       "points": "8",
-      "ppg": "1.60"
+      "ppg": "1.33"
     },
     "form": [
       {
-        "result": "D"
-      },
-      {
-        "result": "W"
-      },
-      {
-        "result": "D"
-      },
-      {
-        "result": "W"
-      },
-      {
         "result": "L"
+      },
+      {
+        "result": "D"
+      },
+      {
+        "result": "W"
+      },
+      {
+        "result": "D"
+      },
+      {
+        "result": "W"
       }
     ]
   },
