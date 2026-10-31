@@ -1791,6 +1791,26 @@
       }
     }
   },
+  "571e6e50-a198-4396-a31e-6122dbca0a43": {
+    "day": "2026-10-31",
+    "teams": {
+      "1b96b793-1dd0-4e01-98b1-d07139fa44c4": {
+        "sheet": true,
+        "scorers": [
+          {
+            "player": "650892e4ab1a",
+            "name": "Michelle White",
+            "goals": 1
+          },
+          {
+            "player": "c06651f07987",
+            "name": "Natalie Skilbeck",
+            "goals": 1
+          }
+        ]
+      }
+    }
+  },
   "6865e825-e4ff-44d5-90da-56f24579a0a1": {
     "day": "2026-10-31",
     "teams": {
