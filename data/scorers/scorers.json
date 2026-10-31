@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-31T14:00:18+00:00",
+  "generated_at": "2026-10-31T14:02:23+00:00",
   "season_label": "2026/27 season",
   "match_day": {
     "date": "2026-10-31",
@@ -144,10 +144,16 @@
         "squad": "6s"
       }
     ],
-    "F": []
+    "F": [
+      {
+        "name": "Melanie Insall",
+        "goals": 1,
+        "squad": "4s"
+      }
+    ]
   },
   "coverage": {
-    "results": 104,
-    "with_team_sheet": 101
+    "results": 105,
+    "with_team_sheet": 102
   }
 }
