@@ -119,25 +119,25 @@
       "label": "Premier Division (2026-2027)"
     },
     "stats": {
-      "played": "6",
+      "played": "7",
       "won": "2",
       "drawn": "1",
-      "lost": "3",
-      "goalsFor": "8",
-      "goalsAgainst": "10",
-      "goalDiff": "-2",
+      "lost": "4",
+      "goalsFor": "9",
+      "goalsAgainst": "13",
+      "goalDiff": "-4",
       "points": "7",
-      "ppg": "1.17"
+      "ppg": "1.00"
     },
     "form": [
+      {
+        "result": "L"
+      },
       {
         "result": "D"
       },
       {
         "result": "W"
-      },
-      {
-        "result": "L"
       },
       {
         "result": "L"
@@ -267,17 +267,20 @@
       "label": "Division 2 South West (2026-2027)"
     },
     "stats": {
-      "played": "6",
+      "played": "7",
       "won": "2",
       "drawn": "1",
-      "lost": "3",
-      "goalsFor": "5",
-      "goalsAgainst": "13",
-      "goalDiff": "-8",
+      "lost": "4",
+      "goalsFor": "6",
+      "goalsAgainst": "16",
+      "goalDiff": "-10",
       "points": "7",
-      "ppg": "1.17"
+      "ppg": "1.00"
     },
     "form": [
+      {
+        "result": "L"
+      },
       {
         "result": "D"
       },
@@ -289,9 +292,6 @@
       },
       {
         "result": "W"
-      },
-      {
-        "result": "L"
       }
     ]
   },
@@ -341,31 +341,31 @@
       "label": "Division 3 South West (2026-2027)"
     },
     "stats": {
-      "played": "6",
+      "played": "7",
       "won": "2",
-      "drawn": "1",
+      "drawn": "2",
       "lost": "3",
       "goalsFor": "9",
       "goalsAgainst": "11",
       "goalDiff": "-2",
-      "points": "7",
-      "ppg": "1.17"
+      "points": "8",
+      "ppg": "1.14"
     },
     "form": [
       {
-        "result": "W"
-      },
-      {
-        "result": "L"
-      },
-      {
-        "result": "L"
-      },
-      {
-        "result": "L"
+        "result": "D"
       },
       {
         "result": "W"
+      },
+      {
+        "result": "L"
+      },
+      {
+        "result": "L"
+      },
+      {
+        "result": "L"
       }
     ]
   },
