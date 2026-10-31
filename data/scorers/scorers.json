@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-31T15:02:29+00:00",
+  "generated_at": "2026-10-31T15:05:29+00:00",
   "season_label": "2026/27 season",
   "match_day": {
     "date": "2026-10-31",
@@ -60,6 +60,11 @@
     ],
     "F": [
       {
+        "name": "Fiona Coope",
+        "goals": 8,
+        "squad": "8s"
+      },
+      {
         "name": "Alicia Gibson",
         "goals": 6,
         "squad": "3s"
@@ -68,11 +73,6 @@
         "name": "Sammie Archer-Overall",
         "goals": 6,
         "squad": "3s"
-      },
-      {
-        "name": "Fiona Coope",
-        "goals": 5,
-        "squad": "8s"
       },
       {
         "name": "Annie Barratt",
@@ -156,14 +156,39 @@
     ],
     "F": [
       {
+        "name": "Fiona Coope",
+        "goals": 3,
+        "squad": "8s"
+      },
+      {
+        "name": "Clare Julien",
+        "goals": 1,
+        "squad": "8s"
+      },
+      {
+        "name": "Emma Edgell",
+        "goals": 1,
+        "squad": "8s"
+      },
+      {
         "name": "Melanie Insall",
         "goals": 1,
         "squad": "4s"
+      },
+      {
+        "name": "Rebecca Balmforth",
+        "goals": 1,
+        "squad": "8s"
+      },
+      {
+        "name": "Sofia Grady-Smith",
+        "goals": 1,
+        "squad": "8s"
       }
     ]
   },
   "coverage": {
-    "results": 107,
-    "with_team_sheet": 104
+    "results": 108,
+    "with_team_sheet": 105
   }
 }

@@ -1782,6 +1782,41 @@
       }
     }
   },
+  "6865e825-e4ff-44d5-90da-56f24579a0a1": {
+    "day": "2026-10-31",
+    "teams": {
+      "7df3c3cf-94cd-4e54-bb74-b85f0f93bcb8": {
+        "sheet": true,
+        "scorers": [
+          {
+            "player": "1abb4747a49d",
+            "name": "Fiona Coope",
+            "goals": 3
+          },
+          {
+            "player": "d9201cb8762d",
+            "name": "Emma Edgell",
+            "goals": 1
+          },
+          {
+            "player": "fabc08881e5d",
+            "name": "Clare Julien",
+            "goals": 1
+          },
+          {
+            "player": "32436d0ec494",
+            "name": "Sofia Grady-Smith",
+            "goals": 1
+          },
+          {
+            "player": "6809c86728a5",
+            "name": "Rebecca Balmforth",
+            "goals": 1
+          }
+        ]
+      }
+    }
+  },
   "73149404-367f-4e26-8226-5060d7930c7d": {
     "day": "2026-10-31",
     "teams": {
