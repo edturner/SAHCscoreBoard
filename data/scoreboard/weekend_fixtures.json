@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-31T16:05:12.934470+00:00",
+  "generated_at": "2026-10-31T16:10:14.969942+00:00",
   "weekend": {
     "saturday": "2026-10-31",
     "sunday": "2026-11-01"
@@ -74,10 +74,10 @@
       "kickoff": "13:30",
       "division": "Women's Conference Midlands",
       "location": "Home",
-      "status": "Scheduled",
+      "status": "Played",
       "fixtureId": "1d2cf74a-24e8-41bb-8106-a689a16e1dd7",
-      "home_score": null,
-      "away_score": null,
+      "home_score": 0,
+      "away_score": 4,
       "_ha": "h"
     },
     {
@@ -89,10 +89,10 @@
       "kickoff": "13:30",
       "division": "Division 7 South West",
       "location": "Home",
-      "status": "Scheduled",
+      "status": "Played",
       "fixtureId": "dcbf0377-b988-40a6-bc6a-f9c9ea04bd4f",
-      "home_score": null,
-      "away_score": null,
+      "home_score": 3,
+      "away_score": 2,
       "_ha": "h"
     },
     {
@@ -211,10 +211,10 @@
       "kickoff": "13:15",
       "division": "Division 2 South West",
       "location": "Away",
-      "status": "Scheduled",
+      "status": "Played",
       "fixtureId": "9edb1159-038f-46c2-ac2d-6dd00f134343",
-      "home_score": null,
-      "away_score": null,
+      "home_score": 1,
+      "away_score": 3,
       "_ha": "a"
     },
     {
@@ -226,10 +226,10 @@
       "kickoff": "13:30",
       "division": "Division 5 South West",
       "location": "Away",
-      "status": "Scheduled",
+      "status": "Played",
       "fixtureId": "8408fc0f-a670-4bc1-9fe0-acfb936477ff",
-      "home_score": null,
-      "away_score": null,
+      "home_score": 6,
+      "away_score": 4,
       "_ha": "a"
     },
     {

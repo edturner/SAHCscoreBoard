@@ -1841,12 +1841,47 @@
       }
     }
   },
+  "9edb1159-038f-46c2-ac2d-6dd00f134343": {
+    "day": "2026-10-31",
+    "teams": {
+      "39486394-dad6-4e98-b4fb-6cc03cbc7910": {
+        "sheet": true,
+        "scorers": [
+          {
+            "player": "82352df63e3a",
+            "name": "Ashley Dawes",
+            "goals": 2
+          },
+          {
+            "player": "009e48e87b15",
+            "name": "Sayan Shah",
+            "goals": 1
+          }
+        ]
+      }
+    }
+  },
   "a056bfbb-9fc4-4692-b19d-9ad1d4994c23": {
     "day": "2026-10-31",
     "teams": {
       "91e2a40f-fe91-4c8e-9ca6-aed40e6178b2": {
         "sheet": false,
         "scorers": []
+      }
+    }
+  },
+  "dcbf0377-b988-40a6-bc6a-f9c9ea04bd4f": {
+    "day": "2026-10-31",
+    "teams": {
+      "2d0cbcaa-ddfe-4aa9-ba90-47f28ee800e1": {
+        "sheet": true,
+        "scorers": [
+          {
+            "player": "05e0ad587a48",
+            "name": "Oskars Bazarovs",
+            "goals": 1
+          }
+        ]
       }
     }
   },

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-31T16:05:20+00:00",
+  "generated_at": "2026-10-31T16:10:28+00:00",
   "season_label": "2026/27 season",
   "match_day": {
     "date": "2026-10-31",
@@ -16,6 +16,11 @@
         "name": "Alastair Powell",
         "goals": 6,
         "squad": "8s"
+      },
+      {
+        "name": "Ashley Dawes",
+        "goals": 5,
+        "squad": "3s"
       },
       {
         "name": "Freddie Merriden",
@@ -38,6 +43,11 @@
         "squad": "1s"
       },
       {
+        "name": "Sayan Shah",
+        "goals": 4,
+        "squad": "4s"
+      },
+      {
         "name": "Spencer Hill",
         "goals": 4,
         "squad": "1s"
@@ -46,16 +56,6 @@
         "name": "Zakariah Mohammedbhai",
         "goals": 4,
         "squad": "2s"
-      },
-      {
-        "name": "Ashley Dawes",
-        "goals": 3,
-        "squad": "3s"
-      },
-      {
-        "name": "Ed Turner",
-        "goals": 3,
-        "squad": "3s"
       }
     ],
     "F": [
@@ -114,6 +114,11 @@
   "match_day_scorers": {
     "M": [
       {
+        "name": "Ashley Dawes",
+        "goals": 2,
+        "squad": "3s"
+      },
+      {
         "name": "Hamish Clark",
         "goals": 2,
         "squad": "6s"
@@ -145,11 +150,6 @@
       },
       {
         "name": "Matthew Stevens",
-        "goals": 1,
-        "squad": "7s"
-      },
-      {
-        "name": "Samuel Davey",
         "goals": 1,
         "squad": "7s"
       }
@@ -188,7 +188,7 @@
     ]
   },
   "coverage": {
-    "results": 109,
-    "with_team_sheet": 106
+    "results": 111,
+    "with_team_sheet": 108
   }
 }
