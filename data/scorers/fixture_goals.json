@@ -1841,6 +1841,31 @@
       }
     }
   },
+  "8408fc0f-a670-4bc1-9fe0-acfb936477ff": {
+    "day": "2026-10-31",
+    "teams": {
+      "30cc8f2b-3eae-47fb-a5fb-f0b976c3d3a2": {
+        "sheet": true,
+        "scorers": [
+          {
+            "player": "9e20138931e4",
+            "name": "Louise Wilding",
+            "goals": 2
+          },
+          {
+            "player": "bad80511aec7",
+            "name": "Louise Jackman",
+            "goals": 1
+          },
+          {
+            "player": "7697c93bce3b",
+            "name": "Helen Anton",
+            "goals": 1
+          }
+        ]
+      }
+    }
+  },
   "9edb1159-038f-46c2-ac2d-6dd00f134343": {
     "day": "2026-10-31",
     "teams": {

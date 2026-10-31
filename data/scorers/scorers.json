@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-31T16:25:22+00:00",
+  "generated_at": "2026-10-31T16:30:23+00:00",
   "season_label": "2026/27 season",
   "match_day": {
     "date": "2026-10-31",
@@ -85,6 +85,11 @@
         "squad": "5s"
       },
       {
+        "name": "Louise Wilding",
+        "goals": 4,
+        "squad": "6s"
+      },
+      {
         "name": "Erin Hugo",
         "goals": 3,
         "squad": "2s"
@@ -103,11 +108,6 @@
         "name": "Sophie Lamb",
         "goals": 3,
         "squad": "6s"
-      },
-      {
-        "name": "Elizabeth Cleverly",
-        "goals": 2,
-        "squad": "4s"
       }
     ]
   },
@@ -161,6 +161,11 @@
         "squad": "8s"
       },
       {
+        "name": "Louise Wilding",
+        "goals": 2,
+        "squad": "6s"
+      },
+      {
         "name": "Clare Julien",
         "goals": 1,
         "squad": "8s"
@@ -171,6 +176,16 @@
         "squad": "8s"
       },
       {
+        "name": "Helen Anton",
+        "goals": 1,
+        "squad": "6s"
+      },
+      {
+        "name": "Louise Jackman",
+        "goals": 1,
+        "squad": "6s"
+      },
+      {
         "name": "Melanie Insall",
         "goals": 1,
         "squad": "4s"
@@ -179,16 +194,11 @@
         "name": "Rebecca Balmforth",
         "goals": 1,
         "squad": "8s"
-      },
-      {
-        "name": "Sofia Grady-Smith",
-        "goals": 1,
-        "squad": "8s"
       }
     ]
   },
   "coverage": {
-    "results": 111,
-    "with_team_sheet": 108
+    "results": 112,
+    "with_team_sheet": 109
   }
 }
