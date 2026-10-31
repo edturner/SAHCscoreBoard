@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-31T19:20:27+00:00",
+  "generated_at": "2026-10-31T19:25:27+00:00",
   "season_label": "2026/27 season",
   "match_day": {
     "date": "2026-10-31",
@@ -76,7 +76,7 @@
       },
       {
         "name": "Annie Barratt",
-        "goals": 4,
+        "goals": 5,
         "squad": "3s"
       },
       {
@@ -166,6 +166,11 @@
         "squad": "6s"
       },
       {
+        "name": "Annie Barratt",
+        "goals": 1,
+        "squad": "3s"
+      },
+      {
         "name": "Clare Julien",
         "goals": 1,
         "squad": "8s"
@@ -189,16 +194,11 @@
         "name": "Melanie Insall",
         "goals": 1,
         "squad": "4s"
-      },
-      {
-        "name": "Rebecca Balmforth",
-        "goals": 1,
-        "squad": "8s"
       }
     ]
   },
   "coverage": {
-    "results": 114,
-    "with_team_sheet": 112
+    "results": 115,
+    "with_team_sheet": 113
   }
 }

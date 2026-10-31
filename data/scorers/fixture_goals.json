@@ -1826,6 +1826,21 @@
       }
     }
   },
+  "71449e09-c864-4d81-a6cd-a183de6ce9b5": {
+    "day": "2026-10-31",
+    "teams": {
+      "b00d4fe3-eacf-4b31-92cf-4ec4798eb44e": {
+        "sheet": true,
+        "scorers": [
+          {
+            "player": "344492f546df",
+            "name": "Annie Barratt",
+            "goals": 1
+          }
+        ]
+      }
+    }
+  },
   "73149404-367f-4e26-8226-5060d7930c7d": {
     "day": "2026-10-31",
     "teams": {
