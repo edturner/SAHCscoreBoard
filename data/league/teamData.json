@@ -156,15 +156,15 @@
       "label": "Division 2 South West (2026-2027)"
     },
     "stats": {
-      "played": "6",
-      "won": "5",
+      "played": "7",
+      "won": "6",
       "drawn": "1",
       "lost": "0",
-      "goalsFor": "29",
-      "goalsAgainst": "9",
-      "goalDiff": "20",
-      "points": "16",
-      "ppg": "2.67"
+      "goalsFor": "32",
+      "goalsAgainst": "11",
+      "goalDiff": "21",
+      "points": "19",
+      "ppg": "2.71"
     },
     "form": [
       {
@@ -177,10 +177,10 @@
         "result": "W"
       },
       {
-        "result": "D"
+        "result": "W"
       },
       {
-        "result": "W"
+        "result": "D"
       }
     ]
   },
