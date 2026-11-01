@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-11-01T16:32:23+00:00",
+  "generated_at": "2026-11-01T16:45:20+00:00",
   "season_label": "2026/27 season",
   "match_day": {
     "date": "2026-10-31",
-    "label": "Saturday 31 October"
+    "label": "Sat 31 October & Sun 1 November"
   },
   "season": {
     "M": [
@@ -198,7 +198,7 @@
     ]
   },
   "coverage": {
-    "results": 116,
-    "with_team_sheet": 115
+    "results": 117,
+    "with_team_sheet": 116
   }
 }
