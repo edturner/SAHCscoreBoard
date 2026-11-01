@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-01T15:45:14.256349+00:00",
+  "generated_at": "2026-11-01T16:00:16.510582+00:00",
   "weekend": {
     "saturday": "2026-10-31",
     "sunday": "2026-11-01"
@@ -256,10 +256,10 @@
       "kickoff": "13:00",
       "division": "Open - Men's Conference Midlands",
       "location": "Away",
-      "status": "Scheduled",
+      "status": "Played",
       "fixtureId": "a43e4088-b10a-4ee9-941c-ebfd29266d81",
-      "home_score": null,
-      "away_score": null,
+      "home_score": 0,
+      "away_score": 0,
       "_ha": "a"
     }
   ]
