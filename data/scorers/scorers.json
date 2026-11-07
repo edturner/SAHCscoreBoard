@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-07T17:45:28+00:00",
+  "generated_at": "2026-11-07T17:50:26+00:00",
   "season_label": "2026/27 season",
   "match_day": {
     "date": "2026-11-07",
@@ -28,6 +28,16 @@
         "squad": "5s"
       },
       {
+        "name": "Oliver Bell",
+        "goals": 6,
+        "squad": "3s"
+      },
+      {
+        "name": "Sayan Shah",
+        "goals": 6,
+        "squad": "4s"
+      },
+      {
         "name": "Ashley Dawes",
         "goals": 5,
         "squad": "3s"
@@ -38,19 +48,9 @@
         "squad": "2s"
       },
       {
-        "name": "Oliver Bell",
-        "goals": 4,
-        "squad": "3s"
-      },
-      {
         "name": "Robert Shearer",
         "goals": 4,
         "squad": "1s"
-      },
-      {
-        "name": "Sayan Shah",
-        "goals": 4,
-        "squad": "4s"
       },
       {
         "name": "Spencer Hill",
@@ -124,6 +124,21 @@
         "squad": "5s"
       },
       {
+        "name": "Oliver Bell",
+        "goals": 2,
+        "squad": "3s"
+      },
+      {
+        "name": "Sayan Shah",
+        "goals": 2,
+        "squad": "3s"
+      },
+      {
+        "name": "Thomas Arden-davis",
+        "goals": 2,
+        "squad": "3s"
+      },
+      {
         "name": "James Durham",
         "goals": 1,
         "squad": "5s"
@@ -137,11 +152,6 @@
         "name": "Tom Linzell",
         "goals": 1,
         "squad": "5s"
-      },
-      {
-        "name": "Zakariah Mohammedbhai",
-        "goals": 1,
-        "squad": "2s"
       }
     ],
     "F": [
@@ -189,6 +199,6 @@
   },
   "coverage": {
     "results": 127,
-    "with_team_sheet": 124
+    "with_team_sheet": 125
   }
 }

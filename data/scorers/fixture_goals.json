@@ -2133,8 +2133,29 @@
     "day": "2026-11-07",
     "teams": {
       "39486394-dad6-4e98-b4fb-6cc03cbc7910": {
-        "sheet": false,
-        "scorers": []
+        "sheet": true,
+        "scorers": [
+          {
+            "player": "7de4cf7aa830",
+            "name": "Thomas Arden-davis",
+            "goals": 2
+          },
+          {
+            "player": "009e48e87b15",
+            "name": "Sayan Shah",
+            "goals": 2
+          },
+          {
+            "player": "d2b3d5cb7890",
+            "name": "Oliver Bell",
+            "goals": 2
+          },
+          {
+            "player": "337008402ca4",
+            "name": "William Sauve",
+            "goals": 1
+          }
+        ]
       }
     }
   },
