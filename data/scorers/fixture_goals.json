@@ -2123,6 +2123,15 @@
       }
     }
   },
+  "8d8483d2-6b65-4138-b95a-009dd991ada3": {
+    "day": "2026-11-07",
+    "teams": {
+      "39486394-dad6-4e98-b4fb-6cc03cbc7910": {
+        "sheet": false,
+        "scorers": []
+      }
+    }
+  },
   "9e3fb0df-18b9-4e9d-9d16-423966f9a6cb": {
     "day": "2026-11-07",
     "teams": {
@@ -2159,6 +2168,15 @@
             "goals": 1
           }
         ]
+      }
+    }
+  },
+  "ccfd9c41-0ff4-4b67-8762-8cbbfef9498f": {
+    "day": "2026-11-07",
+    "teams": {
+      "7df3c3cf-94cd-4e54-bb74-b85f0f93bcb8": {
+        "sheet": false,
+        "scorers": []
       }
     }
   },
