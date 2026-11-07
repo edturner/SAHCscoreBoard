@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-07T19:20:15.982547+00:00",
+  "generated_at": "2026-11-07T19:25:12.624653+00:00",
   "weekend": {
     "saturday": "2026-11-07",
     "sunday": "2026-11-08"
@@ -119,10 +119,10 @@
       "kickoff": "16:30",
       "division": "Division 5 South West",
       "location": "Home",
-      "status": "Scheduled",
+      "status": "Played",
       "fixtureId": "614ee882-b436-4b91-9b4b-9ed568991f8f",
-      "home_score": null,
-      "away_score": null,
+      "home_score": 1,
+      "away_score": 2,
       "_ha": "h"
     }
   ],
@@ -211,10 +211,10 @@
       "kickoff": "17:00",
       "division": "Open - Men's Conference Midlands",
       "location": "Away",
-      "status": "Scheduled",
+      "status": "Played",
       "fixtureId": "d4918559-781b-49da-834b-1a449d5b0cf4",
-      "home_score": null,
-      "away_score": null,
+      "home_score": 2,
+      "away_score": 5,
       "_ha": "a"
     },
     {
