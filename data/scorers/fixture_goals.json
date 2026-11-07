@@ -2114,6 +2114,35 @@
       }
     }
   },
+  "3bd86d8c-62ef-4f19-bb3c-ea1c97cb67a8": {
+    "day": "2026-11-07",
+    "teams": {
+      "b00d4fe3-eacf-4b31-92cf-4ec4798eb44e": {
+        "sheet": true,
+        "scorers": [
+          {
+            "player": "f00f8a4c42b1",
+            "name": "Amy Kee",
+            "goals": 2
+          },
+          {
+            "player": "fabcb01c2b58",
+            "name": "Sarah Embrey",
+            "goals": 2
+          },
+          {
+            "player": "344492f546df",
+            "name": "Annie Barratt",
+            "goals": 1
+          }
+        ]
+      },
+      "e61f49a1-4ebb-4d1e-b346-bbfe5e7763a5": {
+        "sheet": false,
+        "scorers": []
+      }
+    }
+  },
   "3cc2ba84-351b-4beb-8585-363d2eb59879": {
     "day": "2026-11-07",
     "teams": {

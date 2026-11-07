@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-07T17:55:21+00:00",
+  "generated_at": "2026-11-07T18:00:27+00:00",
   "season_label": "2026/27 season",
   "match_day": {
     "date": "2026-11-07",
@@ -70,19 +70,24 @@
         "squad": "3s"
       },
       {
-        "name": "Sammie Archer-Overall",
+        "name": "Annie Barratt",
         "goals": 6,
         "squad": "3s"
       },
       {
-        "name": "Annie Barratt",
-        "goals": 5,
+        "name": "Sammie Archer-Overall",
+        "goals": 6,
         "squad": "3s"
       },
       {
         "name": "Louise Wilding",
         "goals": 5,
         "squad": "6s"
+      },
+      {
+        "name": "Sarah Embrey",
+        "goals": 5,
+        "squad": "3s"
       },
       {
         "name": "Georgina Hampson",
@@ -95,19 +100,14 @@
         "squad": "5s"
       },
       {
+        "name": "Amy Kee",
+        "goals": 3,
+        "squad": "3s"
+      },
+      {
         "name": "Erin Hugo",
         "goals": 3,
         "squad": "2s"
-      },
-      {
-        "name": "Natalie Skilbeck",
-        "goals": 3,
-        "squad": "7s"
-      },
-      {
-        "name": "Sarah Embrey",
-        "goals": 3,
-        "squad": "3s"
       }
     ]
   },
@@ -156,14 +156,29 @@
     ],
     "F": [
       {
+        "name": "Amy Kee",
+        "goals": 2,
+        "squad": "3s"
+      },
+      {
         "name": "Nicola Davies",
         "goals": 2,
         "squad": "7s"
       },
       {
+        "name": "Sarah Embrey",
+        "goals": 2,
+        "squad": "3s"
+      },
+      {
         "name": "Amber Reynolds",
         "goals": 1,
         "squad": "6s"
+      },
+      {
+        "name": "Annie Barratt",
+        "goals": 1,
+        "squad": "3s"
       },
       {
         "name": "Eliza Peters",
@@ -179,26 +194,11 @@
         "name": "Jodie Carter",
         "goals": 1,
         "squad": "6s"
-      },
-      {
-        "name": "Kirsty Barber",
-        "goals": 1,
-        "squad": "1s"
-      },
-      {
-        "name": "Louise Wilding",
-        "goals": 1,
-        "squad": "6s"
-      },
-      {
-        "name": "Natalie Skilbeck",
-        "goals": 1,
-        "squad": "7s"
       }
     ]
   },
   "coverage": {
-    "results": 127,
-    "with_team_sheet": 125
+    "results": 129,
+    "with_team_sheet": 126
   }
 }
