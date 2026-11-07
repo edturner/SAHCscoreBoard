@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-07T13:20:23+00:00",
+  "generated_at": "2026-11-07T13:25:18+00:00",
   "season_label": "2026/27 season",
   "match_day": {
     "date": "2026-11-07",
@@ -100,23 +100,39 @@
         "squad": "1s"
       },
       {
+        "name": "Natalie Skilbeck",
+        "goals": 3,
+        "squad": "7s"
+      },
+      {
         "name": "Sarah Embrey",
         "goals": 3,
         "squad": "3s"
-      },
-      {
-        "name": "Sophie Lamb",
-        "goals": 3,
-        "squad": "6s"
       }
     ]
   },
   "match_day_scorers": {
     "M": [],
-    "F": []
+    "F": [
+      {
+        "name": "Nicola Davies",
+        "goals": 2,
+        "squad": "7s"
+      },
+      {
+        "name": "Natalie Skilbeck",
+        "goals": 1,
+        "squad": "7s"
+      },
+      {
+        "name": "Orla Moore",
+        "goals": 1,
+        "squad": "7s"
+      }
+    ]
   },
   "coverage": {
     "results": 118,
-    "with_team_sheet": 116
+    "with_team_sheet": 117
   }
 }

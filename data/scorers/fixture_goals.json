@@ -2058,8 +2058,24 @@
     "day": "2026-11-07",
     "teams": {
       "1b96b793-1dd0-4e01-98b1-d07139fa44c4": {
-        "sheet": false,
-        "scorers": []
+        "sheet": true,
+        "scorers": [
+          {
+            "player": "952af78bf0df",
+            "name": "Nicola Davies",
+            "goals": 2
+          },
+          {
+            "player": "c06651f07987",
+            "name": "Natalie Skilbeck",
+            "goals": 1
+          },
+          {
+            "player": "5606c199a60c",
+            "name": "Orla Moore",
+            "goals": 1
+          }
+        ]
       }
     }
   }
