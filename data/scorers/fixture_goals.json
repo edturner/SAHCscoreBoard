@@ -2182,6 +2182,15 @@
       }
     }
   },
+  "7d2d1646-dbd2-4173-81ea-f9fb4d472b2a": {
+    "day": "2026-11-07",
+    "teams": {
+      "3d7ecaa8-5810-4721-9e4c-a8cea9ff8581": {
+        "sheet": false,
+        "scorers": []
+      }
+    }
+  },
   "8d8483d2-6b65-4138-b95a-009dd991ada3": {
     "day": "2026-11-07",
     "teams": {
@@ -2262,6 +2271,15 @@
     "teams": {
       "7df3c3cf-94cd-4e54-bb74-b85f0f93bcb8": {
         "sheet": true,
+        "scorers": []
+      }
+    }
+  },
+  "d4918559-781b-49da-834b-1a449d5b0cf4": {
+    "day": "2026-11-07",
+    "teams": {
+      "d2d0b65e-bf96-476b-8d38-6d28dae65a61": {
+        "sheet": false,
         "scorers": []
       }
     }
