@@ -156,15 +156,15 @@
       "label": "Division 2 South West (2026-2027)"
     },
     "stats": {
-      "played": "7",
-      "won": "6",
+      "played": "8",
+      "won": "7",
       "drawn": "1",
       "lost": "0",
-      "goalsFor": "32",
+      "goalsFor": "37",
       "goalsAgainst": "11",
-      "goalDiff": "21",
-      "points": "19",
-      "ppg": "2.71"
+      "goalDiff": "26",
+      "points": "22",
+      "ppg": "2.75"
     },
     "form": [
       {
@@ -193,15 +193,15 @@
       "label": "Division 2 South West (2026-2027)"
     },
     "stats": {
-      "played": "7",
-      "won": "6",
+      "played": "8",
+      "won": "7",
       "drawn": "0",
       "lost": "1",
-      "goalsFor": "24",
-      "goalsAgainst": "8",
-      "goalDiff": "16",
-      "points": "18",
-      "ppg": "2.57"
+      "goalsFor": "31",
+      "goalsAgainst": "12",
+      "goalDiff": "19",
+      "points": "21",
+      "ppg": "2.62"
     },
     "form": [
       {
@@ -211,10 +211,10 @@
         "result": "W"
       },
       {
-        "result": "L"
+        "result": "W"
       },
       {
-        "result": "W"
+        "result": "L"
       },
       {
         "result": "W"
@@ -267,15 +267,15 @@
       "label": "Division 2 South West (2026-2027)"
     },
     "stats": {
-      "played": "7",
+      "played": "8",
       "won": "2",
       "drawn": "1",
-      "lost": "4",
+      "lost": "5",
       "goalsFor": "6",
-      "goalsAgainst": "16",
-      "goalDiff": "-10",
+      "goalsAgainst": "21",
+      "goalDiff": "-15",
       "points": "7",
-      "ppg": "1.00"
+      "ppg": "0.88"
     },
     "form": [
       {
@@ -563,31 +563,31 @@
       "label": "Division 6 South West (2026-2027)"
     },
     "stats": {
-      "played": "7",
+      "played": "8",
       "won": "5",
       "drawn": "0",
-      "lost": "2",
+      "lost": "3",
       "goalsFor": "24",
-      "goalsAgainst": "13",
-      "goalDiff": "11",
+      "goalsAgainst": "15",
+      "goalDiff": "9",
       "points": "15",
-      "ppg": "2.14"
+      "ppg": "1.88"
     },
     "form": [
       {
-        "result": "W"
-      },
-      {
-        "result": "W"
-      },
-      {
-        "result": "W"
-      },
-      {
-        "result": "W"
-      },
-      {
         "result": "L"
+      },
+      {
+        "result": "W"
+      },
+      {
+        "result": "W"
+      },
+      {
+        "result": "W"
+      },
+      {
+        "result": "W"
       }
     ]
   },
