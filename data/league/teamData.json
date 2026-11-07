@@ -180,7 +180,7 @@
         "result": "W"
       },
       {
-        "result": "D"
+        "result": "W"
       }
     ]
   },
@@ -282,13 +282,13 @@
         "result": "L"
       },
       {
+        "result": "L"
+      },
+      {
         "result": "D"
       },
       {
         "result": "L"
-      },
-      {
-        "result": "W"
       },
       {
         "result": "W"
