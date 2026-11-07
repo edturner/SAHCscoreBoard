@@ -390,19 +390,19 @@
     },
     "form": [
       {
-        "result": "W"
-      },
-      {
-        "result": "W"
-      },
-      {
-        "result": "W"
-      },
-      {
         "result": "L"
       },
       {
         "result": "L"
+      },
+      {
+        "result": "W"
+      },
+      {
+        "result": "W"
+      },
+      {
+        "result": "W"
       }
     ]
   },
@@ -464,6 +464,12 @@
     },
     "form": [
       {
+        "result": "W"
+      },
+      {
+        "result": "W"
+      },
+      {
         "result": "D"
       },
       {
@@ -471,12 +477,6 @@
       },
       {
         "result": "D"
-      },
-      {
-        "result": "L"
-      },
-      {
-        "result": "L"
       }
     ]
   },
