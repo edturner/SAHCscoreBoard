@@ -2192,8 +2192,14 @@
     "day": "2026-11-07",
     "teams": {
       "a5b838ee-1d9d-491e-b1bb-f05388eff199": {
-        "sheet": false,
-        "scorers": []
+        "sheet": true,
+        "scorers": [
+          {
+            "player": "7293852ce64b",
+            "name": "Joni Gorman",
+            "goals": 1
+          }
+        ]
       }
     }
   },
