@@ -2114,6 +2114,26 @@
       }
     }
   },
+  "f58e8aed-9f0b-47c1-ada2-80146128dd5b": {
+    "day": "2026-11-07",
+    "teams": {
+      "d9f0f20b-37ae-4a51-aa7c-6b4c2718da54": {
+        "sheet": true,
+        "scorers": [
+          {
+            "player": "519e224cc839",
+            "name": "Kirsty Barber",
+            "goals": 1
+          },
+          {
+            "player": "98b7e5f8f09c",
+            "name": "Georgina Hampson",
+            "goals": 1
+          }
+        ]
+      }
+    }
+  },
   "f5bb1f3e-fb1d-410c-8899-719fa225e3de": {
     "day": "2026-11-07",
     "teams": {
