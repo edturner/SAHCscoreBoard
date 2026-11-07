@@ -45,17 +45,20 @@
       "label": "Women's Conference Midlands (2026-2027)"
     },
     "stats": {
-      "played": "6",
-      "won": "2",
+      "played": "7",
+      "won": "3",
       "drawn": "2",
       "lost": "2",
-      "goalsFor": "6",
-      "goalsAgainst": "7",
-      "goalDiff": "-1",
-      "points": "8",
-      "ppg": "1.33"
+      "goalsFor": "8",
+      "goalsAgainst": "8",
+      "goalDiff": "0",
+      "points": "11",
+      "ppg": "1.57"
     },
     "form": [
+      {
+        "result": "W"
+      },
       {
         "result": "L"
       },
@@ -67,9 +70,6 @@
       },
       {
         "result": "D"
-      },
-      {
-        "result": "W"
       }
     ]
   },
@@ -82,17 +82,20 @@
       "label": "Premier Division (2026-2027)"
     },
     "stats": {
-      "played": "7",
+      "played": "8",
       "won": "2",
       "drawn": "2",
-      "lost": "3",
-      "goalsFor": "13",
-      "goalsAgainst": "16",
-      "goalDiff": "-3",
+      "lost": "4",
+      "goalsFor": "14",
+      "goalsAgainst": "19",
+      "goalDiff": "-5",
       "points": "8",
-      "ppg": "1.14"
+      "ppg": "1.00"
     },
     "form": [
+      {
+        "result": "L"
+      },
       {
         "result": "D"
       },
@@ -101,9 +104,6 @@
       },
       {
         "result": "L"
-      },
-      {
-        "result": "W"
       },
       {
         "result": "W"
@@ -119,15 +119,15 @@
       "label": "Premier Division (2026-2027)"
     },
     "stats": {
-      "played": "7",
+      "played": "8",
       "won": "2",
       "drawn": "1",
-      "lost": "4",
-      "goalsFor": "9",
-      "goalsAgainst": "13",
-      "goalDiff": "-4",
+      "lost": "5",
+      "goalsFor": "10",
+      "goalsAgainst": "15",
+      "goalDiff": "-5",
       "points": "7",
-      "ppg": "1.00"
+      "ppg": "0.88"
     },
     "form": [
       {
@@ -427,6 +427,9 @@
     },
     "form": [
       {
+        "result": "W"
+      },
+      {
         "result": "L"
       },
       {
@@ -437,9 +440,6 @@
       },
       {
         "result": "L"
-      },
-      {
-        "result": "W"
       }
     ]
   },
@@ -526,17 +526,20 @@
       "label": "Division 6 South West (2026-2027)"
     },
     "stats": {
-      "played": "7",
-      "won": "1",
+      "played": "8",
+      "won": "2",
       "drawn": "1",
       "lost": "5",
-      "goalsFor": "14",
+      "goalsFor": "15",
       "goalsAgainst": "21",
-      "goalDiff": "-7",
-      "points": "4",
-      "ppg": "0.57"
+      "goalDiff": "-6",
+      "points": "7",
+      "ppg": "0.88"
     },
     "form": [
+      {
+        "result": "W"
+      },
       {
         "result": "D"
       },
@@ -548,9 +551,6 @@
       },
       {
         "result": "L"
-      },
-      {
-        "result": "W"
       }
     ]
   },
