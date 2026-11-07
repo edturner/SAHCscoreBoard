@@ -2054,6 +2054,66 @@
       }
     }
   },
+  "171922a5-3538-4eff-8519-62bef6c9d577": {
+    "day": "2026-11-07",
+    "teams": {
+      "f1c3a876-4de3-4c99-9800-171fe4667602": {
+        "sheet": true,
+        "scorers": [
+          {
+            "player": "504ba486860e",
+            "name": "Zakariah Mohammedbhai",
+            "goals": 1
+          }
+        ]
+      }
+    }
+  },
+  "1e34d563-008e-487a-9a74-418d9d1ba6bb": {
+    "day": "2026-11-07",
+    "teams": {
+      "5949dcf2-d51f-4e27-9bd3-0639e58261c6": {
+        "sheet": true,
+        "scorers": [
+          {
+            "player": "294d3964f81f",
+            "name": "James Williams",
+            "goals": 1
+          }
+        ]
+      }
+    }
+  },
+  "c764a8b3-31b9-4192-ad99-1f70236f7bec": {
+    "day": "2026-11-07",
+    "teams": {
+      "30cc8f2b-3eae-47fb-a5fb-f0b976c3d3a2": {
+        "sheet": true,
+        "scorers": [
+          {
+            "player": "efcb4c3346c6",
+            "name": "Amber Reynolds",
+            "goals": 1
+          },
+          {
+            "player": "e6546ef1dfb9",
+            "name": "Sian Ireland",
+            "goals": 1
+          },
+          {
+            "player": "9e20138931e4",
+            "name": "Louise Wilding",
+            "goals": 1
+          },
+          {
+            "player": "eae590242c24",
+            "name": "Jodie Carter",
+            "goals": 1
+          }
+        ]
+      }
+    }
+  },
   "f5bb1f3e-fb1d-410c-8899-719fa225e3de": {
     "day": "2026-11-07",
     "teams": {
