@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-11-07T12:00:24+00:00",
+  "generated_at": "2026-11-07T12:02:26+00:00",
   "season_label": "2026/27 season",
   "match_day": {
-    "date": "2026-10-31",
-    "label": "Sat 31 October & Sun 1 November"
+    "date": "2026-11-07",
+    "label": "Saturday 7 November"
   },
   "season": {
     "M": [
@@ -112,93 +112,11 @@
     ]
   },
   "match_day_scorers": {
-    "M": [
-      {
-        "name": "Ashley Dawes",
-        "goals": 2,
-        "squad": "3s"
-      },
-      {
-        "name": "Hamish Clark",
-        "goals": 2,
-        "squad": "6s"
-      },
-      {
-        "name": "Noah Phethean",
-        "goals": 2,
-        "squad": "2s"
-      },
-      {
-        "name": "Rob Fenton",
-        "goals": 2,
-        "squad": "6s"
-      },
-      {
-        "name": "Andy Forshaw",
-        "goals": 1,
-        "squad": "7s"
-      },
-      {
-        "name": "Benjamin Scott",
-        "goals": 1,
-        "squad": "6s"
-      },
-      {
-        "name": "Jack Howard",
-        "goals": 1,
-        "squad": "4s"
-      },
-      {
-        "name": "James Durham",
-        "goals": 1,
-        "squad": "5s"
-      }
-    ],
-    "F": [
-      {
-        "name": "Fiona Coope",
-        "goals": 3,
-        "squad": "8s"
-      },
-      {
-        "name": "Louise Wilding",
-        "goals": 2,
-        "squad": "6s"
-      },
-      {
-        "name": "Annie Barratt",
-        "goals": 1,
-        "squad": "3s"
-      },
-      {
-        "name": "Clare Julien",
-        "goals": 1,
-        "squad": "8s"
-      },
-      {
-        "name": "Emma Edgell",
-        "goals": 1,
-        "squad": "8s"
-      },
-      {
-        "name": "Helen Anton",
-        "goals": 1,
-        "squad": "6s"
-      },
-      {
-        "name": "Louise Jackman",
-        "goals": 1,
-        "squad": "6s"
-      },
-      {
-        "name": "Melanie Insall",
-        "goals": 1,
-        "squad": "4s"
-      }
-    ]
+    "M": [],
+    "F": []
   },
   "coverage": {
-    "results": 117,
+    "results": 118,
     "with_team_sheet": 116
   }
 }
