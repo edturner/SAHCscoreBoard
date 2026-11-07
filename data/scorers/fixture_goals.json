@@ -2158,6 +2158,30 @@
       }
     }
   },
+  "614ee882-b436-4b91-9b4b-9ed568991f8f": {
+    "day": "2026-11-07",
+    "teams": {
+      "3896f4e5-7d73-483b-b735-31f976ed7312": {
+        "sheet": false,
+        "scorers": []
+      },
+      "61325529-1ddf-4011-9913-2073c8f457f7": {
+        "sheet": true,
+        "scorers": [
+          {
+            "player": "bea7ff29b7a5",
+            "name": "Samuel Davey",
+            "goals": 1
+          },
+          {
+            "player": "354dd1aa7218",
+            "name": "Darren Brown",
+            "goals": 1
+          }
+        ]
+      }
+    }
+  },
   "8d8483d2-6b65-4138-b95a-009dd991ada3": {
     "day": "2026-11-07",
     "teams": {

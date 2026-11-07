@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-07T19:10:28+00:00",
+  "generated_at": "2026-11-07T19:15:34+00:00",
   "season_label": "2026/27 season",
   "match_day": {
     "date": "2026-11-07",
@@ -139,6 +139,11 @@
         "squad": "3s"
       },
       {
+        "name": "Darren Brown",
+        "goals": 1,
+        "squad": "7s"
+      },
+      {
         "name": "James Durham",
         "goals": 1,
         "squad": "5s"
@@ -147,11 +152,6 @@
         "name": "James Williams",
         "goals": 1,
         "squad": "8s"
-      },
-      {
-        "name": "Tom Linzell",
-        "goals": 1,
-        "squad": "5s"
       }
     ],
     "F": [
@@ -198,7 +198,7 @@
     ]
   },
   "coverage": {
-    "results": 129,
-    "with_team_sheet": 127
+    "results": 131,
+    "with_team_sheet": 128
   }
 }
