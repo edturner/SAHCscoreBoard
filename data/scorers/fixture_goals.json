@@ -2118,8 +2118,14 @@
     "day": "2026-11-07",
     "teams": {
       "91e2a40f-fe91-4c8e-9ca6-aed40e6178b2": {
-        "sheet": false,
-        "scorers": []
+        "sheet": true,
+        "scorers": [
+          {
+            "player": "fd96b2a5b79c",
+            "name": "Eliza Peters",
+            "goals": 1
+          }
+        ]
       }
     }
   },
