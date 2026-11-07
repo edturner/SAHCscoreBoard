@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-07T16:40:25+00:00",
+  "generated_at": "2026-11-07T16:45:23+00:00",
   "season_label": "2026/27 season",
   "match_day": {
     "date": "2026-11-07",
@@ -13,9 +13,19 @@
         "squad": "6s"
       },
       {
+        "name": "Freddie Merriden",
+        "goals": 7,
+        "squad": "5s"
+      },
+      {
         "name": "Alastair Powell",
         "goals": 6,
         "squad": "8s"
+      },
+      {
+        "name": "Martin Jones",
+        "goals": 6,
+        "squad": "5s"
       },
       {
         "name": "Ashley Dawes",
@@ -23,19 +33,9 @@
         "squad": "3s"
       },
       {
-        "name": "Freddie Merriden",
-        "goals": 5,
-        "squad": "5s"
-      },
-      {
         "name": "Zakariah Mohammedbhai",
         "goals": 5,
         "squad": "2s"
-      },
-      {
-        "name": "Martin Jones",
-        "goals": 4,
-        "squad": "5s"
       },
       {
         "name": "Oliver Bell",
@@ -114,9 +114,29 @@
   "match_day_scorers": {
     "M": [
       {
+        "name": "Freddie Merriden",
+        "goals": 2,
+        "squad": "5s"
+      },
+      {
+        "name": "Martin Jones",
+        "goals": 2,
+        "squad": "5s"
+      },
+      {
+        "name": "James Durham",
+        "goals": 1,
+        "squad": "5s"
+      },
+      {
         "name": "James Williams",
         "goals": 1,
         "squad": "8s"
+      },
+      {
+        "name": "Tom Linzell",
+        "goals": 1,
+        "squad": "5s"
       },
       {
         "name": "Zakariah Mohammedbhai",
@@ -169,6 +189,6 @@
   },
   "coverage": {
     "results": 125,
-    "with_team_sheet": 121
+    "with_team_sheet": 122
   }
 }
