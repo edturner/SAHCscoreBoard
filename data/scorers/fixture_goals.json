@@ -2162,8 +2162,14 @@
     "day": "2026-11-07",
     "teams": {
       "3896f4e5-7d73-483b-b735-31f976ed7312": {
-        "sheet": false,
-        "scorers": []
+        "sheet": true,
+        "scorers": [
+          {
+            "player": "c384219def05",
+            "name": "Jamie Rowland",
+            "goals": 1
+          }
+        ]
       },
       "61325529-1ddf-4011-9913-2073c8f457f7": {
         "sheet": true,
