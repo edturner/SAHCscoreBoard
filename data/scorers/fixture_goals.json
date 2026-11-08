@@ -2322,6 +2322,26 @@
       }
     }
   },
+  "e9f61005-3c66-4919-9619-d538638d9a9d": {
+    "day": "2026-11-07",
+    "teams": {
+      "2d0cbcaa-ddfe-4aa9-ba90-47f28ee800e1": {
+        "sheet": true,
+        "scorers": [
+          {
+            "player": "acc06786e2ec",
+            "name": "Miles Brooke-Williams",
+            "goals": 3
+          },
+          {
+            "player": "a06eb9190387",
+            "name": "Phillip Waite",
+            "goals": 1
+          }
+        ]
+      }
+    }
+  },
   "f58e8aed-9f0b-47c1-ada2-80146128dd5b": {
     "day": "2026-11-07",
     "teams": {
