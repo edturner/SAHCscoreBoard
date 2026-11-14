@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-14T16:50:14.420849+00:00",
+  "generated_at": "2026-11-14T16:55:17.700433+00:00",
   "weekend": {
     "saturday": "2026-11-14",
     "sunday": "2026-11-15"
@@ -241,10 +241,10 @@
       "kickoff": "13:30",
       "division": "Division 3 South West",
       "location": "Away",
-      "status": "Scheduled",
+      "status": "Played",
       "fixtureId": "edaa4327-5fda-42fc-8afb-9803d7ae07da",
-      "home_score": null,
-      "away_score": null,
+      "home_score": 1,
+      "away_score": 1,
       "_ha": "a"
     },
     {
