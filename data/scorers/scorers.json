@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-14T18:30:30+00:00",
+  "generated_at": "2026-11-14T18:32:46+00:00",
   "season_label": "2026/27 season",
   "match_day": {
     "date": "2026-11-14",
@@ -179,6 +179,6 @@
   },
   "coverage": {
     "results": 146,
-    "with_team_sheet": 142
+    "with_team_sheet": 143
   }
 }
