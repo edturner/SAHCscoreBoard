@@ -45,17 +45,20 @@
       "label": "Women's Conference Midlands (2026-2027)"
     },
     "stats": {
-      "played": "7",
+      "played": "8",
       "won": "3",
       "drawn": "2",
-      "lost": "2",
+      "lost": "3",
       "goalsFor": "8",
-      "goalsAgainst": "8",
-      "goalDiff": "0",
+      "goalsAgainst": "9",
+      "goalDiff": "-1",
       "points": "11",
-      "ppg": "1.57"
+      "ppg": "1.38"
     },
     "form": [
+      {
+        "result": "L"
+      },
       {
         "result": "W"
       },
@@ -67,9 +70,6 @@
       },
       {
         "result": "W"
-      },
-      {
-        "result": "D"
       }
     ]
   },
@@ -452,17 +452,20 @@
       "label": "Division 5 South West (2026-2027)"
     },
     "stats": {
-      "played": "8",
+      "played": "9",
       "won": "2",
       "drawn": "2",
-      "lost": "4",
+      "lost": "5",
       "goalsFor": "11",
-      "goalsAgainst": "28",
-      "goalDiff": "-17",
+      "goalsAgainst": "34",
+      "goalDiff": "-23",
       "points": "8",
-      "ppg": "1.00"
+      "ppg": "0.89"
     },
     "form": [
+      {
+        "result": "L"
+      },
       {
         "result": "W"
       },
@@ -474,9 +477,6 @@
       },
       {
         "result": "L"
-      },
-      {
-        "result": "D"
       }
     ]
   },
