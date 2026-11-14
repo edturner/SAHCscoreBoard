@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-14T17:00:27+00:00",
+  "generated_at": "2026-11-14T17:02:43+00:00",
   "season_label": "2026/27 season",
   "match_day": {
     "date": "2026-11-14",
@@ -124,6 +124,11 @@
         "squad": "6s"
       },
       {
+        "name": "Richard Coope",
+        "goals": 1,
+        "squad": "4s"
+      },
+      {
         "name": "Sandipan Chanda",
         "goals": 1,
         "squad": "6s"
@@ -144,6 +149,6 @@
   },
   "coverage": {
     "results": 143,
-    "with_team_sheet": 135
+    "with_team_sheet": 136
   }
 }
