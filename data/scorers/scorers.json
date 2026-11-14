@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-11-14T11:00:17+00:00",
+  "generated_at": "2026-11-14T11:02:28+00:00",
   "season_label": "2026/27 season",
   "match_day": {
-    "date": "2026-11-07",
-    "label": "Saturday 7 November"
+    "date": "2026-11-14",
+    "label": "Saturday 14 November"
   },
   "season": {
     "M": [
@@ -112,93 +112,11 @@
     ]
   },
   "match_day_scorers": {
-    "M": [
-      {
-        "name": "Miles Brooke-Williams",
-        "goals": 3,
-        "squad": "9s"
-      },
-      {
-        "name": "Freddie Merriden",
-        "goals": 2,
-        "squad": "5s"
-      },
-      {
-        "name": "Martin Jones",
-        "goals": 2,
-        "squad": "5s"
-      },
-      {
-        "name": "Oliver Bell",
-        "goals": 2,
-        "squad": "3s"
-      },
-      {
-        "name": "Sayan Shah",
-        "goals": 2,
-        "squad": "3s"
-      },
-      {
-        "name": "Thomas Arden-davis",
-        "goals": 2,
-        "squad": "3s"
-      },
-      {
-        "name": "Darren Brown",
-        "goals": 1,
-        "squad": "7s"
-      },
-      {
-        "name": "James Durham",
-        "goals": 1,
-        "squad": "5s"
-      }
-    ],
-    "F": [
-      {
-        "name": "Amy Kee",
-        "goals": 2,
-        "squad": "3s"
-      },
-      {
-        "name": "Nicola Davies",
-        "goals": 2,
-        "squad": "7s"
-      },
-      {
-        "name": "Sarah Embrey",
-        "goals": 2,
-        "squad": "3s"
-      },
-      {
-        "name": "Amber Reynolds",
-        "goals": 1,
-        "squad": "6s"
-      },
-      {
-        "name": "Annie Barratt",
-        "goals": 1,
-        "squad": "3s"
-      },
-      {
-        "name": "Eliza Peters",
-        "goals": 1,
-        "squad": "5s"
-      },
-      {
-        "name": "Georgina Hampson",
-        "goals": 1,
-        "squad": "1s"
-      },
-      {
-        "name": "Jodie Carter",
-        "goals": 1,
-        "squad": "6s"
-      }
-    ]
+    "M": [],
+    "F": []
   },
   "coverage": {
-    "results": 134,
+    "results": 135,
     "with_team_sheet": 132
   }
 }

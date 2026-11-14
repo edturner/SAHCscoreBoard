@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-14T11:00:12.663933+00:00",
+  "generated_at": "2026-11-14T11:02:14.709092+00:00",
   "weekend": {
     "saturday": "2026-11-14",
     "sunday": "2026-11-15"
@@ -44,10 +44,10 @@
       "kickoff": "11:00",
       "division": "Division 2 South West",
       "location": "Home",
-      "status": "Scheduled",
+      "status": "Played",
       "fixtureId": "2e30e46a-7acb-432f-860d-3b176c52eeba",
-      "home_score": null,
-      "away_score": null,
+      "home_score": 0,
+      "away_score": 0,
       "_ha": "h"
     },
     {
