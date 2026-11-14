@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-14T15:50:25+00:00",
+  "generated_at": "2026-11-14T15:55:31+00:00",
   "season_label": "2026/27 season",
   "match_day": {
     "date": "2026-11-14",
@@ -113,10 +113,21 @@
   },
   "match_day_scorers": {
     "M": [],
-    "F": []
+    "F": [
+      {
+        "name": "Joni Gorman",
+        "goals": 1,
+        "squad": "2s"
+      },
+      {
+        "name": "Mya Carter",
+        "goals": 1,
+        "squad": "2s"
+      }
+    ]
   },
   "coverage": {
-    "results": 138,
-    "with_team_sheet": 133
+    "results": 142,
+    "with_team_sheet": 134
   }
 }

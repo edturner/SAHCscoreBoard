@@ -2396,6 +2396,15 @@
       }
     }
   },
+  "475d7328-e244-407b-8112-928bc9563d74": {
+    "day": "2026-11-14",
+    "teams": {
+      "3896f4e5-7d73-483b-b735-31f976ed7312": {
+        "sheet": false,
+        "scorers": []
+      }
+    }
+  },
   "596a2aa1-ab0d-4c4b-ab65-4dcfd91902bb": {
     "day": "2026-11-14",
     "teams": {
@@ -2414,11 +2423,49 @@
       }
     }
   },
+  "8acc5ed0-ee0b-4afd-bbb9-9eaefd693b60": {
+    "day": "2026-11-14",
+    "teams": {
+      "2d0cbcaa-ddfe-4aa9-ba90-47f28ee800e1": {
+        "sheet": false,
+        "scorers": []
+      }
+    }
+  },
+  "93e78ccb-b891-4ce6-98ee-2c473e1d39f3": {
+    "day": "2026-11-14",
+    "teams": {
+      "a5b838ee-1d9d-491e-b1bb-f05388eff199": {
+        "sheet": true,
+        "scorers": [
+          {
+            "player": "6f784653b790",
+            "name": "Mya Carter",
+            "goals": 1
+          },
+          {
+            "player": "7293852ce64b",
+            "name": "Joni Gorman",
+            "goals": 1
+          }
+        ]
+      }
+    }
+  },
   "9743c69d-0670-450a-b1ce-67bcbec7310b": {
     "day": "2026-11-14",
     "teams": {
       "d9f0f20b-37ae-4a51-aa7c-6b4c2718da54": {
         "sheet": true,
+        "scorers": []
+      }
+    }
+  },
+  "f84db23c-a9d6-456f-865b-5edfba7d5a99": {
+    "day": "2026-11-14",
+    "teams": {
+      "7df3c3cf-94cd-4e54-bb74-b85f0f93bcb8": {
+        "sheet": false,
         "scorers": []
       }
     }
