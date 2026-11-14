@@ -526,25 +526,25 @@
       "label": "Division 6 South West (2026-2027)"
     },
     "stats": {
-      "played": "8",
+      "played": "9",
       "won": "2",
       "drawn": "1",
-      "lost": "5",
-      "goalsFor": "15",
-      "goalsAgainst": "21",
-      "goalDiff": "-6",
+      "lost": "6",
+      "goalsFor": "16",
+      "goalsAgainst": "23",
+      "goalDiff": "-7",
       "points": "7",
-      "ppg": "0.88"
+      "ppg": "0.78"
     },
     "form": [
+      {
+        "result": "L"
+      },
       {
         "result": "W"
       },
       {
         "result": "D"
-      },
-      {
-        "result": "L"
       },
       {
         "result": "L"
