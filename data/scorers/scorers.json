@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-14T17:55:26+00:00",
+  "generated_at": "2026-11-14T18:00:34+00:00",
   "season_label": "2026/27 season",
   "match_day": {
     "date": "2026-11-14",
@@ -144,6 +144,11 @@
         "squad": "4s"
       },
       {
+        "name": "Richard Hesketh",
+        "goals": 1,
+        "squad": "2s"
+      },
+      {
         "name": "Sandipan Chanda",
         "goals": 1,
         "squad": "6s"
@@ -163,7 +168,7 @@
     ]
   },
   "coverage": {
-    "results": 143,
-    "with_team_sheet": 139
+    "results": 146,
+    "with_team_sheet": 141
   }
 }

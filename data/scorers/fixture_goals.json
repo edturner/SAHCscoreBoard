@@ -2387,6 +2387,26 @@
       }
     }
   },
+  "220f37fa-28cf-4c58-ad0d-4369d293ef72": {
+    "day": "2026-11-14",
+    "teams": {
+      "f1c3a876-4de3-4c99-9800-171fe4667602": {
+        "sheet": true,
+        "scorers": [
+          {
+            "player": "50576fa95b88",
+            "name": "Richard Hesketh",
+            "goals": 1
+          },
+          {
+            "player": "e61c9bffdc4e",
+            "name": "Toby Coope",
+            "goals": 1
+          }
+        ]
+      }
+    }
+  },
   "2e30e46a-7acb-432f-860d-3b176c52eeba": {
     "day": "2026-11-14",
     "teams": {
@@ -2490,6 +2510,24 @@
     "teams": {
       "d9f0f20b-37ae-4a51-aa7c-6b4c2718da54": {
         "sheet": true,
+        "scorers": []
+      }
+    }
+  },
+  "bac77cda-160e-4d1e-8918-b06b6df99c3b": {
+    "day": "2026-11-14",
+    "teams": {
+      "91e2a40f-fe91-4c8e-9ca6-aed40e6178b2": {
+        "sheet": true,
+        "scorers": []
+      }
+    }
+  },
+  "e45c2683-9f17-451f-8d94-6654a4911972": {
+    "day": "2026-11-14",
+    "teams": {
+      "e61f49a1-4ebb-4d1e-b346-bbfe5e7763a5": {
+        "sheet": false,
         "scorers": []
       }
     }
