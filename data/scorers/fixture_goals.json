@@ -2449,8 +2449,19 @@
     "day": "2026-11-14",
     "teams": {
       "2d0cbcaa-ddfe-4aa9-ba90-47f28ee800e1": {
-        "sheet": false,
-        "scorers": []
+        "sheet": true,
+        "scorers": [
+          {
+            "player": "a06eb9190387",
+            "name": "Phillip Waite",
+            "goals": 1
+          },
+          {
+            "player": "ca117fc10bb3",
+            "name": "Arlo Balmforth",
+            "goals": 1
+          }
+        ]
       }
     }
   },
