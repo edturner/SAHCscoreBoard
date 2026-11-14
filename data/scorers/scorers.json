@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-14T16:45:29+00:00",
+  "generated_at": "2026-11-14T16:50:25+00:00",
   "season_label": "2026/27 season",
   "match_day": {
     "date": "2026-11-14",
@@ -9,7 +9,7 @@
     "M": [
       {
         "name": "Hamish Clark",
-        "goals": 9,
+        "goals": 10,
         "squad": "6s"
       },
       {
@@ -112,7 +112,23 @@
     ]
   },
   "match_day_scorers": {
-    "M": [],
+    "M": [
+      {
+        "name": "Jamie Rowland",
+        "goals": 2,
+        "squad": "6s"
+      },
+      {
+        "name": "Hamish Clark",
+        "goals": 1,
+        "squad": "6s"
+      },
+      {
+        "name": "Sandipan Chanda",
+        "goals": 1,
+        "squad": "6s"
+      }
+    ],
     "F": [
       {
         "name": "Joni Gorman",
@@ -128,6 +144,6 @@
   },
   "coverage": {
     "results": 142,
-    "with_team_sheet": 134
+    "with_team_sheet": 135
   }
 }
