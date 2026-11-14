@@ -2404,5 +2404,14 @@
         "scorers": []
       }
     }
+  },
+  "9743c69d-0670-450a-b1ce-67bcbec7310b": {
+    "day": "2026-11-14",
+    "teams": {
+      "d9f0f20b-37ae-4a51-aa7c-6b4c2718da54": {
+        "sheet": true,
+        "scorers": []
+      }
+    }
   }
 }
