@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-14T18:00:34+00:00",
+  "generated_at": "2026-11-14T18:02:32+00:00",
   "season_label": "2026/27 season",
   "match_day": {
     "date": "2026-11-14",
@@ -105,9 +105,9 @@
         "squad": "3s"
       },
       {
-        "name": "Erin Hugo",
+        "name": "Elizabeth Cleverly",
         "goals": 3,
-        "squad": "2s"
+        "squad": "4s"
       }
     ]
   },
@@ -156,6 +156,16 @@
     ],
     "F": [
       {
+        "name": "Elizabeth Cleverly",
+        "goals": 1,
+        "squad": "4s"
+      },
+      {
+        "name": "Heidi Griffith",
+        "goals": 1,
+        "squad": "4s"
+      },
+      {
         "name": "Joni Gorman",
         "goals": 1,
         "squad": "2s"
@@ -169,6 +179,6 @@
   },
   "coverage": {
     "results": 146,
-    "with_team_sheet": 141
+    "with_team_sheet": 142
   }
 }

@@ -2527,8 +2527,19 @@
     "day": "2026-11-14",
     "teams": {
       "e61f49a1-4ebb-4d1e-b346-bbfe5e7763a5": {
-        "sheet": false,
-        "scorers": []
+        "sheet": true,
+        "scorers": [
+          {
+            "player": "379dec262df1",
+            "name": "Elizabeth Cleverly",
+            "goals": 1
+          },
+          {
+            "player": "b7456554819e",
+            "name": "Heidi Griffith",
+            "goals": 1
+          }
+        ]
       }
     }
   },
