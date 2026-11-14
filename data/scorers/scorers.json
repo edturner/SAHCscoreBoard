@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-14T18:55:32+00:00",
+  "generated_at": "2026-11-14T19:00:38+00:00",
   "season_label": "2026/27 season",
   "match_day": {
     "date": "2026-11-14",
@@ -174,11 +174,21 @@
         "name": "Mya Carter",
         "goals": 1,
         "squad": "2s"
+      },
+      {
+        "name": "Nicola Davies",
+        "goals": 1,
+        "squad": "7s"
+      },
+      {
+        "name": "Orla Moore",
+        "goals": 1,
+        "squad": "7s"
       }
     ]
   },
   "coverage": {
-    "results": 146,
-    "with_team_sheet": 143
+    "results": 148,
+    "with_team_sheet": 145
   }
 }

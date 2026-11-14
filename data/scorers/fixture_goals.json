@@ -2450,6 +2450,30 @@
       }
     }
   },
+  "6e8a4ae6-cc72-4b73-86cf-0bf7bcb9464e": {
+    "day": "2026-11-14",
+    "teams": {
+      "1b96b793-1dd0-4e01-98b1-d07139fa44c4": {
+        "sheet": true,
+        "scorers": [
+          {
+            "player": "952af78bf0df",
+            "name": "Nicola Davies",
+            "goals": 1
+          },
+          {
+            "player": "5606c199a60c",
+            "name": "Orla Moore",
+            "goals": 1
+          }
+        ]
+      },
+      "30cc8f2b-3eae-47fb-a5fb-f0b976c3d3a2": {
+        "sheet": true,
+        "scorers": []
+      }
+    }
+  },
   "77bbb71f-2337-483a-a60e-917b98ff9587": {
     "day": "2026-11-14",
     "teams": {
