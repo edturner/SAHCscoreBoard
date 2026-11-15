@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-11-15T16:00:27+00:00",
+  "generated_at": "2026-11-15T16:02:24+00:00",
   "season_label": "2026/27 season",
   "match_day": {
     "date": "2026-11-14",
-    "label": "Saturday 14 November"
+    "label": "Sat 14 & Sun 15 November"
   },
   "season": {
     "M": [
@@ -48,14 +48,14 @@
         "squad": "3s"
       },
       {
-        "name": "Spencer Hill",
+        "name": "Robert Shearer",
         "goals": 5,
         "squad": "1s"
       },
       {
-        "name": "Zakariah Mohammedbhai",
+        "name": "Spencer Hill",
         "goals": 5,
-        "squad": "2s"
+        "squad": "1s"
       }
     ],
     "F": [
@@ -149,9 +149,9 @@
         "squad": "2s"
       },
       {
-        "name": "Sandipan Chanda",
+        "name": "Robert Shearer",
         "goals": 1,
-        "squad": "6s"
+        "squad": "1s"
       }
     ],
     "F": [
@@ -188,7 +188,7 @@
     ]
   },
   "coverage": {
-    "results": 148,
-    "with_team_sheet": 145
+    "results": 149,
+    "with_team_sheet": 146
   }
 }
