@@ -205,9 +205,6 @@
     },
     "form": [
       {
-        "result": "D"
-      },
-      {
         "result": "W"
       },
       {
@@ -218,6 +215,9 @@
       },
       {
         "result": "L"
+      },
+      {
+        "result": "W"
       }
     ]
   },
@@ -581,7 +581,7 @@
         "result": "L"
       },
       {
-        "result": "W"
+        "result": "L"
       },
       {
         "result": "W"
