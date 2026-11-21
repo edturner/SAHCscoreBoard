@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-21T21:02:28+00:00",
+  "generated_at": "2026-11-21T21:05:35+00:00",
   "season_label": "2026/27 season",
   "match_day": {
     "date": "2026-11-21",
@@ -28,6 +28,11 @@
         "squad": "5s"
       },
       {
+        "name": "David Williams",
+        "goals": 6,
+        "squad": "3s"
+      },
+      {
         "name": "Miles Brooke-Williams",
         "goals": 6,
         "squad": "9s"
@@ -49,11 +54,6 @@
       },
       {
         "name": "Robert Shearer",
-        "goals": 5,
-        "squad": "1s"
-      },
-      {
-        "name": "Spencer Hill",
         "goals": 5,
         "squad": "1s"
       }
@@ -114,6 +114,11 @@
   "match_day_scorers": {
     "M": [
       {
+        "name": "David Williams",
+        "goals": 6,
+        "squad": "3s"
+      },
+      {
         "name": "Martin Jones",
         "goals": 2,
         "squad": "5s"
@@ -122,6 +127,11 @@
         "name": "Adam Wells",
         "goals": 1,
         "squad": "4s"
+      },
+      {
+        "name": "Andrew Tyler",
+        "goals": 1,
+        "squad": "3s"
       },
       {
         "name": "Arlo Balmforth",
@@ -134,24 +144,14 @@
         "squad": "5s"
       },
       {
+        "name": "Edward Burns",
+        "goals": 1,
+        "squad": "3s"
+      },
+      {
         "name": "Jack Howard",
         "goals": 1,
         "squad": "4s"
-      },
-      {
-        "name": "Sam Thompson",
-        "goals": 1,
-        "squad": "4s"
-      },
-      {
-        "name": "Sholto Morgan",
-        "goals": 1,
-        "squad": "4s"
-      },
-      {
-        "name": "Steve Fox",
-        "goals": 1,
-        "squad": "8s"
       }
     ],
     "F": [
@@ -184,6 +184,6 @@
   },
   "coverage": {
     "results": 161,
-    "with_team_sheet": 156
+    "with_team_sheet": 157
   }
 }

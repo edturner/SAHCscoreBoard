@@ -2689,8 +2689,34 @@
     "day": "2026-11-21",
     "teams": {
       "39486394-dad6-4e98-b4fb-6cc03cbc7910": {
-        "sheet": false,
-        "scorers": []
+        "sheet": true,
+        "scorers": [
+          {
+            "player": "9e5667055169",
+            "name": "David Williams",
+            "goals": 6
+          },
+          {
+            "player": "c3912f4a54ff",
+            "name": "Edward Burns",
+            "goals": 1
+          },
+          {
+            "player": "db84afa81c89",
+            "name": "Nathan Morris",
+            "goals": 1
+          },
+          {
+            "player": "91fb9a8a0d23",
+            "name": "Ranjit Sehmbi",
+            "goals": 1
+          },
+          {
+            "player": "6e6ee2a2addf",
+            "name": "Andrew Tyler",
+            "goals": 1
+          }
+        ]
       }
     }
   },
