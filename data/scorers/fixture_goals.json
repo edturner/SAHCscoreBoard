@@ -2641,8 +2641,19 @@
     "day": "2026-11-21",
     "teams": {
       "5949dcf2-d51f-4e27-9bd3-0639e58261c6": {
-        "sheet": false,
-        "scorers": []
+        "sheet": true,
+        "scorers": [
+          {
+            "player": "7e3f394e2660",
+            "name": "W Gilkes",
+            "goals": 1
+          },
+          {
+            "player": "85dee23304c6",
+            "name": "Steve Fox",
+            "goals": 1
+          }
+        ]
       }
     }
   },

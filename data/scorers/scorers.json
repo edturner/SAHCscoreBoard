@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-21T18:15:28+00:00",
+  "generated_at": "2026-11-21T18:20:28+00:00",
   "season_label": "2026/27 season",
   "match_day": {
     "date": "2026-11-21",
@@ -127,6 +127,16 @@
         "name": "Benjamin West",
         "goals": 1,
         "squad": "5s"
+      },
+      {
+        "name": "Steve Fox",
+        "goals": 1,
+        "squad": "8s"
+      },
+      {
+        "name": "W Gilkes",
+        "goals": 1,
+        "squad": "8s"
       }
     ],
     "F": [
@@ -159,6 +169,6 @@
   },
   "coverage": {
     "results": 157,
-    "with_team_sheet": 153
+    "with_team_sheet": 154
   }
 }
