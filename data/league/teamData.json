@@ -390,6 +390,9 @@
     },
     "form": [
       {
+        "result": "L"
+      },
+      {
         "result": "W"
       },
       {
@@ -397,9 +400,6 @@
       },
       {
         "result": "L"
-      },
-      {
-        "result": "W"
       },
       {
         "result": "W"
