@@ -2597,6 +2597,36 @@
       }
     }
   },
+  "1397bfa7-7175-48cc-9b61-f3613ea82ed2": {
+    "day": "2026-11-21",
+    "teams": {
+      "3d7ecaa8-5810-4721-9e4c-a8cea9ff8581": {
+        "sheet": true,
+        "scorers": [
+          {
+            "player": "8594a6a42e32",
+            "name": "Jack Howard",
+            "goals": 1
+          },
+          {
+            "player": "005247ab1918",
+            "name": "Sholto Morgan",
+            "goals": 1
+          },
+          {
+            "player": "1e97ddf94031",
+            "name": "Sam Thompson",
+            "goals": 1
+          },
+          {
+            "player": "a515364ed708",
+            "name": "Adam Wells",
+            "goals": 1
+          }
+        ]
+      }
+    }
+  },
   "494e80a0-7940-4410-b7c8-975575bd5c44": {
     "day": "2026-11-21",
     "teams": {

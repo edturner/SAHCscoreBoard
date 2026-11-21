@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-21T20:20:28+00:00",
+  "generated_at": "2026-11-21T20:25:32+00:00",
   "season_label": "2026/27 season",
   "match_day": {
     "date": "2026-11-21",
@@ -119,6 +119,11 @@
         "squad": "5s"
       },
       {
+        "name": "Adam Wells",
+        "goals": 1,
+        "squad": "4s"
+      },
+      {
         "name": "Arlo Balmforth",
         "goals": 1,
         "squad": "9s"
@@ -129,12 +134,22 @@
         "squad": "5s"
       },
       {
-        "name": "Steve Fox",
+        "name": "Jack Howard",
         "goals": 1,
-        "squad": "8s"
+        "squad": "4s"
       },
       {
-        "name": "W Gilkes",
+        "name": "Sam Thompson",
+        "goals": 1,
+        "squad": "4s"
+      },
+      {
+        "name": "Sholto Morgan",
+        "goals": 1,
+        "squad": "4s"
+      },
+      {
+        "name": "Steve Fox",
         "goals": 1,
         "squad": "8s"
       }
@@ -168,7 +183,7 @@
     ]
   },
   "coverage": {
-    "results": 160,
-    "with_team_sheet": 155
+    "results": 161,
+    "with_team_sheet": 156
   }
 }
