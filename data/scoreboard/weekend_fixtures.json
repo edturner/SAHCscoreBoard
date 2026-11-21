@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-21T15:05:21.020902+00:00",
+  "generated_at": "2026-11-21T15:10:14.150169+00:00",
   "weekend": {
     "saturday": "2026-11-21",
     "sunday": "2026-11-22"
@@ -59,10 +59,10 @@
       "kickoff": "13:00",
       "division": "Women's Conference Midlands",
       "location": "Home",
-      "status": "Scheduled",
+      "status": "Played",
       "fixtureId": "96b137ef-1839-4730-91a3-9723fcf39e3d",
-      "home_score": null,
-      "away_score": null,
+      "home_score": 2,
+      "away_score": 2,
       "_ha": "h"
     },
     {
