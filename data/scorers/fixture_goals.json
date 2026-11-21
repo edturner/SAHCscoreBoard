@@ -2637,6 +2637,21 @@
       }
     }
   },
+  "b9ce4bfe-301e-4f92-9d3b-70def7755521": {
+    "day": "2026-11-21",
+    "teams": {
+      "e61f49a1-4ebb-4d1e-b346-bbfe5e7763a5": {
+        "sheet": true,
+        "scorers": [
+          {
+            "player": "f2b4648243e2",
+            "name": "Hannah Cole",
+            "goals": 1
+          }
+        ]
+      }
+    }
+  },
   "b9ebe6b3-37d6-4cbd-89f0-05ebb6253001": {
     "day": "2026-11-21",
     "teams": {
