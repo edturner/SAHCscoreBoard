@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-21T12:40:20+00:00",
+  "generated_at": "2026-11-21T12:45:26+00:00",
   "season_label": "2026/27 season",
   "match_day": {
     "date": "2026-11-21",
@@ -112,11 +112,17 @@
     ]
   },
   "match_day_scorers": {
-    "M": [],
+    "M": [
+      {
+        "name": "Arlo Balmforth",
+        "goals": 1,
+        "squad": "9s"
+      }
+    ],
     "F": []
   },
   "coverage": {
-    "results": 150,
-    "with_team_sheet": 146
+    "results": 151,
+    "with_team_sheet": 147
   }
 }

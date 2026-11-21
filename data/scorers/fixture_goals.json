@@ -2606,6 +2606,21 @@
       }
     }
   },
+  "dc70f7f2-0912-4da4-a324-59980468fb4e": {
+    "day": "2026-11-21",
+    "teams": {
+      "2d0cbcaa-ddfe-4aa9-ba90-47f28ee800e1": {
+        "sheet": true,
+        "scorers": [
+          {
+            "player": "ca117fc10bb3",
+            "name": "Arlo Balmforth",
+            "goals": 1
+          }
+        ]
+      }
+    }
+  },
   "ff04a43b-28e0-4952-ace2-1c7fbb8528bd": {
     "day": "2026-11-21",
     "teams": {
