@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-11-21T09:30:24+00:00",
+  "generated_at": "2026-11-21T09:35:26+00:00",
   "season_label": "2026/27 season",
   "match_day": {
-    "date": "2026-11-14",
-    "label": "Sat 14 & Sun 15 November"
+    "date": "2026-11-21",
+    "label": "Saturday 21 November"
   },
   "season": {
     "M": [
@@ -112,83 +112,11 @@
     ]
   },
   "match_day_scorers": {
-    "M": [
-      {
-        "name": "Jamie Rowland",
-        "goals": 2,
-        "squad": "6s"
-      },
-      {
-        "name": "Alastair Powell",
-        "goals": 1,
-        "squad": "8s"
-      },
-      {
-        "name": "Arlo Balmforth",
-        "goals": 1,
-        "squad": "9s"
-      },
-      {
-        "name": "Hamish Clark",
-        "goals": 1,
-        "squad": "6s"
-      },
-      {
-        "name": "Phillip Waite",
-        "goals": 1,
-        "squad": "9s"
-      },
-      {
-        "name": "Richard Coope",
-        "goals": 1,
-        "squad": "4s"
-      },
-      {
-        "name": "Richard Hesketh",
-        "goals": 1,
-        "squad": "2s"
-      },
-      {
-        "name": "Robert Shearer",
-        "goals": 1,
-        "squad": "1s"
-      }
-    ],
-    "F": [
-      {
-        "name": "Elizabeth Cleverly",
-        "goals": 1,
-        "squad": "4s"
-      },
-      {
-        "name": "Heidi Griffith",
-        "goals": 1,
-        "squad": "4s"
-      },
-      {
-        "name": "Joni Gorman",
-        "goals": 1,
-        "squad": "2s"
-      },
-      {
-        "name": "Mya Carter",
-        "goals": 1,
-        "squad": "2s"
-      },
-      {
-        "name": "Nicola Davies",
-        "goals": 1,
-        "squad": "7s"
-      },
-      {
-        "name": "Orla Moore",
-        "goals": 1,
-        "squad": "7s"
-      }
-    ]
+    "M": [],
+    "F": []
   },
   "coverage": {
-    "results": 149,
+    "results": 150,
     "with_team_sheet": 146
   }
 }
