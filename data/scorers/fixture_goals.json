@@ -2617,6 +2617,26 @@
       }
     }
   },
+  "b9ebe6b3-37d6-4cbd-89f0-05ebb6253001": {
+    "day": "2026-11-21",
+    "teams": {
+      "f657d2bb-dafe-4b84-8b33-2c51c690bd5c": {
+        "sheet": true,
+        "scorers": [
+          {
+            "player": "b25bb0ef5327",
+            "name": "Martin Jones",
+            "goals": 2
+          },
+          {
+            "player": "53ed7d98e1e7",
+            "name": "Benjamin West",
+            "goals": 1
+          }
+        ]
+      }
+    }
+  },
   "dc70f7f2-0912-4da4-a324-59980468fb4e": {
     "day": "2026-11-21",
     "teams": {

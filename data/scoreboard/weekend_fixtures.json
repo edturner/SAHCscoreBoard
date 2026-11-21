@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-21T16:10:13.493986+00:00",
+  "generated_at": "2026-11-21T16:15:18.334632+00:00",
   "weekend": {
     "saturday": "2026-11-21",
     "sunday": "2026-11-22"
@@ -74,10 +74,10 @@
       "kickoff": "14:00",
       "division": "Division 4 South West",
       "location": "Home",
-      "status": "Scheduled",
+      "status": "Played",
       "fixtureId": "b9ebe6b3-37d6-4cbd-89f0-05ebb6253001",
-      "home_score": null,
-      "away_score": null,
+      "home_score": 3,
+      "away_score": 2,
       "_ha": "h"
     },
     {
@@ -211,10 +211,10 @@
       "kickoff": "14:30",
       "division": "Division 3 South West",
       "location": "Away",
-      "status": "Scheduled",
+      "status": "Played",
       "fixtureId": "e05b3ea8-cc94-4257-ae0b-bbf6142306fc",
-      "home_score": null,
-      "away_score": null,
+      "home_score": 0,
+      "away_score": 0,
       "_ha": "a"
     },
     {
