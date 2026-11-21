@@ -2629,8 +2629,8 @@
             "goals": 1
           },
           {
-            "player": "a5ae4fb58edd",
-            "name": "Cailin Waddell",
+            "player": "18403d43d325",
+            "name": "Molly Hobson",
             "goals": 1
           }
         ]
@@ -2684,6 +2684,15 @@
             "goals": 1
           }
         ]
+      }
+    }
+  },
+  "e05b3ea8-cc94-4257-ae0b-bbf6142306fc": {
+    "day": "2026-11-21",
+    "teams": {
+      "91e2a40f-fe91-4c8e-9ca6-aed40e6178b2": {
+        "sheet": true,
+        "scorers": []
       }
     }
   },
