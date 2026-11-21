@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-21T15:10:21+00:00",
+  "generated_at": "2026-11-21T15:15:25+00:00",
   "season_label": "2026/27 season",
   "match_day": {
     "date": "2026-11-21",
@@ -119,10 +119,21 @@
         "squad": "9s"
       }
     ],
-    "F": []
+    "F": [
+      {
+        "name": "Cailin Waddell",
+        "goals": 1,
+        "squad": "1s"
+      },
+      {
+        "name": "Lizzie Baylis",
+        "goals": 1,
+        "squad": "1s"
+      }
+    ]
   },
   "coverage": {
-    "results": 151,
-    "with_team_sheet": 147
+    "results": 152,
+    "with_team_sheet": 148
   }
 }

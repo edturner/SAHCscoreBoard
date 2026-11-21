@@ -2597,6 +2597,26 @@
       }
     }
   },
+  "96b137ef-1839-4730-91a3-9723fcf39e3d": {
+    "day": "2026-11-21",
+    "teams": {
+      "d9f0f20b-37ae-4a51-aa7c-6b4c2718da54": {
+        "sheet": true,
+        "scorers": [
+          {
+            "player": "ffdff794d9a4",
+            "name": "Lizzie Baylis",
+            "goals": 1
+          },
+          {
+            "player": "a5ae4fb58edd",
+            "name": "Cailin Waddell",
+            "goals": 1
+          }
+        ]
+      }
+    }
+  },
   "dc70f7f2-0912-4da4-a324-59980468fb4e": {
     "day": "2026-11-21",
     "teams": {
