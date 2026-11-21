@@ -119,17 +119,20 @@
       "label": "Premier Division (2026-2027)"
     },
     "stats": {
-      "played": "9",
-      "won": "3",
+      "played": "10",
+      "won": "4",
       "drawn": "1",
       "lost": "5",
-      "goalsFor": "13",
-      "goalsAgainst": "17",
-      "goalDiff": "-4",
-      "points": "10",
-      "ppg": "1.11"
+      "goalsFor": "15",
+      "goalsAgainst": "18",
+      "goalDiff": "-3",
+      "points": "13",
+      "ppg": "1.30"
     },
     "form": [
+      {
+        "result": "W"
+      },
       {
         "result": "W"
       },
@@ -141,9 +144,6 @@
       },
       {
         "result": "D"
-      },
-      {
-        "result": "W"
       }
     ]
   },
@@ -267,31 +267,31 @@
       "label": "Division 2 South West (2026-2027)"
     },
     "stats": {
-      "played": "9",
+      "played": "10",
       "won": "2",
-      "drawn": "2",
+      "drawn": "3",
       "lost": "5",
-      "goalsFor": "8",
-      "goalsAgainst": "23",
+      "goalsFor": "9",
+      "goalsAgainst": "24",
       "goalDiff": "-15",
-      "points": "8",
-      "ppg": "0.89"
+      "points": "9",
+      "ppg": "0.90"
     },
     "form": [
       {
         "result": "D"
       },
       {
-        "result": "L"
-      },
-      {
-        "result": "L"
-      },
-      {
-        "result": "L"
-      },
-      {
         "result": "D"
+      },
+      {
+        "result": "L"
+      },
+      {
+        "result": "L"
+      },
+      {
+        "result": "L"
       }
     ]
   },
@@ -304,15 +304,15 @@
       "label": "Division 4 South West (2026-2027)"
     },
     "stats": {
-      "played": "8",
-      "won": "7",
+      "played": "9",
+      "won": "8",
       "drawn": "0",
       "lost": "1",
-      "goalsFor": "25",
-      "goalsAgainst": "7",
-      "goalDiff": "18",
-      "points": "21",
-      "ppg": "2.62"
+      "goalsFor": "28",
+      "goalsAgainst": "9",
+      "goalDiff": "19",
+      "points": "24",
+      "ppg": "2.67"
     },
     "form": [
       {
@@ -341,15 +341,15 @@
       "label": "Division 3 South West (2026-2027)"
     },
     "stats": {
-      "played": "9",
+      "played": "10",
       "won": "3",
-      "drawn": "2",
+      "drawn": "3",
       "lost": "4",
       "goalsFor": "10",
       "goalsAgainst": "13",
       "goalDiff": "-3",
-      "points": "11",
-      "ppg": "1.22"
+      "points": "12",
+      "ppg": "1.20"
     },
     "form": [
       {
