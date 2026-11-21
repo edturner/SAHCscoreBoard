@@ -2597,6 +2597,26 @@
       }
     }
   },
+  "494e80a0-7940-4410-b7c8-975575bd5c44": {
+    "day": "2026-11-21",
+    "teams": {
+      "a5b838ee-1d9d-491e-b1bb-f05388eff199": {
+        "sheet": true,
+        "scorers": [
+          {
+            "player": "39e227f229a6",
+            "name": "Katy Hart",
+            "goals": 1
+          },
+          {
+            "player": "8cdb34b74857",
+            "name": "Sian Gill",
+            "goals": 1
+          }
+        ]
+      }
+    }
+  },
   "96b137ef-1839-4730-91a3-9723fcf39e3d": {
     "day": "2026-11-21",
     "teams": {

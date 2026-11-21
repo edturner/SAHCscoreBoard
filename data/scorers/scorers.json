@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-21T16:50:29+00:00",
+  "generated_at": "2026-11-21T16:55:24+00:00",
   "season_label": "2026/27 season",
   "match_day": {
     "date": "2026-11-21",
@@ -136,14 +136,24 @@
         "squad": "1s"
       },
       {
+        "name": "Katy Hart",
+        "goals": 1,
+        "squad": "2s"
+      },
+      {
         "name": "Lizzie Baylis",
         "goals": 1,
         "squad": "1s"
+      },
+      {
+        "name": "Sian Gill",
+        "goals": 1,
+        "squad": "2s"
       }
     ]
   },
   "coverage": {
-    "results": 153,
-    "with_team_sheet": 149
+    "results": 154,
+    "with_team_sheet": 150
   }
 }
