@@ -214,10 +214,10 @@
         "result": "W"
       },
       {
-        "result": "L"
+        "result": "W"
       },
       {
-        "result": "W"
+        "result": "L"
       }
     ]
   },
@@ -467,6 +467,9 @@
         "result": "L"
       },
       {
+        "result": "L"
+      },
+      {
         "result": "W"
       },
       {
@@ -474,9 +477,6 @@
       },
       {
         "result": "D"
-      },
-      {
-        "result": "L"
       }
     ]
   },
