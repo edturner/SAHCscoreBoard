@@ -230,15 +230,15 @@
       "label": "Division 3 South West (2026-2027)"
     },
     "stats": {
-      "played": "9",
-      "won": "4",
+      "played": "10",
+      "won": "5",
       "drawn": "3",
       "lost": "2",
-      "goalsFor": "18",
+      "goalsFor": "24",
       "goalsAgainst": "18",
-      "goalDiff": "0",
-      "points": "15",
-      "ppg": "1.67"
+      "goalDiff": "6",
+      "points": "18",
+      "ppg": "1.80"
     },
     "form": [
       {
