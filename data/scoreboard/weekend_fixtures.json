@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-21T14:05:15.317444+00:00",
+  "generated_at": "2026-11-21T14:10:15.191304+00:00",
   "weekend": {
     "saturday": "2026-11-21",
     "sunday": "2026-11-22"
@@ -44,10 +44,10 @@
       "kickoff": "12:15",
       "division": "Division 6 South West",
       "location": "Home",
-      "status": "Scheduled",
+      "status": "Played",
       "fixtureId": "eb1e4a63-2055-46ad-8a51-022ac2b8cf9e",
-      "home_score": null,
-      "away_score": null,
+      "home_score": 0,
+      "away_score": 2,
       "_ha": "h"
     },
     {
