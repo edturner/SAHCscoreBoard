@@ -2651,8 +2651,14 @@
     "day": "2026-11-21",
     "teams": {
       "3896f4e5-7d73-483b-b735-31f976ed7312": {
-        "sheet": false,
-        "scorers": []
+        "sheet": true,
+        "scorers": [
+          {
+            "player": "817fd295415a",
+            "name": "Hamish Clark",
+            "goals": 1
+          }
+        ]
       }
     }
   },

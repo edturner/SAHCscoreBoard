@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-22T11:15:27+00:00",
+  "generated_at": "2026-11-22T11:30:23+00:00",
   "season_label": "2026/27 season",
   "match_day": {
     "date": "2026-11-21",
@@ -9,7 +9,7 @@
     "M": [
       {
         "name": "Hamish Clark",
-        "goals": 10,
+        "goals": 11,
         "squad": "6s"
       },
       {
@@ -149,9 +149,9 @@
         "squad": "3s"
       },
       {
-        "name": "Jack Howard",
+        "name": "Hamish Clark",
         "goals": 1,
-        "squad": "4s"
+        "squad": "6s"
       }
     ],
     "F": [
@@ -184,6 +184,6 @@
   },
   "coverage": {
     "results": 161,
-    "with_team_sheet": 157
+    "with_team_sheet": 158
   }
 }
