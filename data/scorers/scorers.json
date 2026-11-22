@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-22T18:02:28+00:00",
+  "generated_at": "2026-11-22T18:15:23+00:00",
   "season_label": "2026/27 season",
   "match_day": {
     "date": "2026-11-21",
@@ -144,14 +144,14 @@
         "squad": "5s"
       },
       {
+        "name": "Charlie Bowskill",
+        "goals": 1,
+        "squad": "1s"
+      },
+      {
         "name": "Edward Burns",
         "goals": 1,
         "squad": "3s"
-      },
-      {
-        "name": "Hamish Clark",
-        "goals": 1,
-        "squad": "6s"
       }
     ],
     "F": [

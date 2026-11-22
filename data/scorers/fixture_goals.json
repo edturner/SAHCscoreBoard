@@ -2828,7 +2828,13 @@
     "teams": {
       "d2d0b65e-bf96-476b-8d38-6d28dae65a61": {
         "sheet": true,
-        "scorers": []
+        "scorers": [
+          {
+            "player": "e4646dbede13",
+            "name": "Charlie Bowskill",
+            "goals": 1
+          }
+        ]
       }
     }
   }
