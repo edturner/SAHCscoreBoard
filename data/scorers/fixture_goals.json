@@ -2827,7 +2827,7 @@
     "day": "2026-11-22",
     "teams": {
       "d2d0b65e-bf96-476b-8d38-6d28dae65a61": {
-        "sheet": false,
+        "sheet": true,
         "scorers": []
       }
     }
